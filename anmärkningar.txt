@@ -3,3 +3,4 @@
 – Bindestrecken verkar försvinna ganska systematiskt
 – id:en måste vara unika! (se Kumla, Näs)
 – Göra något åt tankestrecket vid början av uppslagen
+– BCP47! Värmlandsfinska?
