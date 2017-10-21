@@ -38060,6 +38060,7 @@
                      <ImageData src="bilder/SOL2_img_1225.jpg"/>
                   </Figure>
 
+                  <Sect>
                      <div type="bebyggelsenamn" xml:id="Svappavaara">
                      <head><placeName>Svappavaara</placeName></head> <P><locale>gruvort</locale>, <locale>tätort</locale>, 
                      <location><district type="town">Kiruna stad</district>, 
