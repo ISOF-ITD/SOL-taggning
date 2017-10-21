@@ -33672,6 +33672,7 @@
                      <ImageData src="bilder/SOL2_img_1109.jpg"/>
                   </Figure>
 
+                  <Sect>
                      <div type="bebyggelsenamn" xml:id="Skattungbyn">
                      <head><placeName>Skattungbyn</placeName></head> <P><locale>tätort</locale>, 
                      <location><district type="socken">Orsa sn</district>, 
