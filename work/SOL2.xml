@@ -39536,7 +39536,7 @@
                      utmarken; gärde; skifte; hage’. Sedan 1886 är socknens officiella namn Södra Vånga. Förleden Södra särskiljer 
                      socknen från <placeName>Norra Vånga</placeName> socken i samma landskap. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id=" Södra Åby">
+                     <div type="bebyggelsenamn" xml:id="Södra_Åby">
                      <head><placeName> Södra Åby</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Vemmenhögs hd</district>, 
                      <region type="landskap">Skåne</region></location>. 
@@ -39602,7 +39602,7 @@
                          (De) Søne 1291. – Socknen har fått sitt namn efter kyrkbyn. Efterleden innehåller <placeName>vin</placeName>
                         ’betesmark; äng’, förleden troligen so ’sugga’. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Sönnarslöv, Västra, Östra">
+                        <div type="bebyggelsenamn" xml:id="Sönnarslöv._Västra._Östra">
                         <head><placeName>Sönnarslöv, Västra, Östra</placeName></head> <P><locale>snr</locale>, 
                         <location><region type="landskap">Skåne</region></location>. 
                          <placeName>Västra Sönnarslöv</placeName> och <placeName>Östra Sönnarslöv</placeName>. </P> </div>
@@ -39630,14 +39630,14 @@
                          Sørby Sognn 1570-talet. – Sockennamnet, som har lånats från kyrkbyn, kan innehålla ett forndanskt
                         *sør ’smuts, gyttja’. Efterleden är <placeName>by</placeName> ’gård; by’. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Sörby">
+                        <div type="bebyggelsenamn" xml:id="Sörby2">
                         <head><placeName>Sörby</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Vilske hd</district>, 
                         <region type="landskap">Västergötland</region></location>. 
                          Sørby 1305. – Socknen har fått namn efter kyrkbyn. Efterleden innehåller <placeName>by</placeName> 
                         ’gård; by’. Förleden innehåller dialektordet sör ’smuts, gyttja’. Nära byn finns sankmarker. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Sörbygdens härad">
+                        <div type="bebyggelsenamn" xml:id="Sörbygdens_härad">
                         <head><placeName>Sörbygdens härad</placeName></head> <P><locale>hd</locale>, 
                         <location><region type="landskap">Bohuslän</region></location>. 
                         (a) Saurbiom, (a) Saurbioom 1433. – Den äldre namnformen, som innehåller pluralis av ordet by, utgår 
