@@ -49504,7 +49504,7 @@
                         <ImageData src="bilder/SOL2_img_1542.jpg"/>
                      </Figure>
 
-                     <div type="bebyggelsenamn" xml:id="Ör">
+                     <div type="bebyggelsenamn" xml:id="Ör2">
                         <head><placeName>Ör</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Allbo hd</district>, 
                         <region type="landskap">Småland</region></location>.  
@@ -49523,7 +49523,7 @@
                          <location><region type="landskap">Dalarna</region></location>. 
                          <placeName>Ore</placeName>. </P> </div>
 
-                     <div type="naturnamn" xml:id="Öran">
+                     <div type="naturnamn" xml:id="Öran2">
                         <head><placeName>Öran</placeName></head> <P><locale>älv</locale>, i
                         <location><region type="landskap">Lappland och Ångermanland</region></location>.  
                         <placeName>Öreälven</placeName>. </P> </div>
@@ -49547,7 +49547,7 @@
                         Stadsdelen Örby slott omfattar det område som ligger på Örbys gamla ägor nordväst 
                         om Huddingevägen. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Örby">
+                     <div type="bebyggelsenamn" xml:id="Örby2">
                         <head><placeName>Örby</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Marks hd</district>, 
                         <region type="landskap">Västergötland</region></location>.  
@@ -49572,14 +49572,14 @@
                         Tätorten Örbyhus har närmast sitt namn efter järnvägsstationen Örbyhus vid järnvägen 
                         Uppsala– Gävle, öppnad 1874. xxxx </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Örbyhus härad">
+                     <div type="bebyggelsenamn" xml:id="Örbyhus_härad">
                         <head><placeName>Örbyhus härad</placeName></head> <P><locale>hd</locale>, 
                         <location><region type="landskap">Uppland</region></location>.
                          – Häradsnamnet härrör från nyare tiden. Distriktet uppträder först som Öreby lähn (1638), 
                         Öreby hus Lähn (1639), så småningom som Öhrbyhus Härad (1760). Namnet är bildat till godsnamnet 
                         <placeName>Örbyhus</placeName>. </P> </div>
                                             
-                    <div type="bebyggelsenamn" xml:id="Örby slott">
+                    <div type="bebyggelsenamn" xml:id="Örby_slott">
                        <head><placeName>Örby slott</placeName></head> <P><locale>stadsdel</locale>, 
                        <location><district type="town">Stockholms stad</district></location>.                 
                         <placeName>Örby</placeName>. </P> </div>                      
@@ -49596,13 +49596,13 @@
                         Datum Ørabro 1260. – Namnet är givet efter den bro som funnits där Örebroåsen genombryts 
                        av Svartån. Förleden innehåller <placeName>ör</placeName> ’grus(bank)’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Örebro härad">
+                     <div type="bebyggelsenamn" xml:id="Örebro_härad">
                         <head><placeName>Örebro härad</placeName></head> <P><locale>hd</locale>, 
                         <location><region type="landskap">Närke</region></location>.                 
                          (ij) Ørabro hæradhe 1384. – Häradet har namn efter den gamla byn, sedermera staden 
                         <placeName>Örebro</placeName>. Örebro är betygat som medeltida tingsplats. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Örebro län">
+                     <div type="bebyggelsenamn" xml:id="Örebro_län">
                         <head><placeName>Örebro län</placeName></head> <P><locale>län</locale>, 
                         <location><region type="landskap">Närke och västra Västmanland</region>
                         <district type="bergslag">Karlskoga bergslag</district>, 
@@ -49754,7 +49754,7 @@
                         ursprungligen en nu försvunnen sjö norr om kyrkan och innehåller i förleden 
                         <placeName>ör</placeName> ’grus(bank)’. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Örsjö">
+                        <div type="bebyggelsenamn" xml:id="Örsjö2">
                         <head><placeName>Örsjö</placeName></head> <P><locale>sn</locale>, 
                         <locale>tätort</locale>, <location><district type="härad">Södra Möre hd</district>, 
                         <region type="landskap">Småland</region></location>.   
