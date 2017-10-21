@@ -49938,7 +49938,7 @@
                          Östanå Pappersbruk 1813. – Tätorten har sitt namn efter ett pappersbruk, namngivet efter 
                         läget öster om Helge å. </P> </div>
 
-                      <div type="bebyggelsenamn" xml:id="Östanå">
+                      <div type="bebyggelsenamn" xml:id="Östanå2">
                         <head><placeName>Östanå</placeName></head> <P><locale>gods</locale>, 
                         <location><district type="landsförsamling">Gränna lfs</district>, 
                         <district type="härad">Vista hd</district>, 
@@ -49948,7 +49948,7 @@
                         (Brwxwik 1367) har föreslagits vara bildat till ett försvunnet sjönamn *Bruksio, 
                         innehållande brok ’byxa’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östanå">
+                     <div type="bebyggelsenamn" xml:id="Östanå3">
                         <head><placeName>Östanå</placeName></head> <P><locale>gods</locale>, 
                         <location><district type="socken">Roslags-Kulla sn</district>, 
                         <district type="skeppslag">Åkers skg</district>, 
@@ -49977,7 +49977,7 @@
                         <placeName>Västberga</placeName>. </P> </div>
                         
                         
-                      <div type="bebyggelsenamn" xml:id="Östbo härad">
+                      <div type="bebyggelsenamn" xml:id="Östbo_härad">
                         <head><placeName>Östbo härad</placeName></head> <P><locale>hd</locale>, 
                         <location><region type="landskap">Småland</region></location>.   
                         (in) Østbo 1200-talets början. – Östbo ’Östbygden’ är en del av <placeName>Finnveden</placeName>. 
@@ -50009,7 +50009,7 @@
                         <region type="landskap">Dalarna</region></location>.   
                         <placeName>Västerby</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Österby">
+                     <div type="bebyggelsenamn" xml:id="Österby2">
                         <head><placeName>Österby</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="socken">Läby sn</district>, 
                         <district type="härad">Ulleråkers hd</district>, 
@@ -50079,7 +50079,7 @@
                          se <placeName>Götaland</placeName>. Jfr <placeName>Västergötland</placeName>. – Bild 82. </P> </div>
               
                 
-                     <div type="bebyggelsenamn" xml:id="Östergötlands län">
+                     <div type="bebyggelsenamn" xml:id="Östergötlands_län">
                         <head><placeName>Östergötlands län</placeName></head> <P><locale>län</locale>. 
                         <location><district type="härad">Xxx hd</district>, 
                         <region type="landskap">Xland</region></location>.   
@@ -50155,7 +50155,7 @@
                            Det sammanhänger med socken- och kyrkbynamnen <placeName>Medelplana</placeName> 
                            och <placeName>Västerplana</placeName>. </P> </div>
 
-                          <div type="bebyggelsenamn" xml:id="Österrekarne härad">
+                          <div type="bebyggelsenamn" xml:id="Österrekarne_härad">
                             <head><placeName>Österrekarne härad</placeName></head> <P><locale>hd</locale>, 
                             <location><region type="landskap">Södermanland</region></location>.   
                              prouincia Østurrek 1349. – Häradet omfattar östra delen av den gamla bygden 
