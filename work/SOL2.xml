@@ -34453,7 +34453,7 @@
                      </Caption>
                   </Figure>
 
-                     <div type="bebyggelsenamn" xml:id="Skåne län">
+                     <div type="bebyggelsenamn" xml:id="Skåne_län">
                      <head><placeName>Skåne län</placeName></head> <P><locale>län</locale>, 
                      <location><region type="landskap">Skåne</region></location>.
                       – Länet bildades 1997 genom sammanslagning av <placeName>Kristianstads län</placeName> 
@@ -34476,7 +34476,7 @@
                      <region type="landskap">Skåne</region></location>. 
                       <placeName>Tranås</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Skånings härad">
+                     <div type="bebyggelsenamn" xml:id="Skånings_härad">
                      <head><placeName>Skånings härad</placeName></head> <P><locale>hd</locale>, 
                      <location><region type="landskap">Västergötland</region></location>.
                       Skanungshæræd 1200-talets slut. – Till grund för häradsnamnet ligger otvivelaktigt ett namn på en 
@@ -34588,7 +34588,7 @@
                      fram kring en 1885 öppnad järnvägsstation och har sitt namn efter läget vid viken. </P> </div>
 
                      <div type="bebyggelsenamn" xml:id="Skällinge">
-                     <head><placeName>Skällinge</placeName></head> <P><locale>sn</locale>, <locale>tätort/locale>,
+                     <head><placeName>Skällinge</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>,
                      <location><district type="härad">Himle hd</district>, 
                      <region type="landskap">Halland</region></location>.
                      (i) Skællinge soken 1490-talet. – Tätorten är framvuxen ur kyrkbyn Skällinge. Socknen har övertagit kyrkbyns
@@ -34651,7 +34651,7 @@
                       Skierkind 1308 avskr. – Socknen har fått sitt namn från <placeName>Skärkinds härad</placeName>. Häradets 
                      huvudbygd eller en del av denna blev en socken som fick häradets namn. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Skärkinds härad">
+                     <div type="bebyggelsenamn" xml:id="Skärkinds_härad">
                      <head><placeName>Skärkinds härad</placeName></head> <P><locale>hd</locale>, 
                      <location><region type="landskap">Östergötland</region></location>. 
                       prouinciam Skerkindh 1357, (ij) Skærkinda hæraþe 1361. – Häradet har uppkommit vid indelningen i 
@@ -34716,7 +34716,7 @@
                      (De) Skioldestum 1314? – Kyrkbyn (nu en tätort) har givit socknen dess namn, som i förleden har föreslagits
                      innehålla ett mansnamn svarande mot fvn. Ski˛oldr. Efterleden är <placeName>sta(d)</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Sköllersta härad">
+                     <div type="bebyggelsenamn" xml:id="Sköllersta_härad">
                      <head><placeName>Sköllersta härad</placeName></head> <P><locale>hd</locale>, 
                      <location><region type="landskap">Närke</region></location>. 
                       (i) Skyollasta hwndare 1381,   (j) Skiollasta hæradhe 1385. – Häradet har namn efter kyrkbyn i socknen 
@@ -34803,7 +34803,7 @@
                         alldeles norr om gränsen till Eds socken. Dess namn, ’holmen på gränsen till Eds socken’ 
                        (<placeName>holm</placeName>), tillkom säkerligen ursprungligen holmen. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Slågarp, Lilla, Stora">
+                        <div type="bebyggelsenamn" xml:id="Slågarp._Lilla._Stora">
                         <head><placeName>Slågarp, Lilla, Stora</placeName></head> <P><locale>snr</locale>, 
                         <location><district type="härad">Skytts hd</district>, 
                         <region type="landskap">Skåne</region></location>. 
