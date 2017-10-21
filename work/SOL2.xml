@@ -38638,7 +38638,7 @@
                      dunkel. Namnet har, sannolikt med orätt, sammanställts med sockennamnet <placeName>Sånga</placeName> i
                      Ångermanland. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Sånga">
+                     <div type="bebyggelsenamn" xml:id="Sånga2">
                      <head><placeName>Sånga</placeName></head> <P><locale>sn</locale>, 
                      <location><region type="landskap">Ångermanland</region></location>.  
                      (in) Sungu 1303. – Socknen har fått sitt namn efter kyrkbyn. Det är sannolikt ett ursprungligt namn på 
@@ -38676,26 +38676,26 @@
                       Sæby 1160-talet (avser kyrkbyn). – Socknen har sitt namn efter kyrkbyn. Det innehåller i förleden 
                      fda. *sæ ’sjö’, här med syftning på läget vid Öresund. Efterleden är <placeName>by</placeName> ’gård; by’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Säby">
+                     <div type="bebyggelsenamn" xml:id="Säby2">
                      <head><placeName>Säby</placeName></head> <P><locale>f.d. sn</locale>, 
                      <location><district type="town">Tranås stad</district>, 
                      <region type="landskap">Småland</region></location>.                 
                       ecclesie Sæby 1335. – Kyrkbyn har givit socknen dess namn, som i förleden innehåller fsv. *sæ(r)
                      ’sjö’ efter läget vid Säbysjön. Efterleden är <placeName>by</placeName> ’gård; by’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Säby">
+                     <div type="bebyggelsenamn" xml:id="Säby3">
                      <head><placeName>Säby</placeName></head> <P><locale>by</locale>, 
                      <location><district type="socken">Skå sn</district>, <district type="härad">Färentuna hd</district>, 
                      <region type="landskap">Uppland</region></location>. 
                      <placeName>Sånga-Säby</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Säby">
+                     <div type="bebyggelsenamn" xml:id="Säby4">
                      <head><placeName>Säby</placeName></head> <P><locale>gods</locale>, 
                      <location><district type="socken">Visnums sn</district>, <district type="härad">Visnums hd</district>, 
                      <region type="landskap">Värmland</region></location>. 
                      <placeName>Värmlands Säby</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Säby">
+                     <div type="bebyggelsenamn" xml:id="Säby5">
                      <head><placeName>Säby</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Snevringe hd</district>, 
                      <region type="landskap">Västmanland</region></location>.                 
@@ -38772,7 +38772,7 @@
                      kanske fda. Sakulf. Efterleden är → torp ’nybygge’. Förleden uppvisar ihopdragna former (Siels-, Sels- o.d.) 
                      fr.o.m. 1580-talet. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Säm, Norra, Södra">
+                     <div type="bebyggelsenamn" xml:id="Säm._Norra._Södra">
                      <head><placeName>Säm, Norra, Södra</placeName></head> <P><locale>snr</locale>, 
                      <location><region type="landskap">Västergötland</region></location>. 
                       <placeName>Norra Säm</placeName> och <placeName>Södra Säm</placeName>. </P> </div>
@@ -38843,7 +38843,7 @@
                         hålla isär denna ort från andra närbelägna platser med samma namn. Dock brukades Sätra ända in på 
                         1600-talet. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Säter">
+                        <div type="bebyggelsenamn" xml:id="Säter2">
                         <head><placeName>Säter</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Vadsbo hd</district>, 
                         <region type="landskap">Västergötland</region></location>. 
