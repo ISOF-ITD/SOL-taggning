@@ -33325,6 +33325,7 @@
                      <ImageData src="bilder/SOL2_img_1101.jpg"/>
                   </Figure>
 
+                  <Sect>
                      <div type="bebyggelsenamn" xml:id="Själstuga">
                      <head><placeName>Själstuga</placeName></head> <P><locale>by</locale>, 
                      <location><district type="socken">Skogs sn</district>, 
