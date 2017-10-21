@@ -36274,7 +36274,7 @@
                      <region type="landskap">Bohuslän</region></location>.
                       <placeName>Stigfjorden</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Stigberget">
+                     <div type="bebyggelsenamn" xml:id="Stigberget2">
                      <head><placeName>Stigberget</placeName></head> <P><locale>stadsdel</locale>, 
                      <location><district type="town">Göteborgs stad</district>, 
                      <region type="landskap">Västergötland</region></location>. 
@@ -36366,7 +36366,7 @@
                      från den senares efternamn. Efterleden innehåller ortens gamla namn Sund, använt år 1553 om ett nybygge och i 
                      bruk ännu på 1900-talet. Åtminstone en sträcka av den å som rinner genom bruket har uppfattats som ett sund. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Stjärnsund">
+                     <div type="bebyggelsenamn" xml:id="Stjärnsund2">
                      <head><placeName>Stjärnsund</placeName></head> <P><locale>gods</locale>, 
                      <location><district type="socken">Askersunds sn</district>, <district type="härad">Sundbo hd</district>, 
                      <region type="landskap">Närke</region></location>.
@@ -36439,7 +36439,7 @@
                         <location><region type="landskap">Uppland</region></location>. 
                          <placeName>Arlanda</placeName>. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Stockholms län">
+                        <div type="bebyggelsenamn" xml:id="Stockholms_län">
                         <head><placeName>Stockholms län</placeName></head> <P><locale>län</locale>, 
                          (j) Stocholms læn 1454. – Länet upprättades 1641 men var
                         förenat med <placeName>Uppsala län</placeName> 1649–1714. Det omfattar delar av Södermanland och
