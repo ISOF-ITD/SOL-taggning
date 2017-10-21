@@ -50259,7 +50259,7 @@
                         och andra verksamheter <placeNamn>åker</placeNamn>. Förleden Öster anger läget i förhållande 
                         till en annan gammal samlingsplats i grannsocknen <placeNamn>Västra Vingåker</placeNamn>. </P> </div>
           
-                      <div type="bebyggelsenamn" xml:id="Österåker">
+                      <div type="bebyggelsenamn" xml:id="Österåker2">
                          <head><placeName>Österåker</placeName></head> <P><locale>kn</locale>, <locale>sn</locale>,
                          <location><district type="skeppslag">Åkers skg</district>, 
                          <region type="landskap">Uppland</region></location>.   
@@ -50285,7 +50285,7 @@
                         att skilja den nya staden från den gamla. Gammelbyn betyder f.ö. ’den gamla staden’; by betecknade 
                         i fornsvenskan även ’stad’, liksom det ännu gör i danskan och norskan. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östkinds härad">
+                     <div type="bebyggelsenamn" xml:id="Östkinds_härad">
                         <head><placeName>Östkinds härad</placeName></head> <P><locale>hd</locale>, 
                         <location><region type="landskap">Östergötland</region></location>.   
                          (i) Østkindaherret 1317 sen avskr., prouincie Østkindahæradh 1347. – Häradet har uppkommit 
@@ -50310,7 +50310,7 @@
                         återgår på fsv. østan ar ’öster om älven’ (ar är genitiv singularis av fsv. a ’å’). Bebyggelsens 
                         läge nord-nordöst om Österdalälven har i äldre tid uppfattats som östligt. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Broby">
+                     <div type="bebyggelsenamn" xml:id="Östra_Broby">
                         <head><placeName>Östra Broby</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>,
                         <location><district type="härad">Östra Göinge hd</district>, 
                         <region type="landskap">Skåne</region></location>.   
@@ -50326,7 +50326,7 @@
                          – Sockennamnet är givet efter kyrkbyn (numera tätort), som troligen ursprungligen ingick i den
                         angränsande kyrkbyn i socknen <placeNamn>Västerstad</placeNamn>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Ed">
+                     <div type="bebyggelsenamn" xml:id="Östra_Ed">
                         <head><placeName>Östra Ed</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Norra Tjusts hd</district>, 
                         <region type="landskap">Småland</region></location>.   
@@ -50352,7 +50352,7 @@
                      </Figure>
 
 
-                     <div type="bebyggelsenamn" xml:id="Östra Eneby">
+                     <div type="bebyggelsenamn" xml:id="Östra_Eneby">
                         <head><placeName>Östra Eneby</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Bråbo hd</district>, 
                         <region type="landskap">Östergötland</region></location>.   
@@ -50361,7 +50361,7 @@
                         har socknen kallats Östra Eneby. Det tillagda Östra särskiljer socknen från 
                         <placeNamn>Västra Eneby</placeNamn>socken. </P> </div>
 
-                      <div type="Naturnamn" xml:id="Östra Fjällfjället">
+                      <div type="Naturnamn" xml:id="Östra_Fjällfjället">
                         <head><placeName>Östra Fjällfjället</placeName></head> <P><locale>fjällmassiv</locale>, 
                         <location><district type="socken">Vilhelmina sn</district>, 
                         <region type="landskap">Lappland</region></location>.   
@@ -50372,13 +50372,13 @@
                         en förklarande svensk efterled. Det samiska namnet på västra delen av massivet är Ohtje
                         Vielie; ohtje betyder ’liten’. Det anförda belägget från 1739 är en norsk form av namnet. </P> </div>
 
-                      <div type="bebyggelsenamn" xml:id="Östra Fors">
+                      <div type="bebyggelsenamn" xml:id="Östra_Fors">
                         <head><placeName>Östra Fors</placeName></head> <P><locale>by</locale>, 
                         <location><district type="socken">Malungs sn</district>, 
                         <region type="landskap">Dalarna</region></location>.   
                          <placeNamn>Malungsfors</placeNamn>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Frölunda">
+                     <div type="bebyggelsenamn" xml:id="Östra_Frölunda">
                         <head><placeName>Östra Frölunda</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>,
                         <location><district type="härad">Kinds hd</district>, 
                         <region type="landskap">Västergötland</region></location>.   
@@ -50387,7 +50387,7 @@
                         1886 är socknens officiella namn Östra Frölunda. Det tillagda Östra särskiljer socknen från
                         <placeNamn>Västra Frölunda</placeNamn>. Tätorten har vuxit fram i anslutning till sockenkyrkan. </P> </div>
            
-                      <div type="bebyggelsenamn" xml:id="Östra Fågelvik">
+                      <div type="bebyggelsenamn" xml:id="Östra_Fågelvik">
                         <head><placeName>Östra Fågelvik</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Väse hd</district>, 
                         <region type="landskap">Värmland</region></location>.   
@@ -50395,7 +50395,7 @@
                         nära en fågelrik vik av Vänern. Östra tilllades 1886 i syfte att skilja socknen från
                         <placeNamn>Västra Fågelvik</placeNamn>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Gerum">
+                     <div type="bebyggelsenamn" xml:id="Östra_Gerum">
                         <head><placeName>Östra Gerum</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Vartofta hd</district>, 
                         <region type="landskap">Västergötland</region></location>.   
@@ -50406,7 +50406,7 @@
                         Gerumsberget och Gisseberget. Sedan 1886 är socknens officiella namn Östra Gerum. Det tillagda 
                         Östra särskiljer socknen från <placeNamn>Västra Gerum</placeNamn>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Grevie">
+                     <div type="bebyggelsenamn" xml:id="Östra_Grevie">
                         <head><placeName>Östra Grevie</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>,
                         <location><district type="härad">Oxie hd</district>, 
                         <region type="landskap">Skåne</region></location>.   
@@ -50415,19 +50415,19 @@
                         i <placeNamn>Mellan-Grevie</placeNamn> socken och byn Västra Grevie i Södra Åkarps socken. 
                         De tre byarna har ursprungligen utgjort en bebyggelseenhet. </P> </div>
 
-                      <div type="bebyggelsenamn" xml:id="Östra Göinge">
+                      <div type="bebyggelsenamn" xml:id="Östra_Göinge">
                         <head><placeName>Östra Göinge</placeName></head> <P><locale>kn</locale>, 
                         <location><region type="landskap">Skåne</region></location>. 
                         – Kommunen har sitt namn efter <placeNamn>Östra Göinge härad</placeNamn>. 
                         Östra Göinge härad hd, Skåne <placeNamn>Västra Göinge härad</placeNamn>. </P> </div>
                                                
-                     <div type="bebyggelsenamn" xml:id="Östra Hallen">
+                     <div type="bebyggelsenamn" xml:id="Östra_Hallen">
                         <head><placeName>Östra Hallen</placeName></head> <P><locale>by</locale>, 
                         <location><district type="socken">Backaryds sn</district>, <district type="härad">Medelstads hd</district>,
                         <region type="landskap">Blekinge</region></location>.   
                         <placeNamn>Hallabro</placeNamn> </P> </div>            
                         
-                      <div type="bebyggelsenamn" xml:id="Östra Harg">
+                      <div type="bebyggelsenamn" xml:id="Östra_Harg">
                         <head><placeName>Östra Harg</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Åkerbo hd</district>, 
                         <region type="landskap">Östergötland</region></location>.   
@@ -50436,7 +50436,7 @@
                         Sedan åtminstone 1700-talets slut kallas socknen Östra Harg. Det tillagda Östra 
                         särskiljer socknen från <placeNamn>Västra Harg</placeNamn>. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Östra Herrestad">
+                        <div type="bebyggelsenamn" xml:id="Östra_Herrestad">
                            <head><placeName>Östra Herrestad</placeName></head> <P><locale>sn</locale>, 
                            <location><district type="härad">Ingelstads hd</district>, 
                            <region type="landskap">Skåne</region></location>.   
@@ -50444,13 +50444,13 @@
                            ett mansnamn fda. *Hæri och <placeNamn>sta(d)</placeNamn>. Östra tillades redan 
                            på 1500-talet i syfte att skilja socknen från <placeNamn>Stora Herrestad</placeNamn>. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Östra Hisings härad">
+                        <div type="bebyggelsenamn" xml:id="Östra_Hisings_härad">
                            <head><placeName>Östra Hisings härad</placeName></head> <P><locale>hd</locale>, 
                            <location><region type="landskap">Västergötland</region></location>.
                             Hising 1200-talets slut. – Häradet omfattar östra delen av ön <placeName>Hisingen</placeName>, 
                            dvs. den del av ön, Svenska Hisingen, som under medeltiden hörde till Västergötland. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Östra Hoby">
+                        <div type="bebyggelsenamn" xml:id="Östra_Hoby">
                            <head><placeName>Östra Hoby</placeName></head> <P><locale>sn</locale>, 
                            <location><district type="härad">Ingelstads hd</district>, 
                            <region type="landskap">Skåne</region></location>.
@@ -50458,7 +50458,7 @@
                            givet efter kyrkbyn. Förleden är oviss. Östra tillades 1886 i syfte att skilja socknen från
                            <placeName>Västra Hoby</placeName>. </P> </div>
                    
-                        <div type="bebyggelsenamn" xml:id="Östra Husby">
+                        <div type="bebyggelsenamn" xml:id="Östra_Husby">
                            <head><placeName>Östra Husby</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>,
                            <location><district type="härad">Östkinds hd</district>, 
                            <region type="landskap">Östergötland</region></location>.
@@ -50468,20 +50468,20 @@
                            Husaby mællan vika ’Husby mellan vikarna, dvs. på <placeName>Vikbolandet</placeName>’.
                            Tätorten har vuxit fram i anslutning till sockenkyrkan. </P> </div>
 
-                         <div type="bebyggelsenamn" xml:id="Östra härad">
+                         <div type="bebyggelsenamn" xml:id="Östra_härad">
                            <head><placeName>Östra härad</placeName></head> <P><locale>hd</locale>, 
                            <location><region type="landskap">Blekinge</region></location>.
                             Østærstheret, Østræheret ca 1300. – Häradet är det östra av de tre häradena i det gamla 
                            landskapet <placeName>Blekinge</placeName>. Se vidare <placeName>Bräkne härad</placeName>. </P> </div>
 
-                         <div type="bebyggelsenamn" xml:id="Östra härad">
+                         <div type="bebyggelsenamn" xml:id="Östra_härad2">
                            <head><placeName>Östra härad</placeName></head> <P><locale>hd</locale>, 
                            <location><region type="landskap">Småland</region></location>.
                             (jn) Østrahereth 1278. – Östra härad är det östliga av de båda härad som det småländska 
                            <placeName>Njudung</placeName> alltsedan de äldsta källorna varit indelat i. Se vidare
                            <placeName>Västra härad</placeName>. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Östra Ingelstad">
+                        <div type="bebyggelsenamn" xml:id="Östra_Ingelstad">
                            <head><placeName>Östra Ingelstad</placeName></head> <P><locale>sn</locale>, 
                            <location><district type="härad">Ingelstads hd</district>, 
                            <region type="landskap">Skåne</region></location>.
@@ -50490,14 +50490,14 @@
                             <placeName>sta(d)</placeName>. Östra tillades 1886 i syfte att skilja socknen från
                             <placeName>Västra Ingelstad</placeName>. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Östra Karaby">
+                        <div type="bebyggelsenamn" xml:id="Östra_Karaby">
                            <head><placeName>Östra Karaby</placeName></head> <P><locale>sn</locale>, 
                            <location><district type="härad">Onsjö hd</district>, 
                            <region type="landskap">Skåne</region></location>.
                             Karleby 1481. – Sockennamnet (<placeName>Karlaby</placeName>) är givet efter kyrkbyn. 
                             Det 1886 tillfogade Östra skiljer namnet från <placeName>Västra Karaby</placeName>. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Östra Karup">
+                        <div type="bebyggelsenamn" xml:id="Östra_Karup">
                            <head><placeName>Östra Karup</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>,
                            <location><district type="härad">Höks hd</district>, 
                            <region type="landskap">Halland</region></location>.
@@ -50507,7 +50507,7 @@
                            <placeName>Västra Karup</placeName> i Skåne. </P> </div>
                 
 
-                        <div type="bebyggelsenamn" xml:id="Östra Klagstorp">
+                        <div type="bebyggelsenamn" xml:id="Östra_Klagstorp">
                            <head><placeName>Östra Klagstorp</placeName></head> <P><locale>sn</locale>, 
                            <location><district type="härad">Vemmenhögs hd</district>, 
                            <region type="landskap">Skåne</region></location>.
@@ -50515,14 +50515,14 @@
                            kyrkbyn. Det innehåller mansnamnet fda. Klak och <placeName>torp</placeName> ’nybygge’. Östra 
                            skiljer namnet från <placeName>Västra Klagstorp</placeName>. </P> </div>
 
-                         <div type="naturnamn" xml:id="Östra Kvismaren">
+                         <div type="naturnamn" xml:id="Östra_Kvismaren">
                            <head><placeName>Östra Kvismaren</placeName></head> <P><locale>f.d. sjö</locale>, 
                            <locale>våtmark</locale>,
                            <location><district type="härad">Sköllersta och Askers hd</district>, 
                            <region type="landskap">Närke</region></location>.
                             <placeName>Kvismaren</placeName>. </P> </div>
 
-                         <div type="bebyggelsenamn" xml:id="Östra Kärrstorp">
+                         <div type="bebyggelsenamn" xml:id="Östra_Kärrstorp">
                            <head><placeName>Östra Kärrstorp</placeName></head> <P><locale>sn</locale>, 
                            <location><district type="härad">Färs hd</district>, 
                            <region type="landskap">Skåne</region></location>.
@@ -50551,7 +50551,7 @@
                         <ImageData src="bilder/SOL2_img_1564.jpg"/>
                      </Figure>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Ljungby">
+                     <div type="bebyggelsenamn" xml:id="Östra_Ljungby">
                         <head><placeName>Östra Ljungby</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>,
                         <location><district type="härad">Norra Åsbo hd</district>, 
                         <region type="landskap">Skåne</region></location>.
@@ -50559,7 +50559,7 @@
                         betydelsen ’ljungmark’ och <placeName>by</placeName> ’gård; by’. Tilllägget Östra skiljer socknen
                         från <placeName>MunkaLjungby</placeName> socken. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Ny">
+                     <div type="bebyggelsenamn" xml:id="Östra_Ny">
                         <head><placeName>Östra Ny</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Björkekinds hd</district>, 
                         <region type="landskap">Östergötland</region></location>.
@@ -50567,7 +50567,7 @@
                         Den kortare formen Ny sokn är belagd från 1300-talet. 1793 blev Östra Ny den officiella jordeboksformen; 
                         det tillagda Östra särskiljer socknen från <placeName>Västra Ny</placeName> socken. </P> </div>
 
-                      <div type="bebyggelsenamn" xml:id="Östra Nöbbelöv">
+                      <div type="bebyggelsenamn" xml:id="Östra_Nöbbelöv">
                         <head><placeName>Östra Nöbbelöv</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Järrestads hd</district>, 
                         <region type="landskap">Skåne</region></location>.
@@ -50578,7 +50578,7 @@
                         <placeName>Västra Nöbbelöv</placeName>. </P> </div>
                            
                            
-                     <div type="bebyggelsenamn" xml:id="Östra Ryd">
+                     <div type="bebyggelsenamn" xml:id="Östra_Ryd">
                         <head><placeName>Östra Ryd</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="skeppslag">Danderyds skg</district>, 
                         <region type="landskap">Uppland</region></location>.
@@ -50587,7 +50587,7 @@
                         ett ursprungligt bygdenamn. Förleden är tilllagd för att skilja namnet från <placeName>Västra Ryd</placeName> 
                         i Bro härad. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Ryd">
+                     <div type="bebyggelsenamn" xml:id="Östra_Ryd2">
                         <head><placeName>Östra Ryd</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>,
                         <location><district type="härad">Skärkinds hd</district>, 
                         <region type="landskap">Östergötland</region></location>.
@@ -50599,7 +50599,7 @@
                         Östra Ryd. Det tillagda Östra särskiljer socknen från <placeName>Västra Ryd</placeName> i Ydre härad. 
                         Tätorten har vuxit fram i anslutning till sockenkyrkan. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Sallerup">
+                     <div type="bebyggelsenamn" xml:id="Östra_Sallerup">
                         <head><placeName>Östra Sallerup</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Frosta hd</district>, 
                         <region type="landskap">Skåne</region></location>.
@@ -50609,7 +50609,7 @@
                         <placeName>Södra Sallerup</placeName> och <placeName>Västra Sallerup</placeName>. Östra Silvberget 
                         bebyggelse, Silvbergs sn, Dalarna <placeName>Silvberg</placeName>. </P> </div>
 
-                      <div type="bebyggelsenamn" xml:id="Östra Skrukeby">
+                      <div type="bebyggelsenamn" xml:id="Östra_Skrukeby">
                         <head><placeName>Östra Skrukeby</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Åkerbo hd</district>, 
                         <region type="landskap">Östergötland</region></location>.
@@ -50618,13 +50618,13 @@
                         osäker. Sedan åtminstone 1700-talets mitt har socknen kallats Östra Skrukeby. Det tillagda Östra 
                         särskiljer socknen från den förutvarande socknen Västra Skrukeby (nu i Högby socken) i samma landskap. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Skrävlinge">
+                     <div type="bebyggelsenamn" xml:id="Östra_Skrävlinge">
                         <head><placeName>Östra Skrävlinge</placeName></head> <P><locale>stadsdel</locale>, 
                         <location><district type="town">Malmö stad</district>, 
                         <region type="landskap">Skåne</region></location>.
                          <placeName>Västra Skrävlinge</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Stenby">
+                     <div type="bebyggelsenamn" xml:id="Östra_Stenby">
                         <head><placeName>Östra Stenby</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Östkinds hd</district>, 
                         <region type="landskap">Östergötland</region></location>.
@@ -50635,7 +50635,7 @@
                         det ännu använda Stenby (socken). Det tillagda Östra särskiljer socknen från
                         <placeName>Västra Stenby</placeName> socken; redan i början av 1500-talet möter formen Steen östra. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Strö">
+                     <div type="bebyggelsenamn" xml:id="Östra_Strö">
                         <head><placeName>Östra Strö</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Frosta hd</district>, 
                         <region type="landskap">Skåne</region></location>.
@@ -50645,13 +50645,13 @@
                         Östra tillades 1886 i syfte att skilja socknen från <placeName>Norra Strö</placeName> och 
                         <placeName>Västra Strö</placeName>. </P> </div>
 
-                      <div type="bebyggelsenamn" xml:id="Östra Sälen">
+                      <div type="bebyggelsenamn" xml:id="Östra_Sälen">
                         <head><placeName>Östra Sälen</placeName></head> <P><locale>by</locale>, 
                         <location><district type="socken">Transtrands sn</district>, 
                         <region type="landskap">Dalarna</region></location>.
                          <placeName>Sälen</placeName>. </P> </div>
 
-                      <div type="bebyggelsenamn" xml:id="Östra Sönnarslöv">
+                      <div type="bebyggelsenamn" xml:id="Östra_Sönnarslöv">
                         <head><placeName>Östra Sönnarslöv</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>,
                         <location><district type="härad">Gärds hd</district>, 
                         <region type="landskap">Skåne</region></location>.
@@ -50660,7 +50660,7 @@
                         <placeName>löv</placeName>. Östra tillades 1886 i syfte att skilja socknen från 
                         <placeName>Västra Sönnarslöv</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Tollstad">
+                     <div type="bebyggelsenamn" xml:id="Östra_Tollstad">
                         <head><placeName>Östra Tollstad</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Vifolka hd</district>, 
                         <region type="landskap">Östergötland</region></location>.
@@ -50669,7 +50669,7 @@
                         Åtminstone sedan 1700-talets mitt kallas socknen Östra Tollstad. Det tillagda Östra särskiljer 
                         socknen från <placeName>Västra Tollstad</placeName>. </P> </div>
                         
-                     <div type="bebyggelsenamn" xml:id="Östra Tommarp">
+                     <div type="bebyggelsenamn" xml:id="Östra_Tommarp">
                         <head><placeName>Östra Tommarp</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>,
                         <location><district type="härad">Järrestads hd</district>, 
                         <region type="landskap">Skåne</region></location>.
@@ -50678,7 +50678,7 @@
                         <placeName>torp</placeName> ’nybygge’. Östra tillades 1886 i syfte att skilja socknen från
                         <placeName>Västra Tommarp</placeName>. Jfr <placeName>Tomelilla</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Torp">
+                     <div type="bebyggelsenamn" xml:id="Östra_Torp">
                         <head><placeName>Östra Torp</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Vemmenhögs hd</district>, 
                         <region type="landskap">Skåne</region></location>.
@@ -50686,7 +50686,7 @@
                         Det innehåller <placeName>torp</placeName> ’nybygge’. Kyrkbyn och grannbyn Västra Torp i Lilla 
                         Isie socken utgjorde äldst troligen en gemensam by. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Torsås">
+                     <div type="bebyggelsenamn" xml:id="Östra_Torsås">
                         <head><placeName>Östra Torsås</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Konga hd</district>, 
                         <region type="landskap">Småland</region></location>.
@@ -50695,7 +50695,7 @@
                         reducerad form av sjönamnet Torsjön. Efterleden är ås. Östra lades till 1854 för att skilja 
                         socknen från <placeName>Västra Torsås</placeName> i Allbo härad. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Tunhem">
+                     <div type="bebyggelsenamn" xml:id="Östra_Tunhem">
                         <head><placeName>Östra Tunhem</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Gudhems hd</district>, 
                         <region type="landskap">Västergötland</region></location>.
@@ -50723,7 +50723,7 @@
                         <ImageData src="bilder/SOL2_img_1568.jpg"/>
                      </Figure>
 
-                      <div type="bebyggelsenamn" xml:id="Östra Vemmenhög">
+                      <div type="bebyggelsenamn" xml:id="Östra_Vemmenhög">
                         <head><placeName>Östra Vemmenhög</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Vemmenhögs hd</district>, 
                         <region type="landskap">Skåne</region></location>.
@@ -50732,7 +50732,7 @@
                         kyrkbyn i grannsocknen <placeName>Västra Vemmenhög</placeName> utgjorde troligen ursprungligen 
                         en enda by. </P> </div>
 
-                      <div type="bebyggelsenamn" xml:id="Östra Vemmerlöv">
+                      <div type="bebyggelsenamn" xml:id="Östra_Vemmerlöv">
                         <head><placeName>Östra Vemmerlöv</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>,
                         <location><district type="härad">Järrestads hd</district>, 
                         <region type="landskap">Skåne</region></location>.
@@ -50740,7 +50740,7 @@
                         innehåller i förleden troligen ett mansnamn fda. *Withmund. Efterleden är <placeName>löv</placeName>. 
                         Östra tillades 1886 i syfte att skilja socknen från <placeName>Västra Vemmerlöv</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Vingåker">
+                     <div type="bebyggelsenamn" xml:id="Östra_Vingåker">
                         <head><placeName>Östra Vingåker</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Oppunda hd</district>, 
                         <region type="landskap">Södermanland</region></location>.
@@ -50748,7 +50748,7 @@
                         Västra Vingåker och Östra Vingåker. Namnet Vingåker har sin sakliga bakgrund i området vid den 
                         medeltida sockenkyrkan i <placeName>Västra Vingåker</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Vram">
+                     <div type="bebyggelsenamn" xml:id="Östra_Vram">
                         <head><placeName>Östra Vram</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Gärds hd</district>, 
                         <region type="landskap">Skåne</region></location>.
@@ -50757,7 +50757,7 @@
                         Vrams kyrkby och kyrkbyn i grannsocknen <placeName>Västra Vram</placeName> är sannolikt delar av
                         samma ursprungsbebyggelse. Jfr <placeName>Norra Vram</placeName> och <placeName>Södra Vram</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Östra Ämtervik">
+                     <div type="bebyggelsenamn" xml:id="Östra_Ämtervik">
                         <head><placeName>Östra Ämtervik</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Fryksdals hd</district>, 
                         <region type="landskap">Värmland</region></location>.
