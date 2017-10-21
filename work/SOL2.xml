@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Created from PDF via Acrobat SaveAsXML -->
 <!-- Mapping Table version: 28-February-2003 -->
 <TaggedPDF-doc>
    <?xpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'?>
    <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-   <x:xmpmeta xmlns:x="adobe:ns:meta/"
-      x:xmptk="Adobe XMP Core 5.4-c005 78.147326, 2012/08/23-13:03:03        ">
+   <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.147326, 2012/08/23-13:03:03        ">
       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-         <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/"
-            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
-            xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#"
-            xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#"
-            xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/">
+         <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
             <xmp:CreateDate>2016-08-15T13:36:03+02:00</xmp:CreateDate>
             <xmp:MetadataDate>2016-08-18T11:53:29+02:00</xmp:MetadataDate>
             <xmp:ModifyDate>2016-08-18T11:53:29+02:00</xmp:ModifyDate>
@@ -32164,7 +32159,7 @@
                    och <placeName>Östra Sallerup</placeName>. </P> </div>
 
                    <div type="bebyggelsenamn" xml:id="Sallmunds">
-                   <head><placeName>Sallmunds</placeName></head> <P><locale></locale>, 
+                   <head><placeName>Sallmunds</placeName></head> <P><locale/>, 
                    <location><region type="landskap">Gotland</region></location>.  
                     vanligt gårdnamn, <placeName>Levide</placeName>. </P> </div>
 
@@ -35524,7 +35519,7 @@
                    <location><district type="socken">Slättåkra sn</district>, <district type="härad">Halmstads hd</district>, 
                    <region type="landskap">Halland</region></location>. 
                     Speningsholltt 1558. – I förleden ingår möjligen ett mansbinamn fda. *Spænning; jfr det norrländska
-                   dialektordet spänning ’(sparv-, duv-)hök’. Efterleden är <placeName></placeName>hult. </P> </div>
+                   dialektordet spänning ’(sparv-, duv-)hök’. Efterleden är <placeName/>hult. </P> </div>
 
                    <div type="bebyggelsenamn" xml:id="Spjutsbygd">
                    <head><placeName>Spjutsbygd</placeName></head> <P><locale>tätort</locale>, 
@@ -36905,7 +36900,7 @@
                    <head><placeName>Stor-Blåsjön</placeName></head> <P><locale>fjällsjö</locale>, 
                    <location><district type="socken">Frostvikens sn</district>, 
                    <region type="landskap">Jämtland</region></location>.
-                    >– Namnet avser den större delen av den djupa sjö (Blå Siön 1645) vars södra del kallas Lill-Blåsjön. 
+                    &gt;– Namnet avser den större delen av den djupa sjö (Blå Siön 1645) vars södra del kallas Lill-Blåsjön. 
                    Det innehåller adjektivet blå i den äldre betydelsen ’svart, blåsvart, kolmörk’ med syftning på sjöns 
                    färg. Sjöns nuvarande sydsamiska namn <placeName>Plaavere</placeName> är en sammandragen form av 
                    Plaavejaevrie, som är en översättning av det svenska namnet. Ett äldre samiskt namn på sjön är
@@ -39503,7 +39498,7 @@
                    <head><placeName>Södra Vedbo härad</placeName></head> <P><locale>hd</locale>, 
                    <location><region type="landskap">Småland</region></location>. 
                    (j) Sudhra Widhbo 1399. – Häradet omfattar södra delen av det tidigare häradet Vedbo, som vid mitten av 
-                   1400-talet delades i <placeName>Norra Vedbo härad></placeName> och Södra Vedbo härad. </P> </div>
+                   1400-talet delades i <placeName>Norra Vedbo härad&gt;</placeName> och Södra Vedbo härad. </P> </div>
 
                    <div type="bebyggelsenamn" xml:id="Södra_Vi">
                    <head><placeName>Södra Vi</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>, 
@@ -39543,7 +39538,7 @@
                    <region type="landskap">Skåne</region></location>. 
                     Aby 1133 avskr. (avser kyrkbyn), (in) Aby syndræ [’södra’] 1410 (avser kyrkbyn). – Sockennamnet är givet 
                    efter kyrkbyn, som ursprungligen var en del av grannbyn Norra Åby i samma socken, där den å rinner som 
-                   förleden åsyftar. Efterleden är <placeNameby></placeNameby> ’gård; by’. </P> </div>
+                   förleden åsyftar. Efterleden är <placeNameby/> ’gård; by’. </P> </div>
 
                     <div type="bebyggelsenamn" xml:id="Södra_Åkarp">
                     <head><placeName>Södra Åkarp</placeName></head> <P><locale>sn</locale>, 
@@ -39877,7 +39872,7 @@
                    <region type="landskap">Bohuslän</region></location>. 
                     – Tätorten, som nu också omfattar bebyggelsen kring Tanums kyrka, har vuxit upp kring byn Hede med
                    gästgiveri, tingsställe och en år 1861 öppnad poststation. Bynamnet Hede (j Hædi 1391) innehåller dativform 
-                   av ordet hed. Poststationsnamnet ändrades till <placeName></placeName>Tanum 1870 och till Tanumshede 1903. </P> </div>
+                   av ordet hed. Poststationsnamnet ändrades till <placeName/>Tanum 1870 och till Tanumshede 1903. </P> </div>
                       
                       
                 <Figure>
@@ -39949,7 +39944,7 @@
                     Thafflesiö 1539. – Tätorten är framvuxen ur byn, som har fått namn efter läget vid sjön Tavelsjön. 
                    Förleden i sjönamnet innehåller genitiv *Taflo av Tavelåns gamla namn fsv. *Tafla, i böjd form också 
                    bevarat i bynamnet Tavle (i Taflæ 1494) med syftning på (den ena av) byarna 
-                   <placeNameInnertavle></placeNameInnertavle> (nu tätort) och Yttertavle vid Tavelåns utlopp i Bottniska 
+                   <placeNameInnertavle/> (nu tätort) och Yttertavle vid Tavelåns utlopp i Bottniska 
                    viken. Tavelån är avrinningså för Tavelsjön, varför sjönamnet kan tolkas som ’Tavelåns (ån *Tavlas) källsjö’. 
                    Ånamnet *Tavla är besläktat med norska dialekters tavla ’gå fram och tillbaka sökande sig fram
                    med möda; gå trippande och vaggande, gå osäkert och snubblande’ och syftar på åns slingrande lopp, 
@@ -40009,7 +40004,7 @@
                    Kyrksjön, vilken liknats vid en tygel. </P> </div>
 
                    <div type="bebyggelsenamn" xml:id="Tegnaby">
-                   <head><placeName>Tegnaby</placeName></head> <P><locale>f.d. sn</locale>, <locale>by</locale>,    <locale></locale>,  
+                   <head><placeName>Tegnaby</placeName></head> <P><locale>f.d. sn</locale>, <locale>by</locale>,    <locale/>,  
                    <location><district type="socken">Hemmesjö med Tegnaby snr</district>, <district type="härad">Konga hd</district>, 
                    <region type="landskap">Småland</region></location>. 
                    (in) parochia Thegnæby 1314. – Kyrkbyn har givit socknen dess namn, som innehåller genitiv pluralis av ett 
@@ -42927,7 +42922,7 @@
                    ett ånamn *Tyndr(a) f. med syftning på den förbi kyrkbyn rinnande Alslövsån. Detta är i så fall bildat
                    till *Tundr f. ´den tindrande´, ett förmodat gammalt namn på Genevadån, som Alslövsån utmynnar i.
                    *Tundr ligger i sin tur till grund för namnet på byn Tönnersa vid Genevadåns mynning i Laholmsbukten 
-                   (<placeName>Tönnersjö härad></placeName>). Efterleden i Tönnersjö innehåller sjö med syftning på 
+                   (<placeName>Tönnersjö härad&gt;</placeName>). Efterleden i Tönnersjö innehåller sjö med syftning på 
                    Strömmasjön (och kanske också på dess intilliggande grannsjö Backasjön) strax norr om sockenkyrkan. 
                    Sjöarna avvattnas av Alslövsån. Tönnersjö skulle därmed betyda ´ån *Tyndrs/*Tyndras källsjö´. </P> </div>
 
@@ -47915,7 +47910,7 @@
                       <ImageData src="bilder/SOL2_img_1502.jpg"/>
                    </Figure>
 
-                   <P></P>
+                   <P/>
 
                     <div type="bebyggelsenamn" xml:id="Ångermanland">
                        <head><placeName>Ångermanland</placeName></head> <P><locale>landskap</locale>, 
