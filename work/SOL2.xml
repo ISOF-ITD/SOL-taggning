@@ -36724,6 +36724,7 @@
                      <ImageData src="bilder/SOL2_img_1193.jpg"/>
                   </Figure>
 
+                  <Sect>
                      <div type="bebyggelsenamn" xml:id="Stora_Malm">
                      <head><placeName>Stora Malm</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Oppunda hd</district>, 
