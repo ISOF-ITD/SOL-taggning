@@ -38224,7 +38224,7 @@
                      <ImageData src="bilder/SOL2_img_1229.jpg"/>
                   </Figure>
 
-                     <div type="naturnamn" xml:id="Svartån">
+                     <div type="naturnamn" xml:id="Svartån3">
                      <head><placeName>Svartån</placeName></head> <P><locale>vattendrag</locale>, 
                      <location><district type="härad">Ljunits hd</district>, 
                      <region type="landskap">Skåne</region></location>. 
@@ -38351,21 +38351,21 @@
                       (in) Swenstorp 1387. – Byns namn innehåller mansnamnet Sven och <placeName>torp</placeName> ’nybygge’. 
                      Tätorten, belägen ett par km öster om byn, har vuxit fram kring en järnvägsstation, som öppnades 1866. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Svenstorp">
+                     <div type="bebyggelsenamn" xml:id="Svenstorp2">
                      <head><placeName>Svenstorp</placeName></head> <P><locale>gods</locale>, 
                      <location><district type="socken">Odarslövs sn</district>, <district type="härad">Torna hd</district>, 
                      <region type="landskap">Skåne</region></location>. 
                       (de) Swenstorp 1367 avskr. – Godsets namn innehåller mans-namnet Sven och <placeName>torp</placeName> 
                       ’nybygge’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Svenstorp">
+                     <div type="bebyggelsenamn" xml:id="Svenstorp3">
                      <head><placeName>Svenstorp</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Vemmenhögs hd</district>, 
                      <region type="landskap">Skåne</region></location>. 
                      (af) Swenstorp 1364 avskr. – Sockennamnet, som är lånat från kyrkbyn, innehåller mansnamnet Sven 
                      och <placeName>torp</placeName> ’nybygge’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Sventorp">
+                     <div type="bebyggelsenamn" xml:id="Sventorp4">
                      <head><placeName>Sventorp</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Kåkinds hd</district>, 
                      <region type="landskap">Västergötland</region></location>. 
@@ -38577,7 +38577,7 @@
 
                      <div type="naturnamn" xml:id="Syrsan">
                      <head><placeName>Syrsan</placeName></head> <P><locale>fjärd</locale>, 
-                     <location><district type="socken"Lofta och Västra Eds snr</district>, <district type="härad">Norra Tjusts hd</district>, 
+                     <location><district type="socken">Lofta och Västra Eds snr</district>, <district type="härad">Norra Tjusts hd</district>, 
                      <region type="landskap">Småland</region></location>. 
                       Sirisann 1559. – Namnet har inte givits någon tillfredsställande förklaring. </P> </div>
 
