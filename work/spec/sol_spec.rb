@@ -9,7 +9,7 @@ describe Sol do
       out = sol.process('Husby sn, tätort, Dalarna')
       expect(out).to eq '<head><placeName>Husby</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>, <region type="landskap">Dalarna</region>'
       out = sol.process('Hurva sn, tätort, Frosta hd, Skåne')
-      expect(out).to eq '<head><placeName>Hurva</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>, <region'
+      expect(out).to eq '<head><placeName>Hurva</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>, <region type="härad">Frosta hd</region>, <region type="landskap">Skåne</landskap>'
     end
   end
 end
