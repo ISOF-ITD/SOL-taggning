@@ -38943,7 +38943,7 @@
                   (i) Sætunum 1353. – Namnet är sammansatt av fsv. *sæ(r) ’sjö’, samt <placeName>tuna</placeName>. Förleden 
                   syftar på läget vid Långsjöns norra ände för den by som gett godset dess namn. </P> </div>
 
-                  <div type="bebyggelsenamn" xml:id="Sätuna">
+                  <div type="bebyggelsenamn" xml:id="Sätuna2">
                   <head><placeName>Sätuna</placeName></head> <P><locale>sn</locale>, 
                   <location><district type="härad">Gudhems hd</district>, 
                   <region type="landskap">Västergötland</region></location>. 
@@ -38989,7 +38989,7 @@
                      utan ordet socken. Tätorten är framvuxen vid den 1907 öppnade järnvägsstationen, i anslutning till
                      sockenkyrkan. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Sävedals härad">
+                     <div type="bebyggelsenamn" xml:id="Sävedals_härad">
                      <head><placeName>Sävedals härad</placeName></head> <P><locale>hd</locale>, 
                      <location><region type="landskap">Västergötland</region></location>. 
                       Sæwudæl 1200-talets slut. – Sävedal, som är ett gammalt bygdenamn, innehåller som förled det gamla namnet 
@@ -39116,7 +39116,7 @@
                   området söder om <placeName>Uppland</placeName> (jfr <placeName>Västmanland</placeName>);¨se vidare 
                   <placeName>Sverige</placeName>. Sörmland är en sammandragen form av Södermanland. – Bild 70. </P> </div>
 
-                  <div type="bebyggelsenamn" xml:id="Södermanlands län">
+                  <div type="bebyggelsenamn" xml:id="Södermanlands_län">
                   <head><placeName>Södermanlands län</placeName></head> <P><locale>län</locale>, 
                   – Namnet är bildat till landskapsnamnet <placeName>Södermanland</placeName>. Äldst omfattade länet hela
                   Södermanland, dock under namnet Nyköpings län. År 1714 fördes länets östligaste del till 
@@ -39214,7 +39214,7 @@
                   <location><region type="landskap">Skåne</region></location>. 
                    (paa) Sønderaas 1501 avskr. – Åsens namn har givits av invånarna i Norra och Södra Åsbo härad norr om åsen. </P> </div>
 
-                  <div type="bebyggelsenamn" xml:id="Södra Björke">
+                  <div type="bebyggelsenamn" xml:id="Södra_Björke">
                   <head><placeName>Södra Björke</placeName></head> <P><locale>sn</locale>, 
                   <location><district type="härad">Gäsene hd</district>, 
                   <region type="landskap">Västergötland</region></location>. 
@@ -39222,18 +39222,18 @@
                   björkskog’. Sedan 1886 är socknens officiella namn Södra Björke. Namnleden Södra skiljer socknen från 
                   <placeName>Norra Björke</placeName> socken i samma landskap. </P> </div>
 
-                  <div type="naturnamn" xml:id="Södra Borgafjällen">
+                  <div type="naturnamn" xml:id="Södra_Borgafjällen">
                   <head><placeName>Södra Borgafjällen</placeName></head> <P><locale>fjällmassiv</locale>, 
                   <location><district type="socken">Frostvikens sn</district>, 
                   <region type="landskap">Jämtland</region></location>. 
                    – Fjällområdet, som även kallats Orrnäsfjället efter en av topparna, utgör den södra delen i förhållande
                   till <placeName>Norra Borgafjällen</placeName>. </P> </div>
 
-                 <div type="naturnamn" xml:id="Södra Bullaresjön">
+                 <div type="naturnamn" xml:id="Södra_Bullaresjön">
                  <head><placeName>Södra Bullaresjön</placeName></head> <P><locale>sjö</locale>, 
                   <placeName>Bullarens härad</placeName>. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Södra Finnskoga">
+                        <div type="bebyggelsenamn" xml:id="Södra_Finnskoga">
                         <head><placeName>Södra Finnskoga</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Älvdals hd</district>, 
                         <region type="landskap">Värmland</region></location>. 
@@ -39242,19 +39242,19 @@
                         finnar med början på 1600-talet. Formen -skoga är den dialektala motsvarigheten till riksspråkets skogarna.
                         Jfr <placeName>Norra Finnskoga</placeName>. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Södra Fågelås">
+                        <div type="bebyggelsenamn" xml:id="Södra_Fågelås">
                         <head><placeName>Södra Fågelås</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Kåkinds hd</district>, 
                         <region type="landskap">Västergötland</region></location>. 
                          <placeName>Norra Fågelås</placeName>. </P> </div>
 
-                        <div type="naturnamn" xml:id="Södra Gardfjället">
+                        <div type="naturnamn" xml:id="Södra_Gardfjället">
                         <head><placeName>Södra Gardfjället</placeName></head> <P><locale>fjällmassiv</locale>, 
                         <location><district type="socken">Vilhelmina sn</district>, 
                         <region type="landskap">Lappland</region></location>. 
                          <placeName>Norra Gardfjället</placeName>.</P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Södra Hestra">
+                        <div type="bebyggelsenamn" xml:id="Södra_Hestra">
                         <head><placeName>Södra Hestra</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>, 
                         <location><district type="härad">Västbo hd</district>, 
                         <region type="landskap">Småland</region></location>. 
@@ -39262,7 +39262,7 @@
                         bildat till fsv. <placeName>hester</placeName> ’skottskog, småskog’. Tillägget Södra gavs 1886 för att 
                         skilja socknen från <placeName>Norra Hestra</placeName> i Mo härad. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Södra Härene">
+                        <div type="bebyggelsenamn" xml:id="Södra_Härene">
                         <head><placeName>Södra Härene</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Kullings hd</district>, 
                         <region type="landskap">Västergötland</region></location>. 
@@ -39272,7 +39272,7 @@
                         Härene. Den tillagda namnleden Södra skiljer socknen från <placeName>Norra Härene</placeName> i
                         samma landskap. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Södra Kedum">
+                        <div type="bebyggelsenamn" xml:id="Södra_Kedum">
                         <head><placeName>Södra Kedum</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Barne hd</district>, 
                         <region type="landskap">Västergötland</region></location>. 
@@ -39303,11 +39303,11 @@
 
                   <P> </P>
 
-                     <div type="naturnamn" xml:id="Södra Kvarken">
+                     <div type="naturnamn" xml:id="Södra_Kvarken">
                      <head><placeName>Södra Kvarken</placeName></head> <P><locale>del av Ålands hav och Bottenhavet mellan Uppland och Åland</locale>, 
                       <placeName>Norra Kvarken</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Kyrketorp">
+                     <div type="bebyggelsenamn" xml:id="Södra_Kyrketorp">
                      <head><placeName>Södra Kyrketorp</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Gudhems hd</district>, 
                      <region type="landskap">Västergötland</region></location>. 
@@ -39316,7 +39316,7 @@
                      socknens officiella namn Södra Kyrketorp. Namnleden Södra särskiljer socknen från 
                      <placeName>Norra Kyrketorp</placeName> i samma landskap. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Ljunga">
+                     <div type="bebyggelsenamn" xml:id="Södra_Ljunga">
                      <head><placeName>Södra Ljunga</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Sunnerbo hd</district>, 
                      <region type="landskap">Småland</region></location>. 
@@ -39325,13 +39325,13 @@
                      liung ’ljungmark’. Tillägget Södra tillkom 1886 för att socknen skulle åtskiljas från 
                      <placeName>Norra Ljunga</placeName> i Västra härad. </P> </div>
 
-                     <div type="naturnamn" xml:id="Södra Loken">
+                     <div type="naturnamn" xml:id="Södra_Loken">
                      <head><placeName>Södra Loken</placeName></head> <P><locale>sjö</locale>, 
                      <location><district type="socken">Grythyttans sn</district>, <district type="härad">Grythytte och Hällefors hd</district>, 
                      <region type="landskap">Västmanland</region></location>. 
                       <placeName>Loka brunn</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Lundby">
+                     <div type="bebyggelsenamn" xml:id="Södra_Lundby">
                      <head><placeName>Södra Lundby</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Laske hd</district>, 
                      <region type="landskap">Västergötland</region></location>. 
@@ -39339,7 +39339,7 @@
                      <placeName>by</placeName> ’gård; by’. Sedan 1886 är socknens officiella namn Södra Lundby. Tillägget 
                      Södra särskiljer socknen från <placeName>Norra Lundby</placeName> socken i samma landskap. </P></div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Mellby">
+                     <div type="bebyggelsenamn" xml:id="Södra_Mellby">
                      <head><placeName>Södra Mellby</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Albo hd</district>, 
                      <region type="landskap">Skåne</region></location>. 
@@ -39347,13 +39347,13 @@
                      adjektivet fda. *m(i)æthal ’i mitten befintlig’ med oklar syftning och <placeName>by</placeName> ’gård; 
                      by’. Sedan 1886 heter socknen officiellt Södra Mellby till åtskillnad från <placeName>Norra Mellby</placeName>. </P> </div>
 
-                     <div type="naturnamn" xml:id="Södra Motjärnen">
+                     <div type="naturnamn" xml:id="Södra_Motjärnen">
                      <head><placeName>Södra Motjärnen</placeName></head> <P><locale>tätort</locale>, 
                      <location><district type="socken">Nordmarks sn</district>, <district type="härad">Färnebo hd</district>, 
                      <region type="landskap">Värmland</region></location>. 
                       <placeName>Motjärnshyttan</placeName>. </P></div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Möckleby">
+                     <div type="bebyggelsenamn" xml:id="Södra_Möckleby">
                      <head><placeName>Södra Möckleby</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Gräsgårds hd</district>, 
                      <region type="landskap">Öland</region></location>. 
@@ -39362,14 +39362,14 @@
                      ’den stora byn’. Bestämningen Södra har fogats till namnet för att skilja det från
                      <placeName>Norra Möckleby</placeName> i Möckleby härad. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Möre härad">
+                     <div type="bebyggelsenamn" xml:id="Södra_Möre_härad">
                      <head><placeName>Södra Möre härad</placeName></head> <P><locale>hd</locale>, 
                      <location><region type="landskap">Småland</region></location>. 
                      (j) Sudhrehærædhe jnnan Møre 1377 avskr. – Häradet är det södra av de båda härad som det småländska 
                      <placeName>Möre</placeName> alltsedan de äldsta källorna varit indelat i. Se vidare 
                      <placeName>Norra Möre härad</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Ny">
+                     <div type="bebyggelsenamn" xml:id="Södra_Ny">
                      <head><placeName>Stad</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Näs hd</district>, 
                      <region type="landskap">Värmland</region></location>. 
@@ -39377,7 +39377,7 @@
                      Södra tillades 1886 till åtskillnad från sockennamnen <placeName>Ny</placeName> och 
                      <placeName>Norra Ny</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Näs">
+                     <div type="bebyggelsenamn" xml:id="Södra_Näs">
                      <head><placeName>Södra Näs</placeName></head> <P><locale>tätort</locale>, 
                      <location><district type="socken">Träslövs sn</district>, <district type="härad">Himle hd</district>, 
                      <region type="landskap">Halland</region></location>. 
@@ -39385,7 +39385,7 @@
                      tillagd med tanke på byn Trönningenäs, också kallad (Norra) Näs, i grannsocknen Lindberg 
                      (<placeName>Trönninge</placeName>). </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Råda">
+                     <div type="bebyggelsenamn" xml:id="Södra_Råda">
                      <head><placeName>Södra Råda</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Visnums hd</district>, 
                      <region type="landskap">Värmland</region></location>. 
@@ -39393,7 +39393,7 @@
                      Sedan 1886 är socknens officiella namn Södra Råda. Förleden Södra särskiljer socknen från
                      <placeName>Norra Råda</placeName> socken i samma landskap. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Rörum">
+                     <div type="bebyggelsenamn" xml:id="Södra_Rörum">
                      <head><placeName>Södra Rörum</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Frosta hd</district>, 
                      <region type="landskap">Skåne</region></location>. 
@@ -39402,7 +39402,7 @@
                      Efterleden är <placeName>rum</placeName> ’öppen plats’. Tillägget Södra skiljer socknen från 
                      <placeName>Norra Rörum</placeName> i samma härad. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Sallerup">
+                     <div type="bebyggelsenamn" xml:id="Södra_Sallerup">
                      <head><placeName>Södra Sallerup</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Oxie hd</district>, 
                      <region type="landskap">Skåne</region></location>. 
@@ -39412,7 +39412,7 @@
                      Efterleden är <placeName>torp</placeName> ’nybygge’. Södra tillades 1886 i syfte att skilja socknen
                      från <placeName>Västra Sallerup</placeName> och <placeName>Östra Sallerup</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Sandby">
+                     <div type="bebyggelsenamn" xml:id="Södra_Sandby">
                      <head><placeName>Södra Sandby</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>, 
                      <location><district type="härad">Torna hd</district>, 
                      <region type="landskap">Skåne</region></location>. 
@@ -39420,7 +39420,7 @@
                      sammansatt av sand och <placeName>by</placeName> ’gård; by’. Bebyggelsen ligger på sandjord på gränsen 
                      till lerslätten i väster. Södra tillades 1886 till åtskillnad från <placeName>Norra Sandby</placeName>. </P> </div>
                   
-                     <div type="bebyggelsenamn" xml:id="Södra Sandsjö">
+                     <div type="bebyggelsenamn" xml:id="Södra_Sandsjö">
                      <head><placeName>Södra Sandsjö</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Konga hd</district>, 
                      <region type="landskap">Småland</region></location>. 
@@ -39429,21 +39429,21 @@
                      Socknen kallas från 1886 Södra Sandsjö för att den ska åtskiljas från <placeName>Norra Sandsjö</placeName> 
                      i Västra härad. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Solberga">
+                     <div type="bebyggelsenamn" xml:id="Södra_Solberga">
                      <head><placeName>Södra Solberga</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Västra hd</district>, 
                      <region type="landskap">Småland</region></location>. 
                       ecclesie Solbærgha 1335?, (i) Solbærgha sokn 1398. – Socknen har fått sitt namn från en gård. 
                      För tolkningen av namnet se <placeName>Norra Solberga</placeName>. </P> </div>
 
-                     <div type="naturnamn" xml:id="Södra Storfjället">
+                     <div type="naturnamn" xml:id="Södra_Storfjället">
                      <head><placeName>Södra Storfjället</placeName></head> <P><locale>lågfjällsområde</locale>, 
                      <location><district type="socken">Tärna sn</district>, 
                      <region type="landskap">Lappland</region></location>. 
                       – Fjällets sydsamiska namn ÅarjelStoerevaerie är troligen en översättning av det svenska namnet. Jfr
                      <placeName>Norra Storfjället</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Sunderbyn">
+                     <div type="bebyggelsenamn" xml:id="Södra_Sunderbyn">
                      <head><placeName>Södra Sunderbyn</placeName></head> <P><locale>tätort</locale>, 
                      <location><district type="socken">Nederluleå sn</district>, 
                      <region type="landskap">Norrbotten</region></location>. 
@@ -39455,7 +39455,7 @@
                      person som härstammar från eller bor på en plats som heter Sund’. I efterleden ingår
                      <placeName>by</placeName> ’gård; by’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Säm">
+                     <div type="bebyggelsenamn" xml:id="Södra_Säm">
                      <head><placeName>Södra Säm</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Kinds hd</district>, 
                      <region type="landskap">Västergötland</region></location>. 
@@ -39483,12 +39483,12 @@
                      <ImageData src="bilder/SOL2_img_1261.jpg"/>
                   </Figure>
 
-                    <div type="bebyggelsenamn" xml:id="Södra Tjusts härad">
+                    <div type="bebyggelsenamn" xml:id="Södra_Tjusts_härad">
                     <head><placeName>Södra Tjusts härad</placeName></head> <P><locale>hd</locale>, 
                     <location><region type="landskap">Småland</region></location>. 
                      <placeName>Norra Tjusts härad</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Unnaryd">
+                     <div type="bebyggelsenamn" xml:id="Södra_Unnaryd">
                      <head><placeName>Södra Unnaryd</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Västbo hd</district>, 
                      <region type="landskap">Småland</region></location>. 
@@ -39497,13 +39497,13 @@
                      Unnaryd, numera en tätort. I förleden ingår genitiv *Unda av den intilliggande sjön Unnens namn, fsv. *Unde 
                      (innehållande fsv. *unde ’sjö’). Efterleden är <placeName>ryd</placeName> ’röjning’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Vedbo härad">
+                     <div type="bebyggelsenamn" xml:id="Södra_Vedbo_härad">
                      <head><placeName>Södra Vedbo härad</placeName></head> <P><locale>hd</locale>, 
                      <location><region type="landskap">Småland</region></location>. 
                      (j) Sudhra Widhbo 1399. – Häradet omfattar södra delen av det tidigare häradet Vedbo, som vid mitten av 
-                     1400-talet delades i <placeNameNorra Vedbo härad></placeName> och Södra Vedbo härad. </P> </div>
+                     1400-talet delades i <placeName>Norra Vedbo härad></placeName> och Södra Vedbo härad. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Vi">
+                     <div type="bebyggelsenamn" xml:id="Södra_Vi">
                      <head><placeName>Södra Vi</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>, 
                      <location><district type="härad">Sevede hd</district>, 
                      <region type="landskap">Småland</region></location>. 
@@ -39511,7 +39511,7 @@
                      ’helig plats, kultplats’. Södra är tillagt i sen tid för att skilja namnet från Norra Vi i Ydre hd,
                      Östergötland. För tätortens namngivning har säkerligen också järnvägsstationen Södra Vi spelat en roll. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Södra Ving">
+                     <div type="bebyggelsenamn" xml:id="Södra_Ving">
                      <head><placeName>Södra Ving</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Ås hd</district>, 
                      <region type="landskap">Västergötland</region></location>. 
@@ -39520,13 +39520,13 @@
                      socknens officiella namn Södra Ving. Förleden Södra särskiljer socknen från 
                      <placeName>Norra Ving</placeName> i samma landskap. </P> </div>
                      
-                     <div type="bebyggelsenamn" xml:id="Södra Vram">
+                     <div type="bebyggelsenamn" xml:id="Södra_Vram">
                      <head><placeName>Södra Vram</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Luggude hd</district>, 
                      <region type="landskap">Skåne</region></location>. 
                      (in) Sundra [’södra’] Wram 1424 (avser kyrkbyn) <placeName>Norra Vram</placeName>.</P> </div>            
 
-                     <div type="bebyggelsenamn" xml:id="Södra Vånga">
+                     <div type="bebyggelsenamn" xml:id="Södra_Vånga">
                      <head><placeName>Södra Vånga</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Ås hd</district>, 
                      <region type="landskap">Västergötland</region></location>. 
@@ -39543,7 +39543,7 @@
                      efter kyrkbyn, som ursprungligen var en del av grannbyn Norra Åby i samma socken, där den å rinner som 
                      förleden åsyftar. Efterleden är <placeNameby></placeNameby> ’gård; by’. </P> </div>
 
-                      <div type="bebyggelsenamn" xml:id="Södra Åkarp">
+                      <div type="bebyggelsenamn" xml:id="Södra_Åkarp">
                       <head><placeName>Södra Åkarp</placeName></head> <P><locale>sn</locale>, 
                       <location><district type="härad">Oxie hd</district>, 
                       <region type="landskap">Skåne</region></location>. 
@@ -39551,7 +39551,7 @@
                       <placeName>torp</placeName> ’nybygge’. Södra till-lades 1886 i syfte att skilja socknen från 
                       <placeName>Norra Åkarp</placeName>. </P> </div>
                      
-                     <div type="bebyggelsenamn" xml:id="Södra Åsarp">
+                     <div type="bebyggelsenamn" xml:id="Södra_Åsarp">
                      <head><placeName>Stad</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Kinds hd</district>, 
                      <region type="landskap">Västergötland</region></location>. 
@@ -39560,12 +39560,12 @@
                      Sedan 1886 är socknens officiella namn Södra Åsarp. Namnleden Södra särskiljer socknen från 
                      <placeName>Norra Åsarp</placeName> i samma landskap. </P> </div>
                      
-                     <div type="bebyggelsenamn" xml:id="Södra Åsbo härad">
+                     <div type="bebyggelsenamn" xml:id="Södra_Åsbo_härad">
                      <head><placeName>Södra Åsbo härad</placeName></head> <P><locale>hd</locale>, 
                      <location><region type="landskap">Skåne</region></location>. 
                       Asboheret sµndræ ca 1300, (in) Syndreasboheret 1323 avskr. <placeName>Norra Åsbo härad</placeName>. </P> </div>
                      
-                     <div type="bebyggelsenamn" xml:id="Södra Åsum">
+                     <div type="bebyggelsenamn" xml:id="Södra_Åsum">
                      <head><placeName>Södra Åsum</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Färs hd</district>, 
                      <region type="landskap">Skåne</region></location>. 
@@ -39573,7 +39573,7 @@
                      (se inl. 3.3.1) av ås med syftning på en höjdsträckning vid kyrkbyn. Södra tillades 1886 i syfte att 
                      skilja socknen från <placeName>Norra Åsum</placeName> </P> </div>
 
-                        <div type="naturnamn" xml:id="Södra Ulvön">
+                        <div type="naturnamn" xml:id="Södra_Ulvön">
                         <head><placeName>Södra Ulvön</placeName></head> <P><locale>ö</locale>, 
                         <location><district type="socken">Nätra sn</district>, 
                         <region type="landskap">Ångermanland</region></location>. 
