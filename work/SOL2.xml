@@ -34302,8 +34302,7 @@
                      <ImageData src="bilder/SOL2_img_1125.jpg"/>
                   </Figure>
 
-                 
-
+                  <Sect>
                      <div type="bebyggelsenamn" xml:id="Skultorp">
                      <head><placeName>Skultorp</placeName></head> <P><locale>tätort</locale>, 
                      <location><district type="socken">Norra Kyrketorps sn</district>, <district type="härad">Kåkinds hd</district>, 
