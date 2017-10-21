@@ -48237,7 +48237,7 @@
                       <ImageData src="bilder/SOL2_img_1510.jpg"/>
                    </Figure>
 
-                   <div type="bebyggelsenamn" xml:id="Åsele lappmark">
+                   <div type="bebyggelsenamn" xml:id="Åsele_lappmark">
                       <head><placeName>Åsele lappmark</placeName></head> <P><locale>del av Lappland</locale>.
                        – Namnet är ursprungligen en historisk-administrativ benämning på samebygden 
                       som handels- och beskattningsområde. Det är givet efter huvudorten <placeName>Åsele</placeName>. 
@@ -48257,14 +48257,14 @@
                      <region type="landskap">Gästrikland</region></location>.
                      <placeName>Åshammar</placeName>. </P> </div>
 
-                   <div type="naturnamn" xml:id="Åsen">
+                   <div type="naturnamn" xml:id="Åsen2">
                       <head><placeName>Åsen</placeName></head> 
                       <P><locale>höjdsträckning längs gränsen mellan Halland och Skåne</locale>, 
                       <location><district type="härad">Xxx hd</district>, 
                       <region type="landskap">Xland</region></location>.
                       <placeName>Hallandsås</placeName>. </P> </div>
 
-                   <div type="bebyggelsenamn" xml:id="Åsen">
+                   <div type="bebyggelsenamn" xml:id="Åsen3">
                       <head><placeName>Åsen</placeName></head> <P><locale>by</locale>, 
                       <location><district type="socken">Ås sn</district>, <district type="härad">Åse hd</district>,
                       <region type="landskap">Västergötland</region></location>.
@@ -48296,7 +48296,7 @@
                        Förleden anger att hammaren anlagts på mark till byn Åsen (a Aasse 1495), som 
                        har namn efter läget på en rullstensås. </P> </div>
 
-                   <div type="bebyggelsenamn" xml:id="Ås härad">
+                   <div type="bebyggelsenamn" xml:id="Ås_härad">
                       <head><placeName>Ås härad</placeName></head> <P><locale>hd</locale>, 
                       <location><region type="landskap">Västergötland</region></location>. 
                        Ashæraði 1200-talets slut. – Häradet har fått namn efter en samlingsplats på en ås. 
@@ -48346,18 +48346,18 @@
                       Förleden syftar på byns läge invid <placeName>Söderåsen</placeName>.
                       Efterleden är <placeName>torp</placeName> ’nybygge’. </P> </div>
 
-                   <div type="bebyggelsenamn" xml:id="Åstorp">
+                   <div type="bebyggelsenamn" xml:id="Åstorp2">
                       <head><placeName>Åstorp</placeName></head> <P><locale>by</locale>, 
                       <location><district type="socken">Ekrby sn</district>, <district type="härad">Olands hd</district>, 
                       <region type="landskap">Uppland</region></location>. 
                       <placeName>torp</placeName>. </P> </div>
 
-                    <div type="bebyggelsenamn" xml:id="Åsum, Norra, Södra">
+                    <div type="bebyggelsenamn" xml:id="Åsum._Norra._Södra">
                        <head><placeName>Åsum, Norra, Södra</placeName></head> <P><locale>snr</locale>, 
                        <location><region type="landskap">Skåne</region></location>.
                        <placeName>Norra Åsum</placeName> och <placeName>Södra Åsum</placeName>. </P> </div>
 
-                    <div type="bebyggelsenamn" xml:id="Åsunda härad">
+                    <div type="bebyggelsenamn" xml:id="Åsunda_härad">
                        <head><placeName>Åsunda härad</placeName></head> <P><locale>hd</locale>, 
                        <location><region type="landskap">Uppland</region></location>.  
                        Prouincia Aashundæri 1344. – Det ursprungliga namnet är sammansatt av fsv. as ’ås’ 
@@ -48378,7 +48378,7 @@
                       particip på -und, ’den stormande’, till ett verb samhörigt med as, vilket
                       ännu lever i det norska dialektala asa ’brusa upp’ o.d. </P> </div>
 
-                   <div type="naturnamn" xml:id="Åsunden">
+                   <div type="naturnamn" xml:id="Åsunden2">
                       <head><placeName>Åsunden</placeName></head> <P><locale>sjö</locale>, 
                       <location><district type="härad">Kinda hd</district>, 
                       <region type="landskap">Östergötland</region></location>.  
@@ -48452,7 +48452,7 @@
                       <ImageData src="bilder/SOL2_img_1514.jpg"/>
                    </Figure>
 
-                    <P><div type="bebyggelsenamn" xml:id="Älekulla">
+                    <div type="bebyggelsenamn" xml:id="Älekulla">
                       <head><placeName>Älekulla</placeName></head> <P><locale>sn</locale>, 
                       <location><district type="härad">Marks hd</district>, 
                       <region type="landskap">Västrgötland</region></location>. 
@@ -48533,7 +48533,7 @@
                          Mora socken 1586. Älvdalen fungerade dessförinnan som bygdenamn med syftning på
                          Österdalälvens dalgång. </P> </div>
 
-                      <div type="bebyggelsenamn" xml:id="Älvdals härad">
+                      <div type="bebyggelsenamn" xml:id="Älvdals_härad">
                          <head><placeName>Älvdals härad</placeName></head> <P><locale>hd</locale>, 
                          <location><region type="landskap">Värmland</region></location>. 
                          (j) Elwedalen 1415. – Bygden och det därefter benämnda häradet har namn efter 
