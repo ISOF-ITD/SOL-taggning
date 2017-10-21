@@ -37736,6 +37736,7 @@
                      <ImageData src="bilder/SOL2_img_1217.jpg"/>
                   </Figure>
 
+                  <Sect>
                      <div type="bebyggelsenamn" xml:id="Sundborn">
                      <head><placeName>Sundborn</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>. 
                      <location><region type="landskap">Dalarna</region></location>. 
