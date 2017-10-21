@@ -48864,7 +48864,7 @@
                         <ImageData src="bilder/SOL2_img_1526.jpg"/>
                      </Figure>
 
-                     <div type="bebyggelsenamn" xml:id="Ärlinghundra härad">
+                     <div type="bebyggelsenamn" xml:id="Ärlinghundra_härad">
                         <head><placeName>Ärlinghundra härad</placeName></head> <P><locale>hd</locale>, 
                         <location><region type="landskap">Uppland</region></location>. 
                          (de …) Arlenningiahundære 1298 avskr., (in)
@@ -48985,7 +48985,7 @@
                         och Fegen, den senare i samma socken, var att skapa en förbindelse mellan flottningslederna 
                         i ån Ätrans och sjön Fegens vattensystem. </P> </div>
 
-                     <div type="naturnamn" xml:id="Ätran">
+                     <div type="naturnamn" xml:id="Ätran2">
                         <head><placeName>Ätran</placeName></head> <P><locale>å</locale>, 
                         <location><region type="landskap">Halland och Västergötland</region></location>.
                          (ultra [’på andra sidan’]) Ethra 1283. – Ån är omnämnd första gången 1177. Namnet 
@@ -49149,14 +49149,14 @@
                            en böjningsform av ö och kan ursprungligen ha syftat på en eller flera öar, 
                            vilka nu genom landhöjningen förenats med det gotländska fastlandet. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Öja">
+                        <div type="bebyggelsenamn" xml:id="Öja2">
                            <head><placeName>Öja</placeName></head> <P><locale>sn</locale>, 
                            <location><district type="härad">Herrestads hd</district>, 
                            <region type="landskap">Skåne</region></location>. 
                             (in) Øyia 1334 (avser kyrkbyn). – Sockennamnet, lånat från kyrkbyn, innehåller 
                            en böjningsform av ö i betydelsen ’upphöjning i sankmark’. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Öja">
+                        <div type="bebyggelsenamn" xml:id="Öja3">
                            <head><placeName>Öja</placeName></head> <P><locale>sn</locale>, 
                            <location><district type="härad">Kinnevalds hd</district>, 
                            <region type="landskap">Småland</region></location>. 
@@ -49165,14 +49165,14 @@
                            ligger söder om Helgaån på ett något upphöjt torrare parti och är omgiven av 
                            lägre liggande, sankare mark. </P> </div>
 
-                        <div type="naturnamn" xml:id="Öja">
+                        <div type="naturnamn" xml:id="Öja4">
                            <head><placeName>Öja</placeName></head> <P><locale>ö</locale>, 
                            <location><district type="socken">Torö sn</district>, 
                            <region type="landskap">Södermanland</region></location>. 
                            (j) Øya 1504 (avser en by). – Namnet, som tidigare även avsåg en by på norra 
                            delen av ön, innehåller en böjningsform av ordet ö. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Öja">
+                        <div type="bebyggelsenamn" xml:id="Öja5">
                            <head><placeName>Öja</placeName></head> <P><locale>sn</locale>, 
                            <location><district type="härad">Västerrekarne hd</district>, 
                            <region type="landskap">Södermanland</region></location>. 
