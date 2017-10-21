@@ -50921,7 +50921,7 @@
                         till vars namn sjönamnet är bildat. Sjöns umesamiska namn Bijjie Sjuktta innehåller bijjie-’över-,
                         övre’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Övertjurbo härad">
+                     <div type="bebyggelsenamn" xml:id="Övertjurbo_härad">
                         <head><placeName>Övertjurbo härad</placeName></head> <P><locale>hd</locale>, 
                         <location><region type="landskap">Västmanland</region></location>.
                         <placeName>Yttertjurbo härad</placeName>. </P> </div>
@@ -50957,7 +50957,7 @@
                         flyttning på 1320-talet till Nissans mynning, varvid ett nytt namn Övraby skapades för den kvarvarande 
                         bebyggelsen. Förleden är övre, här betecknande ’belägen uppströms’, efterleden fda. by ’stad’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Övraby">
+                     <div type="bebyggelsenamn" xml:id="Övraby2">
                         <head><placeName>Övraby</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Ingelstads hd</district>, 
                         <region type="landskap">Skåne</region></location>.
@@ -50971,42 +50971,42 @@
                          Öffrelidh 1579. – Namnet innehåller lid ’sluttning’. Gården ligger på en mäktig sluttning. Förleden
                         Övra- särskiljer denna bebyggelse från ett Nedra Lid i samma socken. </P> </div>
                         
-                        <div type="naturnamn" xml:id="Övre Blomsjön">
+                        <div type="naturnamn" xml:id="Övre_Blomsjön">
                         <head><placeName>Övre Blomsjön</placeName></head> <P><locale>sjö</locale>, 
                         <location><district type="socken">Blomskogs sn</district>, <district type="härad">Nordmarks hd</district>,
                         <region type="landskap">Värmland</region></location>.
                         <placeName>Blomskog</placeName>. </P> </div>
 
-                      <div type="naturnamn" xml:id="Övre Fryken">
+                      <div type="naturnamn" xml:id="Övre_Fryken">
                         <head><placeName>Övre Fryken</placeName></head> <P><locale>sjö</locale>, 
                         <location><region type="landskap">Värmland</region></location>.
                         <placeName>Frykerud</placeName>. </P> </div>
 
-                    <div type="naturnamn" xml:id="Övre Föret">
+                    <div type="naturnamn" xml:id="Övre_Föret">
                         <head><placeName>Övre Föret</placeName></head> <P><locale>sjö</locale>, 
                         <location><region type="landskap">Uppland</region></location>.
                         <placeName>Fyrisån</placeName>. </P> </div>
 
-                     <div type="naturnamn" xml:id="Övre Gla">
+                     <div type="naturnamn" xml:id="Övre_Gla">
                         <head><placeName>Övre Gla</placeName></head> <P><locale>sjö</locale>, 
                         <location><district type="härad">Gillbergs, Jösse och Nordmark hd</district>, 
                         <region type="landskap">Värmland</region></location>.
                          Öffwer Glaa Siön 1701. – Sjöns namn är givet i anslutning till namnet på den närliggande sjön
                         <placeName>Stora Gla</placeName>, med vilken den står i vattenförbindelse. </P> </div>
 
-                      <div type="naturnamn" xml:id="Övre Gunnarsjön">
+                      <div type="naturnamn" xml:id="Övre_Gunnarsjön">
                         <head><placeName>Övre Gunnarsjön</placeName></head> <P><locale>sjö</locale>, 
                         <location><district type="socken">Stensele sn</district>, 
                         <region type="landskap">Lappland</region></location>.
                          <placeName>Gunnarn</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Övre Gärdsjö">
+                     <div type="bebyggelsenamn" xml:id="Övre_Gärdsjö">
                         <head><placeName>Övre Gärdsjö</placeName></head> <P><locale>by</locale>, 
                         <location><district type="socken">Rättviks sn</district>, 
                         <region type="landskap">Dalarna</region></location>.
                          <placeName>Nedre Gärdsjö</placeName>. </P> </div>
 
-                      <div type="bebyggelsenamn" xml:id="Övre Soppero">
+                      <div type="bebyggelsenamn" xml:id="Övre_Soppero">
                         <head><placeName>Övre Soppero</placeName></head> <P><locale>tätort</locale>, 
                         <location><district type="town">Kiruna stad</district>, 
                         <region type="landskap">Lappland</region></location>.
@@ -51014,14 +51014,14 @@
                         Övre (meänk. Yli-, sam. Badje-) har tillagts för att skilja orten från byn Nedre Soppero längre 
                         ned vid Lainioälven. </P> </div>
                  
-                      <div type="bebyggelsenamn" xml:id="Övre Ullerud">
+                      <div type="bebyggelsenamn" xml:id="Övre_Ullerud">
                         <head><placeName>Övre Ullerud</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Kils hd</district>, 
                         <region type="landskap">Värmland</region></location>.
                         (j) øffra Wllarø 1440. – Sockennamnet har samma språkliga ursprung som <placeName>Nedre Ullerud</placeName>; 
                         kyrkan och prästgården i Övre Ullerud ligger ej långt från en ö i Klarälven. </P> </div>
 
-                       <div type="bebyggelsenamn" xml:id="Övre Vojakkala">
+                       <div type="bebyggelsenamn" xml:id="Övre_Vojakkala">
                          <head><placeName>Övre Vojakkala</placeName></head> <P><locale>by</locale>, 
                          <location><district type="socken">Nedertorneå sn</district>, 
                          <region type="landskap">Norrbotten</region></location>.
