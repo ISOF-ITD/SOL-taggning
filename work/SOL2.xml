@@ -38428,6 +38428,7 @@
 
                      <ImageData src="bilder/SOL2_img_1233.jpg"/>
                   </Figure>
+                  <Sect>
 
          
 
@@ -38558,6 +38559,7 @@
 
                      <ImageData src="bilder/SOL2_img_1237.jpg"/>
                   </Figure>
+                  <Sect>
 
                      <div type="naturnamn" xml:id="Sylarna">
                      <head><placeName>Sylarna</placeName></head> <P><locale>fjällmassiv</locale>, 
@@ -38736,6 +38738,7 @@
 
                      <ImageData src="bilder/SOL2_img_1241.jpg"/>
                   </Figure>
+                  <Sect>
 
                      <div type="bebyggelsenamn" xml:id="Säfsen">
                      <head><placeName>Säfsen</placeName></head> <P><locale>inofficiellt namn på</locale>, 
