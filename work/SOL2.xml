@@ -34866,14 +34866,14 @@
                      <ImageData src="bilder/SOL2_img_1142.jpg"/>
                   </Figure>
 
-                     <div type="bebyggelsenamn" xml:id="Slättbo härad">
+                     <div type="bebyggelsenamn" xml:id="Slättbo_härad">
                      <head><placeName>Slättbo härad</placeName></head> <P><locale>hd</locale>, 
                      <location><region type="landskap">Öland</region></location>.   
                      (j) Sletboheradh 1360. – Namnet innehåller genitiv av en inbyggarbeteckning fsv. slætboar ’slättbor’. 
                      Säkerligen syftar förleden i denna liksom i inbyggarbeteckningen akerboar i Åkerbo härad, namnet på ett
                      grannhärad, på en samlingsplats. Den namnlåtande slätten har emellertid inte kunnat lokaliseras. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Slätten, Stora, Lilla">
+                     <div type="bebyggelsenamn" xml:id="Slätten._Stora._Lilla">
                      <head><placeName>Slätten, Stora, Lilla</placeName></head> <P><locale>sjöar</locale>, 
                      <location><district type="socken">Södra Unnaryds sn</district>, <district type="härad">Västbo hd</district>, 
                      <region type="landskap">Småland</region></location>. 
@@ -34981,7 +34981,7 @@
                      under medeltiden alla de härad som vi vanligen förbinder med landskapet utom Mo härad, som hörde till
                      Västergötland. Därtill kommer Ydre och Kinda hd, senare förda till Östergötland. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Smålands Anneberg">
+                     <div type="bebyggelsenamn" xml:id="Smålands_Anneberg">
                      <head><placeName>Smålands Anneberg</placeName></head> <P><locale>tätort</locale>, 
                      <location><district type="socken">Norra Solberga sn</district>, <district type="härad">Södra Vedbo hd</district>, 
                      <region type="landskap">Småland</region></location>. 
@@ -35052,7 +35052,7 @@
                      bildat till ett adjektiv *snav ’trång’ eller ’snabb’, i så fall syftande på ett parti mellan
                      Kyrkesjön och Östersjön. Efterleden är pluralis av lund ’skogsdunge’ (om plural form på -a se inl. 3.3.1). </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Snevringe härad">
+                     <div type="bebyggelsenamn" xml:id="Snevringe_härad">
                      <head><placeName>Snevringe härad</placeName></head> <P><locale>hd</locale>, 
                      <location><region type="landskap">Västmanland</region></location>.   
                       Snæwingiahunderi 1326. – Häradsnamnet innehåller genitiv av en plural inbyggarbeteckning fsv. snævingiar. 
