@@ -37677,21 +37677,21 @@
                      <region type="landskap">Närke</region></location>.
                       <placeName>Letälven</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Sund">
+                     <div type="bebyggelsenamn" xml:id="Sund2">
                      <head><placeName>Sund</placeName></head> <P><locale>tätort</locale>, 
                      <location><district type="socken">Vagnhärads sn</district>, <district type="härad">Hölebo hd</district>, 
                      <region type="landskap">Södermanland</region></location>.
                      (in) Sunde 1350. – Tätorten är framvuxen kring gården Sund. Gården förefaller ha fått namn efter sjön Sillens 
                      avsmalnande del nordväst om gården. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Stad">
+                     <div type="bebyggelsenamn" xml:id="Stad2">
                      <head><placeName>Stad</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Ydre hd</district>, 
                      <region type="landskap">Östergötland</region></location>. 
                       Sund 1337. – Socknen har fått sitt namn från kyrkbyn, som ligger vid ett kort sund mellan Stora och 
                      Lilla Sundsjön. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Sundals härad">
+                     <div type="bebyggelsenamn" xml:id="Sundals_härad">
                      <head><placeName>Sundals härad</placeName></head> <P><locale>hd</locale>, 
                      <location><region type="landskap">Dalsland</region></location>. 
                       Sundal 1287. – Häradsnamnet återgår på ett gammalt bygdenamn, Sundal, avseende den södra 
@@ -37707,7 +37707,7 @@
                      Sundal tillades i särskiljande syfte 1886; i samma del av Sverige finns sockennamnen 
                      <placeName>Lane-Ryr</placeName> och <placeName>Väne-Ryr</placeName>. </P> </div>
                 
-                     <div type="bebyggelsenamn" xml:id="Sundbo härad">
+                     <div type="bebyggelsenamn" xml:id="Sundbo_härad">
                      <head><placeName>Sundbo härad</placeName></head> <P><locale>hd</locale>, 
                      <location><region type="landskap">Närke</region></location>. 
                       (i) Sundbohæredh 1384, (j) Sundz hæredhe 1416, (i) Askirsunz hæradhe 1473. – Häradet uppträder under
@@ -37754,7 +37754,7 @@
                       <placeName>by</placeName> ’gård; by’. Förleden har sitt upphov i det forna vattenlandskapet på 
                      Rekarneslätten. Mellan Sundby by och Åsby sträckte sig ett sund under järnåldern. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Sundby">
+                     <div type="bebyggelsenamn" xml:id="Sundby2">
                      <head><placeName>Sundby</placeName></head> <P><locale>tätort</locale>, 
                      <location><district type="socken">Ekerö sn</district>, <district type="härad">Färentuna hd</district>, 
                      <region type="landskap">Uppland</region></location>.
@@ -37781,7 +37781,7 @@
                      <placeName>Sundby</placeName> och det statushöjande elementet <placeName>holm</placeName>. Egendomen har 
                      sitt ursprung i byn Sundby. Slottet ligger på ett näs i Mälaren. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Sunderbyn, Norra, Södra">
+                     <div type="bebyggelsenamn" xml:id="Sunderbyn._Norra._Södra">
                      <head><placeName>Sunderbyn, Norra, Södra</placeName></head> <P><locale>by</locale> resp. 
                      <locale>tätort</locale>,  
                      <location><district type="socken">Nederluleå sn</district>, 
@@ -37841,7 +37841,7 @@
                         ordet sund, vilket här syftar på de olika sund som Isön och Andersön bildar mellan öarna och
                         fastlandet. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Sunne">
+                        <div type="bebyggelsenamn" xml:id="Sunne2">
                         <head><placeName>Sunne</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>, 
                         <location><district type="härad">Fryksdals hd</district>, 
                         <region type="landskap">Värmland</region></location>. 
@@ -37856,7 +37856,7 @@
                         Sunnemohyttan 1817). Dess förled åsyftar bebyggelsens läge vid sundet mellan sjöarna Grässjön och
                         Lidsjön. Den oväntade förledsformen Sunne- har inte stöd i dialekten. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Sunnerbo härad">
+                        <div type="bebyggelsenamn" xml:id="Sunnerbo_härad">
                         <head><placeName>Sunnerbo härad</placeName></head> <P><locale>hd</locale>, 
                         <location><region type="landskap">Småland</region></location>. 
                          (in) Sunderbo hered, Sunderbo 1200-talets början. – Det småländska <placeName>Finnveden</placeName> var 
