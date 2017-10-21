@@ -48848,7 +48848,7 @@
 
                            <ImageData src="bilder/SOL2_img_1523.jpg"/>
                         </Figure>
-                     </Sect>
+                     <!-- </Sect> -->
                      <Figure>
 
                         <ImageData src="bilder/SOL2_img_1524.jpg"/>
