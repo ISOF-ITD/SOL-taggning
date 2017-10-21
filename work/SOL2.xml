@@ -36071,6 +36071,7 @@
                      <ImageData src="bilder/SOL2_img_1177.jpg"/>
                   </Figure>
 
+                  <Sect>
                      <div type="bebyggelsenamn" xml:id="Stenhamra">
                      <head><placeName>Stenhamra</placeName></head> <P><locale>tätort</locale>, 
                      <location><district type="socken">Sånga sn</district>, <district type="härad">Färentuna hd</district>, 
