@@ -35281,8 +35281,8 @@
 
                      <ImageData src="bilder/SOL2_img_1154.jpg"/>
                   </Figure>
-
              
+                  <Sect>
                      <div type="bebyggelsenamn" xml:id="Sollentuna_härad">
                      <head><placeName>Sollentuna härad</placeName></head> <P><locale>hd</locale>, 
                      <location><region type="landskap">Uppland</region></location>.    
