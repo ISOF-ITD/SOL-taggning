@@ -36357,6 +36357,7 @@
                      <ImageData src="bilder/SOL2_img_1185.jpg"/>
                   </Figure>
 
+                  <Sect>
                      <div type="bebyggelsenamn" xml:id="Stjärnsund">
                      <head><placeName>Stjärnsund</placeName></head> <P><locale>brukssamhälle</locale>, 
                      <location><district type="socken">Husby sn</district>, 
