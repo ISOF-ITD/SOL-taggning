@@ -35813,6 +35813,7 @@
                      <ImageData src="bilder/SOL2_img_1170.jpg"/>
                   </Figure>
 
+                  <Sect>
                      <div type="bebyggelsenamn" xml:id="Stamnared">
                      <head><placeName>Stamnared</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Himle hd</district>, 
