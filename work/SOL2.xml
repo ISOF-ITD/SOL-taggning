@@ -37301,7 +37301,7 @@
 
          
 
-                     <div type="bebyggelsenamn" xml:id="Strö, Norra, Västra, Östra">
+                     <div type="bebyggelsenamn" xml:id="Strö._Norra._Västra._Östra">
                      <head><placeName>Strö, Norra, Västra, Östra</placeName></head> <P><locale>snr</locale>, 
                      <location><region type="landskap">Skåne</region></location>. 
                       <placeName>Norra Strö</placeName>, <placeName>Västra Strö</placeName> och <placeName>Östra Strö</placeName>. </P> </div>
@@ -37318,7 +37318,7 @@
                      <region type="landskap">Hälsingland</region></location>. 
                       <placeName>Strömsbruk</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Ström">
+                     <div type="bebyggelsenamn" xml:id="Ström2">
                      <head><placeName>Ström</placeName></head> <P><locale>sn</locale>, 
                      <location><region type="landskap">Jämtland</region></location>. 
                       (i) Straumi 1273 avskr. – Sockennamnet får uppfattas som ett gammalt bygdenamn, närmast avseende bygden 
@@ -37394,7 +37394,7 @@
                      sammanträde med byamännen från Bredgård, Näset och Grelsgård som namn på det då tilltänkta municipalsamhället. 
                      Ortens samiska namn Straejmie är ett ord, som går tillbaka på det nordiska ordet ström. </P> </div>
 
-                     <div type="naturnamn" xml:id="Ströms Vattudal">
+                     <div type="naturnamn" xml:id="Ströms_Vattudal">
                      <head><placeName>Ströms Vattudal</placeName></head> <P><locale>dalgång</locale> och <locale>sjö</locale>, 
                      <location><district type="socken">Ströms sn</district>, 
                      <region type="landskap">Jämtland</region></location>. 
@@ -37510,7 +37510,7 @@
                      av stång med oviss syftning och <placeName>by</placeName> ’by; gård’. Tätorten några km sydöst om kyrkbyn 
                      har vuxit fram kring en järnvägsstation vid Södra stambanan. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Stångenäs härad">
+                     <div type="bebyggelsenamn" xml:id="Stångenäs_härad">
                      <head><placeName>Stångenäs härad</placeName></head> <P><locale>hd</locale>, 
                      <location><region type="landskap">Bohuslän</region></location>. 
                       (j) Stanganesi 1338. – Stångenäs, som är ett gammalt bygdenamn och under medeltiden uppträder som 
@@ -37528,7 +37528,7 @@
                         Västanstång väster om ån och Östanstång öster om ån. Det har därför övervägts att stång i Stångån kunde
                         ha den i andra ortnamn styrkta betydelsen ’rågångsmärke’. </P> </div>                        
                         
-                        <div type="bebyggelsenamn" xml:id="-städe">
+                        <div type="bebyggelsenamn" xml:id="_städe">
                         <head><placeName>-städe</placeName></head>   
                          <P><placeName>sta(d)</placeName>. </P> </div>
              
