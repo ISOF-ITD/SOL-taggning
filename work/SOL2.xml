@@ -34694,6 +34694,7 @@
                      <ImageData src="bilder/SOL2_img_1138.jpg"/>
                   </Figure>
 
+                  <Sect>
                      <div type="bebyggelsenamn" xml:id="Skärva">
                      <head><placeName>Skärva</placeName></head> <P><locale>gods</locale>, 
                      <location><district type="socken">Nättraby sn</district>, <district type="härad">Medelstads hd</district>, 
