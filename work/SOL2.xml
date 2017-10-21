@@ -39889,7 +39889,7 @@
 
                   <Sect>
                      
-                        <div type="bebyggelsenamn" xml:id="Tanums härad">
+                        <div type="bebyggelsenamn" xml:id="Tanums_härad">
                         <head><placeName>Tanums härad</placeName></head> <P><locale>hd</locale>, 
                         <location><region type="landskap">Bohuslän</region></location>. 
                          Thanund skyffre 1544. – Häradsnamnet är bildat till by- och sockennamnet <placeName>Tanum</placeName>. 
@@ -40293,7 +40293,7 @@
                      <region type="landskap">Småland</region></location>. 
                       <placeName>Västervik</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Tingstad">
+                     <div type="bebyggelsenamn" xml:id="Tingstad2">
                      <head><placeName>Tingstad</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Lösings hd</district>, 
                      <region type="landskap">Östergötland</region></location>.
@@ -40308,7 +40308,7 @@
                      under medeltiden indelat i tre delar – tredingar – och man har räknat med att den norra tredingens tingsplats 
                      låg här. </P> </div>
 
-                     <div type="naturnamn" xml:id="Tingstäde">
+                     <div type="naturnamn" xml:id="Tingstäde2">
                      <head><placeName>Tingstäde</placeName></head> <P><locale>träsk</locale>, <locale>sjö</locale>, 
                      <location><region type="landskap">Gotland</region></location>.
                       – Namnet är sammansatt av sockennamnet <placeName>Tingstäde</placeName> och ordet träsk, som i gotländska 
@@ -40561,7 +40561,7 @@
                         Efterleden är <placeName>torp</placeName> ’nybygge’. Tätorten har vuxit fram kring en järnvägsstation vid 
                         södra stambanan öster om kyrkbyn. </P> </div>
                                               
-                       <div type="bebyggelsenamn" xml:id="Tjörns härad">
+                       <div type="bebyggelsenamn" xml:id="Tjörns_härad">
                        <head><placeName>Tjörns härad</placeName></head> <P><locale>hd</locale>, 
                        <location><region type="landskap">Bohuslän</region></location>. 
                         – Häradet omfattar ön <placeName>Tjörn</placeName>. </P> </div>
@@ -40596,14 +40596,14 @@
                          (Jn) Thoptu 1304. – Namnet har inte samma ursprung som det i södra Sverige vanliga Tofta. Det kan i 
                         stället hänga samman med toft ’roddarbänk’, men hur det närmare ska förstås är oklart. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Tofta">
+                        <div type="bebyggelsenamn" xml:id="Tofta2">
                         <head><placeName>Tofta</placeName></head> <P><locale>tätort</locale>, 
                         <location><district type="socken">Lindbergs sn</district>, <district type="härad">Himle hd</district>, 
                         <region type="landskap">Halland</region></location>. 
                          Toffte 1570-talet. – Tätorten återgår på en by. Namnet innehåller toft, en sidoform till
                         <placeName>tomt</placeName>. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Tofta">
+                        <div type="bebyggelsenamn" xml:id="Tofta3">
                         <head><placeName>Tofta</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Rönnebergs hd</district>, 
                         <region type="landskap">Skåne</region></location>. 
@@ -40679,7 +40679,7 @@
                      kvinnonamn fsv. *Thorhild med motsvarigheter i andra fornnordiska språk.
                      Efterleden är <placeName>ryd</placeName> ’röjning’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Tollstad, Västra, Östra">
+                     <div type="bebyggelsenamn" xml:id="Tollstad._Västra._Östra">
                      <head><placeName>Tollstad, Västra, Östra</placeName></head> <P><locale>snr</locale>, 
                      <location> <region type="landskap">Östergötland</region></location>. 
                       <placeName>Västra Tollstad</placeName> och <placeName>Östra Tollstad</placeName>. </P> </div>
@@ -40703,7 +40703,7 @@
                       <placeName>Östra Tommarp</placeName>. 
                      Tommarp innehåller mansnamnet fda. Tumi och <placeName>torp</placeName> ’nybygge’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Tommarp, Västra, Östra">
+                     <div type="bebyggelsenamn" xml:id="Tommarp._Västra._Östra">
                      <head><placeName>Tommarp, Västra, Östra</placeName></head> <P><locale>snr</locale>, 
                      <location><region type="landskap">Skåne</region></location>. 
                       <placeName>Västra Tommarp</placeName> och <placeName>Östra Tommarp</placeName>. </P> </div>
@@ -40845,7 +40845,7 @@
                      tolkats som innehållande ett forndanskt *thora ’höjd’ och dialektordet kove ’koja, hydda’, möjligen i 
                      en betydelse ’välvning, hålighet’ med syftning på den lilla bukt vid vilken socknen ligger. </P> </div>
 
-                        <div type="naturnamn" xml:id="Torekov ö">
+                        <div type="naturnamn" xml:id="Torekov_ö">
                         <head><placeName>Torekov ö</placeName></head> <P><locale>ö i Kattegatt</locale>, 
                         <location><district type="socken">Torekovs sn</district>, <district type="härad">Bjäre hd</district>,
                         <region type="landskap">Skåne</region></location>.
@@ -40902,13 +40902,13 @@
                         (i) Tormenstorp 1434, (i) Tormestrop 1505 avskr. – Tätorten har vuxit fram ur en by. Dess namn innehåller 
                         i förleden troligen mansnamnet fda. Thormoth. Efterleden är <placeName>torp</placeName> ’nybygge’. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Torna Hällestad">
+                        <div type="bebyggelsenamn" xml:id="Torna_Hällestad">
                         <head><placeName>StTorna Hällestadaden</placeName></head> <P><locale>tätort</locale>, 
                         <location><district type="socken">Hällestads sn</district>, <district type="härad">Torna hd</district>, 
                         <region type="landskap">Skåne</region></location>. 
                          <placeName>Hällestad</placeName>. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Torna härad">
+                        <div type="bebyggelsenamn" xml:id="Torna_härad">
                         <head><placeName>Torna härad</placeName></head> <P><locale>hd</locale>, 
                         <location><region type="landskap">Skåne</region></location>.
                          Thornæheret ca 1300. – Häradsnamnet utgår från namnet Torn, Östra Torn (jn uilla Thorni 1100-talets mitt, 
@@ -40945,7 +40945,7 @@
                       Namnet är givet efter <placeName>Torneälven</placeName> och omfattar som geografiskt 
                       begrepp Torneälvens och Muonioälvens dalgångar. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Torne lappmark">
+                     <div type="bebyggelsenamn" xml:id="Torne_lappmark">
                      <head><placeName>Torne lappmark</placeName></head> <P><locale>del av Lappland</locale>, 
                      – Namnet är ursprungligen en administrativ benämning på samebygden som handels- och beskattningsområde. 
                      Det är givet efter huvudorten Torneå (fi. Tornio) på finska sidan av riksgränsen, vars namn från
@@ -41012,20 +41012,20 @@
                     <region type="landskap">Bohuslän</region></location>. 
                     <placeName>Inlands Torpe härad</placeName>. </P> </div>
                                                         
-                    <div type="bebyggelsenamn" xml:id="Torp">
+                    <div type="bebyggelsenamn" xml:id="Torp2">
                     <head><placeName>Torp</placeName></head> <P><locale>sn</locale>, 
                     <location><district type="härad">Orusts östra hd</district>, 
                     <region type="landskap">Bohuslän</region></location>.  
                     (j) Þorps sokn 1320. – Socknen har fått sitt namn efter gården Torp, vars namn innehåller <placeName>torp</placeName>
                     ’nybygge’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Torp">
+                     <div type="bebyggelsenamn" xml:id="Torp3">
                      <head><placeName>Torp</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Valbo hd</district>, 
                      <region type="landskap">Dalsland</region></location>.  
                       Thorp 1330-talet. – Socknen har fått sitt namn från kyrkbyn. Det innehåller <placeName>torp</placeName> ’nybygge’. </P> </div>                       
                        
-                     <div type="bebyggelsenamn" xml:id="Torp">
+                     <div type="bebyggelsenamn" xml:id="Torp4">
                      <head><placeName>Torp</placeName></head> <P><locale>sn</locale>, 
                      <location><region type="landskap">Medelpad</region></location>. 
                      (in) Thorp 1344. – Sockennamnet återgår på ett äldre bygdenamn. Detta innehåller <placeName>torp</placeName>, 
@@ -41038,7 +41038,7 @@
                      Torppe Sognn 1570-talet. – Sockennamnet är övertaget från kyrkbyn och innehåller plural form (se inl. 3.3.1) 
                      av <placeName>torp</placeName> ’nybygge’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Torpa">
+                     <div type="bebyggelsenamn" xml:id="Torpa2">
                      <head><placeName>Torpa</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Sunnerbo hd</district>, 
                      <region type="landskap">Småland</region></location>.  
@@ -41047,7 +41047,7 @@
                      ’nybygge’ med syftning på de två byarna eller genitiv av en inbyggarbeteckning *thorpar ’inbyggare i 
                      Norrtorpa och Sunnertorpa’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Torpa">
+                     <div type="bebyggelsenamn" xml:id="Torpa3">
                      <head><placeName>Torpa</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Åkerbo hd</district>, 
                      <region type="landskap">Södermanland</region></location>.  
@@ -41077,20 +41077,20 @@
 
               
 
-                     <div type="bebyggelsenamn" xml:id="Torpa">
+                     <div type="bebyggelsenamn" xml:id="Torpa4">
                      <head><placeName>Torpa</placeName></head> <P><locale>gods</locale>, 
                      <location><district type="socken">Länghems sn</district>, <district type="härad">Kinds hd</district>, 
                      <region type="landskap">Västergötland</region></location>. 
                      (i) Torpum 1459 avskr. – Det plurala (se inl. 3.3.1) ortnamnet innehåller <placeName>torp</placeName> ’nybygge’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Torpa">
+                     <div type="bebyggelsenamn" xml:id="Torpa5">
                      <head><placeName>Torpa</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Vedens hd</district>, 
                      <region type="landskap">Västergötland</region></location>.
                      (j) Torpe sogen 1484. – Socknen har fått sitt namn från kyrkbyn. Det plurala (se inl. 3.3.1) ortnamnet 
                      innehåller <placeName>torp</placeName>, kanske i betydelsen ’nybygge’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Torpa">
+                     <div type="bebyggelsenamn" xml:id="Torpa6">
                      <head><placeName>Torpa</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Ydre hd</district>, 
                      <region type="landskap">Östergötland</region></location>.
@@ -41098,7 +41098,7 @@
                      prästgården Nordanå sannolikt är utbruten. Det plurala (se inl. 3.3.1) ortnamnet innehåller 
                      <placeName>torp</placeName>, kanske i betydelsen ’nybygge’. </P> </div>
 
-                     <div type="naturnamn" xml:id="Torpa tånge">
+                     <div type="naturnamn" xml:id="Torpa_tånge">
                      <head><placeName>Torpa tånge</placeName></head> <P><locale>udde</locale>, 
                      <location><district type="socken">Torpa sn</district>, <district type="härad">Himle hd</district>, 
                      <region type="landskap">Halland</region></location>. 
@@ -41148,7 +41148,7 @@
                       (j) Þoresby 1377. – Kyrkbyn har givit socknen dess namn, som innehåller mansnamnet Tore (fvn. Þórir) och
                      <placeName>by</placeName> ’gård; by’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Torsby">
+                     <div type="bebyggelsenamn" xml:id="Torsby2">
                      <head><placeName>Torsby</placeName></head> <P><locale>kn</locale>, samt <locale>tätort</locale>,
                      <location><district type="socken">Fryksände sn</district>, <district type="härad">Fryksdals hd</district>, 
                      <region type="landskap">Värmland</region></location>. 
@@ -41206,7 +41206,7 @@
                         <region type="landskap">Uppland</region></location>. 
                         <placeName>Torstuna härad</placeName>. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Torslunda">
+                        <div type="bebyggelsenamn" xml:id="Torslunda2">
                         <head><placeName>Torslunda</placeName></head> <P><locale>sn</locale>, 
                         <location><district type="härad">Algutsrums hd</district>, 
                         <region type="landskap">Öland</region></location>.
@@ -41221,7 +41221,7 @@
                         (de) Thorstunum 1287. – Sockennamnet är övertaget från kyrkbyn. I Torstuna låg sannolikt den medeltida 
                         tingsplatsen för Torsåkers hundare. Se vidare <placeName>Torstuna härad</placeName>. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Torstuna härad">
+                        <div type="bebyggelsenamn" xml:id="Torstuna_härad">
                         <head><placeName>Torstuna härad</placeName></head> <P><locale>hd</locale>, 
                         <location><region type="landskap">Uppland</region></location>.
                          Prouincia Thorsakir 1344, (ii) Thorsakirshundare 1370, (j) Torstwna … hærede 1463.  
@@ -41274,14 +41274,14 @@
                      förled innehåller gudanamnet Tor. Att en by norr om kyrkplatsen heter Ovanåker ’(bebyggelsen) ovanför åkern’ 
                      (Offuanååker 1541) kan tyda på att kyrkan är byggd på eller alldeles invid kultåkern Torsåker. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Torsåker">
+                     <div type="bebyggelsenamn" xml:id="Torsåker2">
                      <head><placeName>Torsåker</placeName></head> <P><locale>sn</locale>, 
                      <location><district type="härad">Rönö hd</district>, 
                      <region type="landskap">Södermanland</region></location>.
                      (De) Þorsaker 1314? – Socknen har fått sitt namn från en forntida samlingsplats. Det innehåller 
                      gudanamnet Tor och <placeName>åker</placeName>. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Torsåker">
+                     <div type="bebyggelsenamn" xml:id="Torsåker3">
                      <head><placeName>Torsåker</placeName></head> <P><locale>sn</locale>, 
                      <location><region type="landskap">Ångermanland</region></location>.
                      (De) Thorsakir 1344. – Socknens namn är sammansatt av genitiv av gudanamnet Tor och <placeName>åker</placeName>. 
@@ -41328,7 +41328,7 @@
                      poststation. Denna tillkom 1877 och namngavs efter socknen. Socknen har övertagit namnet från en nu 
                      försvunnen gård. I förleden ingår genitiv av mansnamnet Tord. Efterleden är <placeName>torp</placeName> ’nybygge’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Torup">
+                     <div type="bebyggelsenamn" xml:id="Torup2">
                      <head><placeName>Torup</placeName></head> <P><locale>gods</locale>, 
                      <location><district type="socken">Bara sn</district>, <district type="härad">Bara hd</district>, 
                      <region type="landskap">Skåne</region></location>. 
@@ -41518,7 +41518,7 @@
                      poststationen namnet Skåne-Tranås. Detta har senare kommit i bruk även för den kring kyrkbyn 
                      framväxande tätorten. </P>  </div>
 
-                     <div type="bebyggelsenamn" xml:id="Tranås">
+                     <div type="bebyggelsenamn" xml:id="Tranås2">
                      <head><placeName>Tranås</placeName></head> <P><locale>kn</locale>, <locale>stad</locale>, 
                      <location><region type="landskap">Tranås</region></location>.
                       – Samhället har vuxit upp kring den 1874 öppnade järnvägslinjen. Namnet, som ursprungligen avsåg 
@@ -41608,6 +41608,7 @@
                         namn Trolle-Wachtmeister. </P> </div>
                 
 
+                     <Figure>
                         <ImageData src="bilder/SOL2_img_1309.jpg"/>
                      </Figure>
                   </Sect>
@@ -41857,7 +41858,7 @@
                         står och trampar)’, känt från Hälsingland, och tråda ’trampa (t.ex. på spinnrock)’, känt 
                         från Gästrikland. Om namnet först syftat på en djurfålla, en stig eller något annat är obekant. </P> </div>
 
-                        <div type="bebyggelsenamn" xml:id="Trögds härad">
+                        <div type="bebyggelsenamn" xml:id="Trögds_härad">
                         <head><placeName>Trögds härad</placeName></head> <P><locale>hd</locale>, 
                         <location><region type="landskap">Uppland</region></location>. 
                          Prouincia Trøghd 1344. – Trögd är ett gammalt bygdenamn med feminint genus som inordnats i 
@@ -41915,9 +41916,9 @@
                       <placeName>-inge</placeName>, sannolikt till ordet tryne, här med syftning på det breda näs i 
                      havet som en där belägen by, Trönningenäs, också kallad (Norra) Näs, fått namn efter.
                      Tätorten kallades tidigare Trönningeby för att skilja den från <placeName>Trönninge</placeName> i
-                     Tönnersjö härad. </P>
+                     Tönnersjö härad. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Trönninge">
+                     <div type="bebyggelsenamn" xml:id="Trönninge2">
                      <head><placeName>Trönninge</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>, 
                      <location><district type="härad">Tönnersjö hd</district>, 
                      <region type="landskap">Halland</region></location>. 
@@ -41952,7 +41953,7 @@
                      Tuggenbygget. Enligt en uppgift från 1959 var Tuggen det vedertagna namnet bland kraftverksbyggarna. 
                      Namnets ursprungliga betydelse är dunkel liksom dess språkliga hemvist, svenskt eller samiskt. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Tuhundra härad">
+                     <div type="bebyggelsenamn" xml:id="Tuhundra_härad">
                      <head><placeName>Tuhundra härad</placeName></head> <P><locale>hd</locale>, 
                      <location><region type="landskap">Västmanland</region></location>. 
                       (a) Twæggia hundares thinge 1352, (j) Twemhundærum 1366, (in) Thuhundare 1368. – Tuhundra härad 
@@ -42508,7 +42509,7 @@
 
                      <div type="bebyggelsenamn" xml:id="Tyresö">
                      <head><placeName>Tyresö</placeName></head> <P><locale>kn</locale>, samt 
-                     <locale>sn</locale> och </locale>gods</locale>, 
+                     <locale>sn</locale> och <locale>gods</locale>, 
                      <location><district type="härad">Sotholms hd</district>, 
                      <region type="landskap">Södermanland</region></location>.  
                       (j) Thyrisedh 1369 (avser en gård). – Kommunen har namn efter socknen, som i sin tur har namn
