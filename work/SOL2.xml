@@ -37109,6 +37109,7 @@
                      <ImageData src="bilder/SOL2_img_1201.jpg"/>
                   </Figure>
 
+                  <Sect>
                      <div type="naturnamn" xml:id="Storvindeln">
                      <head><placeName>Storvindeln</placeName></head> <P><locale>sjö</locale>, 
                      <location><district type="socken">Sorsele sn</district>, 
