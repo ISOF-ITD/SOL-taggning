@@ -37997,7 +37997,7 @@
                      (<placeName>holm</placeName>) i Svaneholmssjön, förr kallad Svansjön (Suanne søø 1548). Sjönamnet åsyftar
                      förekomst av svan. </P> </div>
 
-                    <div type="bebyggelsenamn" xml:id="Svaneholm">
+                    <div type="bebyggelsenamn" xml:id="Svaneholm2">
                     <head><placeName>Svaneholm</placeName></head> <P><locale>f.d. järnbruk</locale>, 
                     <location><district type="socken">Svanskogs sn</district>, 
                     <region type="landskap">Värmland</region></location>. 
@@ -38101,7 +38101,7 @@
                      <region type="landskap">Dalarna</region></location>. 
                       <placeName>Svartnäs</placeName>. </P> </div>
 
-                     <div type="naturnamn" xml:id="Svarten">
+                     <div type="naturnamn" xml:id="Svarten2">
                      <head><placeName>Svarten</placeName></head> <P><locale>sjö</locale>, 
                      <location><district type="härad">Faurås och Himle hd</district>, 
                      <region type="landskap">Halland</region></location>. 
@@ -38117,7 +38117,7 @@
                      låg sandstrand’. Ordet är identiskt med fvn. lá ’vatten som sköljer upp mot strandbrädden’. Svartlå
                      kan därför tolkas som ’den svarta (mörkfärgade, skuggiga) sandstranden’. </P> </div>
 
-                     <div type="bebyggelsenamn" xml:id="Svartlösa härad">
+                     <div type="bebyggelsenamn" xml:id="Svartlösa_härad">
                      <head><placeName>Svartlösa härad</placeName></head> <P><locale>hd</locale>, 
                      <location><region type="landskap">Södermanland</region></location>. 
                       (i) Swortaløtz hæradhe 1423. – Det äldre namnet på häradet var Yfra Tør ’Övre Tör’ (J Yfra Tøør 1369), 
@@ -38197,7 +38197,7 @@
                         <region type="landskap">Dalarna</region></location>. 
                          <placeName>Svartnäs</placeName>. </P> </div>
 
-                        <div type="naturnamn" xml:id="Svartån">
+                        <div type="naturnamn" xml:id="Svartån2">
                         <head><placeName>Svartån</placeName></head> <P><locale>å</locale>, 
                         <location><district type="socken">Svartrå sn</district>, <district type="härad">Faurås hd</district>, 
                         <region type="landskap">Halland</region></location>. 
