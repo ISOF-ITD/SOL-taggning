@@ -48030,7 +48030,7 @@
                       <ImageData src="bilder/SOL2_img_1506.jpg"/>
                    </Figure>
 
-                   <div type="bebyggelsenamn" xml:id="Årsta">
+                   <div type="bebyggelsenamn" xml:id="Årsta2">
                       <head><placeName>Årsta</placeName></head> <P><locale>gods</locale>, 
                       <location><district type="socken">Österhaninge sn</district>, 
                       <district type="härad">Sotholms hd</district>, 
@@ -48047,7 +48047,7 @@
                       Förleden innehåller kanske en motsvarighet till det från Västnorden belagda mansnamnet Ari.
                       Efterleden är <placeName>sta(d)</placeName>. </P> </div>
 
-                   <div type="bebyggelsenamn" xml:id="Årstads härad">
+                   <div type="bebyggelsenamn" xml:id="Årstads_härad">
                       <head><placeName>Årstads härad</placeName></head> <P><locale>hd</locale>, 
                       <location><region type="landskap">Halland</region></location>.
                       (in) prouincia Arestathæ 1288, Aræstathheret ca 1300. – Häradet har namn efter 
@@ -48070,7 +48070,7 @@
                        Arydh 1400-talet avskr. – Namnet är  givet efter kyrkbyn (nu en tätort) och åsyftar 
                       dennas läge vid en å (fda. a). Efterleden är <placeName>ryd</placeName> ’röjning’. </P> </div>
 
-                   <div type="bebyggelsenamn" xml:id="Åryd">
+                   <div type="bebyggelsenamn" xml:id="Åryd2">
                       <head><placeName>Åryd</placeName></head> <P><locale>tätort</locale>, 
                       <location><district type="socken">Hemmesjö sn</district>, <district type="härad">Konga hd</district>, 
                       <region type="landskap">Småland</region></location>. 
@@ -48087,13 +48087,13 @@
                       byn från socknen och <placeName>Åskloster</placeName>. Åsby, nu en tätort, ligger i 
                       den nordöstra delen av en långsträckt höjd, varav namnet. </P> </div>
 
-                   <div type="bebyggelsenamn" xml:id="Ås">
+                   <div type="bebyggelsenamn" xml:id="Ås2">
                       <head><placeName>Ås</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>,
                       <location><region type="landskap">Jämtland</region></location>.
                       (apud) ecclesiam Aas 1303. – Sockennamnet återgår på ett bygdenamn, syftande på den 
                       höjdsträckning där sockenkyrkan är belägen. Tätorten har övertagit socknens namn. </P> </div>
 
-                   <div type="bebyggelsenamn" xml:id="Ås">
+                   <div type="bebyggelsenamn" xml:id="Ås3">
                       <head><placeName>Ås</placeName></head> <P><locale>sn</locale>, 
                       <location><district type="härad">Västbo hd</district>, 
                       <region type="landskap">Småland</region></location>.
@@ -48102,14 +48102,14 @@
                       Det innehåller ordet ås och åsyftar den höjd där socknens gamla kyrka ligger. I vissa 
                       fornsvenska belägg har namnet plural form (se inl. 3.3.1). </P> </div>
 
-                   <div type="bebyggelsenamn" xml:id="Ås">
+                   <div type="bebyggelsenamn" xml:id="Ås4">
                       <head><placeName>Ås</placeName></head> <P><locale>tätort</locale>, 
                       <location><district type="socken">Nora sn</district>, 
                       <district type="härad">Nora och Hjulsjö hd</district>, 
                       <region type="landskap">Västmanland</region></location>.
                        – Tätorten har vuxit fram ur byn Ås (i Aase 1481). Namnet innehåller ordet ås. </P> </div>
 
-                    <div type="bebyggelsenamn" xml:id="Ås">
+                    <div type="bebyggelsenamn" xml:id="Ås5">
                       <head><placeName>Ås</placeName></head> <P><locale>sn</locale>, 
                       <location><district type="härad">Gräsgård hd</district>, 
                       <region type="landskap">Öland</region></location>.
@@ -48159,7 +48159,7 @@
                          också ha fått sitt namn (i så fall ett fornsvenskt Asbo ’Åsgården’) från kyrkoherdebostället 
                          Åsbo vid kyrkan. </P> </div>
 
-                      <div type="bebyggelsenamn" xml:id="Åsbo härad, Norra, Södra">
+                      <div type="bebyggelsenamn" xml:id="Åsbo_härad._Norra._Södra">
                          <head><placeName>Åsbo härad, Norra, Södra</placeName></head> <P><locale>hd</locale>, 
                          <location><region type="landskap">Skåne</region></location>.
                          <placeName>Norra Åsbo härad</placeName> och <placeName>Södra Åsbo härad</placeName>. </P> </div>
@@ -48186,7 +48186,7 @@
                          <region type="landskap">Halland</region></location>.
                          <placeName>Ås</placeName>. </P> </div>
 
-                      <div type="bebyggelsenamn" xml:id="Åsby">
+                      <div type="bebyggelsenamn" xml:id="Åsby2">
                          <head><placeName>Åsby</placeName></head> <P><locale>by</locale>, 
                          <location><district type="socken">Edsbro sn</district>, 
                          <district type="härad">Närdinghundra hd</district>, 
@@ -48202,7 +48202,7 @@
                          (se inl.3.3.1) av ett ord motsvarande dialektordet sidd ’sidlänt sluttande mark
                          (vid vatten)’. </P> </div>
 
-                      <div type="bebyggelsenamn" xml:id="Åse härad">
+                      <div type="bebyggelsenamn" xml:id="Åse_härad">
                          <head><placeName>Åse härad</placeName></head> <P><locale>hd</locale>, 
                          <location><region type="landskap">Västergötland</region></location>.
                           Asuhæræd 1200-talets slut. – Till grund för häradsnamnet ligger säkerligen ett 
