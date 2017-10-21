@@ -47536,7 +47536,7 @@
                       <ImageData src="bilder/SOL2_img_1494.jpg"/>
                    </Figure>
 
-                    <div type="bebyggelsenamn" xml:id="Åkerbo härad">
+                    <div type="bebyggelsenamn" xml:id="Åkerbo_härad3">
                       <head><placeName>Åkerbo härad</placeName></head> <P><locale>hd</locale>, 
                       <location><region type="landskap">Östergötland</region></location>.                 
                       (jn) Akerboahærædh 1315 avskr. – Det har övervägts huruvida förleden i den 
@@ -47567,7 +47567,7 @@
                       namnet från andra stationer med namnet <placeName>Berga</placeName>. 
                      Namngivningen kan också ha påverkats av att en poststation i socknen hette Åkersberg. </P> </div>
 
-                   <div type="bebyggelsenamn" xml:id="Åkers härad">
+                   <div type="bebyggelsenamn" xml:id="Åkers_härad">
                       <head><placeName>Åkers härad</placeName></head> <P><locale>hd</locale>, 
                       <location><region type="landskap">Södermanland</region></location>.                 
                        Akirbohundare 1348; (j) Akirs hundare 1384. – Hundaresnamnet 
@@ -47582,13 +47582,13 @@
                       kulten, en plats som senare vid sockenbildningen såsom kyrkplats också legat 
                       till grund för sockennamnet. </P> </div>
 
-                   <div type="bebyggelsenamn" xml:id="Åkers krutbruk">
+                   <div type="bebyggelsenamn" xml:id="Åkers_krutbruk">
                        <head><placeName>Åkers krutbruk</placeName></head> <P><locale>brukssamhälle</locale>, 
                        <location><district type="socken">Åkers sn</district>, <district type="härad">Åkers hd</district>, 
                        <region type="landskap">Södermanland</region></location>. 
                        <placeName>Åkers styckebruk</placeName>. </P> </div>
 
-                   <div type="bebyggelsenamn" xml:id="Åkers styckebruk">
+                   <div type="bebyggelsenamn" xml:id="Åkers_styckebruk">
                       <head><placeName>Åkers styckebruk</placeName></head> <P><locale>tätort</locale>, 
                       <location><district type="socken">Åkers sn</district>, <district type="härad">åkers hd</district>, 
                       <region type="landskap">Södermanland</region></location>.               
@@ -47637,7 +47637,7 @@
                       förslag skulle det röra sig om ett äldre namn på Sävaåns övre lopp, kanske 
                       samhörigt med dialektordet ol ’rem’ i en äldre betydelse ’böjning’. </P> </div>
 
-                   <div type="naturnamn" xml:id="Ålands hav">
+                   <div type="naturnamn" xml:id="Ålands_hav">
                       <head><placeName>Ålands hav</placeName></head> <P><locale>havsområde mellan Uppland och Åland</locale>, 
                       (trans) mare Aland [’(över) Ålands hav’] ca 1300, Alandz haff ca 1340. – Namnet 
                       kan tolkas som ’havet (på vilket man färdas) mot eller till Åland’ eller ’havet 
@@ -47656,7 +47656,7 @@
                       Enligt uppgift från 1560 har ålfiske bedrivits i en å vid Ålberga (gård). 
                       Efterleden är plural form (se inl. 3.3.1) av berg. </P> </div>
 
-                   <div type="naturnamn" xml:id="Ål(e)bäcken">
+                   <div type="naturnamn" xml:id="Ål_e_bäcken">
                       <head><placeName>Ål(e)bäcken</placeName></head> <P><locale>bäck</locale>, 
                       <location><district type="socken">Västra Tollstads sn</district>, 
                       <district type="härad">Lysings hd</district>, 
