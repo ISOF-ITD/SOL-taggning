@@ -37449,6 +37449,7 @@
                      <ImageData src="bilder/SOL2_img_1209.jpg"/>
                   </Figure>
 
+                  <Sect>
                      <div type="bebyggelsenamn" xml:id="Sturehov">
                      <head><placeName>Sturehov</placeName></head> <P><locale>gods</locale>, 
                      <location><district type="socken">Botkyrka sn</district>, <district type="härad">Svartlösa hd</district>, 
