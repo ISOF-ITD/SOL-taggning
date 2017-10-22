@@ -31,9 +31,9 @@ describe Sol do
       # FIXME Add forms with ‘och’, see e. g. pp. 176-177.  No plural abbrevation for härad?
     end
 
-    it "handles the case of two härad" do
+    it "handles the case of two härad", focus: true do
       out = sol.process('Kinnekulle berg, Kinne och Kinnefjärdings hd, Västergötland')
-      expect(out).to eq '<head><placeName>Kinnekulle</placeName></head> <P><locale>berg</locale>, <location><district type="socken">Kinne</district> och </district type="socken">Kinnefjärdings</district> snr, <region type="landsksap">Västergötland</region></location>'
+      expect(out).to eq '<head><placeName>Kinnekulle</placeName></head> <P><locale>berg</locale>, <location><district type="härad">Kinne</district> och <district type="härad">Kinnefjärdings</district> hd, <region type="landskap">Västergötland</region></location>'
     end
 
     it "handles the case of two socknar" do
@@ -41,7 +41,7 @@ describe Sol do
       expect(out).to eq '<head><placeName>Kivik</placeName></head> <P><locale>tätort</locale>, <location><district type="socken">Södra Mellby</district> och <district type="socken">Vitaby</district> snr, <district type="härad">Albo hd</district>, <region type="landskap">Skåne</region></location>'
     end
 
-    it "for real!", focus: true do
+    it "for real!" do
       out = sol.process('Klagshamn samhälle, Västra Klagstorps och Tygelsjö snr, Oxie hd, Skåne')
       expect(out).to eq '<head><placeName>Klagshamn</placeName></head> <P><locale>samhälle</locale>, <location><district type="socken">Västra Klagstorps</district> och <district type="socken">Tygelsjö</district> snr, <district type="härad">Oxie hd</district>, <region type="landskap">Skåne</region></location>'
     end

@@ -53,8 +53,6 @@ class Sol
           attr = 'landskap'
         end
 
-        # byebug
-
         xml_strip += "<#{tag} type=\"#{attr}\">#{element}</#{tag}>"
 
         if index == length - 1
