@@ -7,8 +7,8 @@ class Sol
     place =~ /^(.*) (.*)$/
     xml_strip = "<head><placeName>#{$1}</placeName></head> <P><locale>#{$2}</locale>, "
     first = array.first
-    if first == 'tätort'
-      xml_strip += '<locale>tätort</locale>, '
+    if first == 'tätort' || first == 'gravfält'
+      xml_strip += "<locale>#{first}</locale>, "
       array.shift
     end
     xml_strip += '<location>'
