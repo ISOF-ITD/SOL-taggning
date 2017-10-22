@@ -14,30 +14,44 @@ class Sol
     xml_strip += '<location>'
     length = array.count
     array.each_with_index do |element, index|
-      element =~ /^(.*) (.*)$/
-      locale = $2
-      case locale
-      when 'sn'
-        tag = 'district'
-        attr = 'socken'
-      when 'hd'
-        tag = 'district'
-        attr = 'härad'
-      end
-
-      if index == length - 1
-        tag = 'region'
-        attr = 'landskap'
-      end
-
-      # byebug
-
-      xml_strip += "<#{tag} type=\"#{attr}\">#{element}</#{tag}>"
-
-      if index == length - 1
-        xml_strip += '</location>'
+      if element =~ / och /
+        locs = element.split(' och ').map(&:strip)
+        locs.last =~ /([ ]*)$/
+        locale = $1
+        case locale
+        when 'snr'
+          tag = 'district'
+          attr = 'socken'
+        when 'hd'
+          tag = 'district'
+          attr = 'härad'
+        end
       else
-        xml_strip += ', '
+        element =~ /^(.*) (.*)$/
+        locale = $2
+        case locale
+        when 'sn'
+          tag = 'district'
+          attr = 'socken'
+        when 'hd'
+          tag = 'district'
+          attr = 'härad'
+        end
+
+        if index == length - 1
+          tag = 'region'
+          attr = 'landskap'
+        end
+
+        # byebug
+
+        xml_strip += "<#{tag} type=\"#{attr}\">#{element}</#{tag}>"
+
+        if index == length - 1
+          xml_strip += '</location>'
+        else
+          xml_strip += ', '
+        end
       end
     end
 
