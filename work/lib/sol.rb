@@ -63,7 +63,6 @@ class Sol
       end
     end
 
-    byebug
     xml_strip
   end
 end
