@@ -5,10 +5,10 @@ class Sol
     array = line.split(',').map(&:strip)
     place = array.shift
     place =~ /^(.*) (.*)$/
-    xml_strip = "<head><placeName>#{$1}</placeName></head> <P><locale>#{$2}</locale><location>"
+    xml_strip = "<head><placeName>#{$1}</placeName></head> <P><locale>#{$2}</locale>, <location>"
     length = array.count
     array.each_with_index do |element, index|
-      element = /^(.*) (.*)$/
+      element =~ /^(.*) (.*)$/
       locale = $2
       case locale
       when 'sn'
@@ -23,6 +23,8 @@ class Sol
         tag = 'region'
         attr = 'landskap'
       end
+
+      # byebug
 
       xml_strip += "<#{tag} type=\"#{attr}\">#{element}</#{tag}>"
 
