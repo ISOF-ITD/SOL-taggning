@@ -30,5 +30,7 @@ class Sol
         xml_strip += ', '
       end
     end
+
+    xml_strip
   end
 end
