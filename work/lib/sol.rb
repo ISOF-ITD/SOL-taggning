@@ -16,8 +16,8 @@ class Sol
     array.each_with_index do |element, index|
       if element =~ / och /
         locs = element.split(' och ').map(&:strip)
-        locs.last =~ /([ ]*)$/
-        locale = $1
+        locs.last =~ /^(.*) (.*)$/
+        locale = $2
         case locale
         when 'snr'
           tag = 'district'
@@ -25,6 +25,9 @@ class Sol
         when 'hd'
           tag = 'district'
           attr = 'härad'
+        end
+        locs.pop.each do |loc|
+          xml_strip += "<#{tag} type=\"#{attr}\">#{loc}</#{tag}>"
         end
       else
         element =~ /^(.*) (.*)$/
