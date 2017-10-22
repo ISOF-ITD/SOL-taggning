@@ -8,7 +8,7 @@ class Sol
     xml_strip = "<head><placeName>#{$1}</placeName></head> <P><locale>#{$2}</locale>, "
     first = array.first
     if first == 'tätort'
-      xml_strip += '<locale>tätort</locale>, <location>, '
+      xml_strip += '<locale>tätort</locale>, <location>'
       array.shift
     end
     length = array.count
