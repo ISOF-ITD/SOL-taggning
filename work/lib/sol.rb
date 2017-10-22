@@ -11,12 +11,12 @@ class Sol
       element = /^(.*) (.*)$/
       locale = $2
       case locale
-        when 'sn'
-          tag = 'district'
-          attr = 'socken'
-        when 'hd'
-          tag = 'district'
-          attr = 'härad'
+      when 'sn'
+        tag = 'district'
+        attr = 'socken'
+      when 'hd'
+        tag = 'district'
+        attr = 'härad'
       end
 
       if index == length - 1
