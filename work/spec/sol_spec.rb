@@ -25,7 +25,7 @@ describe Sol do
       expect(out).to eq '<head><placeName>Västra Vram</placeName></head> <P><locale>sn</locale>, <location><district type="härad">Gärds hd</district>, <region type="landskap">Skåne</region></location>'
     end
 
-    it "processes a simple parish", focus: true do
+    it "processes a simple parish" do
       out = sol.process('Västrum sn, Södra Tjusts hd, Småland')
       expect(out).to eq '<head><placeName>Västrum</placeName></head> <P><locale>sn</locale>, <location><district type="härad">Södra Tjusts hd</district>, <region type="landskap">Småland</region></location>'
       # FIXME Add forms with ‘och’, see e. g. pp. 176-177.  No plural abbrevation for härad?
@@ -41,7 +41,7 @@ describe Sol do
       expect(out).to eq '<head><placeName>Kivik</placeName></head> <P><locale>tätort</locale>, <location><district type="socken">Södra Mellby</district> och <district type="socken">Vitaby</district> snr, <district type="härad">Albo hd</district>, <region type="landskap">Skåne</region></location>'
     end
 
-    it "for real!" do
+    it "for real!", focus: true do
       out = sol.process('Klagshamn samhälle, Västra Klagstorps och Tygelsjö snr, Oxie hd, Skåne')
       expect(out).to eq '<head><placeName>Klagshamn</placeName></head> <P><locale>samhälle</locale>, <location><district type="socken">Västra Klagstorps</district> och <district type="socken">Tygelsjö</district> snr, <district type="härad">Oxie hd</district>, <region type="landskap">Skåne</region></location>'
     end

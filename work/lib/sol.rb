@@ -26,9 +26,16 @@ class Sol
           tag = 'district'
           attr = 'härad'
         end
-        locs.pop.each do |loc|
-          xml_strip += "<#{tag} type=\"#{attr}\">#{loc}</#{tag}>"
+
+        locs.pop
+        loc_elts = locs.map do |loc|
+          "<#{tag} type=\"#{attr}\">#{loc}</#{tag}>"
         end
+
+        loc_elts << "<#{tag} type=\"#{attr}\">#{$1}</#{tag}>"
+
+        xml_strip += loc_elts.join(' och ') # FIXME Unlikely to be correct for more than two!
+        xml_strip += " #{locale}, "
       else
         element =~ /^(.*) (.*)$/
         locale = $2
@@ -58,6 +65,7 @@ class Sol
       end
     end
 
+    byebug
     xml_strip
   end
 end
