@@ -5,7 +5,7 @@ describe Sol do
 
   # TODO Hard examples Bålsta kn
   describe '#process' do
-    it "processes a parish without a härad" do
+    it "processes a parish without a härad", focus: true do
       out = sol.process('Husby sn, tätort, Dalarna')
       expect(out).to eq '<head><placeName>Husby</placeName></head> <P><locale>sn</locale>, <locale>tätort</locale>, <location><region type="landskap">Dalarna</region></location>'
     end
@@ -20,7 +20,7 @@ describe Sol do
       expect(out).to eq '<head><placeName>Vätteryd</placeName></head> <P><locale>torp</locale>, <locale>gravfält</locale>, <location><district type="socken">Norra Mellby sn</district>, <district type="härad">Västra Göinge hd</district>, <region type="landskap">Skåne</region></location>'
     end
 
-    it "processes a parish with a compound name", focus: true do
+    it "processes a parish with a compound name" do
       out = sol.process('Västra Vram sn, Gärds hd, Skåne')
       expect(out).to eq '<head><placeName>Västra Vram</placeName></head> <P><locale>sn</locale>, <location><district type="härad">Gärds hd</district>, <region type="landskap">Skåne</region></location>'
     end
