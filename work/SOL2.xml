@@ -980,7 +980,7 @@
 
                      <p>ortnamnssed iakttas. Detta innebär att </p>
 
-                     <list type="litany" rend="simple"><!-- or something better ;-) -->
+                     <list type="unordered"><!-- or something better ;-) -->
                               <item>hävdvunna ortnamn inte ändras utan starka skäl,</item>
 
                            <item>ortnamn i övrigt stavas enligt vedertagna regler för
@@ -1013,6 +1013,7 @@
                      <graphic url="bilder/SOL2_img_47.jpg"/>
                   </figure>
 
+                  <!-- FIXME!
                   <Table>
                      <TR>
                         <TD>gande geodata. Detta gäller bl.a. alla namn som finns i </TD>
@@ -1350,6 +1351,7 @@
                         <TD/>
                      </TR>
                   </Table>
+                  -->
 
                      <figure>
 
