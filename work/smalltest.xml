@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="sv">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Svenst ortnamnslexikon</title>
+      </titleStmt>
+      <publicationStmt>
+	<publisher>Institutet för språk och folkminnen</publisher>
+	<pubPlace>Uppsala</pubPlace>
+	<date when="2016" />
+      </publicationStmt>
+      <sourceDesc>
+        <p>Original research</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div1>
+        <head>Title</head>
+        <p>Här är lite text.</p>
+      </div1>
+    </body>
+  </text>
+</TEI>
