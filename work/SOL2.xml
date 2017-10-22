@@ -1354,34 +1354,33 @@
                   -->
 
                      <figure>
-
                         <graphic url="bilder/SOL2_img_48.jpg"/>
                      </figure>
-                  <figure>
 
+                  <figure>
                      <graphic url="bilder/SOL2_img_49.jpg"/>
                   </figure>
-                  <figure>
 
+                  <figure>
                      <graphic url="bilder/SOL2_img_50.jpg"/>
                   </figure>
 
-                     <H4>NAmNArtIkLAr </H4>
-                  <figure>
+                     <div><head>NAmNArtIkLAr</head></div>
 
+                  <figure>
                      <graphic url="bilder/SOL2_img_51.jpg"/>
                   </figure>
-                  <figure>
 
+                  <figure>
                      <graphic url="bilder/SOL2_img_52.jpg"/>
                   </figure>
 
                   <figure>
-
                      <graphic url="bilder/SOL2_img_53.jpg"/>
                   </figure>
 
-               <H3>Förkortningar, ord- och teckenförklaringar </H3>
+               <div>
+               <head>Förkortningar, ord- och teckenförklaringar</head>
 
                <p>a (fornsvenska) = på apud (latin) = vid avskr. = avskrift castrum (-ri, -ris, -ro)
                   (latin) = slott, fästning curia (-iam, -ias) (latin) = gård de (latin) = från
@@ -1414,26 +1413,27 @@
                <p>* anger att formen är konstruerad ’…’ anger betydelse för ord eller namn </p>
 
                <p>➝ hänvisning till namnartikel </p>
-               <figure>
+               </div>
 
+               <figure>
                   <graphic url="bilder/SOL2_img_54.jpg"/>
                </figure>
 
                   <figure>
-
                      <graphic url="bilder/SOL2_img_55.jpg"/>
                   </figure>
 
-               <H3>Förteckning över översiktsartiklar </H3>
+               <div>
+               <head>Förteckning över översiktsartiklar</head>
 
                <p>al arin arve arvet benning bo bod bol bor by böle ed harg hem hester holm hov hult
                   hundare husaby härad hög -inge Karlaby kind kumla land lösa löv mark måla -nen
                   -nki rud rum ryd sal socken sta(d) Stavgard Stenstugu Stommen säter tomt torp tuna
                   vi vin åker ånger ör </p>
+               </div>
 
 
                <figure>
-
                   <graphic url="bilder/SOL2_img_56.jpg"/>
                </figure>
                <figure>
