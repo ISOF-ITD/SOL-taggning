@@ -21,15 +21,17 @@
                    <div>
                    <p>P </p>
 
-                      <div type="naturnamn" xml:id="Padjelanta">
-                      <head><placeName>Padjelanta</placeName></head> <p><locale>nationalpark</locale>,
-                      <location><district type="socken">Jokkmokks sn</district>,
-                      <region type="landskap">Lappland</region></location>.
+                      <div xml:id="Padjelanta">
+                      <!-- TODO Put geogName somewhere.  placeName too? -->
+                      <!-- TODO Add back locale and location? -->
+                      <head>Padjelanta</head> <p>nationalpark,
+                      <district type="socken">Jokkmokks sn</district>,
+                      <region type="landskap">Lappland</region>.
                        – Namnet är en försvenskning av lulesam. Badjelánnda ’högland’, vars efterled lánnda
                       ’land(område)’ är ett ungt nordiskt lån. Namnet syftar på renbeteslandet närmast Norge. </p> </div>
 
                       <div type="naturnamn" xml:id="Paittasjärvi">
-                      <head><placeName>Paittasjärvi</placeName></head> <p><locale>sjö i Kalixälvens vattensystem</locale>,
+                      <p><placeName>Paittasjärvi</placeName></p> <p><locale>sjö i Kalixälvens vattensystem</locale>,
                       <location><region type="landskap">Lappland</region></location>.
                        Paitze 1568. – Namnet är en till meänkieli anpassad form av sjöns nordsamiska namn Báittasjávri.
                       Förleden är kanske en omvandling av sam. spáittas ’snabb, kvick’, med syftning på det snabbt
@@ -37,7 +39,7 @@
                       Paittasluspa. Efterleden meänk. järvi, nordsam. jávri betyder ’sjö’. </p> </div>
 
                       <div type="bebyggelsenamn" xml:id="Pajala">
-                      <head><placeName>Pajala</placeName></head> <p><locale>kn</locale>,
+                      <p><placeName>Pajala</placeName></p> <p><locale>kn</locale>,
                       <locale>sn</locale>, <locale>tätort</locale>,
                       <location><region type="landskap">Norrbotten</region></location>.
                        Paiala 1603 (avser byn). – Det meänkieliska sockennamnet är lånat från byn, vars namn
