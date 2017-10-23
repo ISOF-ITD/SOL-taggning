@@ -69,12 +69,16 @@ class Sol
 
   def unweave(table)
     doc = REXML::Document.new(table)
-    result = ['', '']
+    result = [[], []]
     doc.root.elements.each do |element|
       elts = element.elements
-      result.first += elts.first.text
-      result.last += elts.last.text
+      result.first << elts.first.text
+      byebug
+      result.last << elts.last.text
     end
+
+    final_result = [result.first.join(' '), result.last.join(' ')].join(' ')
+    byebug
 
     'This line is supposed to go with this line here while that line has to go with that one over there'
   end
