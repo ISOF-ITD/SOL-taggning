@@ -1,0 +1,7 @@
+– Paragraferna kan vara avbrutna av bilder (se Högom)
+– Referenser? Se Kungsnäs med ref. till Näs
+– Bindestrecken verkar försvinna ganska systematiskt
+– id:en måste vara unika! (se Kumla, Näs)
+– Göra något åt tankestrecket vid början av uppslagen
+– BCP47! Värmlandsfinska?
+– En ”se” för mycket i uppslaget Tösse?
