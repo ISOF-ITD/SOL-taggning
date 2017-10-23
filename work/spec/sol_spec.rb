@@ -45,6 +45,8 @@ describe Sol do
       out = sol.process('Klagshamn samhälle, Västra Klagstorps och Tygelsjö snr, Oxie hd, Skåne')
       expect(out).to eq '<head><placeName>Klagshamn</placeName></head> <P><locale>samhälle</locale>, <location><district type="socken">Västra Klagstorps</district> och <district type="socken">Tygelsjö</district> snr, <district type="härad">Oxie hd</district>, <region type="landskap">Skåne</region></location>'
     end
+
+    it "processes the entry for Norberg"
   end
 
   # TODO Handle place name elements, f.d., longer strings such as kavsområde
