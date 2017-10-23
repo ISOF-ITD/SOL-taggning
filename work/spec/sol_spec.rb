@@ -96,12 +96,5 @@ __EoList__
         </div>
 _EoDiv_
     end
-
-    it "preserves p’s" do
-      unlisted = sol.unlist <<_EoListWithP_
-        <LI>
-        </LI>
-_EoListWithP_
-    end
   end
 end
