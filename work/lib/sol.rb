@@ -72,14 +72,10 @@ class Sol
     result = [[], []]
     doc.root.elements.each do |element|
       elts = element.elements
-      result.first << elts.first.text
-      byebug
-      result.last << elts.last.text
+      result.first << elts[1].text
+      result.last << elts[2].text
     end
 
     final_result = [result.first.join(' '), result.last.join(' ')].join(' ')
-    byebug
-
-    'This line is supposed to go with this line here while that line has to go with that one over there'
   end
 end
