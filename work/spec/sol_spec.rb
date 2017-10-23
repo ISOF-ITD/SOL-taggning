@@ -96,5 +96,33 @@ __EoList__
         </div>
 _EoDiv_
     end
+
+    it "deals with interspersed p’s" do
+      unlisted = sol.unlist <<_EoListWithP_
+        <root>
+          <LI>
+            <Lbl>—</Lbl>
+
+            <LBody>Die Suffixbildungen in der altgermanischen Toponymine.</LBody>
+          </LI>
+
+          <p>I: Suffixbildungen in alten Ortsnamen (se detta). Se 13–26.</p>
+
+          <LI>
+            <Lbl>—</Lbl>
+
+            <LBody>Svenska häradsnamn. Uppsala–Köpenhamn 1965. (Nomina Germanica 14.)</LBody>
+          </LI>
+        </root>
+_EoListWithP_
+
+      expect(unlisted).to eq <<_EoJustP_
+        <root>
+          <p>Die Suffixbildungen in der altgermanischen Toponymie.</p>
+
+          <p>I: Suffixbildungen in alten Ortsnamen (se detta). S. 13–26.</p>
+        </root>
+_EoJustP_
+    end
   end
 end
