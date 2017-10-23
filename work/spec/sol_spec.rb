@@ -84,10 +84,24 @@ __EoTable__
           <LI>
             <Lbl>—</Lbl>
 
-            <LBody>Olika egennamnskategorier</LBody>
+            <LBody>Om ortnmanssuffixet -str-. I: NoB 63 (1975). S. 143–63.</LBody>
           </LI>
         </L>
 __EoList__
+      expect unlisted == <<_EoDiv_
+        <div>
+          <p>Nordiska bebyggelsenamn ur språklig synvinkel I: NoB 103 (2015). S. 9–23.</p>
+
+          <p>Om ortnamnssuffixet -str-. I: NoB 63 (1975). S. 143–63.</p>
+        </div>
+_EoDiv_
+    end
+
+    it "preserves p’s" do
+      unlisted = sol.unlist <<_EoListWithP_
+        <LI>
+        </LI>
+_EoListWithP_
     end
   end
 end
