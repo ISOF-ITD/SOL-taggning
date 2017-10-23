@@ -103,7 +103,7 @@ _EoDiv_
           <LI>
             <Lbl>—</Lbl>
 
-            <LBody>Die Suffixbildungen in der altgermanischen Toponymine.</LBody>
+            <LBody>Die Suffixbildungen in der altgermanischen Toponymie.</LBody>
           </LI>
 
           <p>I: Suffixbildungen in alten Ortsnamen (se detta). Se 13–26.</p>
@@ -121,6 +121,8 @@ _EoListWithP_
           <p>Die Suffixbildungen in der altgermanischen Toponymie.</p>
 
           <p>I: Suffixbildungen in alten Ortsnamen (se detta). S. 13–26.</p>
+
+          <p>Svenska häradsnamn. Uppsala–Köpenhamn 1965. (Nomina Germanica 14.)</p>
         </root>
 _EoJustP_
     end

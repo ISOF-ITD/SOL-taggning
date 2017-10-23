@@ -83,8 +83,21 @@ class Sol
     doc = REXML::Document.new(list)
     result = []
 
-    doc.root.elements.each do |element|
-      result << element.elements[2].text
+    if doc.root.name == 'root'
+      doc.root.elements.each do |element|
+        byebug
+        if elements.element.name == 'LI'
+          elements.element.elements.each do |elt|
+            result << elt.elements[2].text
+          end
+        elsif elements.element.name == 'p'
+          result << elements.element.text
+        end
+      end
+    else
+      doc.root.elements.each do |element|
+        result << element.elements[2].text
+      end
     end
 
     '<p>' + result.join("</p>\n\n<p>") + '</p'
