@@ -70,4 +70,24 @@ __EoTable__
       expect unweaved == 'This line is supposed to be combined with this line here while that one has to go with that one over there'
     end
   end
+
+  describe '#unlist' do
+    it "unlists a list" do
+      unlisted = sol.unlist <<__EoList__
+        <L>
+          <LI>
+            <Lbl>—</Lbl>
+
+            <LBody>Nordiska bebyggelsenamn ur språklig synvinkel I: NoB 103 (2015). S. 9–23.</LBody>
+          </LI>
+
+          <LI>
+            <Lbl>—</Lbl>
+
+            <LBody>Olika egennamnskategorier</LBody>
+          </LI>
+        </L>
+__EoList__
+    end
+  end
 end
