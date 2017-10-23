@@ -3,3 +3,4 @@ http://www.tei-c.org/release/xml/tei/custom/schema/xsd/tei_all_{dcr,teix,xml}.xs
 http://www.tei-c.org/release/xml/tei/custom/schema/xsd/tei_minimal.xsd
 http://www.tei-c.org/release/xml/tei/custom/schema/xsd/tei_lite.xsd
 http://www.tei-c.org/release/xml/tei/custom/schema/xsd/tei_lite_{dcr,xml}.xsd
+http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng
