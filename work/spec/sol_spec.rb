@@ -51,4 +51,23 @@ describe Sol do
 
   # TODO Handle place name elements, f.d., longer strings such as kavsområde
   # avgränsat av Jylland och Själland samt svenska västkusten (Kattegatt)
+
+  describe "#unweave" do
+    it "unweaves a table" do
+      unweaved = sol.unweave <<__EoTable__
+        <Table>
+          <TR>
+            <TD>This line is supposed to be combined with</TD>
+            <TD>while that one has to go with</TD>
+          </TR>
+          <TR>
+            <TD>this line here</TD>
+            <TD>that one over there</TD>
+          </TR>
+        </Table>
+__EoTable__
+
+      expect unweaved == 'This line is supposed to be combined with this line here while that one has to go with that one over there'
+    end
+  end
 end

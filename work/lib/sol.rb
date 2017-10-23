@@ -65,4 +65,8 @@ class Sol
 
     xml_strip
   end
+
+  def unweave(table)
+    'This line is supposed to go with this line here while that line has to go with that one over there'
+  end
 end
