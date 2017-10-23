@@ -17,8 +17,6 @@
   </teiHeader>
   <text>
                    <body>
-                   <div>
-                   <div>
                    <p>P </p>
 
                       <div xml:id="Padjelanta">
@@ -46,9 +44,6 @@
                       är bildat till personnamnet Pajainen (byns förste bebyggare) med tillägg av en
                       boplatsangivande ändelse -la. I personnamnet ingår paja ’smedja’. Ortens
                       nordsamiska namn Bájil förefaller att återgå på det meänkieliska namnet. </p> </div>
-
-                  </div>
-   </div><!-- was: Part -->
    </body>
    </text>
 </TEI>
