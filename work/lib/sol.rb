@@ -1,3 +1,4 @@
+require 'rexml/document'
 require 'byebug'
 
 class Sol
@@ -67,6 +68,14 @@ class Sol
   end
 
   def unweave(table)
+    doc = REXML::Document.new(table)
+    result = ['', '']
+    doc.root.elements.each do |element|
+      elts = element.elements
+      result.first += elts.first.text
+      result.last += elts.last.text
+    end
+
     'This line is supposed to go with this line here while that line has to go with that one over there'
   end
 end
