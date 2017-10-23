@@ -3,3 +3,6 @@ test: sol2.xml
 
 smalltest: smalltest.xml
 	xmllint --schema ../../../TEI/Stylesheets/profiles/iso/schema/isotei.xsd smalltest.xml
+
+cotw: character-other-than-whitespace.xml
+	xmllint --schema ../../../TEI/Stylesheets/profiles/iso/schema/isotei.xsd character-other-than-whitespace.xml
