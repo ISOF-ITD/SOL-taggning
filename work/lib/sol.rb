@@ -76,6 +76,6 @@ class Sol
       result.last << elts[2].text
     end
 
-    final_result = [result.first.join(' '), result.last.join(' ')].join(' ')
+    result.map { |res| res.join(' ') }.join(' ')
   end
 end
