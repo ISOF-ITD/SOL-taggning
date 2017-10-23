@@ -22,7 +22,7 @@
                       <div xml:id="Padjelanta">
                       <!-- TODO Put geogName somewhere.  placeName too? -->
                       <!-- TODO Add back locale and location? -->
-                      <head>Padjelanta</head> <p>nationalpark,
+                      <head><tei:place><tei:placeName>Padjelanta</tei:placeName></tei:place></head> <p>nationalpark,
                       <district type="socken">Jokkmokks sn</district>,
                       <region type="landskap">Lappland</region>.
                        – Namnet är en försvenskning av lulesam. Badjelánnda ’högland’, vars efterled lánnda
