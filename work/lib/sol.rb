@@ -78,4 +78,15 @@ class Sol
 
     result.map { |res| res.join(' ') }.join(' ')
   end
+
+  def unlist(list)
+    doc = REXML::Document.new(list)
+    result = []
+
+    doc.root.elements.each do |element|
+      result << element.elements[2].text
+    end
+
+    '<p>' + result.join("</p>\n\n<p>") + '</p'
+  end
 end
