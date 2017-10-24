@@ -3,7 +3,6 @@ require 'spec_helper'
 describe Sol do
   let(:sol) { Sol.new }
 
-  # TODO Hard examples Bålsta kn
   describe '#process' do
     it "processes a parish without a härad" do
       out = sol.process('Husby sn, tätort, Dalarna')
@@ -28,7 +27,6 @@ describe Sol do
     it "processes a simple parish" do
       out = sol.process('Västrum sn, Södra Tjusts hd, Småland')
       expect(out).to eq '<head><placeName>Västrum</placeName></head> <P><locale>sn</locale>, <location><district type="härad">Södra Tjusts hd</district>, <region type="landskap">Småland</region></location>'
-      # FIXME Add forms with ‘och’, see e. g. pp. 176-177.  No plural abbrevation for härad?
     end
 
     it "handles the case of two härad", focus: true do
@@ -47,10 +45,10 @@ describe Sol do
     end
 
     it "processes the entry for Norberg"
+    it "processes the entry for Bålsta (kn och hd osv.)"
+    it "processes entries with f. d."
+    it "processes entries with longer strings such as the one for Kattegatt"
   end
-
-  # TODO Handle place name elements, f.d., longer strings such as kavsområde
-  # avgränsat av Jylland och Själland samt svenska västkusten (Kattegatt)
 
   describe "#unweave" do
     it "unweaves a table" do
