@@ -99,6 +99,6 @@ class Sol
       end
     end
 
-    "<root>\n  <p>" + result.join("</p>\n\n  <p>") + "  </p>\n</root>"
+    "<root>\n  <p>" + result.join("</p>\n\n  <p>") + "</p>\n</root>"
   end
 end
