@@ -132,7 +132,7 @@ _EoJustP_
       expect(unlisted).to eq result.strip
     end
 
-    it "passes graphic elements as is" do
+    it "passes figure elements as is (almost)" do
       unlisted = sol.unlist <<__END__
         <root>
           <p>Nordische Ortsnamen aus germanischer Perspektive. I:  Onoma 37 (2002). S. 95–120.</p>

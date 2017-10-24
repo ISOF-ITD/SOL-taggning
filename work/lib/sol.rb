@@ -95,7 +95,7 @@ class Sol
           result << element.text
         elsif element.name == 'figure'
           graphic = element.elements.first
-          raise UnexpectedElement.new(graphic.name) unless graphic.name != 'graphic'
+          raise UnexpectedElement.new(graphic.name) unless graphic.name == 'graphic'
           url = graphic.attributes['url']
           result << "<figure><graphic url=\"#{url}\" /></figure>"
         else
