@@ -132,8 +132,8 @@ _EoJustP_
       expect(unlisted).to eq result.strip
     end
 
-    it "raises otherwise" do
-      expect { sol.unlist "<root><foo>bar</foo></root>" }.to raise_error
+    it "raises an error if it has any other element than L or p" do
+      expect { sol.unlist "<root><foo>bar</foo></root>" }.to raise_error UnexpectedElement
     end
   end
 end

@@ -1,6 +1,8 @@
 require 'rexml/document'
 require 'byebug'
 
+class UnexpectedElement < StandardError; end
+
 class Sol
   def process(line)
     array = line.split(',').map(&:strip)
@@ -92,7 +94,7 @@ class Sol
         elsif element.name == 'p'
           result << element.text
         else
-          raise "Unexpected element #{element.name}"
+          raise UnexpectedElement.new(element.name)
         end
       end
     else
