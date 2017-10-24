@@ -85,13 +85,12 @@ class Sol
 
     if doc.root.name == 'root'
       doc.root.elements.each do |element|
-        if element.name == 'LI'
+        if element.name == 'L'
           element.elements.each do |elt|
-            byebug
             result << elt.elements[2].text
           end
         elsif element.name == 'p'
-          result << elements.element.text
+          result << element.text
         end
       end
     else
@@ -100,6 +99,6 @@ class Sol
       end
     end
 
-    '<p>' + result.join("</p>\n\n<p>") + '</p'
+    "<root>\n  <p>" + result.join("</p>\n\n  <p>") + "  </p>\n</root>"
   end
 end
