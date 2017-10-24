@@ -131,5 +131,9 @@ _EoListWithP_
 _EoJustP_
       expect(unlisted).to eq result.strip
     end
+
+    it "raises otherwise" do
+      expect { sol.unlist "<root><foo>bar</foo></root>" }.to raise_error
+    end
   end
 end

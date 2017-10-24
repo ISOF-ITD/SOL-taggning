@@ -91,6 +91,8 @@ class Sol
           end
         elsif element.name == 'p'
           result << element.text
+        else
+          raise "Unexpected element #{element.name}"
         end
       end
     else
