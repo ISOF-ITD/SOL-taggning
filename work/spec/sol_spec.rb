@@ -143,13 +143,14 @@ _EoJustP_
         </root>
 __END__
 
-      expect(unlisted).to eq <<__END__
+      result = <<__END__
 <root>
   <p>Nordische Ortsnamen aus germanischer Perspektive. I:  Onoma 37 (2002). S. 95–120.</p>
 
   <figure><graphic url="bilder/SOL2_img_1577.jpg" /></figure>
 </root>
 __END__
+      expect(unlisted).to eq result.strip
     end
 
     it "raises an error if it has any other element than L, p, or figure" do

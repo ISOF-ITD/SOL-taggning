@@ -89,15 +89,15 @@ class Sol
       doc.root.elements.each do |element|
         if element.name == 'L'
           element.elements.each do |elt|
-            result << elt.elements[2].text
+            result << '  <p>' + elt.elements[2].text + '</p>'
           end
         elsif element.name == 'p'
-          result << element.text
+          result << '  <p>' + element.text + '</p>'
         elsif element.name == 'figure'
           graphic = element.elements.first
           raise UnexpectedElement.new(graphic.name) unless graphic.name == 'graphic'
           url = graphic.attributes['url']
-          result << "<figure><graphic url=\"#{url}\" /></figure>"
+          result << "  <figure><graphic url=\"#{url}\" /></figure>"
         else
           raise UnexpectedElement.new(element.name)
         end
@@ -108,6 +108,6 @@ class Sol
       end
     end
 
-    "<root>\n  <p>" + result.join("</p>\n\n  <p>") + "</p>\n</root>"
+    "<root>\n" + result.join("\n\n") + "\n</root>"
   end
 end
