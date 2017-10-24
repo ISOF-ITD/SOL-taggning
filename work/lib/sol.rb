@@ -85,12 +85,12 @@ class Sol
 
     if doc.root.name == 'root'
       doc.root.elements.each do |element|
-        byebug
-        if elements.element.name == 'LI'
-          elements.element.elements.each do |elt|
+        if element.name == 'LI'
+          element.elements.each do |elt|
+            byebug
             result << elt.elements[2].text
           end
-        elsif elements.element.name == 'p'
+        elsif element.name == 'p'
           result << elements.element.text
         end
       end
