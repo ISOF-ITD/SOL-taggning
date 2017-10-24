@@ -28053,7 +28053,7 @@
                   <location><district type="socken">Jokkmokks sn</district>
                   <region type="landskap">Lappland</region></location>.
                   Ráddnávrre sjö i Lilla Luleälvens vattensystem, Jokkmokks sn, Lappland. – Det
-                  <lang type="lulesam">lulesamiska</lang> namnet, med försvenskad stavning Randijaure,
+                  <lang value="lulesam">lulesamiska</lang> namnet, med försvenskad stavning Randijaure,
                   är en sammandragen form troligen av ráddna ’kamrat, granne’ och jávrre ’sjö’.
                   Namnet är överfört på byn Randijaur, sam. Ráddnávrre. </p> </div>
 
@@ -28080,7 +28080,7 @@
                    <head><placeName>Ráhpaädno</placeName></head> <p><span type="locale">fjällälv i Sareks nationalpark</span>,
                    <location><district type="socken">Jokkmokks sn</district>
                    <region type="landskap">Lappland</region></location>.
-                   – Det <lang type="lulesam">lulesamiska</lang> namnet, som tidigare skrevs Rapaätno,
+                   – Det <lang value="lulesam">lulesamiska</lang> namnet, som tidigare skrevs Rapaätno,
                    har föreslagits innehålla det från fi. rapa ’gyttja, slam, dy’ lånade liktydiga ráhpa
                    med syftning på älvens sedimentrika vatten. Förleden har också sammanhållits med
                    adjektivet ráhpat ’rikt givande (om fiskeställe); snabb (att färdas), strid, stark (om
@@ -28179,7 +28179,7 @@
                    <region type="landskap">Uppland</region></location>.
                    (jn) Ramstæ 1282. – Socknen har övertagit namnet från en nu försvunnen gård eller
                    by. I förleden ingår antingen fsv. ramn ’korp’ eller det därtill bildade mansnamnet,
-                   från början säkert binamn på person med korpsvart hår. Efterleden är<placeNamn>sta(d)</placeNamn>. </p> </div>
+                   från början säkert binamn på person med korpsvart hår. Efterleden är<placeName>sta(d)</placeName>. </p> </div>
 
               <div type="naturnamn" xml:id="Ramsundsberget">
                   <head><placeName>Ramsundsberget</placeName></head> <p><span type="locale">höjd</span>,
@@ -28252,7 +28252,7 @@
                    <location><district type="socken">Vilhelmina sn</district>
                    <region type="landskap">Lappland</region></location>.
                    Raanswattn 1670. Namnet, som tillhör en namngrupp med namn på bägge sidor om
-                   riksgränsen, är en försvenskning av en äldre form av <lang type="sydsam">sydsamiska</lang>.
+                   riksgränsen, är en försvenskning av en äldre form av <lang value="sydsam">sydsamiska</lang>.
                    Raentsere. Detta namn är en sammandragen form av ett namn med en förled som kanske lånats
                    från norskans rein ’gränslinje mellan egendomar’, och efterleden jaevrie ’sjö’. Området
                    bildar gräns mellan samebyarna. </p> </div>
@@ -28298,7 +28298,7 @@
                     <location><district type="socken">Jokkmokks sn</district>
                     <region type="landskap">Lappland</region></location>.
                     – Namnet är bildat till älvnamnet <placeName>Ráhpaädno</placeName>. I dalens
-                    <lang type="lulesam">lulesamiska</lang>
+                    <lang value="lulesam">lulesamiska</lang>
                     namn <placeName>Ráhpavuobme</placeName> har efterleden vuobme betydelsen ’skog; skogslandet
                     i motsats till kalfjället’. </p> </div>
 
@@ -28498,7 +28498,7 @@
                    </head>
                 </figure>
 
-                   <p>259 </p>
+                   <div><p>259 </p></div>
                 <figure>
 
                    <graphic url="bilder/SOL2_img_1008.jpg"/>
@@ -28783,7 +28783,7 @@
                    <location><district type="socken">Arjeplogs sn</district>
                    <region type="landskap">Lappland</region></location>.
                     Rebnessjön, Rebnehaure 1833. – Riebnes är en förkortad form av
-                   <lang type="pitesam">Pitesamiska</lang>. <placeName>Riebnesjávrre</placeName>.
+                   <lang value="pitesam">Pitesamiska</lang>. <placeName>Riebnesjávrre</placeName>.
                    Förleden riebnes har jämförts med ett kolasamiskt ord för ’rödräv’, men etymologin
                    är osäker. Efterleden är jávrre ’sjö’. Det äldre belägget Rebnehaure återspeglar en
                    sammandragen form Riebnehávrre. </p> </div>
@@ -29386,8 +29386,8 @@
                   Förledens ursprung är okänt. Efterleden syftar på en fors i Silverån. </p> </div>
 
                 <div type="bebyggelsenamn" xml:id="Rosengård">
-                  <head><placeName>Rosengård</placeName></head> <p><span type="locale">stadsdel</span>,
-                  <location><settlement type="town">Malmö stad</settlement>,
+                  <head><placeName>Rosengård</placeName></head> <p><span type="locale">stadsdel</span>
+                  <location><settlement type="town">Malmö stad</settlement>
                   <region type="landskap">Skåne</region></location>.
                   – Den gård som givit stadsdelen sitt namn var ursprungligen en del av kyrkbyn i Västra
                    Skrävlinge sn, Oxie hd. Den flyttades ut från byn 1811, i samband med enskiftet, och gavs då namnet
@@ -29470,7 +29470,7 @@
                   <location><district type="socken">Karesuando sn</district>
                   <region type="landskap">Lappland</region></location>.
                    Råsta Tresk 1559. – Namnet Rostojávri (med en försvenskad stavningsform Råstojaure)
-                   är <lang type="nordsam">nordsamiskt</lang>. Förleden förekommer i ett flertal namn i
+                   är <lang value="nordsam">nordsamiskt</lang>. Förleden förekommer i ett flertal namn i
                    området, bl.a. som namn på ett stort fjällområde (Rostu). Dess betydelse är okänd.
                    Efterleden är jávri ’sjö’. </p> </div>
 
@@ -29482,7 +29482,7 @@
                    Både äldre norrbottniskt *rodsel ’röjning’ och det finska ordet ruotsi i betydelsen ’svensk’ har
                    föreslagits. Efterleden avser en forntida vik med bl.a. Nedreträsket och Viken
                    som nutida restsjöar. Tolkat som finskt skulle namnet kunna vittna om svensk
-                   bosättning i finsktalande miljö. Den ursprungliga <lang type="fi">finska</lang> efterleden, troligen
+                   bosättning i finsktalande miljö. Den ursprungliga <lang value="fi">finska</lang> efterleden, troligen
                    laksi, äldre form av lahti ’vik’, har av de svensktalande i så fall ersatts med
                    vik efter ett i tvåspråkiga områden välkänt mönster. </p> </div>
 
@@ -29522,7 +29522,7 @@
                <div type="naturnamn" xml:id="Rotnen">
                 <head><placeName>Rotnen</placeName></head> <p><span type="locale">älv</span>,
                 <location><region type="landskap">Dalarna och Härjedalen</region></location>.
-                <placename>Rot</placename>. </p> </div>
+                <placeName>Rot</placeName>. </p> </div>
 
                <div type="naturnamn" xml:id="Rottnan">
                  <head><placeName>Rottnan</placeName></head> <p><span type="locale">å</span>,
@@ -29747,7 +29747,7 @@
                   <head><placeName>Rusksele</placeName></head> <p><span type="locale">tätort</span>,
                   <location><district type="socken">Lycksele sn</district>
                   <region type="landskap">Lappland</region></location>.
-                  – Namnet är givet efter ett sel (lugnvatten) i Vindelälven, <lang type="umesam">Umesamiska</lang>
+                  – Namnet är givet efter ett sel (lugnvatten) i Vindelälven, <lang value="umesam">Umesamiska</lang>
                    <placeName>Ruosskuosuvvane</placeName>, vars efterled innehåller suvvane ’lugnvatten
                    i å eller älv’. Förledens betydelse är inte känd, varför förhållandet mellan det svenska
                    och det samiska namnet är oklart. Ortens samiska namn är <placeName>Ruosskuo</placeName>. </p> </div>
@@ -29975,7 +29975,7 @@
                       <head><placeName>Ryfjället</placeName></head> <p><span type="locale">fjällmassiv</span>,
                       <location><district type="socken">Tärna sn</district>
                       <region type="landskap">Lappland</region></location>.
-                      – Namnets förled är en försvenskning av <lang type="sydsam">sydsamiska</lang>.
+                      – Namnets förled är en försvenskning av <lang value="sydsam">sydsamiska</lang>.
                       <placeName>Ryjveje</placeName> (umesam. Ryjvvie) med betydelsen ’den
                       rykande’; karakteristiskt för fjället är att vindarna där blåser kraftigt
                       och nyckfullt och rör upp snön. Fjället är även känt under de äldre
@@ -30178,13 +30178,13 @@
                    <location><region type="landskap">Norrbotten</region></location>.
                    (in) Rano 1339 (avser kyrkbyn). – Sockennamnet är övertaget från kyrkbyn, även
                    kallad Rånbyn, vars namn är givet efter <placeName>Råneälven</placeName>. För stavningen -eå
-                   <placeName>Bureå</placeName>. Ortens <lang type="lulesam">lulesamiska</lang> namn är
+                   <placeName>Bureå</placeName>. Ortens <lang value="lulesam">lulesamiska</lang> namn är
                    <placeName>Rávnna</placeName> med okänd betydelse. </p> </div>
 
                 <div type="naturnamn" xml:id="Råneälven">
                    <head><placeName>Råneälven</placeName></head> <p><span type="locale">älv</span>,
                    <location><region type="landskap">Lappland och Norrbotten</region></location>.
-                   – Namnet har sannolikt samiskt ursprung. Det nuvarande <lang type="lulesam">lulesamiska</lang>
+                   – Namnet har sannolikt samiskt ursprung. Det nuvarande <lang value="lulesam">lulesamiska</lang>
                    namnet <placeName>Rávnaädno</placeName> innehåller genitiv av
                    tätortsnamnet Rávnna (Råneå) och efterleden -ädno ’älv’. Älven har också
                    kallats Ráddneädno. Förleden i detta namn, som även ingår i namnet på källsjön
@@ -30438,7 +30438,7 @@
                   <region type="landskap">Lappland</region></location>.
                   – Namnet innehåller djurbeteckningen räv och lid i betydelsen ’sluttande
                   skogstrakt’ med syftning på den höjd där gruvan anlagts. Höjdens
-                  <lang type="umesam">umesamiska</lang> namn <placeName>Riebijtjuvvielge</placeName>
+                  <lang value="umesam">umesamiska</lang> namn <placeName>Riebijtjuvvielge</placeName>
                   innehåller riebij ’räv’ och tjuvvielge (tjuvvalge) ’bergrygg’. </p> </div>
 
                 <div type="bebyggelsenamn" xml:id="Rävsnäs">
@@ -30637,7 +30637,7 @@
                    </head>
                 </figure>
 
-                   <p>273 </p>
+                   <div><p>273 </p></div>
                 <figure>
 
                    <graphic url="bilder/SOL2_img_1063.jpg"/>
@@ -30844,7 +30844,7 @@
 
 
 
-                   <p>S </p>
+                   <div><p>S </p></div>
 
                    <div type="naturnamn" xml:id="Sádijávrre">
                    <head><placeName>Sádijávrre</placeName></head> <p><span type="locale">sjö</span>,
