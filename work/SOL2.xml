@@ -28909,7 +28909,7 @@
                 <div type="bebyggelsenamn" xml:id="Rinkabyholm">
                    <head><placeName>Rinkabyholm</placeName></head> <p><span type="locale">tätort</span>,
                    <location><district type="socken">Dörby sn</district><district type="härad">Norra Möre hd</district>
-                   och <district type="socken">Hossmo sn</district><district type="härad">Södra Möre hd</district>
+                   <district type="socken">Hossmo sn</district><district type="härad">Södra Möre hd</district>
                    <region type="landskap">Småland</region></location>.
                     – Tätorten har utvecklats ur bebyggelse kring en hållplats, sedermera station, vid en 1899
                    öppnad järnvägssträcka. Hållplatsen fick namn efter en närbelägen fastighet med det unga
@@ -31374,7 +31374,7 @@
 
                    <div type="naturnamn" xml:id="Segeå">
                    <head><placeName>Segeå</placeName></head> <p><span type="locale">å</span>,
-                   <location><district type="härad">Bara och Oxie hd</district>samt
+                   <location><district type="härad">Bara och Oxie hd</district> samt
                    <district type="town">Malmö stad</district>
                    <region type="landskap">Skåne</region></location>.
                     Seie, Seje aa ca 1590. – Åns namn, fda. *Sekia, sammanhänger med dialektordet seke (sege) ’sidlänt mark,
@@ -31922,7 +31922,7 @@
                       <div type="bebyggelsenamn" xml:id="Simremarken">
                       <head><placeName>Simremarken</placeName></head> <p><span type="locale">del av Trelleborg</span>,
                       <location><district type="socken">Lilla Isie sn</district><district type="härad">Vemmenhögs hd</district>
-                       samt <district type="socken">Gislövs sn</district><district type="härad">Skytts hd</district>
+                       <district type="socken">Gislövs sn</district><district type="härad">Skytts hd</district>
                       <region type="landskap">Xland</region></location>.
                        Sømmere, Sommere 1570-talet. – Namnet på denna unga villa- och sommarstugebebyggelse avsåg äldst ett
                       ägomarks- och strandområde. Det innehåller troligen det lågtyska lånordet sömere (somer) ’kärl;
@@ -32787,21 +32787,24 @@
                    som bor på den skaftliknande terrängformationen’. </p> </div>
 
                    <figure>
-
                       <graphic url="bilder/SOL2_img_1114.jpg"/>
                    </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1115.jpg"/>
                 </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1116.jpg"/>
                 </figure>
+
                 <figure>
-                   <graphic url="bilder/SOL2_img_1117.jpg"/> Bild 63. Skinnskatteberg. Att
+                   <graphic url="bilder/SOL2_img_1117.jpg"/>
+                   <head>Bild 63. Skinnskatteberg. Att
                    bergsklacken invid kyrkan kunnat liknas vid en skinnsäck är lätt att förstå.
-                   Foto: Allan Rostvik. </figure>
+                   Foto: Allan Rostvik.
+                   </head>
+                   </figure>
 
                    <div type="bebyggelsenamn" xml:id="Skerike">
                    <head><placeName>Skerike</placeName></head> <p><span type="locale">sn</span>,
@@ -33806,20 +33809,22 @@
                    på berg och fjäll. </p> </div>
 
                    <figure>
-
                       <graphic url="bilder/SOL2_img_1143.jpg"/>
                    </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1144.jpg"/>
                 </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1145.jpg"/>
                 </figure>
+
                 <figure>
-                   <graphic url="bilder/SOL2_img_1146.jpg"/> Bild 66. Smöghålet. Det smala
-                   sundet Smöghålet ligger bakom namnet Smögen. Äldre vykort. Bohusläns museum. </figure>
+                   <graphic url="bilder/SOL2_img_1146.jpg"/>
+                   <head>Bild 66. Smöghålet. Det smala
+                   sundet Smöghålet ligger bakom namnet Smögen. Äldre vykort. Bohusläns museum.</head>
+                </figure>
 
                    <div type="bebyggelsenamn" xml:id="Snauvalds">
                    <head><placeName>Snauvalds</placeName></head> <p><span type="locale">gårdnamn</span>,
@@ -38006,7 +38011,7 @@
                    <graphic url="bilder/SOL2_img_1257.jpg"/>
                 </figure>
 
-                <p> </p>
+                <!-- <p> </p> FIXME: ? -->
 
                    <div type="naturnamn" xml:id="Södra_Kvarken">
                    <head><placeName>Södra Kvarken</placeName></head> <p><span type="locale">del av Ålands hav och Bottenhavet mellan Uppland och Åland</span>,
