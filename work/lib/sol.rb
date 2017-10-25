@@ -36,7 +36,7 @@ class Sol
       xml_strip += "<span type='locale'>#{first}</span>, "
       array.shift
     end
-    location_element = REXML::Document.new 'location'
+    location_element = REXML::Element.new 'location'
     xml_strip += '<location>'
     length = array.count
     array.each_with_index do |element, index|
@@ -55,7 +55,7 @@ class Sol
 
         locs.pop
         loc_elts = locs.map do |loc|
-          tag_element = REXML::Document.new tag
+          tag_element = REXML::Element.new tag
           tag_element.add_attribute 'type', attr
           tag_element.add_text loc
           place_element.add_element tag_element
