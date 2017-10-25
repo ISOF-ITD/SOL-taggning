@@ -1310,7 +1310,7 @@
                      </TR>
 
                      <TR>
-                        <TD>språkligt korrekt, lätt att skriva, uttala och uppfatta samt </TD>
+                        <TD>språkligt korrekt, lätt att skriva, uttala och uppfatta samt</TD>
 
                         <TD/>
                      </TR>
@@ -31374,7 +31374,7 @@
 
                    <div type="naturnamn" xml:id="Segeå">
                    <head><placeName>Segeå</placeName></head> <p><span type="locale">å</span>,
-                   <location><district type="härad">Bara och Oxie hd</district> samt
+                   <location><district type="härad">Bara och Oxie hd</district>
                    <district type="town">Malmö stad</district>
                    <region type="landskap">Skåne</region></location>.
                     Seie, Seje aa ca 1590. – Åns namn, fda. *Sekia, sammanhänger med dialektordet seke (sege) ’sidlänt mark,
@@ -31866,7 +31866,7 @@
                   <div type="bebyggelsenamn" xml:id="Silvervägen">
                   <head><placeName>Silvervägen</placeName></head> <p><span type="locale">vägsystem mellan Bottenvikskusten och Norge</span>,
                    – Vägsträckningen  mellan Bottenvikskusten och Norge har namn efter de gamla transportlederna för
-                  silver mellan kusten och gruvan vid <placeName>Nasafjället</placeName> samt hyttan vid
+                  silver mellan kusten och gruvan vid <placeName>Nasafjället</placeName>hyttan vid
                   <placeName>Silbojokk</placeName>. </p> </div>
 
                    <div type="naturnamn" xml:id="Silverån">
@@ -32151,7 +32151,7 @@
                    den icke officiellt fastställda dekorativa stavningen Sjöö. </p> </div>
 
                    <div type="bebyggelsenamn" xml:id="Sjöbo">
-                   <head><placeName>Sjöbo</placeName></head> <p><span type="locale">kn</span> samt <span type="locale">tätort</span>,
+                   <head><placeName>Sjöbo</placeName></head> <p><span type="locale">kn</span><span type="locale">tätort</span>,
                    <location><district type="socken">Södra Åsums sn</district><district type="härad">Färs hd</district>
                    <region type="landskap">Skåne</region></location>.
                     (i) Søbo 1502. – Kommunen har sitt namn efter tätorten. Denna har vuxit fram ur en by. Namnets
@@ -32181,7 +32181,7 @@
 
                    <div type="bebyggelsenamn" xml:id="Sjömarken">
                    <head><placeName>Sjömarken</placeName></head> <p><span type="locale">tätort</span>,
-                   <location><district type="town">Borås stad</district> samt <district type="socken">Sandhults sn</district>
+                   <location><district type="town">Borås stad</district><district type="socken">Sandhults sn</district>
                    <district type="härad">Vedens hd</district>
                    <region type="landskap">Västergötland</region></location>.
                     Siömarcken 1685. – Tätorten växte under 1900-talet fram i anslutning till en hållplats vid ortens
@@ -32423,7 +32423,7 @@
                    <div type="naturnamn" xml:id="Skarpö">
                    <head><placeName>Skarpö</placeName></head> <p><span type="locale">halvö</span>,
                    <location><district type="socken">Djurö sn</district><district type="skeppslag">Värmdö skg</district>
-                   samt <span type="locale">ö</span>, <district type="town">Vaxholms stad</district>
+<span type="locale">ö</span>, <district type="town">Vaxholms stad</district>
                    <region type="landskap">Uppland</region></location>.
                    – Namnet, som förekommer på flera håll i skärgården, innehåller adjektivet skarp i betydelsen ’hård,
                    torr, ofruktbar’ och syftar vanligen på öarnas dåliga jordmån. </p> </div>
@@ -32841,7 +32841,7 @@
                    av en inbyggarbeteckning på -ing med oklar härledning. </p> </div>
 
                    <div type="bebyggelsenamn" xml:id="Skinnskatteberg">
-                   <head><placeName>Skinnskatteberg</placeName></head> <p><span type="locale">kn</span>, samt <span type="locale">sn</span> och <span type="locale">tätort</span>,
+                   <head><placeName>Skinnskatteberg</placeName></head> <p><span type="locale">kn</span>,<span type="locale">sn</span> och <span type="locale">tätort</span>,
                    <location><district type="härad">Skinnskattebergs hd</district>
                    <region type="landskap">Västmanland</region></location>.
                     Skynzekkeberge 1360-talet (avser ett större område). – Namnet, fsv. Skinsækkiabærgh, åsyftade ursprungligen
@@ -33143,7 +33143,7 @@
                    Efterleden är gata, åsyftande den långa klyftan som går genom berget. </p> </div>
 
                     <div type="bebyggelsenamn" xml:id="Skurup">
-                    <head><placeName>Skurup</placeName></head> <p><span type="locale">kn</span>, samt <span type="locale">sn</span> och
+                    <head><placeName>Skurup</placeName></head> <p><span type="locale">kn</span>,<span type="locale">sn</span> och
                     <span type="locale">tätort</span>,
                     <location><district type="härad">Vemmenhögs hd</district>
                     <region type="landskap">Skåne</region></location>.
@@ -33375,7 +33375,7 @@
                    Efterledens näs syftar på förträngningen vid Drag. </p> </div>
 
                    <div type="bebyggelsenamn" xml:id="Skälderviken">
-                   <head><placeName>Skälderviken</placeName></head> <p><span type="locale">vik av Kattegatt</span> samt <span type="locale">samhälle</span>,
+                   <head><placeName>Skälderviken</placeName></head> <p><span type="locale">vik av Kattegatt</span><span type="locale">samhälle</span>,
                    <location><district type="socken">Barkåkra sn</district><district type="härad">Bjäre hd</district>
                    <region type="landskap">Skåne</region></location>.
                     Skellder wijk 1680-talet. – Vikens namn är oklart. Bebyggelsen (nu ingående i Ängelholms tätort) har vuxit
@@ -33709,7 +33709,7 @@
                    eller pluralis av fsv. smidher ’smed; hantverkare’ och <placeName>by</placeName> ’gård; by’. </p> </div>
 
                    <div type="bebyggelsenamn" xml:id="Smedjebacken">
-                   <head><placeName>Smedjebacken</placeName></head> <p><span type="locale">kn</span>, samt <span type="locale">tätort</span>,
+                   <head><placeName>Smedjebacken</placeName></head> <p><span type="locale">kn</span>,<span type="locale">tätort</span>,
                    <location><district type="socken">Norrbärke sn</district>
                    <region type="landskap">Dalarna</region></location>.
                     Smedjebacken 1762. – Tätorten återgår på en handelsplats som fick postanstalt redan 1806. Antingen
@@ -34597,7 +34597,7 @@
 
                    <div type="bebyggelsenamn" xml:id="Stanstorp">
                    <head><placeName>Stanstorp</placeName></head> <p><span type="locale">byar</span>,
-                   <location><district type="socken">Nevishögs sn</district><district type="härad">Bara hd</district> samt
+                   <location><district type="socken">Nevishögs sn</district><district type="härad">Bara hd</district>
                    <district type="socken">Bosjöklosters sn</district><district type="härad">Frosta hd</district>
                    <region type="landskap">Skåne</region></location>.
                     <placeName>Staffanstorp</placeName>. </p> </div>
@@ -35684,7 +35684,7 @@
                    <div type="naturnamn" xml:id="Store_mosse">
                    <head><placeName>Store mosse</placeName></head> <p><span type="locale">nationalpark</span>,
                    <location><district type="socken">Kävsjö och Kärda snr</district>
-                   <district type="härad">Östbo hd</district>samt <district type="town">Värnamo stad</district>
+                   <district type="härad">Östbo hd</district><district type="town">Värnamo stad</district>
                    <region type="landskap">Småland</region></location>.
                     – Namnet avser det stora sankmarksområdet norr om Herrestadssjön. </p> </div>
 
@@ -36138,7 +36138,7 @@
                    ej fastläggas. </p> </div>
 
                    <div type="bebyggelsenamn" xml:id="Strömsund">
-                   <head><placeName>Strömsund</placeName></head> <p><span type="locale">kn</span>, samt <span type="locale">tätort</span>,
+                   <head><placeName>Strömsund</placeName></head> <p><span type="locale">kn</span>,<span type="locale">tätort</span>,
                    <location><district type="socken">Ströms sn</district>
                    <region type="landskap">Jämtland</region></location>.
                      – Namnet syftar på tätortens läge vid sundet mellan kyrkan och Näsviken. Det lanserades 1899 vid ett
@@ -36969,7 +36969,7 @@
                    <div type="naturnamn" xml:id="Svartälven">
                    <head><placeName>Svartälven</placeName></head> <p><span type="locale">älv</span>,
                    <location><district type="socken">Äppelbo, Järna, Nås och Säfsnäs snr</district>
-                   <region type="landskap">Dalarna</region> samt
+                   <region type="landskap">Dalarna</region>
                    <district type="härad">Färnebo hd</district>
                    <region type="landskap">Värmland</region> och
                    <district type="socken">Hällefors sn</district><district type="härad">Gryt-hytte och Hällefors hd</district>
@@ -37205,7 +37205,7 @@
                       <div type="bebyggelsenamn" xml:id="Svinninge">
                       <head><placeName>Svinninge</placeName></head> <p><span type="locale">tätort</span>,
                       <location><district type="socken">Österåkers sn</district><district type="skeppslag">Åkers skg</district>
-                      samt <district type="socken">Östra Ryds sn</district><district type="skeppslag">Danderyds skg</district>
+<district type="socken">Östra Ryds sn</district><district type="skeppslag">Danderyds skg</district>
                       <region type="landskap">Uppland</region></location>.
                        (iuxta) villam Swyninge 1325. – Namnet avsåg ursprungligen den by som nu är belägen strax norr om tätorten.
                       Det innehåller en inbyggarbeteckning (<placeName>-inge</placeName>), sannolikt bildad till ett fornsvenskt
@@ -37656,7 +37656,7 @@
                 <head><placeName>Sätuna</placeName></head> <p><span type="locale">gods</span>,
                 <location><district type="socken">Björklinge sn</district><district type="härad">Norunda hd</district>
                 <region type="landskap">Uppland</region></location>.
-                (i) Sætunum 1353. – Namnet är sammansatt av fsv. *sæ(r) ’sjö’, samt <placeName>tuna</placeName>. Förleden
+                (i) Sætunum 1353. – Namnet är sammansatt av fsv. *sæ(r) ’sjö’,<placeName>tuna</placeName>. Förleden
                 syftar på läget vid Långsjöns norra ände för den by som gett godset dess namn. </p> </div>
 
                 <div type="bebyggelsenamn" xml:id="Sätuna2">
@@ -38759,7 +38759,7 @@
                     <location><district type="town">Stockholms stad</district>
                     (<span type="locale">f.d. by</span>,
                     <district type="socken">Spånga sn</district><district type="härad">Sollentuna hd</district>),
-                    samt <span type="locale">sn</span>,
+<span type="locale">sn</span>,
                     <district type="härad">Norunda hd</district>
                     <region type="landskap">Uppland</region></location>.
                      – Båda ortnamnen kan innehålla ett fornsvenskt ord *tenstadher, syftande på platser med fiskeinrättningar
@@ -38967,7 +38967,7 @@
 
                    <div type="bebyggelsenamn" xml:id="Tingsryd">
                    <head><placeName>Tingsryd</placeName></head> <p><span type="locale">kn</span>,
-                   <location><district type="härad">Kinnevalds och Konga hd</district> samt <span type="locale">tätort</span>,
+                   <location><district type="härad">Kinnevalds och Konga hd</district><span type="locale">tätort</span>,
                    <district type="socken">Tingsås sn</district><district type="härad">Konga hd</district>
                    <region type="landskap">Småland</region></location>.
                     – Kommunen har fått namn efter centralorten Tingsryd, som vuxit fram kring byn Tingsryd (vid Tinxrydh 1505).
@@ -39821,7 +39821,7 @@
                    <placeName>by</placeName> ’gård; by’. </p> </div>
 
                    <div type="bebyggelsenamn" xml:id="Torsby2">
-                   <head><placeName>Torsby</placeName></head> <p><span type="locale">kn</span>, samt <span type="locale">tätort</span>,
+                   <head><placeName>Torsby</placeName></head> <p><span type="locale">kn</span>,<span type="locale">tätort</span>,
                    <location><district type="socken">Fryksände sn</district><district type="härad">Fryksdals hd</district>
                    <region type="landskap">Värmland</region></location>.
                     Toresbyn 1540. – Tätorten har vuxit fram kring ett järnbruk, grundat på 1690-talet. Namnet, som ursprungligen
@@ -39830,7 +39830,7 @@
                    <div type="bebyggelsenamn" xml:id="Torsebro">
                    <head><placeName>Torsebro</placeName></head> <p><span type="locale">tätort</span>,
                    <location><district type="socken">Fjälkestads sn</district><district type="härad">Villands hd</district>
-                   samt <district type="socken">Färlövs sn</district><district type="härad">Östra Göinge hd</district>
+<district type="socken">Färlövs sn</district><district type="härad">Östra Göinge hd</district>
                    <region type="landskap">Skåne</region></location>.
                     Tosebroe mølle 1584 (avser en kvarn). – Tätorten har vuxit fram kring ett ca 1680 anlagt krutbruk
                    (i Färlövs socken), vid en bro över Helge å. Namnets förled utgörs kanske av bynamnet Torseke, avseende en
@@ -46369,7 +46369,7 @@
 
                       <div type="bebyggelsenamn" xml:id="Ånge">
                          <head><placeName>Ånge</placeName></head> <p><span type="locale">kn</span>,
-                         samt <span type="locale">tätort</span>,
+<span type="locale">tätort</span>,
                         <location><district type="socken">Borgsjö sn</district>
                         <region type="landskap">Medelpad</region></location>.
                          – Kommunen har sitt namn efter tätorten. Denna har vuxit fram kring poststationen,
@@ -46520,7 +46520,7 @@
                       fram eller upp’ och betecknar högt uppstickande toppar. </p> </div>
 
                    <div type="bebyggelsenamn" xml:id="Årjäng">
-                      <head><placeName>Årjäng</placeName></head> <p><span type="locale">kn</span>, samt <span type="locale">tätort</span>,
+                      <head><placeName>Årjäng</placeName></head> <p><span type="locale">kn</span>,<span type="locale">tätort</span>,
                       <location><district type="socken">Silbodals sn</district><district type="härad">Nordmarks hd</district>
                       <region type="landskap">Värmland</region></location>.
                        Argenge 1540. – Kommunen är namngiven efter tätorten, som har vuxit fram kring byn
@@ -47018,7 +47018,7 @@
 
                    <div type="bebyggelsenamn" xml:id="Älmhult">
                       <head><placeName>Älmhult</placeName></head> <p><span type="locale">kn</span>,
-                      samt <span type="locale">tätort</span>,
+<span type="locale">tätort</span>,
                       <location><district type="socken">Stenbrohults sn</district>
                       <district type="härad">Allbo hd</district>
                       <region type="landskap">Småland</region></location>.
@@ -47053,7 +47053,7 @@
 
                        <div type="bebyggelsenamn" xml:id="Älvdalen">
                          <head><placeName>Älvdalen</placeName></head> <p><span type="locale">kn</span>,
-                         samt <span type="locale">sn</span>, <span type="locale">tätort</span>,
+<span type="locale">sn</span>, <span type="locale">tätort</span>,
                          <location><region type="landskap">Dalarna</region></location>.
                          (tiil) Elffuedalen 1525. – Tätorten är framvuxen vid kyrkan. Socknen bröts ut ur
                          Mora socken 1586. Älvdalen fungerade dessförinnan som bygdenamn med syftning på
@@ -47095,7 +47095,7 @@
 
                      <div type="bebyggelsenamn" xml:id="Älvkarleby">
                         <head><placeName>Älvkarleby</placeName></head> <p><span type="locale">kn</span>,
-                        samt <span type="locale">sn</span> och <span type="locale">tätort</span>,
+<span type="locale">sn</span> och <span type="locale">tätort</span>,
                         <location><district type="härad">Örbyhus hd</district>
                         <region type="landskap">Uppland</region></location>.
                         (in) Eluekarlebui 1100-talets senare del (avser byn). – Namnet, som ursprungligen
@@ -47953,7 +47953,7 @@
 
                      <div type="namnelement" xml:id="ör">
                         <head>ör</head> <p>Ordet ör ’grus(bank)’ är vanligt i svenska ortnamn och  förekommer
-                        både i enkel form (<placeName>Ör</placeName>, <placeName>Öra</placeName> samt de
+                        både i enkel form (<placeName>Ör</placeName>, <placeName>Öra</placeName>de
                         norrbottniska bebyggelserna Örarna och Ören) och i sammansättningar dels som förled
                         (<placeName>Örby</placeName>, <placeName>Örebro</placeName>, <placeName>Öregrund</placeName>),
                         dels som efterled (<placeName>Kuggören</placeName>, <placeName>Kungsör</placeName>,
