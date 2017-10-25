@@ -63,6 +63,10 @@ describe Sol do
       out = sol.process('Abborrberget tätort, Strängnäs stad, Södermanland')
       expect(out.to_s).to eq "<div><head><placeName>Abborrberget</placeName></head> <p><span type='locale'>tätort</span>, <location><settlement type='stad'>Strängnäs stad</settlement><region type='landskap'>Södermanland</region></location></p></div>" # FIXME Allow non-landskap areas as last entries!
     end
+
+    it "raises an exception on a unknown location element" do
+      expect { sol.process('Golv rum, Trätorp stuga, Vaksala sn') }.to raise_error UnexpectedLocation.new('stuga')
+    end
   end
 
   describe '#batch' do
@@ -199,7 +203,6 @@ __END__
     it "raises an error if it has any other element than L, p, or figure" do
       expect { sol.unlist "<root><foo>bar</foo></root>" }.to raise_error UnexpectedElement
     end
-
   end
 
   describe '#load' do

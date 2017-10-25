@@ -2,6 +2,7 @@ require 'rexml/document'
 require 'byebug'
 
 class UnexpectedElement < StandardError; end
+class UnexpectedLocation < StandardError; end
 
 class Sol
   def process(line)
@@ -70,16 +71,20 @@ class Sol
       else
         element =~ /^(.*) (.*)$/
         locale = $2
-        case locale
-        when 'sn'
-          tag = 'district'
-          attr = 'socken'
-        when 'hd'
-          tag = 'district'
-          attr = 'härad'
-        when 'stad'
-          tag = 'settlement'
-          attr = 'stad'
+        if locale
+          case locale
+          when 'sn'
+            tag = 'district'
+            attr = 'socken'
+          when 'hd'
+            tag = 'district'
+            attr = 'härad'
+          when 'stad'
+            tag = 'settlement'
+            attr = 'stad'
+          else
+            raise UnexpectedLocation.new(locale)
+          end
         end
 
         if index == length - 1
