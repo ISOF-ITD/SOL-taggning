@@ -12,7 +12,7 @@ class Sol
     array = first_sentence.split(',').map(&:strip)
     place = array.shift
     place =~ /^(.*) (.*)$/
-    xml_strip = "<head><placeName>#{$1}</placeName></head> <P><locale>#{$2}</locale>, "
+    xml_strip = "<head><placeName>#{$1}</placeName></head> <p><locale>#{$2}</locale>, "
     first = array.first
     if first == 'tätort' || first == 'gravfält'
       xml_strip += "<locale>#{first}</locale>, "
@@ -73,7 +73,7 @@ class Sol
     xml_strip += '.' + remsentences if remsentences
     xml_strip += '.' if final_dot
 
-    xml_strip
+    xml_strip + '</p>'
   end
 
   def unweave(table)
