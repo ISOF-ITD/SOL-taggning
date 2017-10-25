@@ -65,8 +65,10 @@ describe Sol do
     end
 
     it "raises an exception on a unknown location element" do
-      expect { sol.process('Golv rum, Trätorp stuga, Vaksala sn') }.to raise_error UnexpectedLocation.new('stuga')
+      expect { sol.process('Golv rum, Trätorp stuga, Vaksala sn') }.to raise_error UnexpectedLocation
     end
+
+    it "has an exclusive list of landskap"
   end
 
   describe '#batch' do
