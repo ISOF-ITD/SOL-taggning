@@ -32977,7 +32977,7 @@
 
                    <div type="bebyggelsenamn" xml:id="Skogstorp2">
                    <head><placeName>Skogstorp</placeName></head> <p><span type="locale">tätort</span>, <span type="locale">f.d. Fors sn</span>,
-                   <location><district type="town">Eskilstuna stad</district> och <district type="socken">Husby-Rekarne sn</district>
+                   <location><district type="town">Eskilstuna stad</district><district type="socken">Husby-Rekarne sn</district><!-- was: och Husby-Rekarne sn -->
                    <district type="härad">Österrekarne hd</district>
                    <region type="landskap">Södermanland</region></location>.
                     Skogxtorppet 1535, Skoxtorp 1561. – Tätorten är framvuxen kring en gård med detta namn i Husby-Rekarne
@@ -36971,7 +36971,7 @@
                    <location><district type="socken">Äppelbo, Järna, Nås och Säfsnäs snr</district>
                    <region type="landskap">Dalarna</region>
                    <district type="härad">Färnebo hd</district>
-                   <region type="landskap">Värmland</region> och
+                   <region type="landskap">Värmland</region><!-- was: och -->
                    <district type="socken">Hällefors sn</district><district type="härad">Gryt-hytte och Hällefors hd</district>
                    <region type="landskap">Västmanland</region></location>.
                     Svartåå ca 1660, Swartelfwen 1693. – Älvens namn åsyftar vattnets färg. </p> </div>
@@ -38249,7 +38249,7 @@
                    <region type="landskap">Skåne</region></location>.
                     Aby 1133 avskr. (avser kyrkbyn), (in) Aby syndræ [’södra’] 1410 (avser kyrkbyn). – Sockennamnet är givet
                    efter kyrkbyn, som ursprungligen var en del av grannbyn Norra Åby i samma socken, där den å rinner som
-                   förleden åsyftar. Efterleden är <placeNameby/> ’gård; by’. </p> </div>
+                   förleden åsyftar. Efterleden är <placeName>by</placeName> ’gård; by’. </p> </div>
 
                     <div type="bebyggelsenamn" xml:id="Södra_Åkarp">
                     <head><placeName>Södra Åkarp</placeName></head> <p><span type="locale">sn</span>,
@@ -38493,7 +38493,7 @@
                    kan i förleden innehålla ett forndanskt *sæwi ’fuktighet’, åsyftande forna sankmarker öster om kyrkbyn.
                    Efterleden är <placeName>sta(d)</placeName>. </p> </div>
 
-                <p>T </p>
+                <div><p>T </p></div>
 
                    <div type="bebyggelsenamn" xml:id="Taberg">
                    <head><placeName>Taberg</placeName></head> <p><span type="locale">tätort</span>,
