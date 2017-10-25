@@ -25,10 +25,10 @@ class Sol
     span_element.text = $2
     place_element.add_element span_element
     place_element.add_text ', '
-    xml_strip = "<head><placeName>#{$1}</placeName></head> <p><span type=\"locale\">#{$2}</span>, "
+    xml_strip = "<head><placeName>#{$1}</placeName></head> <p><span type='locale'>#{$2}</span>, "
     first = array.first
     if first == 'tätort' || first == 'gravfält'
-      xml_strip += "<span type=\"locale\">#{first}</span>, "
+      xml_strip += "<span type='locale'>#{first}</span>, "
       array.shift
     end
     xml_strip += '<location>'
@@ -49,10 +49,10 @@ class Sol
 
         locs.pop
         loc_elts = locs.map do |loc|
-          "<#{tag} type=\"#{attr}\">#{loc}</#{tag}>"
+          "<#{tag} type='#{attr}'>#{loc}</#{tag}>"
         end
 
-        loc_elts << "<#{tag} type=\"#{attr}\">#{$1}</#{tag}>"
+        loc_elts << "<#{tag} type='#{attr}'>#{$1}</#{tag}>"
 
         xml_strip += loc_elts.join
       else
@@ -72,7 +72,7 @@ class Sol
           attr = 'landskap'
         end
 
-        xml_strip += "<#{tag} type=\"#{attr}\">#{element}</#{tag}>"
+        xml_strip += "<#{tag} type='#{attr}'>#{element}</#{tag}>"
 
         if index == length - 1
           xml_strip += '</location>'
