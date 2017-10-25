@@ -38715,11 +38715,11 @@
 
                     <div type="bebyggelsenamn" xml:id="Tensta">
                     <head><placeName>Tensta</placeName></head> <p><span type="locale">stadsdel</span>,
-                    <location><district type="town">Stockholms stad</district>
+                    <location><district type="town">Stockholms stad</district></location>
                     (<span type="locale">f.d. by</span>,
-                    <district type="socken">Spånga sn</district><district type="härad">Sollentuna hd</district>),
+                    <location><district type="socken">Spånga sn</district><district type="härad">Sollentuna hd</district></location>),
                     <span type="locale">sn</span>,
-                    <district type="härad">Norunda hd</district>
+                    <location><district type="härad">Norunda hd</district>
                     <region type="landskap">Uppland</region></location>.
                      – Båda ortnamnen kan innehålla ett fornsvenskt ord *tenstadher, syftande på platser med fiskeinrättningar
                     i form av tenor, dvs. (fisk)mjärdar. I fråga om byn Tensta i Spånga socken (Tensta 1539) kan dessa ha
@@ -38926,8 +38926,8 @@
 
                    <div type="bebyggelsenamn" xml:id="Tingsryd">
                    <head><placeName>Tingsryd</placeName></head> <p><span type="locale">kn</span>,
-                   <location><district type="härad">Kinnevalds och Konga hd</district> samt <span type="locale">tätort</span>,
-                   <district type="socken">Tingsås sn</district><district type="härad">Konga hd</district>
+                   <location><district type="härad">Kinnevalds och Konga hd</district></location> samt <span type="locale">tätort</span>,
+                   <location><district type="socken">Tingsås sn</district><district type="härad">Konga hd</district>
                    <region type="landskap">Småland</region></location>.
                     – Kommunen har fått namn efter centralorten Tingsryd, som vuxit fram kring byn Tingsryd (vid Tinxrydh 1505).
                     Bynamnets efterled är <placeName>ryd</placeName> ’röjning’. Förleden är genitiv av ett äldre namn på sjön
@@ -39081,8 +39081,6 @@
 
                    <graphic url="bilder/SOL2_img_1284.jpg"/>
                 </figure>
-
-                   <p> </p>
 
                    <div type="bebyggelsenamn" xml:id="Tjolöholm">
                    <head><placeName>Tjolöholm</placeName></head> <p><span type="locale">gods</span>,
@@ -39250,7 +39248,7 @@
                       <location><district type="härad">Rönnebergs hd</district>
                       <region type="landskap">Skåne</region></location>.
                        ecclesie Toftæ 1361. – Sockennamnet, givet efter kyrkbyn, innehåller toft, en sidoform
-                      till <figure>tomt</figure>. </p> </div>
+                      till <placeName>tomt</placeName>. </p> </div>
 
                       <div type="naturnamn" xml:id="Toften">
                       <head><placeName>Toften</placeName></head> <p><span type="locale">tätort</span>,
@@ -40420,13 +40418,9 @@
                       Bild 72. Trollhättan. Namnet Trollhättan antas ursprungligen ha syftat på
                          Gullöfallet nedanför Gullön, nu beläget mitt inne i staden. Här syns det
                          på en teckning av C. F. Hernlund från 1888. Ur: Vårt land. En skildring i
-                         ord och bild (1888), s.
+                         ord och bild (1888), s. 148.
                    </head>
                 </figure>
-
-                   <p>148. </p>
-
-
 
                    <div type="bebyggelsenamn" xml:id="Träslöv">
                    <head><placeName>Träslöv</placeName></head> <p><span type="locale">sn</span>,
@@ -41673,9 +41667,10 @@
 
 
 
-                   <p>U </p>
+                   <div><p>U </p></div>
 
 
+                <div>
                 <p>Ucklum sn, tätort, Inlands Nordre hd, Bohuslän. Auklanda kirkia 1388. – Socknen
                    har fått sitt namn efter kyrkbyn (numera tätort). Det kan vara identiskt med
                    det från sydvästra Norge kända Aukland, som har antagits innehålla ett ord med
@@ -42469,30 +42464,16 @@
                 <p>Vallentuna härad hd, Uppland. (in) Walendahundæri 1292 avskr., (j)
                    Waluntunahundare 1371. – Häradsnamnet innehåller genitiv av en plural
                    inbyggarbeteckning, fsv. valændar, bildad till ett ej belagt bygdenamn,
-                   *Valand. Samma inbyggarbeteckning ingår i sockennamnet </p>
-
-                <L>
-                   <L>
-                      <LI>
-                         <Lbl>→ </Lbl>
-
-                         <LBody>Vallentuna, vilket visar att Vallentuna varit centralort i
+                   *Valand. Samma inbyggarbeteckning ingår i sockennamnet → 
+                         Vallentuna, vilket visar att Vallentuna varit centralort i
                             hundaret. Så småningom kommer detta till uttryck också i
                             distriktsnamnet, där Valænda- undanträngs av tuna-namnet. Den gamla
                             namnformen försvinner ur källorna omkring 1400. Jfr → Sollentuna
-                            härad. </LBody>
-                      </LI>
+                            härad.</p>
 
-                      <LI>*Valand innehåller den i bygdenamn vanliga efterleden </LI>
-                   </L>
-
-                   <LI>
-                      <Lbl>→ </Lbl>
-
-                      <LBody>land. Förleden utgörs säkerligen av ordet vall ’slät, gräsbevuxen
-                         mark’, vars syftning dock inte låter sig närmare preciseras. </LBody>
-                   </LI>
-                </L>
+                      <p>*Valand innehåller den i bygdenamn vanliga efterleden →
+                      land. Förleden utgörs säkerligen av ordet vall ’slät, gräsbevuxen
+                         mark’, vars syftning dock inte låter sig närmare preciseras. </p>
 
                 <p>Vallerstad sn, Bobergs hd, Östergötland. Valdirstadha 1350. – Socknen har fått
                    sitt namn från kyrkbyn. Förleden innehåller sannolikt ett fornsvenskt mansnamn
@@ -43540,9 +43521,7 @@
 
                 <p>vin Namnen på -vin har liksom de på -hem huvudsakligen västlig utbredning i
                    Sverige. De anträffas i norra Halland, Västergötland (där de är särskilt
-                   vanliga, framför allt i </p>
-
-                <p>f.d. Skaraborgs län), Bohuslän, Dalsland, södra Värmland, Jämtland, Medelpad
+                   vanliga, framför allt i f.d. Skaraborgs län), Bohuslän, Dalsland, södra Värmland, Jämtland, Medelpad
                    och Ångermanland. Ett kanske hithörande namn utanför detta utbredningsområde är
                    bynamnet Skeen i Annerstads sn i sydvästra Småland. Talrikast är namntypen
                    företrädd i Norge, där den räknar ett tusental representanter. Danmark har två
@@ -43637,13 +43616,7 @@
                    aktuella namntypen. </p>
 
                 <p>Litteratur: Thorsten Andersson, Nordiska bebyggelsenamn ur språklig synvinkel,
-                   i Namn och bygd 103 (2015), </p>
-
-                <L>
-                   <LI>
-                      <Lbl>s.</Lbl>
-
-                      <LBody> 9–34; Lars-Erik Edlund, Mellan väst och öst. Det jämtska
+                   i Namn och bygd 103 (2015), s. 9–34; Lars-Erik Edlund, Mellan väst och öst. Det jämtska
                          språkområdet över tid ur ett nordiskt perspektiv, i Jämtland och den
                          jämtländska världen 1000–1645 (2011), s. 43–90; Lennart Elmevik, Höra och
                          Fridene. Till tolkningen av ett par svenska vin-namn och något om
@@ -43657,15 +43630,7 @@
                          Bengt Pamp, Ortnamnen i Sverige. 5 uppl. (1988), s. 31–32; Harry Ståhl,
                          Ortnamn och ortnamnsforskning. 2 uppl. (1976), s. 73–76; dens., Recension
                          av Valter Jansson, Nordiska vin-namn, i Arkiv för nordisk filologi 67
-                         (1952), </LBody>
-                   </LI>
-
-                   <LI>
-                      <Lbl>s.</Lbl>
-
-                      <LBody> 227–32. </LBody>
-                   </LI>
-                </L>
+                         (1952), s. 227–32.</p>
 
                 <p>Vinberg sn, tätort, Faurås hd, Halland. ecclesie Windbyerghe 1330-talet. –
                    Tätorten har uppstått vid en år 1894 inrättad post- och järnvägsstation. Denna
@@ -44120,24 +44085,12 @@
                 <p>Vram, Norra, Södra, Västra, Östra snr, Skåne → Norra Vram, → Södra Vram, →
                    Västra Vram och → Östra Vram. Vrams Gunnarstorp gods, Norra Vrams sn, Luggude
                    hd, Skåne. Gundestrup 1510-talet sen avskr. – Förleden i godsets namn utgörs av
-                   mansnamnet Gunnar, efterleden är </p>
-
-                <L>
-                   <LI>
-                      <Lbl>→ </Lbl>
-
-                      <LBody>torp ’nybygge’. Tillägget Vrams, efter sockennamnet, är känt från
+                   mansnamnet Gunnar, efterleden är →
+                      torp ’nybygge’. Tillägget Vrams, efter sockennamnet, är känt från
                          1600-talet (Wrambs Gunnestrup 1688) och skiljer namnet från andra
                          Gunnarstorp, särskilt → Kulla Gunnarstorp i samma härad. Väster om godset
-                         ligger tätorten </LBody>
-                   </LI>
-
-                   <LI>
-                      <Lbl>→ </Lbl>
-
-                      <LBody>Gunnarstorp. </LBody>
-                   </LI>
-                </L>
+                         ligger tätorten → Gunnarstorp.
+                </p>
 
                 <p>Vrena sn, tätort, Oppunda hd, Södermanland. Wreno 1338. – Socknen har fått sitt
                    namn från kyrkbyn, som troligen i sin tur övertagit det från den intilliggande
@@ -44148,9 +44101,7 @@
                 <p>Vretaholm gods, Gränna stad, Vista hd, Småland. – Gården byggdes först på Vreta
                    bys (in Wretum 1333) mark. Namnet Vreta, innehållande ordet vret ’liten
                    inhägnad åker’, ändrades till Vretaholm i samband med säteriets tillkomst 1792.
-                   Efterleden är det i herrgårdsnamn vanliga </p>
-
-                <p>→ holm. </p>
+                   Efterleden är det i herrgårdsnamn vanliga → holm. </p>
 
                 <p>Vreta kloster sn, Gullbergs hd, Östergötland. parrochie Wretis 1289. – Socknen
                    har fått sitt namn från Vreta kloster, ett nunnekloster inom cisterciensorden,
@@ -44176,19 +44127,18 @@
                 <p>Vrångö ö, tätort, Styrsö sn, Askims hd, Västergötland. </p>
 
                    <figure>
-
                       <graphic url="bilder/SOL2_img_1433.jpg"/>
                    </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1434.jpg"/>
                 </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1435.jpg"/>
                 </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1436.jpg"/>
                 </figure>
 
@@ -44302,21 +44252,20 @@
                       Stockholm, är ett på 1960-talet nyskapat namn, ursprungligen avseende en
                       tunnelbanestation. Namnet anspelar på Vårby och på att Vikingaberget var ett
                       »vårdberg», ett vaktberg. </p>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1437.jpg"/>
                    </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1438.jpg"/>
                 </figure>
 
                 <figure>
-
                    <graphic url="bilder/SOL2_img_1439.jpg"/>
                 </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1440.jpg"/>
                 </figure>
 
@@ -44423,19 +44372,18 @@
                    bergsmassiv bakom bebyggelsen. </p>
 
                    <figure>
-
                       <graphic url="bilder/SOL2_img_1441.jpg"/>
                    </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1442.jpg"/>
                 </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1443.jpg"/>
                 </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1444.jpg"/>
                 </figure>
 
@@ -44546,21 +44494,20 @@
                       ingå genitiv singularis *vændo av fsv. *vænda, motsvarande det nutida
                       substantivet vända ’omgång; rörelse runt och tillbaka’. Namnet utgår i så
                       fall från vattnets rörelse eller båtfarares kursändring kring näset. </p>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1445.jpg"/>
                    </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1446.jpg"/>
                 </figure>
 
                 <figure>
-
                    <graphic url="bilder/SOL2_img_1447.jpg"/>
                 </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1448.jpg"/>
                 </figure>
 
@@ -44667,18 +44614,18 @@
                    kyrkbyn, som sedermera uppdelats i tre byar, Nordvära i norr, Värö i mitten och
                    Sunnvära i söder. Namnet, i genuint språkbruk »Vära», innehåller en forndansk
                    motsvarighet till fvn. vera, fsv. vara ’vistelse(ort)’. Ur en böjningsform av
-                   namnet, fda. </p>
+                   namnet, fda. *Wæru, har utvecklats namnformen Väre, vilken redan på 1600-talet felaktigt
+                   uppfattats som en sammansättning med ordet ö, varav Värö. </p>
 
                    <figure>
-
                       <graphic url="bilder/SOL2_img_1449.jpg"/>
                    </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1450.jpg"/>
                 </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1451.jpg"/>
 
                    <head>
@@ -44688,18 +44635,14 @@
                          vanligen inte fryser till på vintern. Foto: Värmlands museum.
                    </head>
                 </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1452.jpg"/>
                 </figure>
 
                    <figure>
-
                       <graphic url="bilder/SOL2_img_1453.jpg"/>
                    </figure>
-
-                <p>*Wæru, har utvecklats namnformen Väre, vilken redan på 1600-talet felaktigt
-                   uppfattats som en sammansättning med ordet ö, varav Värö. </p>
 
                 <p>Väröbacka tätort, Värö sn, Viske hd, Halland. – Tätorten har utvecklats ur byn
                    Backa, äldst omnämnd 1551, vars namn är en böjningsform av ordet backe ’höjd,
@@ -44742,17 +44685,16 @@
 
                    <p>Vässarö ö, Gräsö sn, Frösåkers hd, Uppland. Wissielssöö 1545, Wessersö 1548.
                       – Innebörden av detta säkerligen mycket gamla önamn är oviss. </p>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1454.jpg"/>
                 </figure>
 
                 <figure>
-
                    <graphic url="bilder/SOL2_img_1455.jpg"/>
                 </figure>
-                <figure>
 
+                <figure>
                    <graphic url="bilder/SOL2_img_1456.jpg"/>
                 </figure>
 
@@ -44866,15 +44808,14 @@
                       Østræhanungh 1335). </p>
 
                       <figure>
-
                          <graphic url="bilder/SOL2_img_1457.jpg"/>
                       </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1458.jpg"/>
                    </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1459.jpg"/>
 
                       <head>
@@ -44890,9 +44831,7 @@
 
                    <p>Västerhiske stadsdel, Umeå stad, Västerbotten → Hissjön. Västerhus tätort,
                       Själevads sn, Ångermanland. – Tätorten har vuxit fram vid den år 1892
-                      öppnade järnvägslin</p>
-
-                      <p>jen. Namnet, från byn Västerhus (Vestrvs 1479, Västerus 1486, i
+                      öppnade järnvägslinjen. Namnet, från byn Västerhus (Vestrvs 1479, Västerus 1486, i
                          Westerhuss 1498), är oklart. De äldre skrivningarna från 1479 och 1486
                          kan tyda på att ordet os ’mynning’ ingår, i så fall snarast i betydelsen
                          ’sund’ med syftning på sundet från Happstafjärden till Själevadsfjärden.
@@ -44902,22 +44841,7 @@
 
                       <p>Västerlanda sn, Inlands Torpe hd, Bohuslän. (i) Vistalanda sokn 1354
                          avskr. – Kyrkbyn har givit socknen dess namn, som i förleden innehåller
-                         det gamla namnet på </p>
-                   <figure>
-
-                      <graphic url="bilder/SOL2_img_1460.jpg"/>
-                   </figure>
-
-                   <figure>
-
-                      <graphic url="bilder/SOL2_img_1461.jpg"/>
-                   </figure>
-                   <figure>
-
-                      <graphic url="bilder/SOL2_img_1462.jpg"/>
-                   </figure>
-
-                   <p>Västerlandaån, *Vista. Ånamn på Vist- förekommer på andra håll i Sverige och
+                         det gamla namnet på Västerlandaån, *Vista. Ånamn på Vist- förekommer på andra håll i Sverige och
                       Norge. De avser ofta krokiga och buktande vattendrag, och Västerlandaån har
                       ett buktande lopp med många krökar. Associationen med
                       väderstrecksbeteckningen väster kan spåras ända till 1500-talet. Efterleden
@@ -44931,6 +44855,19 @@
                       Lung, som inbegripit åtminstone en del av Vagnhärads socken. Tätorten
                       Västerljung, med järnvägsstation vid en bansträcka öppnad 1913, har vuxit
                       fram i anslutning till sockenkyrkan. </p>
+
+                   <figure>
+                      <graphic url="bilder/SOL2_img_1460.jpg"/>
+                   </figure>
+
+                   <figure>
+
+                      <graphic url="bilder/SOL2_img_1461.jpg"/>
+                   </figure>
+
+                   <figure>
+                      <graphic url="bilder/SOL2_img_1462.jpg"/>
+                   </figure>
 
                    <p>Västerlösa sn, tätort, Vifolka hd, Östergötland. (in) parochia Wæsterløso
                       1325. – Socknen har fått sitt namn från kyrkbyn. Det innehåller det
@@ -45139,31 +45076,28 @@
                          socknen kallats Västra Eneby. Det tillagda Västra särskiljer socknen från
                          → Östra Eneby socken. </p>
 
-                      <p>Västra Fjällfjället fjällmassiv, Vilhelmina sn, Lappland </p>
-
-                      <p>→ Östra Fjällfjället. Västra Fors by, Malungs sn, Dalarna → Malungsfors.
-                         Västra Frölunda sn, Askims hd, Västergötland. (j) </p>
-
-                      <p>Frølanda 1436. – Socknen har fått sitt namn från byn Frölunda. Förleden i
+                      <p>Västra Fjällfjället fjällmassiv, Vilhelmina sn, Lappland → Östra Fjällfjället.</p>
+                      
+                      <p>Västra Fors by, Malungs sn, Dalarna → Malungsfors.
+                         Västra Frölunda sn, Askims hd, Västergötland. (j) Frølanda 1436. – Socknen har fått sitt namn från byn Frölunda. Förleden i
                          detta innehåller troligen dialektordet frö ’fruktbar, frodig’. Efterleden
                          är → land. Anslutning till namn på -lunda har skett redan på 1500-talet.
                          Det särskiljande Västra lades till 1886 för att skilja socknen från
                          (Östra) Frölunda i Kinds härad. </p>
-                      <figure>
 
+                      <figure>
                          <graphic url="bilder/SOL2_img_1467.jpg"/>
                       </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1468.jpg"/>
                    </figure>
 
                    <figure>
-
                       <graphic url="bilder/SOL2_img_1469.jpg"/>
                    </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1470.jpg"/>
                    </figure>
 
@@ -45268,30 +45202,27 @@
 
                    <p>Västra Nöbbelöv sn, Ljunits hd, Skåne. (j) Nybøle sogn 1465 avskr. –
                       Sockennamnet, som äldst avsåg kyrkbyn, innehåller ett forndanskt *nybyli
-                      ’nybygge’ (jfr → böle). </p>
+                      ’nybygge’ (jfr → böle).
+                   Den nuvarande formen, känd sedan början av 1700-talet, beror på anslutning
+                      till de vanliga bebyggelsenamnen på
+                   → löv. Västra tillades 1886 till åtskillnad från sockennamnen → Norra
+                      Nöbbelöv och → Östra Nöbbelöv. </p>
 
                       <figure>
-
                          <graphic url="bilder/SOL2_img_1471.jpg"/>
                       </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1472.jpg"/>
                    </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1473.jpg"/>
                    </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1474.jpg"/>
                    </figure>
-
-                   <p>Den nuvarande formen, känd sedan början av 1700-talet, beror på anslutning
-                      till de vanliga bebyggelsenamnen på </p>
-
-                   <p>→ löv. Västra tillades 1886 till åtskillnad från sockennamnen → Norra
-                      Nöbbelöv och → Östra Nöbbelöv. </p>
 
                    <p>Västra Ryd sn, Bro hd, Uppland. (in) parochia Riudh 1299. – Ortnamnet
                       innehåller → ryd ’röjning’. Troligen rör det sig om ett gammalt bygdenamn.
@@ -45400,16 +45331,14 @@
                          öppnad 1862. </p>
 
                       <figure>
-
                          <graphic url="bilder/SOL2_img_1475.jpg"/>
                       </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1476.jpg"/>
                    </figure>
 
                    <figure>
-
                       <graphic url="bilder/SOL2_img_1477.jpg"/>
 
                       <head>
@@ -45418,8 +45347,8 @@
                             Vikstrand.
                       </head>
                    </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1478.jpg"/>
                    </figure>
 
@@ -45478,9 +45407,8 @@
 
                    <p>Vättland gd, Skee sn, Vätte hd, Bohuslän → Vätte härad. </p>
 
-                   <p>Vättle härad hd, Västergötland. (in) Vetlohærad 1286. </p>
-
-                   <p>– Till grund för häradsnamnet ligger säkerligen ett ånamn fsv. *Vætla, som
+                   <p>Vättle härad hd, Västergötland. (in) Vetlohærad 1286.  
+                   – Till grund för häradsnamnet ligger säkerligen ett ånamn fsv. *Vætla, som
                       får antas ha avsett Lärjeån, ett biflöde till Göta älv. Ånamnet, som
                       sannolikt är bildat till adjektivet våt, har ansetts ha haft en allmän
                       betydelse ’vattendrag’. Snarare har det dock på något sätt karakteriserat
@@ -45491,19 +45419,18 @@
                       Jfr → Villands härad. </p>
 
                       <figure>
-
                          <graphic url="bilder/SOL2_img_1479.jpg"/>
                       </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1480.jpg"/>
                    </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1481.jpg"/>
                    </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1482.jpg"/>
                    </figure>
 
@@ -45512,9 +45439,8 @@
                       betydelsen ’vatten(drag), sjö e.d.’ (jfr → Vättern) och efterleden → lösa
                       ’glänta; äng’. Kyrkan ligger vid en å. </p>
 
-                   <p>Vätö sn, Bro och Vätö skg, Uppland. Ecclesie Vætu 1337. </p>
-
-                   <p>– Ortnamnet, som äldst avsåg ön Vätö, bör sammanhållas med det från
+                   <p>Vätö sn, Bro och Vätö skg, Uppland. Ecclesie Vætu 1337.
+                   – Ortnamnet, som äldst avsåg ön Vätö, bör sammanhållas med det från
                       gotländska dialekter kända vät ’pöl, träsk; grunt vatten som torkar ut’.
                       Bakgrunden kan vara de grunda vikar som ännu under vikingatid har skurit
                       långt in i ön. Namnet ingår i skeppslagsnamnet Bro och Vätö skeppslag, se →
@@ -45528,8 +45454,9 @@
                    <p>Växjö kn, stad, Småland. Datum Vexio 1286. – Namnet har ursprungligen
                       betecknat nuvarande Växjösjön. Det är sammansatt av orden väg och sjö, dvs.
                       ’Vägsjön’. Namnet syftar troligen på vinterfarleder. </p>
+                   </div>
 
-                      <p>Y </p>
+                      <div><p>Y </p></div>
 
                    <div type="naturnamn" xml:id="Ycklaren">
                       <head><placeName>Ycklaren</placeName></head> <p><span type="locale">sjö</span>,
@@ -45788,7 +45715,7 @@
                       <placeName>Yxnerum</placeName> vid sjön och betyder ’sjön vid Yxne-rum’ eller
                       ’Yxnerumsbornas sjö’. </p> </div>
 
-                   <p>Z </p>
+                   <div><p>Z </p></div>
 
                    <div type="bebyggelsenamn" xml:id="Zinkgruvan">
                       <head><placeName>Zinkgruvan</placeName></head> <p><span type="locale">gruva</span>, <span type="locale">tätort</span>,
@@ -45798,7 +45725,7 @@
                       belgiska företaget Vielle Montagne inköpte 1857 Zinkgruvan och drev länge en framgångsrik
                       verksamhet där. </p> </div>
 
-                   <p>Å </p>
+                   <div><p>Å </p></div>
 
                     <div type="bebyggelsenamn" xml:id="Å">
                       <head><placeName>Å</placeName></head> <p><span type="locale">sn</span>,
@@ -46404,8 +46331,6 @@
                       <graphic url="bilder/SOL2_img_1502.jpg"/>
                    </figure>
 
-                   <P/>
-
                     <div type="bebyggelsenamn" xml:id="Ångermanland">
                        <head><placeName>Ångermanland</placeName></head> <p><span type="locale">landskap</span>,
                         (in ...) Angermannaland 1257. – Namnet, bildat till fsv. *anger ’(havs)vik’
@@ -46501,19 +46426,18 @@
                       på <placeName>sta(d)</placeName>. </p> </div>
 
                       <figure>
-
                          <graphic url="bilder/SOL2_img_1503.jpg"/>
                       </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1504.jpg"/>
                    </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1505.jpg"/>
                    </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1506.jpg"/>
                    </figure>
 
@@ -46705,20 +46629,18 @@
                          <placeName>Sjeltie</placeName> betyder ’kyrkplats, marknadsplats’. </p> </div>
 
                       <figure>
-
                          <graphic url="bilder/SOL2_img_1507.jpg"/>
                       </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1508.jpg"/>
                    </figure>
 
                    <figure>
-
                       <graphic url="bilder/SOL2_img_1509.jpg"/>
                    </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1510.jpg"/>
                    </figure>
 
@@ -46898,7 +46820,7 @@
                       sockennamnet <placeName>Åtvid och berg</placeName> ’bergverk,
                       gruvfält’. </p> </div>
 
-                   <p>Ä </p>
+                   <div><p>Ä </p></div>
 
                    <div type="bebyggelsenamn" xml:id="Älandsbro">
                       <head><placeName>Älandsbro</placeName></head> <p><span type="locale">tätort</span>,
@@ -46911,15 +46833,14 @@
                      *Ælia, även detta en bildning till al. Efterleden i Äland är <placeName>land</placeName>. </p> </div>
 
                       <figure>
-
                          <graphic url="bilder/SOL2_img_1511.jpg"/>
                       </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1512.jpg"/>
                    </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1513.jpg"/>
 
                       <head>
@@ -46930,8 +46851,8 @@
                             &amp; Uno Troili (1867).
                       </head>
                    </figure>
-                   <figure>
 
+                   <figure>
                       <graphic url="bilder/SOL2_img_1514.jpg"/>
                    </figure>
 
@@ -47033,20 +46954,18 @@
                          *Ælve. Efterleden är <placeName>sta(d)</placeName>. </p> </div>
 
                       <figure>
-
                          <graphic url="bilder/SOL2_img_1515.jpg"/>
                       </figure>
-                     <figure>
 
+                     <figure>
                         <graphic url="bilder/SOL2_img_1516.jpg"/>
                      </figure>
 
                      <figure>
-
                         <graphic url="bilder/SOL2_img_1517.jpg"/>
                      </figure>
-                     <figure>
 
+                     <figure>
                         <graphic url="bilder/SOL2_img_1518.jpg"/>
                      </figure>
 
@@ -47214,19 +47133,18 @@
                         namnformen i jordregistret ändrades först 1963 från Englikbenning till Ängelsberg. </p> </div>
 
                         <figure>
-
                            <graphic url="bilder/SOL2_img_1519.jpg"/>
                         </figure>
-                     <figure>
 
+                     <figure>
                         <graphic url="bilder/SOL2_img_1520.jpg"/>
                      </figure>
-                     <figure>
 
+                     <figure>
                         <graphic url="bilder/SOL2_img_1521.jpg"/>
                      </figure>
-                     <figure>
 
+                     <figure>
                         <graphic url="bilder/SOL2_img_1522.jpg"/>
 
                         <head>
@@ -47324,20 +47242,18 @@
                            Ärla järnvägsstation, öppnad 1895. </p> </div>
 
                         <figure>
-
                            <graphic url="bilder/SOL2_img_1523.jpg"/>
                         </figure>
-                     <figure>
 
+                     <figure>
                         <graphic url="bilder/SOL2_img_1524.jpg"/>
                      </figure>
 
                      <figure>
-
                         <graphic url="bilder/SOL2_img_1525.jpg"/>
                      </figure>
-                     <figure>
 
+                     <figure>
                         <graphic url="bilder/SOL2_img_1526.jpg"/>
                      </figure>
 
@@ -47469,7 +47385,7 @@
                         har grundbetydelsen ’något svällande’ och är besläktat med ordet etter ’gift;
                         var (i böld eller sår)’. Alltså kan det tolkas som ’den översvämmande (ån)’. </p> </div>
 
-                     <p>Ö </p>
+                     <div><p>Ö </p></div>
 
                      <div type="bebyggelsenamn" xml:id="Öckerö">
                         <head><placeName>Öckerö</placeName></head> <p><span type="locale">kn</span>, samt
@@ -47492,19 +47408,18 @@
                         väster om sockenkyrkan. </p> </div>
 
                         <figure>
-
                            <graphic url="bilder/SOL2_img_1527.jpg"/>
                         </figure>
-                     <figure>
 
+                     <figure>
                         <graphic url="bilder/SOL2_img_1528.jpg"/>
                      </figure>
-                     <figure>
 
+                     <figure>
                         <graphic url="bilder/SOL2_img_1529.jpg"/>
                      </figure>
-                     <figure>
 
+                     <figure>
                         <graphic url="bilder/SOL2_img_1530.jpg"/>
                      </figure>
 
@@ -47684,20 +47599,18 @@
                            Området där byn ligger var sannolikt en ö vid namnets tillkomst. </p> </div>
 
                         <figure>
-
                            <graphic url="bilder/SOL2_img_1531.jpg"/>
                         </figure>
-                     <figure>
 
+                     <figure>
                         <graphic url="bilder/SOL2_img_1532.jpg"/>
                      </figure>
 
                      <figure>
-
                         <graphic url="bilder/SOL2_img_1533.jpg"/>
                      </figure>
-                     <figure>
 
+                     <figure>
                         <graphic url="bilder/SOL2_img_1534.jpg"/>
                      </figure>
 
@@ -48681,8 +48594,8 @@
                         <region type="landskap">Södermanland</region></location>.
                          Öster Tälie Sochn 1680. – Den medeltida kyrksocknen Tälje (in parochia Tælhium 1280), som omgav
                         staden Södertälje, var administrativt delad i en västlig del, senare kallad
-                        <placeNamn>Västertälje</placeNamn>, och en östlig del, senare kallad Östertälje. Namnet
-                        Västertälje är numera sällan brukat. För namntolkning<placeNamn>Södertälje</placeNamn>. </p> </div>
+                        <placeName>Västertälje</placeName>, och en östlig del, senare kallad Östertälje. Namnet
+                        Västertälje är numera sällan brukat. För namntolkning<placeName>Södertälje</placeName>. </p> </div>
 
                       <div type="bebyggelsenamn" xml:id="Österunda">
                         <head><placeName>Österunda</placeName></head> <p><span type="locale">sn</span>,
@@ -48709,32 +48622,32 @@
                          (apud) Valir 1296. – Sockennamnet innehåller plural form (se inl. 3.3.1) av dialektordet
                         vål ’samling av kullfallna trädstammar, ris o.d.; vindfälle, röjningsbråte’ m.m. och kan
                         ursprungligen ha varit ett bygdenamn. Förleden Öster- skiljer sedan 1600-talet socknen från
-                        <placeNamn>Västervåla</placeNamn>. Tätorten har vuxit fram kring bebyggelse vid kyrkan.
-                        Jfr <placeNamn>Våla härad</placeNamn>. </p> </div>
+                        <placeName>Västervåla</placeName>. Tätorten har vuxit fram kring bebyggelse vid kyrkan.
+                        Jfr <placeName>Våla härad</placeName>. </p> </div>
 
                      <div type="bebyggelsenamn" xml:id="Österåker">
                         <head><placeName>Österåker</placeName></head> <p><span type="locale">sn</span>,
                         <location><district type="härad">Oppunda hd</district>
                         <region type="landskap">Oppunda</region></location>.
                          – Socknens namn åsyftar en gammal samlingsplats, som kan ha använts för både hednisk kult
-                        och andra verksamheter <placeNamn>åker</placeNamn>. Förleden Öster anger läget i förhållande
-                        till en annan gammal samlingsplats i grannsocknen <placeNamn>Västra Vingåker</placeNamn>. </p> </div>
+                        och andra verksamheter <placeName>åker</placeName>. Förleden Öster anger läget i förhållande
+                        till en annan gammal samlingsplats i grannsocknen <placeName>Västra Vingåker</placeName>. </p> </div>
 
                       <div type="bebyggelsenamn" xml:id="Österåker2">
                          <head><placeName>Österåker</placeName></head> <p><span type="locale">kn</span>, <span type="locale">sn</span>,
                          <location><district type="skeppslag">Åkers skg</district>
                          <region type="landskap">Uppland</region></location>.
                           (in) Aker 1298. – Namnet har troligen från början avsett en i förkristen tid helig åker
-                        (<placeNamn>åker</placeNamn>). Som sockennamn kan det återgå på ett kyrkplatsnamn eller ett
+                        (<placeName>åker</placeName>). Som sockennamn kan det återgå på ett kyrkplatsnamn eller ett
                         bygdenamn, eller möjligen röra sig om ett äldre namn på nuvarande Prästgården. Öster är tillagt
-                        i sen tid för att skilja namnet från <placeNamn>Västeråker</placeNamn>. Namnet Åker ingår i
-                        skeppslagsnamnet Åkers skeppslag, se <placeNamn>Frösåkers härad</placeNamn>. </p> </div>
+                        i sen tid för att skilja namnet från <placeName>Västeråker</placeName>. Namnet Åker ingår i
+                        skeppslagsnamnet Åkers skeppslag, se <placeName>Frösåkers härad</placeName>. </p> </div>
 
                      <div type="bebyggelsenamn" xml:id="Österåsen">
                         <head><placeName>Österåsen</placeName></head> <p><span type="locale">by</span>,
                         <location><district type="socken">Åsarne sn</district>
                         <region type="landskap">Jämtland</region></location>.
-                        <placeNamn>Åsarne</placeNamn> </p> </div>
+                        <placeName>Åsarne</placeName> </p> </div>
                     .
                      <div type="bebyggelsenamn" xml:id="Östhammar">
                         <head><placeName>Östhammar</placeName></head> <p><span type="locale">kn</span>, <span type="locale">stad</span>,
@@ -48750,7 +48663,7 @@
                         <head><placeName>Östkinds härad</placeName></head> <p><span type="locale">hd</span>,
                         <location><region type="landskap">Östergötland</region></location>.
                          (i) Østkindaherret 1317 sen avskr., prouincie Østkindahæradh 1347. – Häradet har uppkommit
-                        vid indelningen i häradsdistrikt av ett »land» benämnt *Kind (<placeNamn>kind</placeNamn>).
+                        vid indelningen i häradsdistrikt av ett »land» benämnt *Kind (<placeName>kind</placeName>).
                         Øst- syftar på häradets östliga läge bland de östgötska kind-häradena. Det har antagits att
                         Östkinds härad har brutits ut ur Björkekinds härad; det ligger nordöst om detta på
                         Vikbolandet. </p> </div>
@@ -48776,8 +48689,8 @@
                         <location><district type="härad">Östra Göinge hd</district>
                         <region type="landskap">Skåne</region></location>.
                          (j) Broby 1426. – Socknen har sitt namn efter kyrkbyn (nu tätorten Broby). Det är sammansatt
-                        av bro(bebyggelsen ligger vid Helge å) och <placeNamn>by</placeNamn> ’gård; by’. Östra tillades
-                        1886 i syfte att skilja socknen från <placeNamn>Västra Broby</placeNamn>. </p> </div>
+                        av bro(bebyggelsen ligger vid Helge å) och <placeName>by</placeName> ’gård; by’. Östra tillades
+                        1886 i syfte att skilja socknen från <placeName>Västra Broby</placeName>. </p> </div>
 
                      <div type="bebyggelsenamn" xml:id="Östraby">
                         <head><placeName>Östraby</placeName></head> <p><span type="locale">sn</span>, <span type="locale">tätort</span>,
@@ -48785,13 +48698,13 @@
                         <region type="landskap">Skåne</region></location>.
                          (i) Østerwæsterstade S[ogn] 1495 sen avskr., Østerstadt Sognn 1570-talet, Østerbye 1611.
                          – Sockennamnet är givet efter kyrkbyn (numera tätort), som troligen ursprungligen ingick i den
-                        angränsande kyrkbyn i socknen <placeNamn>Västerstad</placeNamn>. </p> </div>
+                        angränsande kyrkbyn i socknen <placeName>Västerstad</placeName>. </p> </div>
 
                      <div type="bebyggelsenamn" xml:id="Östra_Ed">
                         <head><placeName>Östra Ed</placeName></head> <p><span type="locale">sn</span>,
                         <location><district type="härad">Norra Tjusts hd</district>
                         <region type="landskap">Småland</region></location>.
-                        <placeNamn>Västra Ed</placeNamn>. </p> </div>
+                        <placeName>Västra Ed</placeName>. </p> </div>
 
                         <figure>
 
@@ -48816,9 +48729,9 @@
                         <location><district type="härad">Bråbo hd</district>
                         <region type="landskap">Östergötland</region></location>.
                          Eneby 1331. – Socknen har fått sitt namn från kyrkbyn. Det innehåller dialektordet
-                        ene ’enbestånd’ och <placeNamn>by</placeNamn> ’gård; by’. Åtminstone sedan 1760-talet
+                        ene ’enbestånd’ och <placeName>by</placeName> ’gård; by’. Åtminstone sedan 1760-talet
                         har socknen kallats Östra Eneby. Det tillagda Östra särskiljer socknen från
-                        <placeNamn>Västra Eneby</placeNamn>socken. </p> </div>
+                        <placeName>Västra Eneby</placeName>socken. </p> </div>
 
                       <div type="Naturnamn" xml:id="Östra_Fjällfjället">
                         <head><placeName>Östra Fjällfjället</placeName></head> <p><span type="locale">fjällmassiv</span>,
@@ -48835,7 +48748,7 @@
                         <head><placeName>Östra Fors</placeName></head> <p><span type="locale">by</span>,
                         <location><district type="socken">Malungs sn</district>
                         <region type="landskap">Dalarna</region></location>.
-                         <placeNamn>Malungsfors</placeNamn>. </p> </div>
+                         <placeName>Malungsfors</placeName>. </p> </div>
 
                      <div type="bebyggelsenamn" xml:id="Östra_Frölunda">
                         <head><placeName>Östra Frölunda</placeName></head> <p><span type="locale">sn</span>, <span type="locale">tätort</span>,
@@ -48844,7 +48757,7 @@
                          Frølvnda songh 1402. – Socknen har fått sitt namn från kyrkbyn. Det plurala (se inl. 3.3.1)
                         ortnamnet innehåller i efterleden lund och i förleden snarast frö ’fruktbar; frodig’. Sedan
                         1886 är socknens officiella namn Östra Frölunda. Det tillagda Östra särskiljer socknen från
-                        <placeNamn>Västra Frölunda</placeNamn>. Tätorten har vuxit fram i anslutning till sockenkyrkan. </p> </div>
+                        <placeName>Västra Frölunda</placeName>. Tätorten har vuxit fram i anslutning till sockenkyrkan. </p> </div>
 
                       <div type="bebyggelsenamn" xml:id="Östra_Fågelvik">
                         <head><placeName>Östra Fågelvik</placeName></head> <p><span type="locale">sn</span>,
@@ -48852,18 +48765,18 @@
                         <region type="landskap">Värmland</region></location>.
                          (j) Fuglauik sokn 1400. – Socknen har troligen sitt namn efter platsen där kyrkan byggdes,
                         nära en fågelrik vik av Vänern. Östra tilllades 1886 i syfte att skilja socknen från
-                        <placeNamn>Västra Fågelvik</placeNamn>. </p> </div>
+                        <placeName>Västra Fågelvik</placeName>. </p> </div>
 
                      <div type="bebyggelsenamn" xml:id="Östra_Gerum">
                         <head><placeName>Östra Gerum</placeName></head> <p><span type="locale">sn</span>,
                         <location><district type="härad">Vartofta hd</district>
                         <region type="landskap">Västergötland</region></location>.
                          Gerema sokn 1397 [’Gerumsbornas socken’]. – Socknen har fått sitt namn från kyrkbyn.
-                        Efterleden innehåller <placeNamn>hem</placeNamn> ’boplats; gård’. Förleden innehåller fsv.
+                        Efterleden innehåller <placeName>hem</placeName> ’boplats; gård’. Förleden innehåller fsv.
                         gere ’kil, kilformigt stycke’ eller en motsvarighet, fsv. *ger, till fvn. geirr ’spjut’ och
                         åsyftar sannolikt någon kil- eller spjutliknande formation i landskapet, möjligen dalen mellan
                         Gerumsberget och Gisseberget. Sedan 1886 är socknens officiella namn Östra Gerum. Det tillagda
-                        Östra särskiljer socknen från <placeNamn>Västra Gerum</placeNamn>. </p> </div>
+                        Östra särskiljer socknen från <placeName>Västra Gerum</placeName>. </p> </div>
 
                      <div type="bebyggelsenamn" xml:id="Östra_Grevie">
                         <head><placeName>Östra Grevie</placeName></head> <p><span type="locale">sn</span>, <span type="locale">tätort</span>,
@@ -48871,37 +48784,37 @@
                         <region type="landskap">Skåne</region></location>.
                          (in) Græfhøhæ orientali [’östra’] 1200-talets förra del (avser kyrkbyn). – Sockennamnet, lånat
                         från kyrkbyn (nu en tätort), innehåller ordet gravhög. Förleden åsyftar läget öster om kyrkbyn
-                        i <placeNamn>Mellan-Grevie</placeNamn> socken och byn Västra Grevie i Södra Åkarps socken.
+                        i <placeName>Mellan-Grevie</placeName> socken och byn Västra Grevie i Södra Åkarps socken.
                         De tre byarna har ursprungligen utgjort en bebyggelseenhet. </p> </div>
 
                       <div type="bebyggelsenamn" xml:id="Östra_Göinge">
                         <head><placeName>Östra Göinge</placeName></head> <p><span type="locale">kn</span>,
                         <location><region type="landskap">Skåne</region></location>.
-                        – Kommunen har sitt namn efter <placeNamn>Östra Göinge härad</placeNamn>.
-                        Östra Göinge härad hd, Skåne <placeNamn>Västra Göinge härad</placeNamn>. </p> </div>
+                        – Kommunen har sitt namn efter <placeName>Östra Göinge härad</placeName>.
+                        Östra Göinge härad hd, Skåne <placeName>Västra Göinge härad</placeName>. </p> </div>
 
                      <div type="bebyggelsenamn" xml:id="Östra_Hallen">
                         <head><placeName>Östra Hallen</placeName></head> <p><span type="locale">by</span>,
                         <location><district type="socken">Backaryds sn</district><district type="härad">Medelstads hd</district>
                         <region type="landskap">Blekinge</region></location>.
-                        <placeNamn>Hallabro</placeNamn> </p> </div>
+                        <placeName>Hallabro</placeName> </p> </div>
 
                       <div type="bebyggelsenamn" xml:id="Östra_Harg">
                         <head><placeName>Östra Harg</placeName></head> <p><span type="locale">sn</span>,
                         <location><district type="härad">Åkerbo hd</district>
                         <region type="landskap">Östergötland</region></location>.
                          Hargh 1318. – Socknen har fått sitt namn från gården Harg. Det innehåller
-                         <placeNamn>harg</placeNamn> ’stenig mark’ e.d. Kyrkan ligger på en höjd med berghällar.
+                         <placeName>harg</placeName> ’stenig mark’ e.d. Kyrkan ligger på en höjd med berghällar.
                         Sedan åtminstone 1700-talets slut kallas socknen Östra Harg. Det tillagda Östra
-                        särskiljer socknen från <placeNamn>Västra Harg</placeNamn>. </p> </div>
+                        särskiljer socknen från <placeName>Västra Harg</placeName>. </p> </div>
 
                         <div type="bebyggelsenamn" xml:id="Östra_Herrestad">
                            <head><placeName>Östra Herrestad</placeName></head> <p><span type="locale">sn</span>,
                            <location><district type="härad">Ingelstads hd</district>
                            <region type="landskap">Skåne</region></location>.
                             ecclesie Hærestathe 1430. – Sockennamnet är givet efter kyrkbyn. Det innehåller
-                           ett mansnamn fda. *Hæri och <placeNamn>sta(d)</placeNamn>. Östra tillades redan
-                           på 1500-talet i syfte att skilja socknen från <placeNamn>Stora Herrestad</placeNamn>. </p> </div>
+                           ett mansnamn fda. *Hæri och <placeName>sta(d)</placeName>. Östra tillades redan
+                           på 1500-talet i syfte att skilja socknen från <placeName>Stora Herrestad</placeName>. </p> </div>
 
                         <div type="bebyggelsenamn" xml:id="Östra_Hisings_härad">
                            <head><placeName>Östra Hisings härad</placeName></head> <p><span type="locale">hd</span>,
