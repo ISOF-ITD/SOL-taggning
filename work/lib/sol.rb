@@ -110,4 +110,8 @@ class Sol
 
     "<root>\n" + result.join("\n\n") + "\n</root>"
   end
+
+  def load
+    REXML::Document.new(File.read('SOL2.xml')).root.elements[2].elements[2].elements[2].elements[74]
+  end
 end

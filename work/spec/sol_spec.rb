@@ -154,5 +154,15 @@ __END__
     it "raises an error if it has any other element than L, p, or figure" do
       expect { sol.unlist "<root><foo>bar</foo></root>" }.to raise_error UnexpectedElement
     end
+
+  end
+
+  describe '#load' do
+    it "loads a contentious div" do
+      div = sol.load
+      p = div.elements.first
+      expect(p.name).to eq 'p'
+      expect(p.text).to eq 'A '
+    end
   end
 end
