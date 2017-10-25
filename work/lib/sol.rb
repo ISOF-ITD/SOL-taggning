@@ -41,8 +41,7 @@ class Sol
 
         loc_elts << "<#{tag} type=\"#{attr}\">#{$1}</#{tag}>"
 
-        xml_strip += loc_elts.join(' och ') # FIXME Unlikely to be correct for more than two!
-        xml_strip += " #{locale}, "
+        xml_strip += loc_elts.join
       else
         element =~ /^(.*) (.*)$/
         locale = $2
@@ -64,8 +63,6 @@ class Sol
 
         if index == length - 1
           xml_strip += '</location>'
-        else
-          xml_strip += ', '
         end
       end
     end
