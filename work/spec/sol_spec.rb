@@ -61,7 +61,37 @@ describe Sol do
 
     it "calls a city a settlement" do
       out = sol.process('Abborrberget tätort, Strängnäs stad, Södermanland')
-      expect(out.to_s).to eq "<div><head><placeName>Abborrberget</placeName></head> <p><span type='locale'>tätort</span>, <location><settlement type='stad'>Strängnäs stad</settlement><region type='landskap'>Södermanland</region></location></p></div>" # FIXME Allow non-lanskap areas as last entries!
+      expect(out.to_s).to eq "<div><head><placeName>Abborrberget</placeName></head> <p><span type='locale'>tätort</span>, <location><settlement type='stad'>Strängnäs stad</settlement><region type='landskap'>Södermanland</region></location></p></div>" # FIXME Allow non-landskap areas as last entries!
+    end
+  end
+
+  describe '#batch' do
+    let(:null) { double("null output").as_null_object }
+
+    it "processes all p children of an element" do
+      doc = REXML::Document.new <<__EODOC__
+        <root>
+          <p>Vákkudavárre fjäll, Gällivare sn, Lappland</p>
+
+          <figure><graphic url="bilder/image_1234.jpg" /></figure>
+
+          <p>Vaksala sn, Vaksala hd, Uppland</p>
+        </root>
+__EODOC__
+
+      out = sol.batch(doc, null)
+      expect(out).to be_a REXML::Document
+      xml = <<__EOSTRING__
+<root><div><head><placeName>Vákkudavárre</placeName></head> <p><span type='locale'>fjäll</span>, <location><district type='socken'>Gällivare sn</district><region type='landskap'>Lappland</region></location></p></div><figure><graphic url='bilder/image_1234.jpg'/></figure><div><head><placeName>Vaksala</placeName></head> <p><span type='locale'>sn</span>, <location><district type='härad'>Vaksala hd</district><region type='landskap'>Uppland</region></location></p></div></root>
+__EOSTRING__
+      expect(out.to_s).to eq xml.strip
+    end
+
+    it "takes an optional stream argument" do
+      stream = double("output stream").as_null_object
+      expect(stream).to receive(:puts).with('Processed 1 <p> element')
+      doc = REXML::Document.new '<root><p>Hornö behandlingshem, Vallby sn, Trögds hd, Uppland</p></root>'
+      out = sol.batch(doc, stream)
     end
   end
 

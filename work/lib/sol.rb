@@ -100,6 +100,27 @@ class Sol
     place_element
   end
 
+  def batch(doc, output)
+    retvalue = REXML::Document.new
+    retvalue.add_element doc.root.name
+    n = 0
+    doc.root.elements.each do |element|
+      if element.name == 'p'
+        retvalue.root.add_element process element.text
+        n += 1
+      else
+        begin
+          retvalue.root.add_element element
+        rescue RuntimeError
+          byebug
+        end
+      end
+    end
+
+    output.puts "Processed #{n} <p> element"
+    retvalue
+  end
+
   def unweave(table)
     doc = REXML::Document.new(table)
     result = [[], []]
