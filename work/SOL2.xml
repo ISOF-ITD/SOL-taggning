@@ -29939,9 +29939,9 @@
                 <div type="bebyggelsenamn" xml:id="Rydsgård">
                    <head><placeName>Rydsgård</placeName></head> <p><span type="locale">gods</span>,
                    <location><district type="socken">Villie sn</district>
-                   <district type="härad">Ljunits hd</district>
-                   <span type="locale">tätort</span>
-                   <district type="socken">Örsjö sn</district>
+                   <district type="härad">Ljunits hd</district></location>
+                   samt <span type="locale">tätort</span>,
+                   <location><district type="socken">Örsjö sn</district>
                    <district type="härad">Vemmenhögs hd</district>
                    <region type="landskap">Skåne</region></location>.
                     – Godset, som tillkom 1683, har övertagit namnet från en äldre medeltida
@@ -30986,7 +30986,7 @@
                    och <placeName>Östra Sallerup</placeName>. </p> </div>
 
                    <div type="bebyggelsenamn" xml:id="Sallmunds">
-                   <head><placeName>Sallmunds</placeName></head> <p><locale/>,
+                   <head><placeName>Sallmunds</placeName></head> <p><span type="locale" />,
                    <location><region type="landskap">Gotland</region></location>.
                     vanligt gårdnamn, <placeName>Levide</placeName>. </p> </div>
 
@@ -32422,8 +32422,8 @@
 
                    <div type="naturnamn" xml:id="Skarpö">
                    <head><placeName>Skarpö</placeName></head> <p><span type="locale">halvö</span>,
-                   <location><district type="socken">Djurö sn</district><district type="skeppslag">Värmdö skg</district>
-                   <span type="locale">ö</span>, <district type="town">Vaxholms stad</district>
+                   <location><district type="socken">Djurö sn</district><district type="skeppslag">Värmdö skg</district></location>
+                   samt <span type="locale">ö</span>, <location><district type="town">Vaxholms stad</district>
                    <region type="landskap">Uppland</region></location>.
                    – Namnet, som förekommer på flera håll i skärgården, innehåller adjektivet skarp i betydelsen ’hård,
                    torr, ofruktbar’ och syftar vanligen på öarnas dåliga jordmån. </p> </div>
