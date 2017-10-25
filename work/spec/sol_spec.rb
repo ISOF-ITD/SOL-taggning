@@ -48,6 +48,11 @@ describe Sol do
     it "processes the entry for Bålsta (kn och hd osv.)"
     it "processes entries with f. d."
     it "processes entries with longer strings such as the one for Kattegatt"
+
+    it "stops at the first full stop" do
+      out = sol.process('Abbekås tätort, Skivarps sn, Vemmenhög hd, Skåne. Abbekassz 1536. – Namnet på detta gamla fiskeläge innehåller troligen mansnamnet fda. Abbi.')
+      expect(out).to eq '<head><placeName>Abbekås</placeName></head> <P><locale>tätort</locale>, <location><district type="socken">Skivarps sn</district>, <district type="härad">Vemmenhög hd</district>, <region type="landskap">Skåne</region></location>. Abbekassz 1536. – Namnet på detta gamla fiskeläge innehåller troligen mansnamnet fda. Abbi.'
+    end
   end
 
   describe "#unweave" do

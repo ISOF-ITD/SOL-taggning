@@ -5,7 +5,11 @@ class UnexpectedElement < StandardError; end
 
 class Sol
   def process(line)
-    array = line.split(',').map(&:strip)
+    final_dot = line =~ /\.$/
+    sentences = line.split('.')
+    first_sentence = sentences.shift
+    remsentences = sentences.join('.') if sentences.count > 0
+    array = first_sentence.split(',').map(&:strip)
     place = array.shift
     place =~ /^(.*) (.*)$/
     xml_strip = "<head><placeName>#{$1}</placeName></head> <P><locale>#{$2}</locale>, "
@@ -65,6 +69,9 @@ class Sol
         end
       end
     end
+
+    xml_strip += '.' + remsentences if remsentences
+    xml_strip += '.' if final_dot
 
     xml_strip
   end
