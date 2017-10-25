@@ -28,9 +28,15 @@ class Sol
     xml_strip = "<head><placeName>#{$1}</placeName></head> <p><span type='locale'>#{$2}</span>, "
     first = array.first
     if first == 'tätort' || first == 'gravfält'
+      span_element2 = REXML::Element.new 'span'
+      span_element2.add_attribute 'type', 'locale'
+      span_element2.text = first
+      place_element.add_element span_element2
+      place_element.add_text ', '
       xml_strip += "<span type='locale'>#{first}</span>, "
       array.shift
     end
+    location_element = REXML::Document.new 'location'
     xml_strip += '<location>'
     length = array.count
     array.each_with_index do |element, index|
@@ -48,7 +54,12 @@ class Sol
         end
 
         locs.pop
+        location_elements = []
         loc_elts = locs.map do |loc|
+          tag_element = REXML::Document.new tag
+          tag_element.add_attribute 'type', attr
+          tag_element.add_text loc
+          location_elements << tag_element
           "<#{tag} type='#{attr}'>#{loc}</#{tag}>"
         end
 
