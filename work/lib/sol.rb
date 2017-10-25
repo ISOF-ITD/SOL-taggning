@@ -77,6 +77,9 @@ class Sol
         when 'hd'
           tag = 'district'
           attr = 'härad'
+        when 'stad'
+          tag = 'settlement'
+          attr = 'stad'
         end
 
         if index == length - 1

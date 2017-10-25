@@ -58,6 +58,11 @@ describe Sol do
       out = sol.process('Abbekås tätort, Skivarps sn, Vemmenhög hd, Skåne. Abbekassz 1536. – Namnet på detta gamla fiskeläge innehåller troligen mansnamnet fda. Abbi.')
  expect(out.to_s).to eq "<div><head><placeName>Abbekås</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Skivarps sn</district><district type='härad'>Vemmenhög hd</district><region type='landskap'>Skåne</region></location>. Abbekassz 1536. – Namnet på detta gamla fiskeläge innehåller troligen mansnamnet fda. Abbi.</p></div>"
     end
+
+    it "calls a city a settlement" do
+      out = sol.process('Abborrberget tätort, Strängnäs stad, Södermanland')
+      expect(out.to_s).to eq "<div><head><placeName>Abborrberget</placeName></head> <p><span type='locale'>tätort</span>, <location><settlement type='stad'>Strängnäs stad</settlement><region type='landskap'>Södermanland</region></location></p></div>" # FIXME Allow non-lanskap areas as last entries!
+    end
   end
 
   describe "#unweave" do
