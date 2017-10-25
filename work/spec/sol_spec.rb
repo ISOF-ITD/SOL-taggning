@@ -11,42 +11,42 @@ describe Sol do
 
     it "processes a parish without a härad" do
       out = sol.process('Husby sn, tätort, Dalarna')
-      expect(out.to_s).to eq "<head><placeName>Husby</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><region type='landskap'>Dalarna</region></location></p>"
+      expect(out.to_s).to eq "<div><head><placeName>Husby</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><region type='landskap'>Dalarna</region></location></p></div>"
     end
 
     it "processes a parish with an extra locale" do
       out = sol.process('Hurva sn, tätort, Frosta hd, Skåne')
-      expect(out.to_s).to eq "<head><placeName>Hurva</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Frosta hd</district><region type='landskap'>Skåne</region></location></p>"
+      expect(out.to_s).to eq "<div><head><placeName>Hurva</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Frosta hd</district><region type='landskap'>Skåne</region></location></p></div>"
     end
 
     it "processes a point with an extra locale" do
       out = sol.process('Vätteryd torp, gravfält, Norra Mellby sn, Västra Göinge hd, Skåne')
-      expect(out.to_s).to eq "<head><placeName>Vätteryd</placeName></head> <p><span type='locale'>torp</span>, <span type='locale'>gravfält</span>, <location><district type='socken'>Norra Mellby sn</district><district type='härad'>Västra Göinge hd</district><region type='landskap'>Skåne</region></location></p>"
+      expect(out.to_s).to eq "<div><head><placeName>Vätteryd</placeName></head> <p><span type='locale'>torp</span>, <span type='locale'>gravfält</span>, <location><district type='socken'>Norra Mellby sn</district><district type='härad'>Västra Göinge hd</district><region type='landskap'>Skåne</region></location></p></div>"
     end
 
     it "processes a parish with a compound name" do
       out = sol.process('Västra Vram sn, Gärds hd, Skåne')
-      expect(out.to_s).to eq "<head><placeName>Västra Vram</placeName></head> <p><span type='locale'>sn</span>, <location><district type='härad'>Gärds hd</district><region type='landskap'>Skåne</region></location></p>"
+      expect(out.to_s).to eq "<div><head><placeName>Västra Vram</placeName></head> <p><span type='locale'>sn</span>, <location><district type='härad'>Gärds hd</district><region type='landskap'>Skåne</region></location></p></div>"
     end
 
     it "processes a simple parish" do
       out = sol.process('Västrum sn, Södra Tjusts hd, Småland')
-      expect(out.to_s).to eq "<head><placeName>Västrum</placeName></head> <p><span type='locale'>sn</span>, <location><district type='härad'>Södra Tjusts hd</district><region type='landskap'>Småland</region></location></p>"
+      expect(out.to_s).to eq "<div><head><placeName>Västrum</placeName></head> <p><span type='locale'>sn</span>, <location><district type='härad'>Södra Tjusts hd</district><region type='landskap'>Småland</region></location></p></div>"
     end
 
     it "handles the case of two härad", focus: true do
       out = sol.process('Kinnekulle berg, Kinne och Kinnefjärdings hd, Västergötland')
-      expect(out.to_s).to eq "<head><placeName>Kinnekulle</placeName></head> <p><span type='locale'>berg</span>, <location><district type='härad'>Kinne</district><district type='härad'>Kinnefjärdings</district><region type='landskap'>Västergötland</region></location></p>"
+      expect(out.to_s).to eq "<div><head><placeName>Kinnekulle</placeName></head> <p><span type='locale'>berg</span>, <location><district type='härad'>Kinne</district><district type='härad'>Kinnefjärdings</district><region type='landskap'>Västergötland</region></location></p></div>"
     end
 
     it "handles the case of two socknar" do
       out = sol.process('Kivik tätort, Södra Mellby och Vitaby snr, Albo hd, Skåne')
-      expect(out.to_s).to eq "<head><placeName>Kivik</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Södra Mellby</district><district type='socken'>Vitaby</district><district type='härad'>Albo hd</district><region type='landskap'>Skåne</region></location></p>"
+      expect(out.to_s).to eq "<div><head><placeName>Kivik</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Södra Mellby</district><district type='socken'>Vitaby</district><district type='härad'>Albo hd</district><region type='landskap'>Skåne</region></location></p></div>"
     end
 
     it "for real!" do
       out = sol.process('Klagshamn samhälle, Västra Klagstorps och Tygelsjö snr, Oxie hd, Skåne')
-      expect(out.to_s).to eq "<head><placeName>Klagshamn</placeName></head> <p><span type='locale'>samhälle</span>, <location><district type='socken'>Västra Klagstorps</district><district type='socken'>Tygelsjö</district><district type='härad'>Oxie hd</district><region type='landskap'>Skåne</region></location></p>"
+      expect(out.to_s).to eq "<div><head><placeName>Klagshamn</placeName></head> <p><span type='locale'>samhälle</span>, <location><district type='socken'>Västra Klagstorps</district><district type='socken'>Tygelsjö</district><district type='härad'>Oxie hd</district><region type='landskap'>Skåne</region></location></p></div>"
     end
 
     it "processes the entry for Norberg"
@@ -56,7 +56,7 @@ describe Sol do
 
     it "stops at the first full stop" do
       out = sol.process('Abbekås tätort, Skivarps sn, Vemmenhög hd, Skåne. Abbekassz 1536. – Namnet på detta gamla fiskeläge innehåller troligen mansnamnet fda. Abbi.')
- expect(out.to_s).to eq "<head><placeName>Abbekås</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Skivarps sn</district><district type='härad'>Vemmenhög hd</district><region type='landskap'>Skåne</region></location>. Abbekassz 1536. – Namnet på detta gamla fiskeläge innehåller troligen mansnamnet fda. Abbi.</p>"
+ expect(out.to_s).to eq "<div><head><placeName>Abbekås</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Skivarps sn</district><district type='härad'>Vemmenhög hd</district><region type='landskap'>Skåne</region></location>. Abbekassz 1536. – Namnet på detta gamla fiskeläge innehåller troligen mansnamnet fda. Abbi.</p></div>"
     end
   end
 

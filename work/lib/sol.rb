@@ -23,20 +23,22 @@ class Sol
     span_element = REXML::Element.new 'span'
     span_element.add_attribute 'type', 'locale'
     span_element.text = $2
-    place_element.add_element span_element
-    place_element.add_text ', '
+    p_element.add_element span_element
+    place_element.add_element p_element
+    p_element.add_text ', '
     xml_strip = "<head><placeName>#{$1}</placeName></head> <p><span type='locale'>#{$2}</span>, "
     first = array.first
     if first == 'tätort' || first == 'gravfält'
       span_element2 = REXML::Element.new 'span'
       span_element2.add_attribute 'type', 'locale'
       span_element2.text = first
-      place_element.add_element span_element2
-      place_element.add_text ', '
+      p_element.add_element span_element2
+      p_element.add_text ', '
       xml_strip += "<span type='locale'>#{first}</span>, "
       array.shift
     end
     location_element = REXML::Element.new 'location'
+    p_element.add_element location_element
     xml_strip += '<location>'
     length = array.count
     array.each_with_index do |element, index|
@@ -58,13 +60,14 @@ class Sol
           tag_element = REXML::Element.new tag
           tag_element.add_attribute 'type', attr
           tag_element.add_text loc
-          place_element.add_element tag_element
+          location_element.add_element tag_element
           "<#{tag} type='#{attr}'>#{loc}</#{tag}>"
         end
 
         tag_element = REXML::Element.new tag
         tag_element.add_attribute 'type', attr
         tag_element.add_text $1
+        location_element.add_element tag_element
         loc_elts << "<#{tag} type='#{attr}'>#{$1}</#{tag}>"
 
         xml_strip += loc_elts.join
@@ -88,7 +91,7 @@ class Sol
         tag_element = REXML::Element.new tag
         tag_element.add_attribute 'type', attr
         tag_element.add_text element
-        place_element.add_element tag_element
+        location_element.add_element tag_element
         xml_strip += "<#{tag} type='#{attr}'>#{element}</#{tag}>"
 
         if index == length - 1
@@ -97,12 +100,13 @@ class Sol
       end
     end
 
-    place_element.add_text('.' + remsentences) if remsentences
-    place_element.add_text '.' if final_dot
+    p_element.add_text('.' + remsentences) if remsentences
+    p_element.add_text '.' if final_dot
     xml_strip += '.' + remsentences if remsentences
     xml_strip += '.' if final_dot
 
     xml_strip + '</p>'
+    place_element
   end
 
   def unweave(table)
