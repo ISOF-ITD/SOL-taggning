@@ -54,15 +54,17 @@ class Sol
         end
 
         locs.pop
-        location_elements = []
         loc_elts = locs.map do |loc|
           tag_element = REXML::Document.new tag
           tag_element.add_attribute 'type', attr
           tag_element.add_text loc
-          location_elements << tag_element
+          place_element.add_element tag_element
           "<#{tag} type='#{attr}'>#{loc}</#{tag}>"
         end
 
+        tag_element = REXML::Element.new tag
+        tag_element.add_attribute 'type', attr
+        tag_element.add_text $1
         loc_elts << "<#{tag} type='#{attr}'>#{$1}</#{tag}>"
 
         xml_strip += loc_elts.join
@@ -83,6 +85,10 @@ class Sol
           attr = 'landskap'
         end
 
+        tag_element = REXML::Element.new tag
+        tag_element.add_attribute 'type', attr
+        tag_element.add_text element
+        place_element.add_element tag_element
         xml_strip += "<#{tag} type='#{attr}'>#{element}</#{tag}>"
 
         if index == length - 1
@@ -91,6 +97,8 @@ class Sol
       end
     end
 
+    place_element.add_text('.' + remsentences) if remsentences
+    place_element.add_text '.' if final_dot
     xml_strip += '.' + remsentences if remsentences
     xml_strip += '.' if final_dot
 
