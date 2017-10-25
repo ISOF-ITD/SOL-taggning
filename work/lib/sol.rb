@@ -12,6 +12,19 @@ class Sol
     array = first_sentence.split(',').map(&:strip)
     place = array.shift
     place =~ /^(.*) (.*)$/
+    place_element = REXML::Element.new 'div'
+    head_element = REXML::Element.new 'head'
+    placename_element = REXML::Element.new 'placeName'
+    placename_element.text = $1
+    place_element.add_element head_element
+    head_element.add_element placename_element
+    place_element.add_text ' '
+    p_element = REXML::Element.new 'p'
+    span_element = REXML::Element.new 'span'
+    span_element.add_attribute 'type', 'locale'
+    span_element.text = $2
+    place_element.add_element span_element
+    place_element.add_text ', '
     xml_strip = "<head><placeName>#{$1}</placeName></head> <p><span type=\"locale\">#{$2}</span>, "
     first = array.first
     if first == 'tätort' || first == 'gravfält'

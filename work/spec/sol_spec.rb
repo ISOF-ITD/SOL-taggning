@@ -6,7 +6,6 @@ describe Sol do
   describe '#process' do
     it "returns an XML element" do
       out = sol.process('Vemmenhög')
-      pending "Not yet"
       expect(out).to be_an REXML::Element
     end
 
