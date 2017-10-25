@@ -997,7 +997,67 @@
                      <p>Institutet för språk och folkminnen och Lantmäteriet har ett stort ansvar
                         inom ortnamnsvården. Till Lantmäteriets uppgifter som nationell
                         ortnamnsmyndighet hör att fastställa stavningen för merparten av ortnamnen i
-                        grundläg</p>
+                        grundläggande geodata. Detta gäller bl.a. alla namn som finns i fastighetsregistret,
+                        dvs. de flesta namnen på våra gårdar och byar, men också natur- och ägonamn i
+                        Lantmäteri ets grundläggande geodata. Alla dessa namn är sökbara i
+                        Lantmäteriets karttjänst Kartsök och ortnamn. I samtliga fall har namnen först
+                        granskats av Institutet för språk och folkminnen. Över huvud taget har
+                        ortnamnsvården i Sveri ge i hög grad varit knuten till dessa myndigheter och
+                        deras föregångare, som i början av 1900-talet inledde ett alltjämt pågående
+                        samarbete. Ursprungligen handlade det om att ge ut generalstabs- kartan med
+                        konsekvens i fråga om namnredovisningen. Före 1902 saknades regler för hur
+                        ortnamnen skulle stavas. Den detta år inrättade Ortnamnskommittén fick inleda
+                        sin verksamhet inom det som då kallades namnreglering med att utarbeta
+                        riktlinjer beträffande ortnamnens stavning och form. Först 1927 kom
+                        föreskrifter som ledde till en bestående norm. Ortnamnens stavning i officiella
+                        handlingar skulle följa grunderna i Svenska Akademiens ordlista (SAOL).
+                        Därmed blev det enklare att ersätta gammalstav ning med ny stavning. Qvarnböle
+                        blev Kvarnböle, Wedevåg blev Vedevåg, Öfverby blev Överby etc. Andra
+                        stavningsänd ringar var inte lika självklara, då de principer som kunde
+                        härledas ur SAOL ibland stred mot varandra. Fyra huvud principer har gällt,
+                        avseende ljudlikhet (stavning i nära anslutning till uttal), samhörighet
+                        (SAOL:s stavning gäller om ett visst ortnamnselement finns i ordlistan), etymo
+                        logi (namntolkningen får avgöra stavningen av ett idag ogenomskinligt namn)
+                        samt hävd (en etablerad stavning ändras inte, även om den språkligt sett är
+                        felaktig). Genom Ortnamnskommittén och dess efterträdare Ortnamnskom missionen
+                        utbildades en praxis, som innebär att de drygt en miljon ortnamn som finns i
+                        Lantmäteriets grundläggan de geodata fått en rimlig enhetlig behandling och
+                        numera också en normerande status. Bland dessa namn finns en liten del som är
+                        officiellt fastställda på annat sätt än genom Lantmäteriet. Sålun da beslutar
+                        regeringen och ibland riksdagen om namn på län och kommuner, medan namn på
+                        församlingar numera fastställs av respektive stiftsstyrelse. Vissa myndigheter,
+                        såsom Trafikverket, Transportstyrelsen och Sjöfartsverket, har ansvar för
+                        namnsättning inom sina verksamhetsområ den men ska återge Lantmäteriets
+                        fastställda namnformer. För namn i tätorter gäller att berörd kommun beslutar
+                        om t.ex. gatunamn och kvartersnamn. Kommunerna har också huvudansvaret för
+                        adressering på landsbygden med därtill hörande namnfrågor. Ortnamnsvården har
+                        en funktionell och en kulturhisto risk sida. För att vara funktionellt ska ett
+                        ortnamn vara språkligt korrekt, lätt att skriva, uttala och uppfatta samt inom
+                        en namnbrukargemenskap entydigt beteckna en geo grafisk lokalitet. Den
+                        kulturhistoriska aspekten har fått allt större genomslag, med begreppet hävd i
+                        centrum. Vid vården av existerande ortnamn bidrar hävden till att be vara det
+                        traditionella namnbruket och ortnamnsförrådet inom ett område. Ortnamnens
+                        fortlevnad betyder också mycket för män- niskors känsla av samhörighet med
+                        hembygden, och all- mänhetens medvetande om detta har ökat. Säkert bidrog
+                        debatten om fastighetsdatareformen på 1970-talet vä- sentligt till en
+                        fokusering på ortnamnen som en del av kulturlandskapet. Primärt handlade denna
+                        reform om att datorisera bl.a. det gamla jordregistret, vilket till en bör- jan
+                        betraktades som en rent teknisk uppgift. Om reformen hade genomförts i sin
+                        ursprungliga tappning skulle dock antalet namn i fastighetsregistret ha minskat
+                        drastiskt. Uppmärksamheten kring detta kan också sägas vara en av anledningarna
+                        till att Ortnamnsrådet inrättades 1985. Rådet, som är knutet till Lantmäteriet,
+                        kom till för att stärka den officiella ortnamnsvården. Dess sju ledamöter
+                        representerar olika myndigheter och organisationer med intressen inom
+                        ortnamnsverksamheten, däribland Institu tet för språk och folkminnen och
+                        universiteten. Dit hör också Riksantikvarieämbetet, som har ett särskilt ansvar
+                        inom ortnamnsvården genom ortnamnsparagrafen i kul turmiljölagen. Även på
+                        internationell nivå bedrivs ortnamnsvård, främst i FN:s regi, och i dessa
+                        sammanhang används begreppet »standardisering av geografiska namn» för att
+                        beskriva verksamheten. Målet är ett klart och enhetligt internatio nellt
+                        namnskick. En viktig delfråga utgör behandlingen av minoritetsspråkens ortnamn,
+                        vilket på nordiskt initiativ och med samiskan som exempel tagits upp i en
+                        särskild FN-resolution.</p>
+
                      </div>
                   <figure>
 
@@ -1013,345 +1073,6 @@
                      <graphic url="bilder/SOL2_img_47.jpg"/>
                   </figure>
 
-                  <!-- FIXME!
-                  <Table>
-                     <TR>
-                        <TD>gande geodata. Detta gäller bl.a. alla namn som finns i </TD>
-
-                        <TD>Ortnamnens fortlevnad betyder också mycket för män-</TD>
-                     </TR>
-
-                     <TR>
-                        <TD>fastighetsregistret, dvs. de flesta namnen på våra gårdar </TD>
-
-                        <TD>niskors känsla av samhörighet med hembygden, och all-</TD>
-                     </TR>
-
-                     <TR>
-                        <TD>och byar, men också natur- och ägonamn i Lantmäteri</TD>
-
-                        <TD>mänhetens medvetande om detta har ökat. Säkert bidrog </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>ets grundläggande geodata. Alla dessa namn är sökbara i </TD>
-
-                        <TD>debatten om fastighetsdatareformen på 1970-talet vä-</TD>
-                     </TR>
-
-                     <TR>
-                        <TD>Lantmäteriets karttjänst Kartsök och ortnamn. I samtliga </TD>
-
-                        <TD>sentligt till en fokusering på ortnamnen som en del av </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>fall har namnen först granskats av Institutet för språk och </TD>
-
-                        <TD>kulturlandskapet. Primärt handlade denna reform om att </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>folkminnen. Över huvud taget har ortnamnsvården i Sveri</TD>
-
-                        <TD>datorisera bl.a. det gamla jordregistret, vilket till en bör-</TD>
-                     </TR>
-
-                     <TR>
-                        <TD>ge i hög grad varit knuten till dessa myndigheter och deras </TD>
-
-                        <TD>jan betraktades som en rent teknisk uppgift. Om reformen </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>föregångare, som i början av 1900-talet inledde ett alltjämt </TD>
-
-                        <TD>hade genomförts i sin ursprungliga tappning skulle dock </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>pågående samarbete. </TD>
-
-                        <TD>antalet namn i fastighetsregistret ha minskat drastiskt. </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>Ursprungligen handlade det om att ge ut generalstabs-</TD>
-
-                        <TD>Uppmärksamheten kring detta kan också sägas vara en </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>kartan med konsekvens i fråga om namnredovisningen. </TD>
-
-                        <TD>av anledningarna till att Ortnamnsrådet inrättades 1985. </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>Före 1902 saknades regler för hur ortnamnen skulle stavas. </TD>
-
-                        <TD>Rådet, som är knutet till Lantmäteriet, kom till för att </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>Den detta år inrättade Ortnamnskommittén fick inleda sin </TD>
-
-                        <TD>stärka den officiella ortnamnsvården. Dess sju ledamöter </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>verksamhet inom det som då kallades namnreglering med </TD>
-
-                        <TD>representerar olika myndigheter och organisationer med </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>att utarbeta riktlinjer beträffande ortnamnens stavning </TD>
-
-                        <TD>intressen inom ortnamnsverksamheten, däribland Institu</TD>
-                     </TR>
-
-                     <TR>
-                        <TD>och form. Först 1927 kom föreskrifter som ledde till en </TD>
-
-                        <TD>tet för språk och folkminnen och universiteten. Dit hör </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>bestående norm. Ortnamnens stavning i officiella hand-</TD>
-
-                        <TD>också Riksantikvarieämbetet, som har ett särskilt ansvar </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>lingar skulle följa grunderna i Svenska Akademiens ordlista </TD>
-
-                        <TD>inom ortnamnsvården genom ortnamnsparagrafen i kul</TD>
-                     </TR>
-
-                     <TR>
-                        <TD>(SAOL). Därmed blev det enklare att ersätta gammalstav</TD>
-
-                        <TD>turmiljölagen. </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>ning med ny stavning. Qvarnböle blev Kvarnböle, Wedevåg </TD>
-
-                        <TD>Även på internationell nivå bedrivs ortnamnsvård, främst </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>blev Vedevåg, Öfverby blev Överby etc. Andra stavningsänd</TD>
-
-                        <TD>i FN:s regi, och i dessa sammanhang används begreppet </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>ringar var inte lika självklara, då de principer som kunde </TD>
-
-                        <TD>»standardisering av geografiska namn» för att beskriva </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>härledas ur SAOL ibland stred mot varandra. Fyra huvud</TD>
-
-                        <TD>verksamheten. Målet är ett klart och enhetligt internatio</TD>
-                     </TR>
-
-                     <TR>
-                        <TD>principer har gällt, avseende ljudlikhet (stavning i nära </TD>
-
-                        <TD>nellt namnskick. En viktig delfråga utgör behandlingen av </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>anslutning till uttal), samhörighet (SAOL:s stavning gäller </TD>
-
-                        <TD>minoritetsspråkens ortnamn, vilket på nordiskt initiativ </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>om ett visst ortnamnselement finns i ordlistan), etymo</TD>
-
-                        <TD>och med samiskan som exempel tagits upp i en särskild </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>logi (namntolkningen får avgöra stavningen av ett idag </TD>
-
-                        <TD>FN-resolution. </TD>
-                     </TR>
-
-                     <TR>
-                        <TD>ogenomskinligt namn) samt hävd (en etablerad stavning </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>ändras inte, även om den språkligt sett är felaktig). Genom </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>Ortnamnskommittén och dess efterträdare Ortnamnskom</TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>missionen utbildades en praxis, som innebär att de drygt </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>en miljon ortnamn som finns i Lantmäteriets grundläggan</TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>de geodata fått en rimlig enhetlig behandling och numera </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>också en normerande status. </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>Bland dessa namn finns en liten del som är officiellt </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>fastställda på annat sätt än genom Lantmäteriet. Sålun</TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>da beslutar regeringen och ibland riksdagen om namn på </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>län och kommuner, medan namn på församlingar numera </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>fastställs av respektive stiftsstyrelse. Vissa myndigheter, </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>såsom Trafikverket, Transportstyrelsen och Sjöfartsverket, </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>har ansvar för namnsättning inom sina verksamhetsområ</TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>den men ska återge Lantmäteriets fastställda namnformer. </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>För namn i tätorter gäller att berörd kommun beslutar om </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>t.ex. gatunamn och kvartersnamn. Kommunerna har också </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>huvudansvaret för adressering på landsbygden med därtill </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>hörande namnfrågor. </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>Ortnamnsvården har en funktionell och en kulturhisto</TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>risk sida. För att vara funktionellt ska ett ortnamn vara </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>språkligt korrekt, lätt att skriva, uttala och uppfatta samt</TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>inom en namnbrukargemenskap entydigt beteckna en geo</TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>grafisk lokalitet. Den kulturhistoriska aspekten har fått </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>allt större genomslag, med begreppet hävd i centrum. Vid </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>vården av existerande ortnamn bidrar hävden till att be</TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>vara det traditionella namnbruket och ortnamnsförrådet </TD>
-
-                        <TD/>
-                     </TR>
-
-                     <TR>
-                        <TD>inom ett område. </TD>
-
-                        <TD/>
-                     </TR>
-                  </Table>
-                  -->
 
                      <figure>
                         <graphic url="bilder/SOL2_img_48.jpg"/>
