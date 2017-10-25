@@ -12,10 +12,10 @@ class Sol
     array = first_sentence.split(',').map(&:strip)
     place = array.shift
     place =~ /^(.*) (.*)$/
-    xml_strip = "<head><placeName>#{$1}</placeName></head> <p><locale>#{$2}</locale>, "
+    xml_strip = "<head><placeName>#{$1}</placeName></head> <p><span type=\"locale\">#{$2}</span>, "
     first = array.first
     if first == 'tätort' || first == 'gravfält'
-      xml_strip += "<locale>#{first}</locale>, "
+      xml_strip += "<span type=\"locale\">#{first}</span>, "
       array.shift
     end
     xml_strip += '<location>'
