@@ -14,7 +14,7 @@ xyzxyz på slutet av uppslaget för Skeppsholmen
 Inget uppslag för Gamla Stan?
 Gott exempel på dålig taggning: Store mosse (två socknar i en!)
 Svartälven – verkligen många location-element!
-Skirösjön, sn: naturnamn?
+Skirösjön, sn: naturnamn?  Generally speaking: what about names that are both? Frösön osv.
 Tingsryd i två härad, men taggad med en enda tagg.
 Struktur: – som en ny p!
 Skogstorp har district type="town", borde det inte vara settlement type="town"
@@ -25,3 +25,6 @@ Find solution ... oh wait, it’s useless.  The solution for multiple paragraphs
 Albo härad: gotiska språk.
 ”*Yxn- ’vattendraget” blev ”*Yxn’vattendraget” (rättat nu).
 Veddinge, forndansk
+Tavelsjö had tags that were a little absurd: <placeNameInnertavle/> and no tag
+för Yttertavle. Jag rättade den första och lade till en tagg för Yttertavle.
+Två socknar för Tegnaby

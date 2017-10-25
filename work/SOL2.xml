@@ -38605,7 +38605,7 @@
                     Thafflesiö 1539. – Tätorten är framvuxen ur byn, som har fått namn efter läget vid sjön Tavelsjön.
                    Förleden i sjönamnet innehåller genitiv *Taflo av Tavelåns gamla namn fsv. *Tafla, i böjd form också
                    bevarat i bynamnet Tavle (i Taflæ 1494) med syftning på (den ena av) byarna
-                   <placeNameInnertavle/> (nu tätort) och Yttertavle vid Tavelåns utlopp i Bottniska
+                   <placeName>Innertavle</placeName> (nu tätort) och <placeName>Yttertavle</placeName> vid Tavelåns utlopp i Bottniska
                    viken. Tavelån är avrinningså för Tavelsjön, varför sjönamnet kan tolkas som ’Tavelåns (ån *Tavlas) källsjö’.
                    Ånamnet *Tavla är besläktat med norska dialekters tavla ’gå fram och tillbaka sökande sig fram
                    med möda; gå trippande och vaggande, gå osäkert och snubblande’ och syftar på åns slingrande lopp,
@@ -38665,7 +38665,7 @@
                    Kyrksjön, vilken liknats vid en tygel. </p> </div>
 
                    <div type="bebyggelsenamn" xml:id="Tegnaby">
-                   <head><placeName>Tegnaby</placeName></head> <p><span type="locale">f.d. sn</span>, <span type="locale">by</span>,    <locale/>,
+                   <head><placeName>Tegnaby</placeName></head> <p><span type="locale">f.d. sn</span>, <span type="locale">by</span>,
                    <location><district type="socken">Hemmesjö med Tegnaby snr</district><district type="härad">Konga hd</district>
                    <region type="landskap">Småland</region></location>.
                    (in) parochia Thegnæby 1314. – Kyrkbyn har givit socknen dess namn, som innehåller genitiv pluralis av ett
