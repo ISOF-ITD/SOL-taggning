@@ -3,6 +3,6 @@ Struktur
 – de måste vara unika (se Rya, Rya2, Rya3)
 
 Semantik
-– <locale>-taggarna får inte förekomma där de står nu
-– <location>-taggarna får inte innehålla text
-– <district>-taggar Uttryck som “Ysane och Mörrums snr” borde vara två separata taggar
+– <locale>-taggar får inte förekomma där de står nu
+– <location>-taggar får inte innehålla text
+– <district>-taggar borde innehålla bara ett namn (se Pukavik, Store mosse)
