@@ -178,16 +178,27 @@ class Solig
 
   def unword(element)
     div = REXML::Element.new 'div'
-    if REXML::XPath.first(element, 'w:r[1]/w:rPr/w:b')
-      head = REXML::Element.new 'head', div
-      head.text = REXML::XPath.first(element, 'w:r[1]/w:t').text
+    p = REXML::Element.new 'p'
 
-      p = REXML::Element.new 'p', div
-
-      n = 0
-      element.each_element('w:r') do |r|
-        n += 1
-        next if n == 1
+    state = :initial
+    element.each_element('w:r') do |r|
+      if state == :initial
+        if REXML::XPath.first(r, 'w:rPr/w:b')
+          head = REXML::Element.new 'head', div
+          head.text = REXML::XPath.first(r, 'w:t').text
+          state = :intermediate
+        else
+          return element
+        end
+      elsif state == :intermediate
+        if REXML::XPath.first(r, 'w:t').text.strip == ''
+        else
+          div.add_text ' '
+          div.add_element p
+          p.text = REXML::XPath.first(r, 'w:t').text # FIXME Do the italic stuff like below
+          state = :tail
+        end
+      elsif state == :tail
         if REXML::XPath.first(r, 'w:rPr/w:i')
           span = REXML::Element.new 'span', p
           span.add_attribute 'style', 'italic'
@@ -196,8 +207,6 @@ class Solig
           p.add_text REXML::XPath.first(r, 'w:t').text
         end
       end
-    else
-      element
     end
 
     div
