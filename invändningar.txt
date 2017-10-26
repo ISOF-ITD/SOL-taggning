@@ -5,4 +5,11 @@ Struktur
 Semantik
 – <locale>-taggar får inte förekomma där de står nu
 – <location>-taggar får inte innehålla text
-– <district>-taggar borde innehålla bara ett namn (se Pukavik, Store mosse)
+– <district>-taggar borde innehålla bara ett namn (se Pukavik, Store mosse, ännu roligare: Rinkabyholm)
+– Ordled är det vi vill tagga med språkrelaterade taggar (TODO: vilka?), inte språket själv
+– Taggar vi bara de nationella minoriteternas språk, inte norska, forndanska, lågtyska osv.?
+– Enskilda problem: är -sjö:ar naturnamn eller bebyggelsenamn?
+– Taggar vi alla ortnamn in artikeltexten eller bara de som är i kursivt?
+
+Vidare
+– Den nuvarande filen är ingen giltig TEI-fil.
