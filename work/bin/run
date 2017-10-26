@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/sol'
+proc = Sol.new
+sol = REXML::Document.new File.read File.expand_path '../../SOL2.xml', __FILE__
+element = sol.root.elements[2].elements[2].elements[2].elements[74]
+proc.batch element

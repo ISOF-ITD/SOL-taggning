@@ -105,11 +105,12 @@ class Sol
     place_element
   end
 
-  def batch(doc, output)
+  def batch(doc, output = STDOUT)
     retvalue = REXML::Document.new
     retvalue.add_element doc.root.name
     n = 0
-    doc.root.elements.each do |element|
+    node = if doc.is_a? REXML::Document then doc.root else doc end # TODO Spec for that
+    node.elements.each do |element|
       if element.name == 'p'
         retvalue.root.add_element process element.text
         n += 1
