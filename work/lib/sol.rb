@@ -84,6 +84,9 @@ class Sol
             attr = 'stad'
           else
             raise UnexpectedLocation.new(locale)
+
+            # @errors ||= []
+            # @errors << locale
           end
         end
 

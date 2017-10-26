@@ -69,6 +69,7 @@ describe Sol do
     end
 
     it "has an exclusive list of landskap"
+    it "Takes arrows in account too (see Ajmunds)"
   end
 
   describe '#batch' do
