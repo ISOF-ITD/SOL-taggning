@@ -178,6 +178,7 @@ class Solig
 
   def unword(element)
     div = REXML::Element.new 'div'
+    n = 0
     element.each_element('w:r') do |r|
       if REXML::XPath.first(r, 'w:rPr/w:b')
         head = REXML::Element.new 'head', div
