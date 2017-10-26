@@ -184,10 +184,10 @@ class Solig
 
       p = REXML::Element.new 'p', div
 
-      n = 1
+      n = 0
       element.each_element('w:r') do |r|
-        next if n == 1
         n += 1
+        next if n == 1
         if REXML::XPath.first(r, 'w:rPr/w:i')
           span = REXML::Element.new 'span', p
           span.add_attribute 'style', 'italic'
