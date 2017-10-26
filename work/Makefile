@@ -9,3 +9,6 @@ cotw: character-other-than-whitespace.xml
 
 whereplace: where-are-placenames.xml
 	xmllint --schema ../../../TEI/Stylesheets/profiles/iso/schema/isotei.xsd where-are-placenames.xml
+
+html: sol2.xml
+	saxon SOL2.xml ../../../TEI/Stylesheets/html/html.xsl
