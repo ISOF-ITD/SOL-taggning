@@ -175,4 +175,21 @@ class Solig
   def load
     REXML::Document.new(File.read('SOL2.xml')).root.elements[2].elements[2].elements[2].elements[74]
   end
+
+  def unword(element)
+    div = REXML::Element.new 'p'
+    element.each_element('w:r') do |r|
+      if REXML::XPath.first(r, 'w:rPr/w:b')
+        head = REXML::Element.new 'head', div
+        head.text = REXML::XPath.first(r, 'w:t').text
+      elsif REXML::XPath.first(r, 'w:rPr/w:i')
+        span = REXML::Element.new 'span', div
+        span.text = REXML::XPath.first(r, 'w:t').text
+      else
+        div.add_text REXML::XPath.first(r, 'w:t').text
+      end
+    end
+
+    div
+  end
 end
