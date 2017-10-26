@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Sol do
-  let(:sol) { Sol.new }
+describe Solig do
+  let(:sol) { Solig.new }
 
   describe '#process' do
     it "returns an XML element" do

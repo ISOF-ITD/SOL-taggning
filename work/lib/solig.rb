@@ -4,7 +4,7 @@ require 'byebug'
 class UnexpectedElement < StandardError; end
 class UnexpectedLocation < StandardError; end
 
-class Sol
+class Solig
   def process(line)
     final_dot = line =~ /\.$/
     sentences = line.split(/[\.→]/)
