@@ -190,6 +190,11 @@ class Solig
       end
     end
 
+    div2 = process(div.elements.first.text + div.text.strip)
+    p = div2.elements[2]
+    div.text = ' '
+    div.add_element p
+
     div
   end
 end
