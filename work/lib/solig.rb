@@ -178,23 +178,27 @@ class Solig
 
   def unword(element)
     div = REXML::Element.new 'div'
-    n = 0
-    element.each_element('w:r') do |r|
-      if REXML::XPath.first(r, 'w:rPr/w:b')
-        head = REXML::Element.new 'head', div
-        head.text = REXML::XPath.first(r, 'w:t').text
-      elsif REXML::XPath.first(r, 'w:rPr/w:i')
-        span = REXML::Element.new 'span', div
-        span.text = REXML::XPath.first(r, 'w:t').text
-      else
-        div.add_text REXML::XPath.first(r, 'w:t').text
-      end
-    end
+    if REXML::XPath.first(element, 'w:r[1]/w:rPr/w:b')
+      head = REXML::Element.new 'head', div
+      head.text = REXML::XPath.first(element, 'w:r[1]/w:t').text
 
-    div2 = process(div.elements.first.text + div.text.strip)
-    p = div2.elements[2]
-    div.text = ' '
-    div.add_element p
+      p = REXML::Element.new 'p', div
+
+      n = 1
+      element.each_element('w:r') do |r|
+        next if n == 1
+        n += 1
+        if REXML::XPath.first(r, 'w:rPr/w:i')
+          span = REXML::Element.new 'span', p
+          span.add_attribute 'style', 'italic'
+          span.text = REXML::XPath.first(r, 'w:t').text
+        else
+          p.add_text REXML::XPath.first(r, 'w:t').text
+        end
+      end
+    else
+      element
+    end
 
     div
   end
