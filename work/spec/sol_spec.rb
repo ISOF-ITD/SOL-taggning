@@ -69,7 +69,10 @@ describe Sol do
     end
 
     it "has an exclusive list of landskap"
-    it "Takes arrows in account too (see Ajmunds)"
+    it "doesn’t screw up on arrows" do
+      out = sol.process('Ajmunds gårdnamn, Gotland → Smiss.')
+      expect(out.to_s).to eq "<div><head><placeName>Ajmunds</placeName></head> <p><span type='locale'>gårdnamn</span>, <location><region type='landskap'>Gotland</region></location> → Smiss.</p></div>"
+    end
   end
 
   describe '#batch' do

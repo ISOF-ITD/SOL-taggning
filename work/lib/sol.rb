@@ -7,7 +7,7 @@ class UnexpectedLocation < StandardError; end
 class Sol
   def process(line)
     final_dot = line =~ /\.$/
-    sentences = line.split('.')
+    sentences = line.split(/[\.→]/)
     first_sentence = sentences.shift
     remsentences = sentences.join('.') if sentences.count > 0
     array = first_sentence.split(',').map(&:strip)
