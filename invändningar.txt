@@ -14,4 +14,4 @@ Semantik
 
 Vidare
 – Den nuvarande filen är ingen giltig TEI-fil.
-– Prata om processer
+– Prata om processer. Font?
