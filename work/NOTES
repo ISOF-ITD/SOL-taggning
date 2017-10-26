@@ -40,3 +40,5 @@ Goals: language elements, links to correct entries (when duplicates etc.).  Form
 Elements: head good, placeName: reference or just formatting? locale doesn’t work at all, location doesn’t accept content.  Language as discussed.
 Abisko: punkt efter ”förs”?
 Nuvarande typer:  => ["", "Landsförsamling", "Town", "bergslag", "härad", "kommun", "landsförsamling", "skeppslag", "socken", "town"] 
+
+Four types of italic: place name in index, etymon, reconstructed etymon, belägg.
