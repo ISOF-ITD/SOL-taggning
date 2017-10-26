@@ -220,4 +220,43 @@ __END__
       expect(p.text).to eq 'A '
     end
   end
+
+  describe '#unword' do
+    p = REXML::Document.new <<__EOP__
+    <w:document xmlns:w='http://schemas.openxmlformats.org/wordprocessingml/2006/main'>
+      <w:p>
+        <w:r>
+          <w:rPr>
+            <w:b />
+          </w:rPr>
+          <w:t>Bro</w:t>
+        </w:r>
+        <w:r>
+          <w:t> </w:t>
+        </w:r>
+        <w:r>
+          <w:t>sn, Bro och Vätö skg, Uppland </w:t>
+        </w:r>
+        <w:r>
+          <w:t>→</w:t>
+        </w:r>
+        <w:r>
+          <w:t xml:space='preserve'> </w:t>
+        </w:r>
+        <w:r>
+          <w:rPr>
+            <w:i />
+          </w:rPr>
+          <w:t>Roslags-Bro</w:t>
+        </w:r>
+        <w:r>
+          <w:t>.</w:t>
+        </w:r>
+      </w:p>
+    </w:document>
+__EOP__
+
+    solig = Solig.new
+    expect(solig.unword(p.root.elements.first).to_s).to eq "<div><p><span type='locale'>sn</span>, <location><district type='skeppslag'>Bro och Vätö skg<district><region type='landskap'>Uppland</region></location>.</div>"
+  end
 end
