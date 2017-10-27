@@ -1,10 +1,17 @@
 require 'spec_helper'
 
 describe String do
+  let(:ox) { "Oxie härad " } # With trailing U+2003 EM SPACE and U+2005 FOUR-PER-EM SPACE in the middle
+
   describe '#ustrip' do
     it "strips all Unicode space characters" do
-      ox = "Oxie härad " # With trailing U+2003 EM SPACE and U+2005 FOUR-PER-EM SPACE in the middle
-      expect(ox.ustrip).to eq "Oxie härad"
+      expect(ox.ustrip).to eq "Oxie härad"
+    end
+  end
+
+  describe '#uspace 'do
+    it "replaces all Unicode space characters" do
+      expect(ox.uspace).to eq "Oxie härad "
     end
   end
 end
@@ -315,10 +322,10 @@ __EOP__
               </w:rPr>
               <w:t xml:space='preserve'> ca 1300. – Häradet har namn efter kyrkbyn i socknen </w:t>
             </w:r>
-            <w:r w:rsidR='008341E4' w:rsidRPr='004B2EA5'>
+            <w:r>
               <w:t>→</w:t>
             </w:r>
-            <w:r w:rsidRPr='004B2EA5'>
+            <w:r>
               <w:t xml:space='preserve'> </w:t>
             </w:r>
             <w:r>
@@ -334,7 +341,6 @@ __EOP__
         </w:document>
 __EOOXIE__
       formatted = solig.unword(oxie.root.elements.first)
-      # byebug
       expect(formatted.to_s).to eq "<div><head>Oxie härad</head> <p><span type='locale'>hd</span>, <location><region type='landskap'>Skåne</region></location>. <span style='italic'>Oshøgheret</span> ca 1300. – Häradet har namn efter kyrkbyn i socknen → <span style='italic'>Oxie</span>.</p></div>"
     end
   end

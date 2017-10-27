@@ -5,8 +5,14 @@ class UnexpectedElement < StandardError; end
 class UnexpectedLocation < StandardError; end
 
 class String
+  @@uspaces = '[  ]' # FIXME Complete!
+
   def ustrip
-    strip.gsub /[  ]/, '' # FIXME Complete!
+    gsub(/^#{@@uspaces}*/, '').gsub(/#{@@uspaces}*$/, '')
+  end
+
+  def uspace
+    gsub(/#{@@uspaces}+/, ' ')
   end
 end
 
@@ -191,10 +197,11 @@ class Solig
     element.each_element('w:r') do |r|
       if state == :initial
         if REXML::XPath.first(r, 'w:rPr/w:b')
-          headword += REXML::XPath.first(r, 'w:t').text
-          if headword.length > 0 && headword.ustrip == ''
-            headword = ' '
+          rt = REXML::XPath.first(r, 'w:t').text
+          if rt.length > 0 && rt.ustrip == ''
+            rt = ' '
           end
+          headword += rt
         else
           head = REXML::Element.new 'head', div
           head.text = (headword + REXML::XPath.first(r, 'w:t').text).ustrip
@@ -206,7 +213,7 @@ class Solig
           div.add_text ' '
           div.add_element p
           start = REXML::XPath.first(r, 'w:t').text
-          if start =~ /^(.*?)([\.→]).*$/
+          if start =~ /^(.*?)([\.→])(.*)$/
             location = $1.split ','
             separator = $2
             tail = $3
@@ -247,10 +254,11 @@ class Solig
             loc_element = REXML::Element.new tag, location_element
             loc_element.add_attribute 'type', type
             loc_element.text = loc.strip
-            location.add_text separator + tail if tail # FIXME Do the italic stuff like below and FIXME do sth with sep
-            if index == ct - 1 && loc =~ /\s$/
-              p.add_text ' '
-            end
+            p.add_text(separator + tail) if tail # FIXME Do the italic stuff like below and FIXME do sth with sep
+            # TODO Not sure it’s that wise ...
+            # if index == ct - 1 && loc =~ /\s$/
+            #   p.add_text ' '
+            # end
           end
           state = :remainder
         end
