@@ -1,5 +1,14 @@
 require 'spec_helper'
 
+describe String do
+  describe '#ustrip' do
+    it "strips all Unicode space characters" do
+      ox = "Oxie härad " # With trailing U+2003 EM SPACE
+      expect(ox.ustrip).to eq "Oxie härad"
+    end
+  end
+end
+
 describe Solig do
   let(:solig) { Solig.new }
 
@@ -325,6 +334,7 @@ __EOP__
         </w:document>
 __EOOXIE__
       formatted = solig.unword(oxie.root.elements.first)
+      byebug
       expect(formatted.to_s).to eq "<div><head>Oxie härad</head> <p><span type='locale'>hd</span>, <location><region type='landskap'>Skåne</region></location>. <span style='italic'>Oshøgheret</span> ca 1300. – Häradet har namn efter kyrkbyn i socknen → <span style='italic'>Oxie</span>.</p></div>"
     end
   end

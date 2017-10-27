@@ -4,6 +4,12 @@ require 'byebug'
 class UnexpectedElement < StandardError; end
 class UnexpectedLocation < StandardError; end
 
+class String
+  def ustrip
+    strip.gsub /[ ]/, '' # FIXME Complete!
+  end
+end
+
 class Solig
   def process(line)
     final_dot = line =~ /\.$/
@@ -188,7 +194,7 @@ class Solig
           headword += REXML::XPath.first(r, 'w:t').text
         else
           head = REXML::Element.new 'head', div
-          head.text = (headword + REXML::XPath.first(r, 'w:t').text).strip
+          head.text = (headword + REXML::XPath.first(r, 'w:t').text).ustrip
           state = :parstart
         end
       elsif state == :parstart
