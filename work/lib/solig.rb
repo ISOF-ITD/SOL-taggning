@@ -200,34 +200,35 @@ class Solig
             location = $1.split ','
             separator = $2
             tail = $3
-            locale = location.shift
-            locale_element = REXML::Element.new 'span', p
-            locale_element.add_attribute 'span', 'locale'
-            locale_element.text = locale.split
-            location_element = REXML::Element.new 'location', p
-            ct = location.count
-            location.each_index do |loc, index|
-              loc =~ /(.*)\s+(.*)/
-              locale = $2
-              name = $1
-              case locale
-              when 'sn'
-                tag = 'district'
-                type = 'socken'
-              when 'hd'
-                tag = 'district'
-                type = 'härad'
-              end
-              if index == ct - 1
-                tag = 'region'
-                type = 'landskap'
-              end
-              loc_element = REXML::Element.new tag, p
-              loc_element.add_attribute 'type', type
-            end
-            p.text = tail # FIXME Do the italic stuff like below
           else
-            return element
+            location = start.split
+          end
+
+          locale = location.shift
+          locale_element = REXML::Element.new 'span', p
+          locale_element.add_attribute 'span', 'locale'
+          locale_element.text = locale.split
+          location_element = REXML::Element.new 'location', p
+          ct = location.count
+          location.each_index do |loc, index|
+            loc =~ /(.*)\s+(.*)/
+            locale = $2
+            name = $1
+            case locale
+            when 'sn'
+              tag = 'district'
+              type = 'socken'
+            when 'hd'
+              tag = 'district'
+              type = 'härad'
+            end
+            if index == ct - 1
+              tag = 'region'
+              type = 'landskap'
+            end
+            loc_element = REXML::Element.new tag, p
+            loc_element.add_attribute 'type', type
+            p.text = separator + tail if tail # FIXME Do the italic stuff like below and FIXME do sth with sep
           end
           state = :remainder
         end
