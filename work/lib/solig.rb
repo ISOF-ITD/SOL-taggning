@@ -234,13 +234,13 @@ class Solig
               tag = 'invalid'
               type = 'invalid-too'
             end
-            loc_element = REXML::Element.new tag, p
+            loc_element = REXML::Element.new tag, location_element
             loc_element.add_attribute 'type', type
             loc_element.text = loc.strip
+            location.add_text separator + tail if tail # FIXME Do the italic stuff like below and FIXME do sth with sep
             if index == ct - 1 && loc =~ /\s$/
               p.add_text ' '
             end
-            p.add_text separator + tail if tail # FIXME Do the italic stuff like below and FIXME do sth with sep
           end
           state = :remainder
         end
