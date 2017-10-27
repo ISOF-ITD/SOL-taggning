@@ -206,13 +206,13 @@ class Solig
         else
           head = REXML::Element.new 'head', div
           head.text = headword.ustrip
-          carryover = REXML::XPath.first(r, 'w:t').text
+          carryover = REXML::XPath.first(r, 'w:t').text.uspace
           state = :parstart
         end
       elsif state == :parstart
         if REXML::XPath.first(r, 'w:t').text.strip == ''
         else
-          div.add_text carryover.uspace
+          div.add_text carryover
           div.add_element p
           start = REXML::XPath.first(r, 'w:t').text
           if start =~ /^(.*?)([\.→])(.*)$/
@@ -257,10 +257,9 @@ class Solig
             loc_element.add_attribute 'type', type
             loc_element.text = loc.strip
             p.add_text(separator + tail) if tail # FIXME Do the italic stuff like below and FIXME do sth with sep
-            # TODO Not sure it’s that wise ...
-            # if index == ct - 1 && loc =~ /\s$/
-            #   p.add_text ' '
-            # end
+            if index == ct - 1 && loc =~ /\s$/
+              p.add_text ' '
+            end
           end
           state = :remainder
         end
