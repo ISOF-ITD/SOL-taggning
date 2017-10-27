@@ -264,5 +264,68 @@ __EOP__
 
     it "works on an entry with an arrow"
     it "works on an entry with a dot"
+
+    it "works on an entry with a headword in two parts" do # Oxie härad (element 4299)
+      oxie = REXML::Document.new <<__EOOXIE__
+        <w:document xmlns:w='http://schemas.openxmlformats.org/wordprocessingml/2006/main'>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:b/>
+              </w:rPr>
+              <w:t>Oxie</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:b/>
+              </w:rPr>
+              <w:t> </w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:b/>
+              </w:rPr>
+              <w:t>härad</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+              </w:rPr>
+              <w:t> </w:t>
+            </w:r>
+            <w:r>
+              <w:t xml:space='preserve'>hd, Skåne. </w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t>Oshøgheret</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+              </w:rPr>
+              <w:t xml:space='preserve'> ca 1300. – Häradet har namn efter kyrkbyn i socknen </w:t>
+            </w:r>
+            <w:r w:rsidR='008341E4' w:rsidRPr='004B2EA5'>
+              <w:t>→</w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:t xml:space='preserve'> </w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:i/>
+              </w:rPr>
+              <w:t>Oxie</w:t>
+            </w:r>
+            <w:r>
+              <w:t>.</w:t>
+            </w:r>
+          </w:p>
+        </w:document>
+__EOOXIE__
+      formatted = solig.unword(oxie.root.elements.first)
+      expect(formatted.to_s).to eq "<div><head>Oxie härad</head> <p><span type='locale'>hd</span>, <location><region type='landskap'>Skåne</region></location>. <span style='italic'>Oshøgheret</span> ca 1300. – Häradet har namn efter kyrkbyn i socknen → <span style='italic'>Oxie</span>.</p></div>"
+    end
   end
 end
