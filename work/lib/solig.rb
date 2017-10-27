@@ -201,17 +201,18 @@ class Solig
             separator = $2
             tail = $3
           else
-            location = start.split
+            location = start.split ','
           end
 
           locale = location.shift
           locale_element = REXML::Element.new 'span', p
-          locale_element.add_attribute 'span', 'locale'
-          locale_element.text = locale.split
+          locale_element.add_attribute 'type', 'locale'
+          locale_element.text = locale
+          p.add_text ', '
           location_element = REXML::Element.new 'location', p
           ct = location.count
           location.each_index do |loc, index|
-            loc =~ /(.*)\s+(.*)/
+            loc.strip =~ /(.*)\s+(.*)/
             locale = $2
             name = $1
             case locale
@@ -221,14 +222,25 @@ class Solig
             when 'hd'
               tag = 'district'
               type = 'härad'
+            when 'skg'
+              tag = 'district'
+              type = 'skeppslag'
             end
             if index == ct - 1
               tag = 'region'
               type = 'landskap'
             end
+            unless tag
+              tag = 'invalid'
+              type = 'invalid-too'
+            end
             loc_element = REXML::Element.new tag, p
             loc_element.add_attribute 'type', type
-            p.text = separator + tail if tail # FIXME Do the italic stuff like below and FIXME do sth with sep
+            loc_element.text = loc.strip
+            if index == ct - 1 && loc =~ /\s$/
+              p.add_text ' '
+            end
+            p.add_text separator + tail if tail # FIXME Do the italic stuff like below and FIXME do sth with sep
           end
           state = :remainder
         end

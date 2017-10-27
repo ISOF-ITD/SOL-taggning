@@ -257,8 +257,8 @@ __END__
       </w:document>
 __EOP__
 
-      expect(solig.unword(p.root.elements.first).to_s).to eq "<div><head>Bro</head> <p>sn, Bro och Vätö skg, Uppland → <span style='italic'>Roslags-Bro</span>.</p></div>"
-      # expect(solig.unword(p.root.elements.first).to_s).to eq "<div><p><span type='locale'>sn</span>, <location><district type='skeppslag'>Bro och Vätö skg<district><region type='landskap'>Uppland</region></location>.</div>"
+      # expect(solig.unword(p.root.elements.first).to_s).to eq "<div><head>Bro</head> <p>sn, Bro och Vätö skg, Uppland → <span style='italic'>Roslags-Bro</span>.</p></div>"
+      expect(solig.unword(p.root.elements.first).to_s).to eq "<div><head>Bro</head> <p><span type='locale'>sn</span>, <location><district type='skeppslag'>Bro och Vätö skg<district><region type='landskap'>Uppland</region></location> → <span style='italic'>Roslags-Bro</span>.</div>"
     end
 
     it "works on an entry with an arrow"
