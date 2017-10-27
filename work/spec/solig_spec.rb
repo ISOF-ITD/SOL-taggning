@@ -3,7 +3,7 @@ require 'spec_helper'
 describe String do
   describe '#ustrip' do
     it "strips all Unicode space characters" do
-      ox = "Oxie härad " # With trailing U+2003 EM SPACE
+      ox = "Oxie härad " # With trailing U+2003 EM SPACE and U+2005 FOUR-PER-EM SPACE in the middle
       expect(ox.ustrip).to eq "Oxie härad"
     end
   end
@@ -334,7 +334,7 @@ __EOP__
         </w:document>
 __EOOXIE__
       formatted = solig.unword(oxie.root.elements.first)
-      byebug
+      # byebug
       expect(formatted.to_s).to eq "<div><head>Oxie härad</head> <p><span type='locale'>hd</span>, <location><region type='landskap'>Skåne</region></location>. <span style='italic'>Oshøgheret</span> ca 1300. – Häradet har namn efter kyrkbyn i socknen → <span style='italic'>Oxie</span>.</p></div>"
     end
   end

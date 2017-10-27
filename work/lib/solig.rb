@@ -6,7 +6,7 @@ class UnexpectedLocation < StandardError; end
 
 class String
   def ustrip
-    strip.gsub /[ ]/, '' # FIXME Complete!
+    strip.gsub /[  ]/, '' # FIXME Complete!
   end
 end
 
@@ -192,6 +192,9 @@ class Solig
       if state == :initial
         if REXML::XPath.first(r, 'w:rPr/w:b')
           headword += REXML::XPath.first(r, 'w:t').text
+          if headword.length > 0 && headword.ustrip == ''
+            headword = ' '
+          end
         else
           head = REXML::Element.new 'head', div
           head.text = (headword + REXML::XPath.first(r, 'w:t').text).ustrip
