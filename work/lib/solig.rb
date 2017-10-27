@@ -181,14 +181,15 @@ class Solig
     p = REXML::Element.new 'p'
 
     state = :initial
+    headword = ''
     element.each_element('w:r') do |r|
       if state == :initial
         if REXML::XPath.first(r, 'w:rPr/w:b')
-          head = REXML::Element.new 'head', div
-          head.text = REXML::XPath.first(r, 'w:t').text
-          state = :parstart
+          headword += REXML::XPath.first(r, 'w:t').text
         else
-          return element
+          head = REXML::Element.new 'head', div
+          head.text = (headword + REXML::XPath.first(r, 'w:t').text).strip
+          state = :parstart
         end
       elsif state == :parstart
         if REXML::XPath.first(r, 'w:t').text.strip == ''
