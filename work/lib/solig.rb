@@ -191,6 +191,7 @@ class Solig
   def unword(element)
     div = REXML::Element.new 'div'
     p = REXML::Element.new 'p'
+    carryover = ''
 
     state = :initial
     headword = ''
@@ -204,13 +205,14 @@ class Solig
           headword += rt
         else
           head = REXML::Element.new 'head', div
-          head.text = (headword + REXML::XPath.first(r, 'w:t').text).ustrip
+          head.text = headword.ustrip
+          carryover = REXML::XPath.first(r, 'w:t').text
           state = :parstart
         end
       elsif state == :parstart
         if REXML::XPath.first(r, 'w:t').text.strip == ''
         else
-          div.add_text ' '
+          div.add_text carryover.uspace
           div.add_element p
           start = REXML::XPath.first(r, 'w:t').text
           if start =~ /^(.*?)([\.→])(.*)$/
