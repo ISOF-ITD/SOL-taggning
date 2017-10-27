@@ -211,7 +211,7 @@ class Solig
           p.add_text ', '
           location_element = REXML::Element.new 'location', p
           ct = location.count
-          location.each_index do |loc, index|
+          location.each_with_index do |loc, index|
             loc.strip =~ /(.*)\s+(.*)/
             locale = $2
             name = $1
