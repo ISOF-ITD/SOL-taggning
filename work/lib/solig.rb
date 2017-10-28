@@ -216,61 +216,53 @@ class Solig
           div.add_text carryover
           div.add_element p
           start = REXML::XPath.first(r, 'w:t').text
-          if start =~ /^(.*?)([\.→])(.*)$/
-            location = $1.split ','
-            separator = $2
-            tail = $3
-          else
-            location = start.split ','
-          end
+          if start == 'tätort' # TODO Complete list with plenty of other stuff!
+            if start =~ /^(.*?)([\.→])(.*)$/
+              location = $1.split ','
+              separator = $2
+              tail = $3
+            else
+              location = start.split ','
+            end
 
-          inlocale = true
-          locale = location.shift
-          while inlocale
-            byebug
+            locale = location.shift
             locale_element = REXML::Element.new 'span', p
             locale_element.add_attribute 'type', 'locale'
             locale_element.text = locale
             p.add_text ', '
-            locale = location.shift
-            if locale && locale.strip == 'tätort' # TODO Complete with plenty of other stuff ;-)
-              # Do nothing
-            else
-              inlocale = false
-              location.unshift locale if locale
-            end
-          end
-          location_element = REXML::Element.new 'location', p
-          ct = location.count
-          location.each_with_index do |loc, index|
-            loc.strip =~ /(.*)\s+(.*)/
-            locale = $2
-            name = $1
-            case locale
-            when 'sn'
-              tag = 'district'
-              type = 'socken'
-            when 'hd'
-              tag = 'district'
-              type = 'härad'
-            when 'skg'
-              tag = 'district'
-              type = 'skeppslag'
-            end
-            if index == ct - 1
-              tag = 'region'
-              type = 'landskap'
-            end
-            unless tag
-              tag = 'invalid'
-              type = 'invalid-too'
-            end
-            loc_element = REXML::Element.new tag, location_element
-            loc_element.add_attribute 'type', type
-            loc_element.text = loc.strip
-            p.add_text(separator + tail) if tail && index == ct - 1# FIXME Do the italic stuff like below and FIXME do sth with sep
-            if index == ct - 1 && loc =~ /\s$/
-              p.add_text ' '
+
+            location_element = REXML::Element.new 'location', p
+            ct = location.count
+            location.each_with_index do |loc, index|
+              loc.strip =~ /(.*)\s+(.*)/
+              locale = $2
+              name = $1
+              case locale
+              when 'sn'
+                tag = 'district'
+                type = 'socken'
+              when 'hd'
+                tag = 'district'
+                type = 'härad'
+              when 'skg'
+                tag = 'district'
+                type = 'skeppslag'
+              end
+              if index == ct - 1
+                tag = 'region'
+                type = 'landskap'
+              end
+              unless tag
+                tag = 'invalid'
+                type = 'invalid-too'
+              end
+              loc_element = REXML::Element.new tag, location_element
+              loc_element.add_attribute 'type', type
+              loc_element.text = loc.strip
+              p.add_text(separator + tail) if tail && index == ct - 1# FIXME Do the italic stuff like below and FIXME do sth with sep
+              if index == ct - 1 && loc =~ /\s$/
+                p.add_text ' '
+              end
             end
           end
 
