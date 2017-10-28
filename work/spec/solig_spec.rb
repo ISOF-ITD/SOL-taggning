@@ -56,7 +56,14 @@ describe REXML::Element do
     end
   end
 
-  describe '#add_location_element'
+  describe '#add_location_element' do
+    styra = REXML::Document.new "<div><head>Styra</head> <p><span type='locale'>sn</span> <location></location></p></div>"
+    p = REXML::XPath.first(styra, 'div/p/location')
+
+    p.add_location_element 'Aska', 'hd'
+
+    expect(styra.to_s).to eq "<div><head>Styra</head> <p><span type='locale'><sn</span> <location><district type='härad'>Aska hd</district></location></p></div>'
+  end
 end
 
 describe Solig do

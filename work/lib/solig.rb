@@ -39,6 +39,22 @@ class REXML::Element
     span.add_attribute 'type', 'locale'
     span.add_text locale
   end
+
+  def add_location_element(name, locale)
+    case locale
+    when 'sn'
+      tag = 'district'
+      type = 'socken'
+    when 'hd'
+      tag = 'district'
+      type = 'härad'
+    when 'skg'
+      tag = 'district'
+      type = 'skeppslag'
+    end
+
+    element = REXML::Element.new tag, type
+  end
 end
 
 class Solig
