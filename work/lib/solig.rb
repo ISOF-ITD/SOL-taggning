@@ -236,7 +236,7 @@ class Solig
           end
 
           locale = location.shift
-          while locale =~ /^\s*([^\s]+)\s*/
+          while locale =~ /^\s*([^\s]+)\s*$/ && !locale.strip.is_landskap
             locale_element = REXML::Element.new 'span', p
             locale_element.add_attribute 'type', 'locale'
             locale_element.text = locale
