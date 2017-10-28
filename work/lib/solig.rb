@@ -254,28 +254,29 @@ class Solig
           location_element = REXML::Element.new 'location', p
           ct = location.count
           location.each_with_index do |loc, index|
-            loc.strip =~ /(.*)\s+(.*)/
-            locale = $2
-            name = $1
-            case locale
-            when 'sn'
-              tag = 'district'
-              type = 'socken'
-            when 'hd'
-              tag = 'district'
-              type = 'härad'
-            when 'skg'
-              tag = 'district'
-              type = 'skeppslag'
-            end
-            if index == ct - 1
+            if loc.strip.is_landskap
               tag = 'region'
               type = 'landskap'
+            else
+              loc.strip =~ /(.*)\s+(.*)/
+              locale = $2
+              name = $1
+              case locale
+              when 'sn'
+                tag = 'district'
+                type = 'socken'
+              when 'hd'
+                tag = 'district'
+                type = 'härad'
+              when 'skg'
+                tag = 'district'
+                type = 'skeppslag'
+              else
+                tag = 'invalid'
+                type = 'invalid-too'
+              end
             end
-            unless tag
-              tag = 'invalid'
-              type = 'invalid-too'
-            end
+
             loc_element = REXML::Element.new tag, location_element
             loc_element.add_attribute 'type', type
             loc_element.text = loc.strip
