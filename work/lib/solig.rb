@@ -33,6 +33,12 @@ class REXML::Element
     span.add_attribute 'style', 'italic'
     span.add_text text
   end
+
+  def add_locale(locale)
+    span = REXML::Element.new 'span', self
+    span.add_attribute 'type', 'locale'
+    span.add_text locale
+  end
 end
 
 class Solig
