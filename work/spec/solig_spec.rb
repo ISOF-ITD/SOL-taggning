@@ -260,7 +260,9 @@ __END__
 
     it "works on an entry with an arrow" do
       lillbäls = loadparagraph '3431-lillbäls'
-      expect(solig.unword(lillbäls).to_s).to eq "<div><head><placeName>Lillbäls</placeName></head> <p><span type='locale'>gd</span>, <location><district type='socken'>Bäls sn</district><region type='landskap'>Gotland</region></location> → <span style='locale'>Bäl</span>.</p></div>"
+      expected = "<div><head><placeName>Lillbäls</placeName></head> <p><span type='locale'>gd</span>, <location><district type='socken'>Bäls sn</district><region type='landskap'>Gotland</region></location> → <span style='italic'>Bäl</span>.</p></div>"
+      actual = solig.unword(lillbäls).to_s
+      expect(actual).to eq expected
     end
 
     it "works on entries 459, 460, 461, 465, 474, 3383"
