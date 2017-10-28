@@ -280,10 +280,17 @@ class Solig
             loc_element = REXML::Element.new tag, location_element
             loc_element.add_attribute 'type', type
             loc_element.text = loc.strip
-            if index == ct - 1 && loc =~ /\s$/
-              p.add_text ' '
+
+            if index == ct - 1
+              if loc =~ /\s$/
+                p.add_text ' '
+              end
+
+              if tail # FIXME Do the italic stuff like below and FIXME do sth with sep
+                p.add_text separator
+                p.add_text tail
+              end
             end
-            p.add_text(separator + tail) if tail && index == ct - 1# FIXME Do the italic stuff like below and FIXME do sth with sep
           end
 
           state = :remainder
