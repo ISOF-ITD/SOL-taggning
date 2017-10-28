@@ -69,6 +69,14 @@ class REXML::Element
     element.add_attribute 'type', type
     element.add_text loc.strip
   end
+
+  def isitalic
+    REXML::XPath.first(self, 'w:rPr/w:i')
+  end
+
+  def isbold
+    REXML::XPath.first(self, 'w:rPr/w:b')
+  end
 end
 
 class Solig
