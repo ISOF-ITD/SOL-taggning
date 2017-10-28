@@ -32,6 +32,22 @@ describe String do
   end
 end
 
+describe REXML::Element do
+  describe '#add_italic_text' do
+    it "adds italic text" do
+      foo = REXML::Document.new('<doc>foo</doc>').root
+
+      foo.add_text ' '
+      foo.add_italic_text 'bar'
+      foo.add_text ' quux'
+
+      expect(foo.to_s).to eq "<doc>foo <span style='italic'>bar</span> quux</doc>"
+    end
+  end
+
+  describe '#add_locale'
+end
+
 describe Solig do
   let(:solig) { Solig.new }
 

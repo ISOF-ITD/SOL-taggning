@@ -27,6 +27,14 @@ class String
   end
 end
 
+class REXML::Element
+  def add_italic_text(text)
+    span = REXML::Element.new 'span', self
+    span.add_attribute 'style', 'italic'
+    span.add_text text
+  end
+end
+
 class Solig
   def process(line)
     final_dot = line =~ /\.$/
