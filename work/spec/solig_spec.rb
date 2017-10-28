@@ -259,7 +259,7 @@ __END__
     end
 
     it "works on an entry with an arrow"
-    it "works on entry 460"
+    it "works on entries 459, 460, 461, 465, 474, 3383"
 
     it "works on an entry with a dot" do
       aitikgruvan = loadparagraph '461-aitikgruvan'
