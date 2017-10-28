@@ -57,12 +57,14 @@ describe REXML::Element do
   end
 
   describe '#add_location_element' do
-    styra = REXML::Document.new "<div><head>Styra</head> <p><span type='locale'>sn</span> <location></location></p></div>"
-    p = REXML::XPath.first(styra, 'div/p/location')
+    it "adds a location element" do
+      styra = REXML::Document.new "<div><head>Styra</head> <p><span type='locale'>sn</span> <location></location></p></div>"
+      p = REXML::XPath.first(styra, 'div/p/location')
 
-    p.add_location_element 'Aska', 'hd'
+      p.add_location_element 'Aska hd'
 
-    expect(styra.to_s).to eq "<div><head>Styra</head> <p><span type='locale'><sn</span> <location><district type='härad'>Aska hd</district></location></p></div>'
+      expect(styra.to_s).to eq "<div><head>Styra</head> <p><span type='locale'><sn</span> <location><district type='härad'>Aska hd</district></location></p></div>"
+    end
   end
 end
 
