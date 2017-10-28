@@ -261,6 +261,13 @@ __END__
     it "works on an entry with an arrow"
     it "works on entries 459, 460, 461, 465, 474, 3383"
 
+    it "replaces the Unicode spaces" do
+      lilla_tjärby = loadparagraph '3426-lilla-tjärby'
+      formatted = solig.unword(lilla_tjärby)
+      expected = "<div><head><placeName>Lilla Tjärby</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Laholms sn</district><district type='härad'>Höks hd</district><region type='landskap'>Halland</region></location>. – Tätorten har namn efter en intilliggande by, ursprungligen en del av byn Tjärby i grannsocknen → <span style='italic'>Tjärby</span>. Namnet <span style='italic'>Lilla Tjärby</span> är belagt från mitten av 1600-talet. </p></div>"
+      expect(formatted.to_s).to eq expected
+    end
+
     it "works on an entry with a dot" do
       aitikgruvan = loadparagraph '461-aitikgruvan'
       formatted = solig.unword(aitikgruvan)

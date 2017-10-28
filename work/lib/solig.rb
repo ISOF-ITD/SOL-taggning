@@ -210,7 +210,7 @@ class Solig
     element.each_element('w:r') do |r|
       if state == :initial
         if REXML::XPath.first(r, 'w:rPr/w:b')
-          rt = REXML::XPath.first(r, 'w:t').text
+          rt = REXML::XPath.first(r, 'w:t').text.uspace
           if rt.length > 0 && rt.ustrip == ''
             rt = ' '
           end
