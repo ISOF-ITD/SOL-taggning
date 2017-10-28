@@ -64,6 +64,9 @@ class REXML::Element
       when 'skg'
         tag = 'district'
         type = 'skeppslag'
+      when 'stad'
+        tag = 'settlement'
+        type = 'stad'
       else
         tag = 'invalid'
         type = 'invalid'
