@@ -254,253 +254,32 @@ __END__
 
   describe '#unword' do
     it "dismantles the Word XML structure" do
-      p = REXML::Document.new <<__EOP__
-      <w:document xmlns:w='http://schemas.openxmlformats.org/wordprocessingml/2006/main'>
-        <w:p>
-          <w:r>
-            <w:rPr>
-              <w:b />
-            </w:rPr>
-            <w:t>Bro</w:t>
-          </w:r>
-          <w:r>
-            <w:t> </w:t>
-          </w:r>
-          <w:r>
-            <w:t>sn, Bro och Vätö skg, Uppland </w:t>
-          </w:r>
-          <w:r>
-            <w:t>→</w:t>
-          </w:r>
-          <w:r>
-            <w:t xml:space='preserve'> </w:t>
-          </w:r>
-          <w:r>
-            <w:rPr>
-              <w:i />
-            </w:rPr>
-            <w:t>Roslags-Bro</w:t>
-          </w:r>
-          <w:r>
-            <w:t>.</w:t>
-          </w:r>
-        </w:p>
-      </w:document>
-__EOP__
-
-      # byebug
-      # expect(solig.unword(p.root.elements.first).to_s).to eq "<div><head>Bro</head> <p>sn, Bro och Vätö skg, Uppland → <span style='italic'>Roslags-Bro</span>.</p></div>"
-      expect(solig.unword(p.root.elements.first).to_s).to eq "<div><head>Bro</head> <p><span type='locale'>sn</span>, <location><district type='skeppslag'>Bro och Vätö skg</district><region type='landskap'>Uppland</region></location> → <span style='italic'>Roslags-Bro</span>.</p></div>"
+      bro = loadparagraph '1023-bro'
+      expect(solig.unword(bro).to_s).to eq "<div><head>Bro</head> <p><span type='locale'>sn</span>, <location><district type='skeppslag'>Bro och Vätö skg</district><region type='landskap'>Uppland</region></location> → <span style='italic'>Roslags-Bro</span>.</p></div>"
     end
 
     it "works on an entry with an arrow"
     it "works on an entry with a dot"
 
     it "works on the first entry in the lexicon" do # 444 Abbekås
-      abbekaas = REXML::Document.new <<__EOABBEKAAS__
-        <w:document xmlns:w='http://schemas.openxmlformats.org/wordprocessingml/2006/main'>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t>Abbekås</w:t>
-            </w:r>
-            <w:r w:rsidRPr='004B2EA5'>
-              <w:rPr>
-                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
-                <w:color w:val='000000'/>
-                <w:sz w:val='16'/>
-                <w:szCs w:val='16'/>
-              </w:rPr>
-              <w:t> </w:t>
-            </w:r>
-            <w:r w:rsidRPr='004B2EA5'>
-              <w:rPr>
-                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
-                <w:color w:val='000000'/>
-                <w:sz w:val='16'/>
-                <w:szCs w:val='16'/>
-              </w:rPr>
-              <w:t xml:space='preserve'>tätort, Skivarps sn, Vemmenhögs hd, Skåne. </w:t>
-            </w:r>
-            <w:r w:rsidRPr='004B2EA5'>
-              <w:rPr>
-                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
-                <w:i/>
-                <w:iCs/>
-                <w:color w:val='000000'/>
-                <w:sz w:val='16'/>
-                <w:szCs w:val='16'/>
-              </w:rPr>
-              <w:t>Ab</w:t>
-            </w:r>
-            <w:r w:rsidR='008F1124' w:rsidRPr='004B2EA5'>
-              <w:rPr>
-                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
-                <w:i/>
-                <w:iCs/>
-                <w:color w:val='000000'/>
-                <w:sz w:val='16'/>
-                <w:szCs w:val='16'/>
-              </w:rPr>
-              <w:t>be</w:t>
-            </w:r>
-            <w:r w:rsidRPr='004B2EA5'>
-              <w:rPr>
-                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
-                <w:i/>
-                <w:iCs/>
-                <w:color w:val='000000'/>
-                <w:sz w:val='16'/>
-                <w:szCs w:val='16'/>
-              </w:rPr>
-              <w:t>kassz</w:t>
-            </w:r>
-            <w:r w:rsidRPr='004B2EA5'>
-              <w:rPr>
-                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
-                <w:color w:val='000000'/>
-                <w:sz w:val='16'/>
-                <w:szCs w:val='16'/>
-              </w:rPr>
-              <w:t xml:space='preserve'> 1536. – Namne</w:t>
-            </w:r>
-            <w:r w:rsidR='008F1124' w:rsidRPr='004B2EA5'>
-              <w:rPr>
-                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
-                <w:color w:val='000000'/>
-                <w:sz w:val='16'/>
-                <w:szCs w:val='16'/>
-              </w:rPr>
-              <w:t>t på detta gamla fiskeläge innehål</w:t>
-            </w:r>
-            <w:r w:rsidRPr='004B2EA5'>
-              <w:rPr>
-                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
-                <w:color w:val='000000'/>
-                <w:sz w:val='16'/>
-                <w:szCs w:val='16'/>
-              </w:rPr>
-              <w:t xml:space='preserve'>ler troligen mansnamnet fda. </w:t>
-            </w:r>
-            <w:r w:rsidRPr='004B2EA5'>
-              <w:rPr>
-                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
-                <w:i/>
-                <w:iCs/>
-                <w:color w:val='000000'/>
-                <w:sz w:val='16'/>
-                <w:szCs w:val='16'/>
-              </w:rPr>
-              <w:t>Abbi</w:t>
-            </w:r>
-            <w:r w:rsidRPr='004B2EA5'>
-              <w:rPr>
-                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
-                <w:color w:val='000000'/>
-                <w:sz w:val='16'/>
-                <w:szCs w:val='16'/>
-              </w:rPr>
-              <w:t xml:space='preserve'>. Efterleden är dialektordet </w:t>
-            </w:r>
-            <w:r w:rsidRPr='004B2EA5'>
-              <w:rPr>
-                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
-                <w:i/>
-                <w:iCs/>
-                <w:color w:val='000000'/>
-                <w:sz w:val='16'/>
-                <w:szCs w:val='16'/>
-              </w:rPr>
-              <w:t xml:space='preserve'>kås </w:t>
-            </w:r>
-            <w:r w:rsidRPr='004B2EA5'>
-              <w:rPr>
-                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
-                <w:color w:val='000000'/>
-                <w:sz w:val='16'/>
-                <w:szCs w:val='16'/>
-              </w:rPr>
-              <w:t>’båtplats, mindre hamn’.</w:t>
-            </w:r>
-          </w:p>
-        </w:document>
-__EOABBEKAAS__
+      abbekaas = loadparagraph '444-abbekås'
 
-      formatted = solig.unword(abbekaas.root.elements.first)
+      formatted = solig.unword(abbekaas)
       expected = "<div><head>Abbekås</head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Skivarps sn</district><district type='härad'>Vemmenhögs hd</district><region type='landskap'>Skåne</region></location>. <span style='italic'>Abbekassz</span> 1536. – Namnet på detta gamla fiskeläge innehåller troligen mansnamnet fda. <span style='italic'>Abbi</span>. Efterleden är dialektordet <span style='italic'>kås</span> ’båtplats, mindre hamn’.</p></div>"
       actual = formatted.to_s
       expect(actual).to eq expected
     end
 
     it "works on an entry with a headword in two parts" do # Oxie härad (element 4299)
-      oxie = REXML::Document.new <<__EOOXIE__
-        <w:document xmlns:w='http://schemas.openxmlformats.org/wordprocessingml/2006/main'>
-          <w:p>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t>Oxie</w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t> </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:b/>
-              </w:rPr>
-              <w:t>härad</w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-              </w:rPr>
-              <w:t> </w:t>
-            </w:r>
-            <w:r>
-              <w:t xml:space='preserve'>hd, Skåne. </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:t>Oshøgheret</w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-              </w:rPr>
-              <w:t xml:space='preserve'> ca 1300. – Häradet har namn efter kyrkbyn i socknen </w:t>
-            </w:r>
-            <w:r>
-              <w:t>→</w:t>
-            </w:r>
-            <w:r>
-              <w:t xml:space='preserve'> </w:t>
-            </w:r>
-            <w:r>
-              <w:rPr>
-                <w:i/>
-              </w:rPr>
-              <w:t>Oxie</w:t>
-            </w:r>
-            <w:r>
-              <w:t>.</w:t>
-            </w:r>
-          </w:p>
-        </w:document>
-__EOOXIE__
-      formatted = solig.unword(oxie.root.elements.first)
+      oxie = loadparagraph '4299-oxie'
+      formatted = solig.unword(oxie)
       expect(formatted.to_s).to eq "<div><head>Oxie härad</head> <p><span type='locale'>hd</span>, <location><region type='landskap'>Skåne</region></location>. <span style='italic'>Oshøgheret</span> ca 1300. – Häradet har namn efter kyrkbyn i socknen → <span style='italic'>Oxie</span>.</p></div>"
     end
 
     it "works on the first U entry" do
       ucklum = loadparagraph '5813-ucklum'
 
-      formatted = solig.unword(ucklum.root.elements.first)
+      formatted = solig.unword(ucklum)
       expect(formatted.to_s).to eq "<div><head>Ucklum</head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Inlands Nordre hd</district><region type='landskap'>Bohuslän</region></location>. <span style='italic'>Auklanda kirkia</span> 1388. – Socknen har fått sitt namn efter kyrkbyn (numera tätort). Det kan vara identiskt med det från sydvästra Norge kända <span style='italic'>Aukland</span>, som har antagits innehålla ett ord med betydelsen ’ökat eller tillfogat land, nyodling’. Det är här i så fall fråga om en mycket tidig nyodling till byn Grössby.</p></div>"
     end
   end
