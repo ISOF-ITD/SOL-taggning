@@ -138,7 +138,8 @@ describe Solig do
     end
 
     it "processes a parish without a härad" do
-      out = solig.process('Husby sn, tätort, Dalarna')
+      # out = solig.process('Husby sn, tätort, Dalarna')
+      out = solig.unword("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /><w:rPr>
       expect(out.to_s).to eq "<div><head><placeName>Husby</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><region type='landskap'>Dalarna</region></location></p></div>"
     end
 
