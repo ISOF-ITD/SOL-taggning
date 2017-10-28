@@ -208,69 +208,72 @@ class Solig
           head = REXML::Element.new 'head', div
           head.text = headword.ustrip
           carryover = REXML::XPath.first(r, 'w:t').text.uspace
-          state = :parstart
+          state = :locale
         end
-      elsif state == :parstart
+      elsif state == :locale
         if REXML::XPath.first(r, 'w:t').text.strip == ''
         else
           div.add_text carryover
           div.add_element p
           start = REXML::XPath.first(r, 'w:t').text
-          if start =~ /^\s*(sn|tätort),\s*$/ # TODO Complete list with plenty of other stuff!
-            span = REXML::Element.new 'span', p
-            span.add_attribute 'style', 'italic'
-            span.text = $1
+          if start =~ /^(.*?)([\.→])(.*)$/
+            location = $1.split ','
+            separator = $2
+            tail = $3
           else
-            if start =~ /^(.*?)([\.→])(.*)$/
-              location = $1.split ','
-              separator = $2
-              tail = $3
-            else
-              location = start.split ','
-            end
+            location = start.split ','
+          end
 
-            locale = location.shift
+          locale = location.shift
+          while locale =~ /^\s*([^\s]+),\s*/
             locale_element = REXML::Element.new 'span', p
             locale_element.add_attribute 'type', 'locale'
             locale_element.text = locale
             p.add_text ', '
-
-            location_element = REXML::Element.new 'location', p
-            ct = location.count
-            location.each_with_index do |loc, index|
-              loc.strip =~ /(.*)\s+(.*)/
-              locale = $2
-              name = $1
-              case locale
-              when 'sn'
-                tag = 'district'
-                type = 'socken'
-              when 'hd'
-                tag = 'district'
-                type = 'härad'
-              when 'skg'
-                tag = 'district'
-                type = 'skeppslag'
-              end
-              if index == ct - 1
-                tag = 'region'
-                type = 'landskap'
-              end
-              unless tag
-                tag = 'invalid'
-                type = 'invalid-too'
-              end
-              loc_element = REXML::Element.new tag, location_element
-              loc_element.add_attribute 'type', type
-              loc_element.text = loc.strip
-              p.add_text(separator + tail) if tail && index == ct - 1# FIXME Do the italic stuff like below and FIXME do sth with sep
-              if index == ct - 1 && loc =~ /\s$/
-                p.add_text ' '
-              end
-            end
-
-            state = :remainder
+            locale = location.shift
           end
+
+          if locale
+            location.unshift(locale)
+          else
+            next
+          end
+
+          location_element = REXML::Element.new 'location', p
+          ct = location.count
+          location.each_with_index do |loc, index|
+            loc.strip =~ /(.*)\s+(.*)/
+            locale = $2
+            name = $1
+            case locale
+            when 'sn'
+              tag = 'district'
+              type = 'socken'
+            when 'hd'
+              tag = 'district'
+              type = 'härad'
+            when 'skg'
+              tag = 'district'
+              type = 'skeppslag'
+            end
+            if index == ct - 1
+              tag = 'region'
+              type = 'landskap'
+            end
+            unless tag
+              tag = 'invalid'
+              type = 'invalid-too'
+            end
+            loc_element = REXML::Element.new tag, location_element
+            loc_element.add_attribute 'type', type
+            loc_element.text = loc.strip
+            p.add_text(separator + tail) if tail && index == ct - 1# FIXME Do the italic stuff like below and FIXME do sth with sep
+            if index == ct - 1 && loc =~ /\s$/
+              p.add_text ' '
+            end
+          end
+
+          state = :remainder
         end
       elsif state == :remainder
         text = REXML::XPath.first(r, 'w:t').text
