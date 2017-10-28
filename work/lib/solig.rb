@@ -326,17 +326,15 @@ class Solig
           state = :remainder
         end
       elsif state == :remainder
-        text = r.text_bit
         if r.isitalic
-          italic = text
+          italic = r.text_bit
           state = :italic
         else
-          p.add_text text
+          p.add_text r.text_bit
         end
       elsif state == :italic
-        text = r.text_bit
         if r.isitalic
-          italic += text
+          italic += r.text_bit
         else
           p.add_italic_text italic.strip
           p.add_text ' ' if italic =~ /\s$/
