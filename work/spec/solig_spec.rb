@@ -23,6 +23,12 @@ describe String do
     it "returns false otherwise" do
       expect('talgoxe'.is_landskap).to be_falsey
     end
+
+    it "has an exclusive list of landskap" do
+      landskap = String.class_variable_get(:@@landskap)
+      expect(landskap.count).to eq 25
+      expect(landskap[1]).to eq 'Blekinge'
+    end
   end
 end
 
@@ -94,7 +100,6 @@ describe Solig do
       expect { solig.process('Golv rum, Trätorp stuga, Vaksala sn') }.to raise_error UnexpectedLocation
     end
 
-    it "has an exclusive list of landskap"
     it "doesn’t screw up on arrows" do
       out = solig.process('Ajmunds gårdnamn, Gotland → Smiss.')
       pending "Maybe forever"
@@ -621,6 +626,7 @@ __EOOXIE__
 __EOUCKLUM__
 
       formatted = solig.unword(ucklum.root.elements.first)
+      byebug
       expect(formatted.to_s).to eq "<div><head>Ucklum</head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Inlands Nordre hd</district><region type='landskap'>Bohuslän</region></location>. <span style='italic'>Auklanda kirkia</span> 1388. – Socknen har fått sitt namn efter kyrkbyn (numera tätort). Det kan vara identiskt med det från sydvästra Norge kända <span style='italic'>Aukland</span>, som har antagits innehålla ett ord med betydelsen ’ökat eller tillfogat land, nyodling’. Det är här i så fall fråga om en mycket tidig nyodling till byn Grössby.</p></div>"
     end
   end
