@@ -266,8 +266,8 @@ class Solig
     headword = ''
     element.each_element('w:r') do |r|
       if state == :initial
-        if REXML::XPath.first(r, 'w:rPr/w:b')
-          rt = REXML::XPath.first(r, 'w:t').text.uspace
+        if r.isbold
+          rt = r.text_bit.uspace
           if rt.length > 0 && rt.ustrip == ''
             rt = ' '
           end
@@ -276,15 +276,15 @@ class Solig
           headtag = REXML::Element.new 'head', div
           head = REXML::Element.new 'placeName', headtag
           head.text = headword.ustrip
-          carryover = REXML::XPath.first(r, 'w:t').text.uspace
+          carryover = r.text_bit.uspace
           state = :locale
         end
       elsif state == :locale
-        if REXML::XPath.first(r, 'w:t').text.strip == ''
+        if r.text_bit.strip == ''
         else
           div.add_text carryover unless p.parent
           div.add_element p unless p.parent
-          start = REXML::XPath.first(r, 'w:t').text
+          start = r.text_bit
           if start =~ /^(.*?)([\.→])(.*)$/
             location = $1.split ','
             separator = $2
@@ -326,21 +326,21 @@ class Solig
           state = :remainder
         end
       elsif state == :remainder
-        text = REXML::XPath.first(r, 'w:t').text
-        if REXML::XPath.first(r, 'w:rPr/w:i')
+        text = r.text_bit
+        if r.isitalic
           italic = text
           state = :italic
         else
           p.add_text text
         end
       elsif state == :italic
-        text = REXML::XPath.first(r, 'w:t').text
-        if REXML::XPath.first(r, 'w:rPr/w:i')
+        text = r.text_bit
+        if r.isitalic
           italic += text
         else
           p.add_italic_text italic.strip
           p.add_text ' ' if italic =~ /\s$/
-          p.add_text REXML::XPath.first(r, 'w:t').text
+          p.add_text r.text_bit
           state = :remainder
         end
       end
