@@ -40,20 +40,34 @@ class REXML::Element
     span.add_text locale
   end
 
-  def add_location_element(name, locale)
-    case locale
-    when 'sn'
-      tag = 'district'
-      type = 'socken'
-    when 'hd'
-      tag = 'district'
-      type = 'härad'
-    when 'skg'
-      tag = 'district'
-      type = 'skeppslag'
+  def add_location_element(loc)
+    if loc.strip.is_landskap
+      tag = 'region'
+      type = 'landskap'
+    else
+      loc.strip =~ /(.*)\s+(.*)/
+      locale = $2
+      name = $1
+
+      case locale
+      when 'sn'
+        tag = 'district'
+        type = 'socken'
+      when 'hd'
+        tag = 'district'
+        type = 'härad'
+      when 'skg'
+        tag = 'district'
+        type = 'skeppslag'
+      else
+        tag = 'invalid'
+        type = 'invalid'
+      end
     end
 
-    element = REXML::Element.new tag, type
+    element = REXML::Element.new tag, self
+    element.add_attribute 'type', type
+    element.add_text loc.strip
   end
 end
 
@@ -282,32 +296,7 @@ class Solig
           location_element = REXML::Element.new 'location', p
           ct = location.count
           location.each_with_index do |loc, index|
-            if loc.strip.is_landskap
-              tag = 'region'
-              type = 'landskap'
-            else
-              loc.strip =~ /(.*)\s+(.*)/
-              locale = $2
-              name = $1
-              case locale
-              when 'sn'
-                tag = 'district'
-                type = 'socken'
-              when 'hd'
-                tag = 'district'
-                type = 'härad'
-              when 'skg'
-                tag = 'district'
-                type = 'skeppslag'
-              else
-                tag = 'invalid'
-                type = 'invalid-too'
-              end
-            end
-
-            loc_element = REXML::Element.new tag, location_element
-            loc_element.add_attribute 'type', type
-            loc_element.text = loc.strip
+            location_element.add_location_element loc
 
             if index == ct - 1
               if loc =~ /\s$/
