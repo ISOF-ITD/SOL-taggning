@@ -216,7 +216,8 @@ class Solig
           end
           headword += rt
         else
-          head = REXML::Element.new 'head', div
+          headtag = REXML::Element.new 'head', div
+          head = REXML::Element.new 'placeName', headtag
           head.text = headword.ustrip
           carryover = REXML::XPath.first(r, 'w:t').text.uspace
           state = :locale
