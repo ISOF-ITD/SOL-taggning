@@ -101,9 +101,10 @@ describe Solig do
     end
 
     it "doesn’t screw up on arrows" do
-      out = solig.process('Ajmunds gårdnamn, Gotland → Smiss.')
-      pending "Maybe forever"
-      expect(out.to_s).to eq "<div><head><placeName>Ajmunds</placeName></head> <p><span type='locale'>gårdnamn</span>, <location><region type='landskap'>Gotland</region></location> → Smiss.</p></div>"
+      ajmunds = loadparagraph '462-ajmunds'
+      beljuset = solig.unword(ajmunds)
+      expect(beljuset.to_s).to eq "<div><head>Ajmunds</head> <p><span type='locale'>gårdnamn</span>, <location><region type='landskap'>Gotland</region></location> → <span style='italic'>Smiss</span>.</p></div>"
+      # expect(beljuset.to_s).to eq "<div><head><placeName>Ajmunds</placeName></head> <p><span type='locale'>gårdnamn</span>, <location><region type='landskap'>Gotland</region></location> → Smiss.</p></div>"
     end
   end
 
