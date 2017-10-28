@@ -224,7 +224,7 @@ class Solig
       elsif state == :locale
         if REXML::XPath.first(r, 'w:t').text.strip == ''
         else
-          div.add_text carryover
+          div.add_text carryover unless p.parent
           div.add_element p unless p.parent
           start = REXML::XPath.first(r, 'w:t').text
           if start =~ /^(.*?)([\.→])(.*)$/
