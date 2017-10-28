@@ -259,6 +259,8 @@ __END__
     end
 
     it "works on an entry with an arrow"
+    it "works on entry 460"
+
     it "works on an entry with a dot" do
       aitikgruvan = loadparagraph '461-aitikgruvan'
       formatted = solig.unword(aitikgruvan)
