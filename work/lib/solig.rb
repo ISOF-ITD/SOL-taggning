@@ -224,21 +224,20 @@ class Solig
             location = start.split ','
           end
 
+          inlocale = true
           locale = location.shift
-          while locale
+          while inlocale
+            byebug
             locale_element = REXML::Element.new 'span', p
             locale_element.add_attribute 'type', 'locale'
             locale_element.text = locale
             p.add_text ', '
             locale = location.shift
-            if locale
-              if locale.strip == 'tätort' # TODO Complete with plenty of other stuff ;-)
-                # Proceed to next iteration
-              else
-              end
+            if locale && locale.strip == 'tätort' # TODO Complete with plenty of other stuff ;-)
+              # Do nothing
             else
-              locale = false
-              location.unshift locale
+              inlocale = false
+              location.unshift locale if locale
             end
           end
           location_element = REXML::Element.new 'location', p
