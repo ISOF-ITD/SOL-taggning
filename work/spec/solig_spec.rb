@@ -106,6 +106,26 @@ describe REXML::Element do
       expect(not_a_text_bit.isbold).to be_falsey
     end
   end
+
+  describe '#text_bit' do
+    it "returns the text bit" do
+      doc = REXML::Document.new "<w:document xmlns:w=''><w:r><w:t>foo</w:t></w:r></w:document>"
+      bit = doc.root.elements.first
+      expect(bit.text_bit).to eq 'foo'
+    end
+
+    it "doesn’t crash if element doesn’t contain a text bit" do
+      doc = REXML::Document.new "<w:document xmlns:w=''><w:p>bar</w:p></w:document>"
+      bit = doc.root.elements.first
+      expect { bit.text_bit }.to_not raise_error
+    end
+
+    it "returns an empty string if element doesn’t contain a text bit" do
+      doc = REXML::Document.new "<w:document xmlns:w=''><w:p>quux</w:p></w:document>"
+      bit = doc.root.elements.first
+      expect(bit.text_bit).to eq ''
+    end
+  end
 end
 
 describe Solig do

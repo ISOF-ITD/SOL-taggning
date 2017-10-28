@@ -77,6 +77,11 @@ class REXML::Element
   def isbold
     REXML::XPath.first(self, 'w:rPr/w:b')
   end
+
+  def text_bit
+    t = REXML::XPath.first(self, 'w:t')
+    t && t.text
+  end
 end
 
 class Solig
