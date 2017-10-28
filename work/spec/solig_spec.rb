@@ -259,7 +259,11 @@ __END__
     end
 
     it "works on an entry with an arrow"
-    it "works on an entry with a dot"
+    it "works on an entry with a dot" do
+      aitikgruvan = loadparagraph '461-aitikgruvan'
+      formatted = solig.unword(aitikgruvan)
+      expected = "<div><head><placeName>Aitikgruvan</placeName></head> <p><span type='locale'>gruva</span>, <location><district type='socken'>Gällivare sn</district><region type='landskap'>Lappland</region></location>. – Namnet är givet efter berget <span style='italic'>Ájtek(várre)</span>, bildat till lulesam. <span style='italic'>ájtte</span> ’förrådsbod, härbre’ och <span style='italic'>várre</span> ’berg, fjäll’.</p></div>"
+    end
 
     it "works on the first entry in the lexicon" do # 444 Abbekås
       abbekaas = loadparagraph '444-abbekås'
