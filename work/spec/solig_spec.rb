@@ -414,7 +414,10 @@ __EOP__
 __EOABBEKAAS__
 
       formatted = solig.unword(abbekaas.root.elements.first)
-      expect(formatted.to_s).to eq "<div><head>Abbekås</head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Skivarps sn</district><district type='härad>Vemmenhögs hd</district><region type='landskap'>Skåne</region></location>. <span style='italic'>Abbekassz</span> 1536. – Namnet på detta gamal fiskeläge innehåller troligen mansnamnet fds. <span type='italic'>Abbi</span>. Efterleden är dialektordet <span style='italic'>kås</span> ‘båtplats, mindre hamn’.</p></div>"
+      expected = "<div><head>Abbekås</head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Skivarps sn</district><district type='härad'>Vemmenhögs hd</district><region type='landskap'>Skåne</region></location>. <span style='italic'>Abbekassz</span> 1536. – Namnet på detta gamla fiskeläge innehåller troligen mansnamnet fda. <span style='italic'>Abbi</span>. Efterleden är dialektordet <span style='italic'>kås</span> ’båtplats, mindre hamn’.</p></div>"
+      actual = formatted.to_s
+      byebug
+      expect(actual).to eq expected
     end
 
     it "works on an entry with a headword in two parts" do # Oxie härad (element 4299)

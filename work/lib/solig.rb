@@ -192,6 +192,7 @@ class Solig
     div = REXML::Element.new 'div'
     p = REXML::Element.new 'p'
     carryover = ''
+    italic = ''
 
     state = :initial
     headword = ''
@@ -256,20 +257,34 @@ class Solig
             loc_element = REXML::Element.new tag, location_element
             loc_element.add_attribute 'type', type
             loc_element.text = loc.strip
-            p.add_text(separator + tail) if tail # FIXME Do the italic stuff like below and FIXME do sth with sep
+            p.add_text(separator + tail) if tail && index == ct - 1# FIXME Do the italic stuff like below and FIXME do sth with sep
             if index == ct - 1 && loc =~ /\s$/
               p.add_text ' '
             end
           end
+
           state = :remainder
         end
       elsif state == :remainder
+        text = REXML::XPath.first(r, 'w:t').text
         if REXML::XPath.first(r, 'w:rPr/w:i')
+          italic = text
+          state = :italic
+        else
+          p.add_text text
+        end
+      elsif state == :italic
+        text = REXML::XPath.first(r, 'w:t').text
+        if REXML::XPath.first(r, 'w:rPr/w:i')
+          italic += text
+        else
           span = REXML::Element.new 'span', p
           span.add_attribute 'style', 'italic'
-          span.text = REXML::XPath.first(r, 'w:t').text
-        else
-          p.add_text REXML::XPath.first(r, 'w:t').text
+          span.text = italic.strip
+          text = REXML::XPath.first(r, 'w:t').text
+          p.add_text ' ' if italic =~ /\s$/
+          p.add_text text
+          state = :remainder
         end
       end
     end
