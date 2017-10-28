@@ -135,12 +135,6 @@ describe Solig do
     it "raises an exception on a unknown location element" do
       expect { solig.process('Golv rum, Trätorp stuga, Vaksala sn') }.to raise_error UnexpectedLocation
     end
-
-    it "doesn’t screw up on arrows" do
-      ajmunds = loadparagraph '462-ajmunds'
-      beljuset = solig.unword(ajmunds)
-      expect(beljuset.to_s).to eq "<div><head><placeName>Ajmunds</placeName></head> <p><span type='locale'>gårdnamn</span>, <location><region type='landskap'>Gotland</region></location> → <span style='italic'>Smiss</span>.</p></div>"
-    end
   end
 
   describe '#batch' do
@@ -299,6 +293,12 @@ __END__
       expected = "<div><head><placeName>Lillbäls</placeName></head> <p><span type='locale'>gd</span>, <location><district type='socken'>Bäls sn</district><region type='landskap'>Gotland</region></location> → <span style='italic'>Bäl</span>.</p></div>"
       actual = solig.unword(lillbäls).to_s
       expect(actual).to eq expected
+    end
+
+    it "doesn’t screw up on arrows" do
+      ajmunds = loadparagraph '462-ajmunds'
+      beljuset = solig.unword(ajmunds)
+      expect(beljuset.to_s).to eq "<div><head><placeName>Ajmunds</placeName></head> <p><span type='locale'>gårdnamn</span>, <location><region type='landskap'>Gotland</region></location> → <span style='italic'>Smiss</span>.</p></div>"
     end
 
     it "works on entries 459, 460, 461, 465, 474, 3383"
