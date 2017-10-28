@@ -120,10 +120,10 @@ describe REXML::Element do
       expect { bit.text_bit }.to_not raise_error
     end
 
-    it "returns an empty string if element doesn’t contain a text bit" do
+    it "returns nil if element doesn’t contain a text bit" do
       doc = REXML::Document.new "<w:document xmlns:w=''><w:p>quux</w:p></w:document>"
       bit = doc.root.elements.first
-      expect(bit.text_bit).to eq ''
+      expect(bit.text_bit).to be_nil
     end
   end
 end
