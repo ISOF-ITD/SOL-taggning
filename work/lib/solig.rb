@@ -6,6 +6,13 @@ class UnexpectedLocation < StandardError; end
 
 class String
   @@uspaces = '[  ]' # FIXME Complete!
+  @@landskap = [
+    'Skåne', 'Blekinge', 'Öland', 'Småland', 'Halland',
+    'Västergötland', 'Bohuslän', 'Dalsland', 'Gotland', 'Östergötland',
+    'Södermanland', 'Närke', 'Värmland', 'Uppland', 'Västmandland',
+    'Dalarna', 'Gästrikland', 'Hälsingland', 'Härjedalen', 'Medelpad',
+    'Jämland', 'Ångermanland', 'Västerbotten', 'Lappland', 'Norrbotten',
+  ]
 
   def ustrip
     gsub(/^#{@@uspaces}*/, '').gsub(/#{@@uspaces}*$/, '')
@@ -13,6 +20,10 @@ class String
 
   def uspace
     gsub(/#{@@uspaces}+/, ' ')
+  end
+
+  def is_landskap
+    @@landskap.include? self
   end
 end
 
@@ -225,7 +236,7 @@ class Solig
           end
 
           locale = location.shift
-          while locale =~ /^\s*([^\s]+),\s*/
+          while locale =~ /^\s*([^\s]+)\s*/
             locale_element = REXML::Element.new 'span', p
             locale_element.add_attribute 'type', 'locale'
             locale_element.text = locale

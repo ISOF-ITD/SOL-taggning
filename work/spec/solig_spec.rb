@@ -9,9 +9,19 @@ describe String do
     end
   end
 
-  describe '#uspace 'do
+  describe '#uspace' do
     it "replaces all Unicode space characters" do
       expect(ox.uspace).to eq "Oxie härad "
+    end
+  end
+
+  describe '#is_landskap' do
+    it "returns true if self is a landskap name" do
+      expect('Uppland'.is_landskap).to be_truthy
+    end
+
+    it "returns false otherwise" do
+      expect('talgoxe'.is_landskap).to be_falsey
     end
   end
 end
