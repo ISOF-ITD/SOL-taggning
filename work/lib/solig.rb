@@ -252,9 +252,7 @@ class Solig
 
           locale = location.shift.strip
           while locale =~ /^\s*([^\s]+)\s*$/ && !locale.strip.is_landskap
-            locale_element = REXML::Element.new 'span', p
-            locale_element.add_attribute 'type', 'locale'
-            locale_element.text = locale
+            p.add_locale locale
             p.add_text ', '
             locale = location.shift
           end
@@ -322,12 +320,9 @@ class Solig
         if REXML::XPath.first(r, 'w:rPr/w:i')
           italic += text
         else
-          span = REXML::Element.new 'span', p
-          span.add_attribute 'style', 'italic'
-          span.text = italic.strip
-          text = REXML::XPath.first(r, 'w:t').text
+          p.add_italic_text italic.strip
           p.add_text ' ' if italic =~ /\s$/
-          p.add_text text
+          p.add_text REXML::XPath.first(r, 'w:t').text
           state = :remainder
         end
       end
