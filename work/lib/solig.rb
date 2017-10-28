@@ -216,7 +216,11 @@ class Solig
           div.add_text carryover
           div.add_element p
           start = REXML::XPath.first(r, 'w:t').text
-          if start == 'tätort' # TODO Complete list with plenty of other stuff!
+          if start =~ /tätort/ # TODO Complete list with plenty of other stuff!
+            span = REXML::Element.new 'span', p
+            span.add_attribute 'style', 'italic'
+            span.text = 'tätort'
+          else
             if start =~ /^(.*?)([\.→])(.*)$/
               location = $1.split ','
               separator = $2
