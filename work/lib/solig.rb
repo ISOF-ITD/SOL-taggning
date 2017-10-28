@@ -225,7 +225,7 @@ class Solig
         if REXML::XPath.first(r, 'w:t').text.strip == ''
         else
           div.add_text carryover
-          div.add_element p
+          div.add_element p unless p.parent
           start = REXML::XPath.first(r, 'w:t').text
           if start =~ /^(.*?)([\.→])(.*)$/
             location = $1.split ','
