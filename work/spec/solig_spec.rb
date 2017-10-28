@@ -281,6 +281,142 @@ __EOP__
     it "works on an entry with an arrow"
     it "works on an entry with a dot"
 
+    it "works on the first entry in the lexicon" do # 444 Abbekås
+      abbekaas = REXML::Document.new <<__EOABBEKAAS__
+        <w:document xmlns:w='http://schemas.openxmlformats.org/wordprocessingml/2006/main'>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:b/>
+              </w:rPr>
+              <w:t>Abbekås</w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t> </w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t xml:space='preserve'>tätort, Skivarps sn, Vemmenhögs hd, Skåne. </w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:i/>
+                <w:iCs/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t>Ab</w:t>
+            </w:r>
+            <w:r w:rsidR='008F1124' w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:i/>
+                <w:iCs/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t>be</w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:i/>
+                <w:iCs/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t>kassz</w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t xml:space='preserve'> 1536. – Namne</w:t>
+            </w:r>
+            <w:r w:rsidR='008F1124' w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t>t på detta gamla fiskeläge innehål</w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t xml:space='preserve'>ler troligen mansnamnet fda. </w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:i/>
+                <w:iCs/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t>Abbi</w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t xml:space='preserve'>. Efterleden är dialektordet </w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:i/>
+                <w:iCs/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t xml:space='preserve'>kås </w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t>’båtplats, mindre hamn’.</w:t>
+            </w:r>
+          </w:p>
+        </w:document>
+__EOABBEKAAS__
+
+      formatted = solig.unword(abbekaas.root.elements.first)
+      expect(formatted.to_s).to eq "<div><head>Abbekås</head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Skivarps sn</district><district type='härad>Vemmenhögs hd</district><region type='landskap'>Skåne</region></location>. <span style='italic'>Abbekassz</span> 1536. – Namnet på detta gamal fiskeläge innehåller troligen mansnamnet fds. <span type='italic'>Abbi</span>. Efterleden är dialektordet <span style='italic'>kås</span> ‘båtplats, mindre hamn’.</p></div>"
+    end
+
     it "works on an entry with a headword in two parts" do # Oxie härad (element 4299)
       oxie = REXML::Document.new <<__EOOXIE__
         <w:document xmlns:w='http://schemas.openxmlformats.org/wordprocessingml/2006/main'>
@@ -342,6 +478,138 @@ __EOP__
 __EOOXIE__
       formatted = solig.unword(oxie.root.elements.first)
       expect(formatted.to_s).to eq "<div><head>Oxie härad</head> <p><span type='locale'>hd</span>, <location><region type='landskap'>Skåne</region></location>. <span style='italic'>Oshøgheret</span> ca 1300. – Häradet har namn efter kyrkbyn i socknen → <span style='italic'>Oxie</span>.</p></div>"
+    end
+
+    it "works on the first U entry" do
+      ucklum = REXML::Document.new <<__EOUCKLUM__ # 5813 Ucklum
+        <w:document xmlns:w='http://schemas.openxmlformats.org/wordprocessingml/2006/main'>
+          <w:p w:rsidP='00D67F70' w:rsidR='00D67F70' w:rsidRDefault='00D67F70' w:rsidRPr='004B2EA5'>
+            <w:pPr>
+              <w:autoSpaceDE w:val='0'/>
+              <w:autoSpaceDN w:val='0'/>
+              <w:adjustRightInd w:val='0'/>
+              <w:spacing w:after='0' w:line='220' w:lineRule='atLeast'/>
+              <w:ind w:hanging='113' w:left='113'/>
+              <w:jc w:val='both'/>
+              <w:textAlignment w:val='center'/>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:b/>
+                <w:bCs/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t>Ucklum</w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t> </w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t>sn,</w:t>
+            </w:r>
+            <w:r w:rsidR='002D726B' w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t xml:space='preserve'> tätort,</w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t xml:space='preserve'> Inlands Nordre hd, Bohuslän. </w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:i/>
+                <w:iCs/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t>Auklanda kirkia</w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t xml:space='preserve'> 1388. – Socknen har fått sitt namn efter kyrkbyn</w:t>
+            </w:r>
+            <w:r w:rsidR='002D726B' w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t xml:space='preserve'> (numera tätort)</w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t xml:space='preserve'>. Det kan vara identiskt med det från sydvästra Norge kända </w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:i/>
+                <w:iCs/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t>Aukland</w:t>
+            </w:r>
+            <w:r w:rsidRPr='004B2EA5'>
+              <w:rPr>
+                <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+                <w:color w:val='000000'/>
+                <w:sz w:val='16'/>
+                <w:szCs w:val='16'/>
+              </w:rPr>
+              <w:t>, som har antagits innehålla ett ord med betydelsen ’ökat eller tillfogat land, nyodling’. Det är här i så fall fråga om en mycket tidig nyodling till byn Grössby.</w:t>
+            </w:r>
+          </w:p>
+        </w:document>
+__EOUCKLUM__
+
+      formatted = solig.unword(ucklum.root.elements.first)
+      expect(formatted.to_s).to eq "<div><head>Ucklum</head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Inlands Nordre hd</district><region type='landskap'>Bohuslän</region></location>. <span style='italic'>Auklanda kirkia</span> 1388. – Socknen har fått sitt namn efter kyrkbyn (numera tätort). Det kan vara identiskt med det från sydvästra Norge kända <span style='italic'>Aukland</span>, som har antagits innehålla ett ord med betydelsen ‘ökat eller tillfogat land, nyodling’. Det är här i så fall fråga om en mycket tidig nyodlinge till byn Grössby.</p></div>"
     end
   end
 end
