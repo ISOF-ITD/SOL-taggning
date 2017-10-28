@@ -42,15 +42,20 @@ class REXML::Element
 
   def add_location_element(loc)
     if loc.strip.is_landskap
-      tag = 'region'
-      type = 'landskap'
+      element = REXML::Element.new 'region', self
+      element.add_attribute 'type', 'landskap'
+      element.add_text loc.strip
+      return
     else
       loc.strip =~ /(.*)\s+(.*)/
       locale = $2
-      name = $1
+      name_s_ = $1
+    end
 
+    ls = loc.split('och').map(&:strip)
+    ls.each do |l|
       case locale
-      when 'sn'
+      when 'sn', 'snr'
         tag = 'district'
         type = 'socken'
       when 'hd'
@@ -63,11 +68,11 @@ class REXML::Element
         tag = 'invalid'
         type = 'invalid'
       end
-    end
 
-    element = REXML::Element.new tag, self
-    element.add_attribute 'type', type
-    element.add_text loc.strip
+      element = REXML::Element.new tag, self
+      element.add_attribute 'type', type
+      element.add_text l.strip
+    end
   end
 
   def isitalic
