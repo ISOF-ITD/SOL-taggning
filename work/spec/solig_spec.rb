@@ -144,8 +144,9 @@ describe Solig do
     end
 
     it "processes a parish with an extra locale" do
-      out = solig.process('Hurva sn, tätort, Frosta hd, Skåne')
-      expect(out.to_s).to eq "<div><head><placeName>Hurva</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Frosta hd</district><region type='landskap'>Skåne</region></location></p></div>"
+      hurva = loadparagraph '2490-hurva'
+      form = solig.unword(hurva)
+      expect(form.to_s).to be =~ /<div><head><placeName>Hurva<\/placeName><\/head> <p><span type='locale'>sn<\/span>, <span type='locale'>tätort<\/span>, <location><district type='härad'>Frosta hd<\/district><region type='landskap'>Skåne<\/region><\/location>/
     end
 
     it "processes a point with an extra locale" do
