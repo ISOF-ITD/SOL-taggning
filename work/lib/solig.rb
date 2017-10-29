@@ -93,52 +93,6 @@ class REXML::Element
 end
 
 class Solig
-  def unweave(table)
-    doc = REXML::Document.new(table)
-    result = [[], []]
-    doc.root.elements.each do |element|
-      elts = element.elements
-      result.first << elts[1].text
-      result.last << elts[2].text
-    end
-
-    result.map { |res| res.join(' ') }.join(' ')
-  end
-
-  def unlist(list)
-    doc = REXML::Document.new(list)
-    result = []
-
-    if doc.root.name == 'root'
-      doc.root.elements.each do |element|
-        if element.name == 'L'
-          element.elements.each do |elt|
-            result << '  <p>' + elt.elements[2].text + '</p>'
-          end
-        elsif element.name == 'p'
-          result << '  <p>' + element.text + '</p>'
-        elsif element.name == 'figure'
-          graphic = element.elements.first
-          raise UnexpectedElement.new(graphic.name) unless graphic.name == 'graphic'
-          url = graphic.attributes['url']
-          result << "  <figure><graphic url=\"#{url}\" /></figure>"
-        else
-          raise UnexpectedElement.new(element.name)
-        end
-      end
-    else
-      doc.root.elements.each do |element|
-        result << element.elements[2].text
-      end
-    end
-
-    "<root>\n" + result.join("\n\n") + "\n</root>"
-  end
-
-  def load
-    REXML::Document.new(File.read('SOL2.xml')).root.elements[2].elements[2].elements[2].elements[74]
-  end
-
   def unword(element)
     div = REXML::Element.new 'div'
     p = REXML::Element.new 'p'
