@@ -117,8 +117,7 @@ class Solig
           state = :locale
         end
       elsif state == :locale
-        if r.text_bit.strip == ''
-        else
+        unless r.text_bit.strip == ''
           unless p.parent # FIXME Replace with an intermediate state or something
             div.add_text carryover
             div.add_element p
