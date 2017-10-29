@@ -1,0 +1,93 @@
+    <w:p w14:paraId="0EF0EB6F" w14:textId="1FF06E73" w:rsidR="0015176D" w:rsidRPr="004B2EA5" w:rsidRDefault="0015176D" w:rsidP="0015176D">
+      <w:pPr>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:adjustRightInd w:val="0"/>
+        <w:spacing w:after="0" w:line="220" w:lineRule="atLeast"/>
+        <w:ind w:hanging="113"/>
+        <w:jc w:val="both"/>
+        <w:textAlignment w:val="center"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:b/>
+          <w:bCs/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t>Albano</w:t>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t> </w:t>
+      </w:r>
+      <w:r w:rsidR="00383DCC" w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t>område på Norra Djurgården</w:t>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t xml:space="preserve">, Stockholms stad </w:t>
+      </w:r>
+      <w:r w:rsidR="008341E4" w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t>→</w:t>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:i/>
+          <w:iCs/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t>Frescati</w:t>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t>.</w:t>
+      </w:r>
+    </w:p>
