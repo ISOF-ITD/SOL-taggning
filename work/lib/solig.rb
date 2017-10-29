@@ -121,13 +121,12 @@ class Solig
         else
           div.add_text carryover unless p.parent
           div.add_element p unless p.parent
-          start = r.text_bit
-          if start =~ /^(.*?)([\.→])(.*)$/
+          if r.text_bit =~ /^(.*?)([\.→])(.*)$/
             location = $1.split ','
             separator = $2
             tail = $3
           else
-            location = start.split ','
+            location = r.text_bit.split ','
           end
 
           locale = location.shift.strip
