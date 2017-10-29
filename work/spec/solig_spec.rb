@@ -132,11 +132,6 @@ describe Solig do
   let(:solig) { Solig.new }
 
   describe '#process' do
-    it "returns an XML element" do
-      out = solig.process('Vemmenhög')
-      expect(out).to be_an REXML::Element
-    end
-
     it "processes a parish without a härad" do
       husby = loadparagraph '2498-husby'
       form = solig.unword(husby)
@@ -204,40 +199,6 @@ describe Solig do
       formatted = solig.unword abborrberget
       pending "This is just bizarre.  Strä[new element]ngnäs"
       expect(formatted.to_s).to be =~ /<div><head><placeName>Abborrberget<\/placeName><\/head> <p><span type='locale'>tätort<\/span>, <location><settlement type='stad'>Strängnäs stad<\/settlement><region type='landskap'>Södermanland<\/region><\/location>/ # FIXME Allow non-landskap areas as last entries!
-    end
-
-    it "raises an exception on a unknown location element" do
-      expect { solig.process('Golv rum, Trätorp stuga, Vaksala sn') }.to raise_error UnexpectedLocation
-    end
-  end
-
-  describe '#batch' do
-    let(:null) { double("null output").as_null_object }
-
-    it "processes all p children of an element" do
-      doc = REXML::Document.new <<__EODOC__
-        <root>
-          <p>Vákkudavárre fjäll, Gällivare sn, Lappland</p>
-
-          <figure><graphic url="bilder/image_1234.jpg" /></figure>
-
-          <p>Vaksala sn, Vaksala hd, Uppland</p>
-        </root>
-__EODOC__
-
-      out = solig.batch(doc, null)
-      expect(out).to be_a REXML::Document
-      xml = <<__EOSTRING__
-<root><div><head><placeName>Vákkudavárre</placeName></head> <p><span type='locale'>fjäll</span>, <location><district type='socken'>Gällivare sn</district><region type='landskap'>Lappland</region></location></p></div><figure><graphic url='bilder/image_1234.jpg'/></figure><div><head><placeName>Vaksala</placeName></head> <p><span type='locale'>sn</span>, <location><district type='härad'>Vaksala hd</district><region type='landskap'>Uppland</region></location></p></div></root>
-__EOSTRING__
-      expect(out.to_s).to eq xml.strip
-    end
-
-    it "takes an optional stream argument" do
-      stream = double("output stream").as_null_object
-      expect(stream).to receive(:puts).with('Processed 1 <p> element')
-      doc = REXML::Document.new '<root><p>Hornö behandlingshem, Vallby sn, Trögds hd, Uppland</p></root>'
-      out = solig.batch(doc, stream)
     end
   end
 
