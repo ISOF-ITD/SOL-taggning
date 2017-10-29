@@ -129,8 +129,8 @@ class Solig
             location = r.text_bit.split ','
           end
 
-          locale = location.shift.strip
-          while locale && locale.strip =~ /^\s*([^\s]+)\s*$/ && !locale.strip.is_landskap
+          locale = location.shift
+          while locale && locale.strip =~ /^([^\s]+)$/ && !locale.strip.is_landskap
             p.add_locale locale.strip
             p.add_text ', '
             locale = location.shift
