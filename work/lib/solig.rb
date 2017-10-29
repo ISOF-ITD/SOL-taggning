@@ -130,7 +130,7 @@ class Solig
           end
 
           locale = location.shift
-          while locale && locale.strip =~ /^([^\s]+)$/ && !locale.strip.is_landskap
+          while locale && locale.strip !~ /\s/ && !locale.strip.is_landskap
             p.add_locale locale.strip
             p.add_text ', '
             locale = location.shift
