@@ -131,77 +131,6 @@ end
 describe Solig do
   let(:solig) { Solig.new }
 
-  describe '#process' do
-    it "processes a parish without a härad" do
-      husby = loadparagraph '2498-husby'
-      form = solig.unword(husby)
-      expect(form.to_s).to be =~ /^<div><head><placeName>Husby<\/placeName><\/head> <p><span type='locale'>sn<\/span>, <span type='locale'>tätort<\/span>, <location><region type='landskap'>Dalarna<\/region><\/location>/
-    end
-
-    it "processes a parish with an extra locale" do
-      hurva = loadparagraph '2490-hurva'
-      form = solig.unword(hurva)
-      expect(form.to_s).to be =~ /^<div><head><placeName>Hurva<\/placeName><\/head> <p><span type='locale'>sn<\/span>, <span type='locale'>tätort<\/span>, <location><district type='härad'>Frosta hd<\/district><region type='landskap'>Skåne<\/region><\/location>/
-    end
-
-    it "processes a point with an extra locale" do
-      vätteryd = loadparagraph '6338-vätteryd'
-      form = solig.unword(vätteryd)
-      expect(form.to_s).to be =~ /^<div><head><placeName>Vätteryd<\/placeName><\/head> <p><span type='locale'>torp<\/span>, <span type='locale'>gravfält<\/span>, <location><district type='socken'>Norra Mellby sn<\/district><district type='härad'>Västra Göinge hd<\/district><region type='landskap'>Skåne<\/region><\/location>/
-    end
-
-    it "processes a parish with a compound name" do
-      västra_vram = loadparagraph '6331-västra-vram'
-      form = solig.unword(västra_vram)
-      expect(form.to_s).to be =~ /^<div><head><placeName>Västra Vram<\/placeName><\/head> <p><span type='locale'>sn<\/span>, <location><district type='härad'>Gärds hd<\/district><region type='landskap'>Skåne<\/region><\/location>/
-    end
-
-    it "processes a simple parish" do
-      västrum = loadparagraph '6333-västrum'
-      form = solig.unword(västrum)
-      expect(form.to_s).to be =~ /<div><head><placeName>Västrum<\/placeName><\/head> <p><span type='locale'>sn<\/span>, <location><district type='härad'>Södra Tjusts hd<\/district><region type='landskap'>Småland<\/region><\/location>/
-    end
-
-    it "handles the case of two härad" do
-      kinnekulle = loadparagraph '3006-kinnekulle'
-      form = solig.unword(kinnekulle)
-      expect(form.to_s).to be =~ /^<div><head><placeName>Kinnekulle<\/placeName><\/head> <p><span type='locale'>berg<\/span>, <location><district type='härad'>Kinne<\/district><district type='härad'>Kinnefjärdings hd<\/district><region type='landskap'>Västergötland<\/region><\/location>/
-    end
-
-    it "handles the case of two socknar" do
-      kivik = loadparagraph '3015-kivik'
-      form = solig.unword(kivik)
-      expect(form.to_s).to be =~ /<div><head><placeName>Kivik<\/placeName><\/head> <p><span type='locale'>tätort<\/span>, <location><district type='socken'>Södra Mellby<\/district><district type='socken'>Vitaby snr<\/district><district type='härad'>Albo hd<\/district><region type='landskap'>Skåne<\/region><\/location>/
-    end
-
-    it "for real!" do
-      klagshamn = loadparagraph '3018-klagshamn'
-      form = solig.unword(klagshamn)
-      expect(form.to_s).to be =~ /<div><head><placeName>Klagshamn<\/placeName><\/head> <p><span type='locale'>samhälle<\/span>, <location><district type='socken'>Västra Klagstorps<\/district><district type='socken'>Tygelsjö snr<\/district><district type='härad'>Oxie hd<\/district><region type='landskap'>Skåne<\/region><\/location>/
-    end
-
-    it "handles two landskap?"
-    it "processes the entry for Norberg"
-    it "processes the entry for Bålsta (kn och hd osv.)"
-    it "processes entries with f. d."
-    it "processes entries with longer strings such as the one for Kattegatt"
-
-    it "stops at the first full stop" do
-      abbekås = loadparagraph '444-abbekås'
-      form = solig.unword(abbekås)
-      actual = form.to_s
-      expected = "<div><head><placeName>Abbekås</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Skivarps sn</district><district type='härad'>Vemmenhögs hd</district><region type='landskap'>Skåne</region></location>. <span style='italic'>Abbekassz</span> 1536. – Namnet på detta gamla fiskeläge innehåller troligen mansnamnet fda. <span style='italic'>Abbi</span>. Efterleden är dialektordet <span style='italic'>kås</span> ’båtplats, mindre hamn’.</p></div>"
-      expect(actual).to eq expected
-    end
-
-    it "calls a city a settlement" do
-      abborrberget = loadparagraph '445-abborrberget'
-      formatted = solig.unword abborrberget
-      pending "This is just bizarre.  Strä[new element]ngnäs"
-      expect(formatted.to_s).to be =~ /<div><head><placeName>Abborrberget<\/placeName><\/head> <p><span type='locale'>tätort<\/span>, <location><settlement type='stad'>Strängnäs stad<\/settlement><region type='landskap'>Södermanland<\/region><\/location>/ # FIXME Allow non-landskap areas as last entries!
-    end
-  end
-
   describe "#unweave" do
     it "unweaves a table" do
       unweaved = solig.unweave <<__EoTable__
@@ -322,6 +251,75 @@ __END__
       bro = loadparagraph '1023-bro'
       pending "This is going to be painful"
       expect(solig.unword(bro).to_s).to eq "<div><head><placeName>Bro</placeName></head> <p><span type='locale'>sn</span>, <location><district type='skeppslag'>Bro och Vätö skg</district><region type='landskap'>Uppland</region></location> → <span style='italic'>Roslags-Bro</span>.</p></div>"
+    end
+
+    it "processes a parish without a härad" do
+      husby = loadparagraph '2498-husby'
+      form = solig.unword(husby)
+      expect(form.to_s).to be =~ /^<div><head><placeName>Husby<\/placeName><\/head> <p><span type='locale'>sn<\/span>, <span type='locale'>tätort<\/span>, <location><region type='landskap'>Dalarna<\/region><\/location>/
+    end
+
+    it "processes a parish with an extra locale" do
+      hurva = loadparagraph '2490-hurva'
+      form = solig.unword(hurva)
+      expect(form.to_s).to be =~ /^<div><head><placeName>Hurva<\/placeName><\/head> <p><span type='locale'>sn<\/span>, <span type='locale'>tätort<\/span>, <location><district type='härad'>Frosta hd<\/district><region type='landskap'>Skåne<\/region><\/location>/
+    end
+
+    it "processes a point with an extra locale" do
+      vätteryd = loadparagraph '6338-vätteryd'
+      form = solig.unword(vätteryd)
+      expect(form.to_s).to be =~ /^<div><head><placeName>Vätteryd<\/placeName><\/head> <p><span type='locale'>torp<\/span>, <span type='locale'>gravfält<\/span>, <location><district type='socken'>Norra Mellby sn<\/district><district type='härad'>Västra Göinge hd<\/district><region type='landskap'>Skåne<\/region><\/location>/
+    end
+
+    it "processes a parish with a compound name" do
+      västra_vram = loadparagraph '6331-västra-vram'
+      form = solig.unword(västra_vram)
+      expect(form.to_s).to be =~ /^<div><head><placeName>Västra Vram<\/placeName><\/head> <p><span type='locale'>sn<\/span>, <location><district type='härad'>Gärds hd<\/district><region type='landskap'>Skåne<\/region><\/location>/
+    end
+
+    it "processes a simple parish" do
+      västrum = loadparagraph '6333-västrum'
+      form = solig.unword(västrum)
+      expect(form.to_s).to be =~ /<div><head><placeName>Västrum<\/placeName><\/head> <p><span type='locale'>sn<\/span>, <location><district type='härad'>Södra Tjusts hd<\/district><region type='landskap'>Småland<\/region><\/location>/
+    end
+
+    it "handles the case of two härad" do
+      kinnekulle = loadparagraph '3006-kinnekulle'
+      form = solig.unword(kinnekulle)
+      expect(form.to_s).to be =~ /^<div><head><placeName>Kinnekulle<\/placeName><\/head> <p><span type='locale'>berg<\/span>, <location><district type='härad'>Kinne<\/district><district type='härad'>Kinnefjärdings hd<\/district><region type='landskap'>Västergötland<\/region><\/location>/
+    end
+
+    it "handles the case of two socknar" do
+      kivik = loadparagraph '3015-kivik'
+      form = solig.unword(kivik)
+      expect(form.to_s).to be =~ /<div><head><placeName>Kivik<\/placeName><\/head> <p><span type='locale'>tätort<\/span>, <location><district type='socken'>Södra Mellby<\/district><district type='socken'>Vitaby snr<\/district><district type='härad'>Albo hd<\/district><region type='landskap'>Skåne<\/region><\/location>/
+    end
+
+    it "for real!" do
+      klagshamn = loadparagraph '3018-klagshamn'
+      form = solig.unword(klagshamn)
+      expect(form.to_s).to be =~ /<div><head><placeName>Klagshamn<\/placeName><\/head> <p><span type='locale'>samhälle<\/span>, <location><district type='socken'>Västra Klagstorps<\/district><district type='socken'>Tygelsjö snr<\/district><district type='härad'>Oxie hd<\/district><region type='landskap'>Skåne<\/region><\/location>/
+    end
+
+    it "handles two landskap?"
+    it "processes the entry for Norberg"
+    it "processes the entry for Bålsta (kn och hd osv.)"
+    it "processes entries with f. d."
+    it "processes entries with longer strings such as the one for Kattegatt"
+
+    it "stops at the first full stop" do
+      abbekås = loadparagraph '444-abbekås'
+      form = solig.unword(abbekås)
+      actual = form.to_s
+      expected = "<div><head><placeName>Abbekås</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Skivarps sn</district><district type='härad'>Vemmenhögs hd</district><region type='landskap'>Skåne</region></location>. <span style='italic'>Abbekassz</span> 1536. – Namnet på detta gamla fiskeläge innehåller troligen mansnamnet fda. <span style='italic'>Abbi</span>. Efterleden är dialektordet <span style='italic'>kås</span> ’båtplats, mindre hamn’.</p></div>"
+      expect(actual).to eq expected
+    end
+
+    it "calls a city a settlement" do
+      abborrberget = loadparagraph '445-abborrberget'
+      formatted = solig.unword abborrberget
+      pending "This is just bizarre.  Strä[new element]ngnäs"
+      expect(formatted.to_s).to be =~ /<div><head><placeName>Abborrberget<\/placeName><\/head> <p><span type='locale'>tätort<\/span>, <location><settlement type='stad'>Strängnäs stad<\/settlement><region type='landskap'>Södermanland<\/region><\/location>/ # FIXME Allow non-landskap areas as last entries!
     end
 
     it "works on an entry with an arrow" do
