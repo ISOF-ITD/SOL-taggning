@@ -220,7 +220,30 @@ describe Solig do
       expect(beljuset.to_s).to eq "<div><head><placeName>Ajmunds</placeName></head> <p><span type='locale'>gårdnamn</span>, <location><region type='landskap'>Gotland</region></location> → <span style='italic'>Smiss</span>.</p></div>"
     end
 
-    it "works on entries 459, 460, 461, 465, 474, 3383"
+    it "works on entry 459" do
+      áhkká = loadparagraph '459-áhkká'
+      expect(solig.unword(áhkká).to_s).to eq "<div><head><placeName>Áhkká<placeName></head> <p><span type='locale'>fjällmassiv i Stora Sjöfallets nationalpark, <location><district type='socken'>Jokkmokks sn</district></region type='landskap'>Lappland</region></location>. – Det lulesamiska nammet (med äldre stavning <span style='italic'>Akka</span>) innehåller ett ornamnselement som förekommer i många berg- och sjönamn i Lule lappmark och som betyder ’(samisk) gudinna; gumma; hustru’. Ordet ingår även i kvinnliga gudabeteckningar. Många av <span style='italic'>Áhkká</span>-namnen kan knytas till samernas forntida kult.</p></div>"
+    end
+
+    it "works on entry 460" do
+      áhkájávrre = loadparagraph '460-áhkájávrre'
+      expect(solig.unword(áhkájávrre).to_s).to eq "<div><head><placeName>Áhkájávrre</placeName></head> <p><span type='locale'>vattenregleringsmagasin i Store Luleälven</span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet (med försvenskad stavning <span style='italic'>Akkajaure</span>) är givet efter fjället → <span syle='italic'>Áhkká</span>. Förleden är genitiv singularis av fjällmaassivets namn; efterleden är <span style='italic'>jávrre</span> ’sjö’. Namnet har tillkommit efter regleringen av sjösystemet under 1900-talet.</p></div>"
+    end
+
+    it "works on entry 465" do
+      akkats = loadparagraph '465-akkats'
+      expect(solig.unword(akkats).to_s).to eq "<div><head><placeName>Akkats</placeName></head> <p><span type='locale'>kraftstation i Lilla Luleälven</span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet är bildat till <span style='italic'>Akkatsfallen</span>, namn på ett på platsen tidigare befintligt vattenfallskomplex, bestående av tre fall. Fallets namn är en försvenskning av lulesam. <span style='italic'>Áhkásjgårttje</span>, sammansatt av <span type='italic'>áhkásj</span>, en diminutivform av <span style='italic'>áhkká</span> ’(samisk) gudinna; gumma; hustru’ (jfr. → <span style='italic'>Áhkká</span>), med obekant syftning, och <span style='italic'>gårttje</span> ’vattenfall’. Kraftstationens samiska namn är <span style='italic'>Áhkásj</span>.</p></div>"
+    end
+
+    it "works on entry 474" do
+      albano = loadparagraph '474-albano'
+      expect(solig.unword(albano).to_s).to eq "<div><head><placeName>Albano</placeName></head> <p><span type='locale'>område på Norra Djurgården</span>, <location><settlement type='stad'>Stockholms stad</settlement></location> → <span style='italic'>Frescati</span>.</p></div>"
+    end
+
+    it "works on entry 3383" do
+      letsi = loadparagraph '3383-letsi'
+      expect(solig.unword(letsi).to_s).to eq "<div><head><placeName>Letsi</placeName></head> <p><span type='locale'>vattenkraftverk i Lilla Luleälven<span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet är en försvenskning av lulesam. <span style='italic'>Liehtse</span>, som var namnet på forsen före utbyggnaden. Ordet <span style='italic'>liehtse</span> betyder ’dåligt väder (dimma, duggregn)’ och syftar antagligen på att forsen orsakade dimma om vintern.</p></div>"
+    end
 
     it "replaces the Unicode spaces" do
       lilla_tjärby = loadparagraph '3426-lilla-tjärby'
