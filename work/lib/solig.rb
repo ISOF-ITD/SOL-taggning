@@ -119,8 +119,11 @@ class Solig
       elsif state == :locale
         if r.text_bit.strip == ''
         else
-          div.add_text carryover unless p.parent
-          div.add_element p unless p.parent
+          unless p.parent # FIXME Replace with an intermediate state or something
+            div.add_text carryover
+            div.add_element p
+          end
+
           if r.text_bit =~ /^(.*?)([\.→])(.*)$/
             location = $1.split ','
             separator = $2
