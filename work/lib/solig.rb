@@ -184,6 +184,7 @@ class Solig
           p.add_text r.text_bit
         end
       elsif state == :italic
+        byebug
         if r.isitalic?
           italic += r.text_bit
         else
