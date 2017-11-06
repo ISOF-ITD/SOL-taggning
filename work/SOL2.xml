@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="sv">
+<TEI xml:lang="sv" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.tei-c.org/ns/1.0" xmlns:dcr="http://www.isocat.org/ns/dcr" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /home/isof/SOL/work/schema/tei_all.xsd">
   <teiHeader>
     <fileDesc>
       <titleStmt>
