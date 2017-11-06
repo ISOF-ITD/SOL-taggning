@@ -41076,35 +41076,41 @@
 
 
                 <div>
-                <p>Ucklum sn, tätort, Inlands Nordre hd, Bohuslän. Auklanda kirkia 1388. – Socknen
+                
+                
+                
+                <div type="bebyggelsenamn" xml:id="Ucklum"><head><placeName>Ucklum</placeName></head><p> 
+                <span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type="härad">Inlands Nordre hd</district>
+                <region type="landskap">Bohuslän</region></location>. Auklanda kirkia 1388. – Socknen
                    har fått sitt namn efter kyrkbyn (numera tätort). Det kan vara identiskt med
                    det från sydvästra Norge kända Aukland, som har antagits innehålla ett ord med
                    betydelsen ’ökat eller tillfogat land, nyodling’. Det är här i så fall fråga om
-                   en mycket tidig nyodling till byn Grössby. </p>
+                   en mycket tidig nyodling till byn Grössby. </p></div>
 
-                <p>Uddebo tätort, Tranemo sn, Kinds hd, Västergötland. Oddebo 1546, Oddaboda 1547.
+                <div type="bebyggelsenamn" xml:id="Uddebo"><head><placeName>Uddebo</placeName></head> <p><span type='locale'>tätort</span>,
+                <location><district type="socken">Tranemo sn</district><district type="härad">Kinds hd</district><region type="landskap">Västergötland</region></location>.
+                 Oddebo 1546, Oddaboda 1547.
                    – Tätorten är framvuxen dels vid gården Uddebo norr om ån Assman, dels vid en
                    1904 inrättad post- och järnvägsstation på Uddebos mark söder om denna å. I
-                   förleden ingår mansnamnet fsv. Odde </p>
+                   förleden ingår mansnamnet fsv. Odde (Udde). Efterleden innehåller pluralis av → bod.</p></div>
 
-                   <p>(Udde). Efterleden innehåller pluralis av → bod. Uddeholm tätort, Norra Råda
-                      sn, Älvdals hd, Värmland. </p>
-
-                   <p>– Tätorten har sitt namn efter ett järnbruk uppfört 1668 invid en äldre gård
+                   <div type="bebyggelsenamn" xml:id="Uddeholm"><head><placeName> Uddeholm</placeName></head>
+                   <p><span type='locale'> tätort</span>,<location><district type="socken"> Norra Råda sn</district><district type="härad"> Älvdals hd</district>
+                   <region type="landskap"> Värmland</region></location>.
+                      – Tätorten har sitt namn efter ett järnbruk uppfört 1668 invid en äldre gård
                       (Vdhön 1535, Wdhe 1543, Vfwe 1610). Gårdnamnet innehåller namnet på den
-                      förbiflytande ån </p>
-
-                   <p>→ Uvan. Formerna med dh återspeglar möjligen en ursprunglig sammansättning
+                      förbiflytande ån → Uvan. Formerna med dh återspeglar möjligen en ursprunglig sammansättning
                       med en efterled → ed. Till gårdens namn lades efterleden → holm efter
-                      mönster av äldre herrgårdsnamn. </p>
-
-                   <p>Uddevalla kn, stad, Bohuslän. (jn) opido [’staden’] Oddewalle 1495. – Biskop
+                      mönster av äldre herrgårdsnamn.</p></div>
+                      
+                   <div type="bebyggelsenamn" xml:id="Uddevalla"><head><placeName>Uddevalla</placeName></head>
+                   <p> <span type='locale'>kn</span>,<span type='locale'> stad</span>,<location><region type="landskap"> Bohuslän</region></location>. (jn) opido [’staden’] Oddewalle 1495. – Biskop
                       Jens Nilssøn uppger 1594 att staden »haffuer sit nafn aff den aadde, som
                       kallis Oddeuald». Förleden är bohuslänskans odde ’udde’, troligen åsyftande
                       Kasenabben. Efterleden är antingen det inhemska ordet vall ’slät,
                       gräsbevuxen mark’ eller det inlånade vall ’förskansning, skydd mot vatten’.
                       Den nuvarande skrivningen Uddevalla är en försvenskning av den norska
-                      namnformen Oddevall. </p>
+                      namnformen Oddevall.</p> </div>
 
                    <p>Uddheden tätort, Gräsmarks sn, Fryksdals hd, Värmland. – Tätorten har vuxit
                       fram kring Gräsmarks kyrka. Den har sitt namn efter den söder om kyrkan
