@@ -174,7 +174,6 @@ class Solig
           state = if r.isitalic then :italic else :remainder end
         end
       elsif state == :remainder
-        byebug
         if carryover
           if tail # FIXME Do the italic stuff like below and FIXME do sth with sep
             p.add_text separator
