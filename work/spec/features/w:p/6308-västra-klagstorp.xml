@@ -1,4 +1,4 @@
-    <w:p w14:paraId="67A4836A" w14:textId="77777777" w:rsidR="00E0608E" w:rsidRPr="004B2EA5" w:rsidRDefault="00E0608E" w:rsidP="00E0608E">
+    <w:p w14:paraId="15CEB6DF" w14:textId="3AEF72F7" w:rsidR="00DE1909" w:rsidRPr="004B2EA5" w:rsidRDefault="00DE1909" w:rsidP="00DE1909">
       <w:pPr>
         <w:autoSpaceDE w:val="0"/>
         <w:autoSpaceDN w:val="0"/>
@@ -23,7 +23,7 @@
           <w:sz w:val="16"/>
           <w:szCs w:val="16"/>
         </w:rPr>
-        <w:t>Klagstorp</w:t>
+        <w:t>Västra Klagstorp</w:t>
       </w:r>
       <w:r w:rsidRPr="004B2EA5">
         <w:rPr>
@@ -41,7 +41,47 @@
           <w:sz w:val="16"/>
           <w:szCs w:val="16"/>
         </w:rPr>
-        <w:t xml:space="preserve">tätort, Östra Klagstorps sn, Vemmenhögs hd, Skåne </w:t>
+        <w:t xml:space="preserve">sn, Oxie hd, Skåne. </w:t>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:i/>
+          <w:iCs/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t>ecclesie Claustorp</w:t>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> 1334. – Socknen har sitt namn från kyrkbyn. Det innehåller mansnamnet fda. </w:t>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:i/>
+          <w:iCs/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t>Klak</w:t>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> och </w:t>
       </w:r>
       <w:r w:rsidR="008341E4" w:rsidRPr="004B2EA5">
         <w:rPr>
@@ -70,7 +110,105 @@
           <w:sz w:val="16"/>
           <w:szCs w:val="16"/>
         </w:rPr>
-        <w:t>Östra Klagstorp</w:t>
+        <w:t>torp</w:t>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> ’nybygge’. </w:t>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:i/>
+          <w:iCs/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t>Västra</w:t>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> skiljer sedan 188</w:t>
+      </w:r>
+      <w:r w:rsidR="003E0580" w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t>6</w:t>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> namnet från </w:t>
+      </w:r>
+      <w:r w:rsidR="008341E4" w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t>→</w:t>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:i/>
+          <w:iCs/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t>Östra Klags</w:t>
+      </w:r>
+      <w:r w:rsidR="003E0580" w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:i/>
+          <w:iCs/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:softHyphen/>
+      </w:r>
+      <w:r w:rsidRPr="004B2EA5">
+        <w:rPr>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
+          <w:i/>
+          <w:iCs/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="16"/>
+          <w:szCs w:val="16"/>
+        </w:rPr>
+        <w:t>torp</w:t>
       </w:r>
       <w:r w:rsidRPr="004B2EA5">
         <w:rPr>
