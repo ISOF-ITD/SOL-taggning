@@ -179,6 +179,8 @@ class Solig
           italic = r.text_bit
           state = :italic
         else
+          p.add_text carryover if carryover
+          carryover = nil if carryover
           p.add_text r.text_bit
         end
       elsif state == :italic
@@ -186,6 +188,7 @@ class Solig
           italic += r.text_bit
         else
           p.add_italic_text italic.strip
+          carryover = nil
           p.add_text ' ' if italic =~ /\s$/
           p.add_text r.text_bit
           state = :remainder
