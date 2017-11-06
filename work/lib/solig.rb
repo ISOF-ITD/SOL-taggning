@@ -102,6 +102,7 @@ class Solig
     state = :initial
     headword = ''
     element.each_element('w:r') do |r|
+      byebug
       if state == :initial
         if r.isbold
           rt = r.text_bit.uspace
@@ -144,7 +145,7 @@ class Solig
             next
           end
 
-          state = if tail then :remainder else :location end
+          state = :remainder
           carryover = [location, separator, tail]
         end
       elsif state == :location
@@ -162,16 +163,20 @@ class Solig
                 p.add_text ' '
               end
 
-              if tail # FIXME Do the italic stuff like below and FIXME do sth with sep
-                p.add_text separator
-                p.add_text tail
-              end
+              carryover = tail if tail
             end
           end
 
           state = :remainder
         end
       elsif state == :remainder
+        if carryover
+          if tail # FIXME Do the italic stuff like below and FIXME do sth with sep
+            p.add_text separator
+            p.add_text tail
+          end
+        end
+
         if r.isitalic
           italic = r.text_bit
           state = :italic
