@@ -102,7 +102,6 @@ class Solig
     state = :initial
     headword = ''
     element.each_element('w:r') do |r|
-      byebug
       if state == :initial
         if r.isbold
           rt = r.text_bit.uspace
@@ -145,7 +144,7 @@ class Solig
             next
           end
 
-          state = :location
+          state = if tail then :remainder else :location end
           carryover = [location, separator, tail]
         end
       elsif state == :location
