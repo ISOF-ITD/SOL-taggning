@@ -167,7 +167,8 @@ class Solig
             end
           end
 
-          state = :remainder
+          italic = r.text_bit if r.isitalic
+          state = if r.isitalic then :italic else :remainder end
         end
       elsif state == :remainder
         byebug
