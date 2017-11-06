@@ -293,7 +293,6 @@ describe Solig do
 
   it "doesn’t crash on Västra Klagstorp" do # 6308
     västra_klagstorp = loadparagraph '6308-västra-klagstorp'
-    byebug
     expect { solig.unword västra_klagstorp }.to_not raise_error TypeError
   end
 end
