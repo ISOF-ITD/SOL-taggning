@@ -161,13 +161,16 @@ class Solig
               if loc =~ /\s$/
                 p.add_text ' '
               end
-
-              carryover = if tail then tail else '' end
-              carryover += r.text_bit
             end
           end
 
+          if tail
+            p.add_text separator
+            p.add_text tail
+          end
+
           italic = r.text_bit if r.isitalic
+          carryover = r.text_bit
           state = if r.isitalic then :italic else :remainder end
         end
       elsif state == :remainder
