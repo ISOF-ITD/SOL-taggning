@@ -102,6 +102,7 @@ class Solig
     state = :initial
     headword = ''
     element.each_element('w:r') do |r|
+      byebug
       if state == :initial
         if r.isbold
           rt = r.text_bit.uspace
@@ -144,6 +145,14 @@ class Solig
             next
           end
 
+          state = :location
+          carryover = [location, separator, tail]
+        end
+      elsif state == :location
+        unless r.text_bit.strip == ''
+          location = carryover.first
+          separator = carryover[1]
+          tail = carryover.last
           location_element = REXML::Element.new 'location', p
           ct = location.count
           location.each_with_index do |loc, index|
