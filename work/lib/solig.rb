@@ -184,9 +184,8 @@ class Solig
           p.add_text r.text_bit
         end
       elsif state == :italic
-        byebug
         if r.isitalic?
-          italic += r.text_bit
+          italic += r.text_bit if r.text_bit
         else
           p.add_italic_text italic.strip
           carryover = nil
