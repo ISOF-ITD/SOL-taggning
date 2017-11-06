@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"?>
-<TEI xml:lang="sv" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.tei-c.org/ns/1.0" xmlns:dcr="http://www.isocat.org/ns/dcr" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /home/isof/SOL/work/schema/tei_all.xsd">
+<TEI xml:lang="sv" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.tei-c.org/ns/1.0" xmlns:dcr="http://www.isocat.org/ns/dcr" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples">
+<!-- xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /home/isof/SOL/work/schema/tei_all.xsd" -->
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -13794,7 +13795,7 @@
                          sydöstspets mot Mälaren.</p>
 
                       <p>Horred sn, tätort, Marks hd, Västergötland.
-                         Hornaryth 
+                         Hornaryth
                       sooghn 1393. – Socknen har fått sitt namn från kyrkbyn. Med syftning på en
                       eller flera hornliknande naturformationer ingår ordet horn eller en bildning
                       därtill i ortnamnet. Detta kan t.ex. innehålla genitiv av ett om Lilla och
@@ -41075,11 +41076,9 @@
                    <div><p>U </p></div>
 
 
-                <div>
-                
-                
-                
-                <div type="bebyggelsenamn" xml:id="Ucklum"><head><placeName>Ucklum</placeName></head><p> 
+
+
+                <div type="bebyggelsenamn" xml:id="Ucklum"><head><placeName>Ucklum</placeName></head><p>
                 <span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type="härad">Inlands Nordre hd</district>
                 <region type="landskap">Bohuslän</region></location>. Auklanda kirkia 1388. – Socknen
                    har fått sitt namn efter kyrkbyn (numera tätort). Det kan vara identiskt med
@@ -41102,7 +41101,7 @@
                       förbiflytande ån → Uvan. Formerna med dh återspeglar möjligen en ursprunglig sammansättning
                       med en efterled → ed. Till gårdens namn lades efterleden → holm efter
                       mönster av äldre herrgårdsnamn.</p></div>
-                      
+
                    <div type="bebyggelsenamn" xml:id="Uddevalla"><head><placeName>Uddevalla</placeName></head>
                    <p> <span type='locale'>kn</span>,<span type='locale'> stad</span>,<location><region type="landskap"> Bohuslän</region></location>. (jn) opido [’staden’] Oddewalle 1495. – Biskop
                       Jens Nilssøn uppger 1594 att staden »haffuer sit nafn aff den aadde, som
@@ -41112,6 +41111,8 @@
                       Den nuvarande skrivningen Uddevalla är en försvenskning av den norska
                       namnformen Oddevall.</p> </div>
 
+
+                <div>
                    <p>Uddheden tätort, Gräsmarks sn, Fryksdals hd, Värmland. – Tätorten har vuxit
                       fram kring Gräsmarks kyrka. Den har sitt namn efter den söder om kyrkan
                       belägna gården Uddheden (Oddeheden 1590) på en hed (’grus- eller sandslätt,
