@@ -67,43 +67,43 @@ describe REXML::Element do
     end
   end
 
-  describe '#isitalic' do
+  describe '#isitalic?' do
     it "returns true if text bit is italic" do
       doc = REXML::Document.new "<w:document xmlns:w='somelink'><w:r><w:rPr><w:i /></w:rPr></w:r></w:document>"
       text = doc.root.elements.first
-      expect(text.isitalic).to be_truthy
+      expect(text.isitalic?).to be_truthy
     end
 
     it "returns false otherwise" do
       doc = REXML::Document.new "<w:document xmlns:w='ns'><w:r><w:rPr></w:rPr></w:r></w:document>"
       text = doc.root.elements.first
-      expect(text.isitalic).to be_falsey
+      expect(text.isitalic?).to be_falsey
     end
 
     it "doesn’t crash if element doesn’t conform to the .docx format" do
       doc = REXML::Document.new "<w:document xmlns:w='ns'><w:p></w:p></w:document>"
       text = doc.root.elements.first
-      expect { text.isitalic }.to_not raise_error
+      expect { text.isitalic? }.to_not raise_error
     end
   end
 
-  describe '#isbold' do
+  describe '#isbold?' do
     it "returns true if text bit is bold" do
       doc = REXML::Document.new "<w:document xmlns:w=''><w:r><w:rPr><w:b /></w:rPr></w:r></w:document>"
       bold = doc.root.elements.first
-      expect(bold.isbold).to be_truthy
+      expect(bold.isbold?).to be_truthy
     end
 
     it "returns false otherwise" do
       doc = REXML::Document.new "<w:document xmlns:w=''><w:r><w:rPr></w:rPr></w:r></w:document>"
       notbold = doc.root.elements.first
-      expect(notbold.isbold).to be_falsey
+      expect(notbold.isbold?).to be_falsey
     end
 
     it "doesn’t crash if element doesn’t have an rPr child" do
       doc = REXML::Document.new "<w:document xmlns:w=''><w:p></w:p></w:document>"
       not_a_text_bit = doc.root.elements.first
-      expect(not_a_text_bit.isbold).to be_falsey
+      expect(not_a_text_bit.isbold?).to be_falsey
     end
   end
 

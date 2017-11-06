@@ -78,11 +78,11 @@ class REXML::Element
     end
   end
 
-  def isitalic
+  def isitalic?
     REXML::XPath.first(self, 'w:rPr/w:i')
   end
 
-  def isbold
+  def isbold?
     REXML::XPath.first(self, 'w:rPr/w:b')
   end
 
@@ -104,7 +104,7 @@ class Solig
     element.each_element('w:r') do |r|
       # byebug
       if state == :initial
-        if r.isbold
+        if r.isbold?
           rt = r.text_bit.uspace
           if rt.length > 0 && rt.ustrip == ''
             rt = ' '
@@ -170,12 +170,12 @@ class Solig
             p.add_text tail
           end
 
-          italic = r.text_bit if r.isitalic
+          italic = r.text_bit if r.isitalic?
           carryover = r.text_bit
-          state = if r.isitalic then :italic else :remainder end
+          state = if r.isitalic? then :italic else :remainder end
         end
       elsif state == :remainder
-        if r.isitalic
+        if r.isitalic?
           italic = r.text_bit
           state = :italic
         else
@@ -184,7 +184,7 @@ class Solig
           p.add_text r.text_bit
         end
       elsif state == :italic
-        if r.isitalic
+        if r.isitalic?
           italic += r.text_bit
         else
           p.add_italic_text italic.strip
