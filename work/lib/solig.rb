@@ -56,15 +56,11 @@ class REXML::Element
   end
 
   def add_location_element(loc)
-    if loc.strip.is_landskap
-      element = REXML::Element.new 'region', self
-      element.add_attribute 'type', 'landskap'
-      element.add_escaped_text loc.strip
-      return
-    else
-      loc.strip =~ /(.*)\s+(.*)/
+    loc.strip =~ /(.*)\s+(.*)/
+    if $2 then
       locale = $2
-      name_s_ = $1
+    else
+      locale = loc
     end
 
     ls = loc.split('och').map(&:strip)
