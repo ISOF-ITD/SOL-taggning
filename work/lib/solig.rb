@@ -36,7 +36,7 @@ class REXML::Element
 
   def escape_text!
     savedtext = text
-    text = ''
+    self.text = ''
     add_escaped_text savedtext
   end
 
