@@ -54,7 +54,7 @@ class REXML::Element
     if loc.strip.is_landskap
       element = REXML::Element.new 'region', self
       element.add_attribute 'type', 'landskap'
-      element.add_text loc.strip
+      element.add_escaped_text loc.strip
       return
     else
       loc.strip =~ /(.*)\s+(.*)/
@@ -84,7 +84,7 @@ class REXML::Element
 
       element = REXML::Element.new tag, self
       element.add_attribute 'type', type
-      element.add_text l.strip
+      element.add_escaped_text l.strip
     end
   end
 
@@ -116,7 +116,7 @@ class Solig
     state = :initial
     headword = ''
     element.each_element('w:r') do |r|
-      # byebug
+      byebug
       if state == :initial
         if r.isbold?
           rt = r.text_bit.uspace
