@@ -46,16 +46,22 @@ describe REXML::Element do
 
     it "calls #add_escaped_text" do
       doc = REXML::Document.new('<doc>content</doc>')
-      expect(doc.root).to receive(:add_escaped_text).with('a \fd b')
-      doc.root.add_escaped_text('a \fd b')
+      expect(doc.root).to receive(:add_escaped_text).with('a \\fd b')
+      doc.root.add_escaped_text('a \\fd b')
     end
   end
 
-  describe '#escape_text' do
+  describe '#escape_text!' do
     it "escapes the text" do
       doc = REXML::Document.new('<doc>x \\fd y</doc>')
       doc.root.escape_text!
-      expect(doc.root
+      expect(doc.root.text).to eq 'x f.d. y'
+    end
+
+    it "calls Solig.escape" do
+      doc = REXML::Document.new('<doc>p \\fd q</doc>')
+      expect(Solig).to receive(:escape).with('p \\fd q')
+      doc.root.escape_text!
     end
   end
 
@@ -156,7 +162,7 @@ describe Solig do
 
   describe '.escape' do
     it "replaces “f.d.” with \\fd" do
-      expect(Solig.escape('lantbruksuniversitet, f.d. gods')).to eq 'lantbruksuniversitet, \fd gods'
+      expect(Solig.escape('lantbruksuniversitet, f.d. gods')).to eq 'lantbruksuniversitet, \\fd gods'
     end
   end
 
