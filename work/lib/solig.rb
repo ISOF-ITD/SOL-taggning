@@ -149,36 +149,15 @@ class Solig
           carryover = [location, separator, tail]
         end
       elsif state == :location
-        unless r.text_bit.strip == ''
-          location = carryover.first
-          separator = carryover[1]
-          tail = carryover.last
-          location_element = REXML::Element.new 'location', p
-          ct = location.count
-          location.each_with_index do |loc, index|
-            location_element.add_location_element loc
-
-            if index == ct - 1
-              if loc =~ /\s$/
-                p.add_text ' '
-              end
-            end
-          end
-
-          if tail
-            p.add_text separator
-            p.add_text tail
-          end
-
-          italic = r.text_bit if r.isitalic?
-          carryover = r.text_bit
-          state = if r.isitalic? then :italic else :remainder end
-        end
+        retvalue = add_location(p, r, carryover)
+        state = retvalue.first
+        carryover = retvalue.last
       elsif state == :remainder
         if r.isitalic?
           italic = r.text_bit
           state = :italic
         else
+          # byebug
           p.add_text carryover if carryover
           carryover = nil if carryover
           p.add_text r.text_bit
@@ -198,14 +177,49 @@ class Solig
 
     # byebug
 
-    if carryover
-      if state == :remainder
-        p.add_text carryover
-      elsif state == :italic
-        p.add_italic_text carryover
-      end # FIXME else raise something
-    end
+    r = REXML::Element.new 'w:r'
+    add_location(p, r, carryover) if carryover && state == :location
+
+    # if carryover
+    #   if state == :remainder
+    #     p.add_text carryover
+    #   elsif state == :italic
+    #     p.add_italic_text carryover
+    #   end # FIXME else raise something
+    # end
 
     div
+  end
+
+  def add_location(p, r, carryover = nil) # FIXME Some spec (?)
+    state = nil
+
+    unless r.text_bit && r.text_bit.strip == ''
+      location = carryover.first
+      separator = carryover[1]
+      tail = carryover.last
+      location_element = REXML::Element.new 'location', p
+      ct = location.count
+      location.each_with_index do |loc, index|
+        location_element.add_location_element loc
+
+        if index == ct - 1
+          if loc =~ /\s$/
+            p.add_text ' '
+          end
+        end
+      end
+
+      if tail
+        p.add_text separator
+        p.add_text tail
+      end
+
+      italic = r.text_bit if r.isitalic?
+      carryover = r.text_bit
+      state = if r.isitalic? then :italic else :remainder end
+    end
+
+    [state, carryover]
   end
 end
