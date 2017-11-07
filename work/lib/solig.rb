@@ -27,7 +27,7 @@ class String
   end
 
   def self.landskap_regexp
-    @@landskap_regexp ||= /#{@@landskap.join('|')}/
+    @@landskap_regexp ||= Regexp.new @@landskap.join('|')
   end
 end
 
