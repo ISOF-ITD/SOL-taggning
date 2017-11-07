@@ -52,7 +52,6 @@ class REXML::Element
   end
 
   def add_location_element(loc)
-    byebug
     if loc.strip.is_landskap
       element = REXML::Element.new 'region', self
       element.add_attribute 'type', 'landskap'

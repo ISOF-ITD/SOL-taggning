@@ -30,6 +30,8 @@ describe String do
       expect(landskap[1]).to eq 'Blekinge'
     end
   end
+
+  describe '.landskap_regexp' # TODO
 end
 
 describe REXML::Element do
