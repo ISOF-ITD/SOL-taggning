@@ -153,6 +153,7 @@ class Solig
 
           locale = location.shift
           while first || locale =~ /\\fd/ || locale && locale.strip !~ /\s/ && !locale.strip.is_landskap
+            # byebug
             p.add_escaped_text ', ' unless first
             p.add_locale locale.strip
             locale = location.shift
@@ -163,10 +164,10 @@ class Solig
             p.add_escaped_text ', '
             location.unshift(locale)
           else
-            p.add_text separator
-            p.add_text tail
-            carryover = nil
-            state = :remainder
+            # p.add_text separator
+            # p.add_text tail
+            # carryover = nil
+            # state = :remainder
             next
           end
 
