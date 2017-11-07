@@ -151,7 +151,8 @@ class Solig
       elsif state == :location
         retvalue = add_location(p, r, carryover)
         state = retvalue.first
-        carryover = retvalue.last
+        carryover = retvalue[1]
+        italic = retvalue.last
       elsif state == :remainder
         if r.isitalic?
           italic = r.text_bit
@@ -222,6 +223,6 @@ class Solig
       end
     end
 
-    [state, carryover]
+    [state, carryover, italic]
   end
 end
