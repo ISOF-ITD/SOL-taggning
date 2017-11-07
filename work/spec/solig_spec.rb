@@ -43,6 +43,11 @@ describe REXML::Element do
 
       expect(foo.to_s).to eq "<doc>foo <span style='italic'>bar</span> quux</doc>"
     end
+
+    it "calls #add_escaped_text" do
+      doc = REXML::Document.new('<doc>content</doc>')
+      expect(foo.root.add_escaped_text('a \fd b')).to receive(:add_escaped_text).with('a \fd b')
+    end
   end
 
   describe '#add_locale' do
@@ -126,10 +131,24 @@ describe REXML::Element do
       expect(bit.text_bit).to be_nil
     end
   end
+
+  describe '#add_escaped_text' do
+    it "interprets the escape sequences" do
+      doc = REXML::Document.new "<doc><p></p></doc>"
+      doc.add_escaped_text "foo \\fd bar"
+      expect(doc.root.elements.first.text).to eq "foo f.d. bar"
+    end
+  end
 end
 
 describe Solig do
   let(:solig) { Solig.new }
+
+  describe '.escape' do
+    it "replaces “f.d.” with \\fd" do
+      expect(Solig.escape('lantbruksuniversitet, f.d. gods')).to eq 'lantbruksuniversitet, \fd gods'
+    end
+  end
 
   describe '#unword' do
     it "dismantles the Word XML structure" do
