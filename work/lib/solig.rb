@@ -196,6 +196,16 @@ class Solig
       end
     end
 
+    # byebug
+
+    if carryover
+      if state == :remainder
+        p.add_text carryover
+      elsif state == :italic
+        p.add_italic_text carryover
+      end # FIXME else raise something
+    end
+
     div
   end
 end

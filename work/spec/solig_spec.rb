@@ -301,7 +301,15 @@ describe Solig do
     expected = "<div><head><placeName>Ullvi</placeName></head> <p><span type='locale'>gd</span>, <location><district type='socken'>Irsta sn</district><district type='härad'>Siende hd</district><region type='landskap'>Västmanland</region></location>. (<span style='italic'>in</span>) <span style='italic'>Vllaui</span> 1371. – Namnets förled innehåller gudanamnet <span style='italic'>Ull</span> och dess efterled → <span style='italic'>vi</span> ’helig plats, kultplats’. Namnet <span style='italic'>Ullvi</span> bars tidigare också av den unga tätorten → <span style='italic'>Irsta</span> strax norr om gården.</p></div>"
     formatted = solig.unword(ullvi)
     actual = formatted.to_s
-    byebug
+    expect(actual).to eq expected
+  end
+
+  it "works on Ulrika" do # 5837
+    ulrika = loadparagraph '5837-ulrika'
+    expected = "<div><head><placeName>Ulrika</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Valkebo hd</district><region type='landskap'>Östergötland</region></location>. – Socknen bildades 1736 av områden från flera äldre socknar. Namnet gavs för att hedra Ulrika Eleonora. Tätorten har vuxit fram i anslutning till sockenkyrkan.</p></div>"
+    actual = solig.unword(ulrika).to_s
+    pending "Later"
+    # byebug
     expect(actual).to eq expected
   end
 end
