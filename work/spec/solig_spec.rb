@@ -386,7 +386,7 @@ describe Solig do
 
   it "doesn’t crash on Västra Klagstorp" do # 6308
     västra_klagstorp = loadparagraph '6308-västra-klagstorp'
-    expect { solig.unword västra_klagstorp }.to_not raise_error TypeError
+    expect { solig.unword västra_klagstorp }.to_not raise_error # Raised TypeError (at some point)
   end
 
   it "works on Ullvi" do # 5834
