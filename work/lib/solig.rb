@@ -43,7 +43,7 @@ class REXML::Element
   def add_locale(locale)
     span = REXML::Element.new 'span', self
     span.add_attribute 'type', 'locale'
-    span.add_text locale
+    span.add_escaped_text locale
   end
 
   def add_escaped_text(text)
@@ -116,7 +116,7 @@ class Solig
     state = :initial
     headword = ''
     element.each_element('w:r') do |r|
-      byebug
+      # byebug
       if state == :initial
         if r.isbold?
           rt = r.text_bit.uspace
@@ -147,10 +147,12 @@ class Solig
           end
 
           locale = location.shift
-          while locale && locale.strip !~ /\s/ && !locale.strip.is_landskap
+          first = true
+          while first || locale =~ /\\fd/ || locale && locale.strip !~ /\s/ && !locale.strip.is_landskap
             p.add_locale locale.strip
             p.add_escaped_text ', '
             locale = location.shift
+            first = false
           end
 
           if locale

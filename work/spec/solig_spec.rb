@@ -208,8 +208,7 @@ describe Solig do
       kinnekulle = loadparagraph '3006-kinnekulle'
       form = solig.unword(kinnekulle)
       expect(form.to_s).to be =~ /^<div><head><placeName>Kinnekulle<\/placeName><\/head> <p><span type='locale'>berg<\/span>, <location><district type='härad'>Kinne<\/district><district type='härad'>Kinnefjärdings hd<\/district><region type='landskap'>Västergötland<\/region><\/location>/
-    end
-
+    end 
     it "handles the case of two socknar" do
       kivik = loadparagraph '3015-kivik'
       form = solig.unword(kivik)
@@ -228,7 +227,7 @@ describe Solig do
 
     it "processes entries with f. d." do
       ultuna = loadparagraph '5841-ultuna'
-      expected = "<div><head><placeName>Ultuna</placeName></head> <p><span type='locale'>Sveriges lantbruksuniversitet</span>, <span type='locale'>f.d. gods</span>, <location><region type='landskap'>Uppland</region></location>. (<span style='italic'>in</span>) <span style='italic'>villa Wlertune</span> 1221. – Namnet innehåller genitiv av gudanamnet <span style='italic'>Ull<span> och → <span style='italic'>tuna</span>. Gudanamnet ingår också i häradsnamnet <span style='italic'>Ulleråkers härad</span>. Relationen mellan de båda namnen är omdiskuterad. Se vidare → <span style='italic'>Ulleråkers härad</span>.</p></div>"
+      expected = "<div><head><placeName>Ultuna</placeName></head> <p><span type='locale'>Sveriges lantbruksuniversitet</span>, <span type='locale'>f.d. gods</span>, <location><settlement type='stad'>Uppsala stad</settlement><region type='landskap'>Uppland</region></location>. (<span style='italic'>in</span>) <span style='italic'>villa Wlertune</span> 1221. – Namnet innehåller genitiv av gudanamnet <span style='italic'>Ull</span> och → <span style='italic'>tuna</span>. Gudanamnet ingår också i häradsnamnet <span style='italic'>Ulleråkers härad</span>. Relationen mellan de båda namnen är omdiskuterad. Se vidare → <span style='italic'>Ulleråkers härad</span>.</p></div>"
       actual = solig.unword(ultuna).to_s
       byebug
       expect(actual).to eq expected
