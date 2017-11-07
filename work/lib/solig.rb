@@ -102,7 +102,7 @@ class Solig
     state = :initial
     headword = ''
     element.each_element('w:r') do |r|
-      # byebug
+      byebug
       if state == :initial
         if r.isbold?
           rt = r.text_bit.uspace
@@ -194,30 +194,32 @@ class Solig
   def add_location(p, r, carryover = nil) # FIXME Some spec (?)
     state = nil
 
-    unless r.text_bit && r.text_bit.strip == ''
-      location = carryover.first
-      separator = carryover[1]
-      tail = carryover.last
-      location_element = REXML::Element.new 'location', p
-      ct = location.count
-      location.each_with_index do |loc, index|
-        location_element.add_location_element loc
+    if r.text_bit
+      unless r.text_bit.strip == ''
+        location = carryover.first
+        separator = carryover[1]
+        tail = carryover.last
+        location_element = REXML::Element.new 'location', p
+        ct = location.count
+        location.each_with_index do |loc, index|
+          location_element.add_location_element loc
 
-        if index == ct - 1
-          if loc =~ /\s$/
-            p.add_text ' '
+          if index == ct - 1
+            if loc =~ /\s$/
+              p.add_text ' '
+            end
           end
         end
-      end
 
-      if tail
-        p.add_text separator
-        p.add_text tail
-      end
+        if tail
+          p.add_text separator
+          p.add_text tail
+        end
 
-      italic = r.text_bit if r.isitalic?
-      carryover = r.text_bit
-      state = if r.isitalic? then :italic else :remainder end
+        italic = r.text_bit if r.isitalic?
+        carryover = r.text_bit
+        state = if r.isitalic? then :italic else :remainder end
+      end
     end
 
     [state, carryover]
