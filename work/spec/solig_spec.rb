@@ -289,6 +289,7 @@ describe Solig do
       abborrberget = loadparagraph '445-abborrberget'
       formatted = solig.unword abborrberget
       pending "This is just bizarre.  Strä[new element]ngnäs"
+      # byebug
       expect(formatted.to_s).to be =~ /<div><head><placeName>Abborrberget<\/placeName><\/head> <p><span type='locale'>tätort<\/span>, <location><settlement type='stad'>Strängnäs stad<\/settlement><region type='landskap'>Södermanland<\/region><\/location>/ # FIXME Allow non-landskap areas as last entries!
     end
 
@@ -308,21 +309,25 @@ describe Solig do
     it "works on entry 459" do
       áhkká = loadparagraph '459-áhkká'
       pending "wip"
-      expect(solig.unword(áhkká).to_s).to eq "<div><head><placeName>Áhkká<placeName></head> <p><span type='locale'>fjällmassiv i Stora Sjöfallets nationalpark, <location><district type='socken'>Jokkmokks sn</district></region type='landskap'>Lappland</region></location>. – Det lulesamiska nammet (med äldre stavning <span style='italic'>Akka</span>) innehåller ett ornamnselement som förekommer i många berg- och sjönamn i Lule lappmark och som betyder ’(samisk) gudinna; gumma; hustru’. Ordet ingår även i kvinnliga gudabeteckningar. Många av <span style='italic'>Áhkká</span>-namnen kan knytas till samernas forntida kult.</p></div>"
+      expected = "<div><head><placeName>Áhkká</placeName></head> <p><span type='locale'>fjällmassiv i Stora Sjöfallets nationalpark</span>, <location><district type='socken'>Jokkmokks sn</district></region type='landskap'>Lappland</region></location>. – Det lulesamiska nammet (med äldre stavning <span style='italic'>Akka</span>) innehåller ett ornamnselement som förekommer i många berg- och sjönamn i Lule lappmark och som betyder ’(samisk) gudinna; gumma; hustru’. Ordet ingår även i kvinnliga gudabeteckningar. Många av <span style='italic'>Áhkká</span>-namnen kan knytas till samernas forntida kult.</p></div>"
+      actual = solig.unword(áhkká).to_s
+      byebug
+      expect(actual).to eq expected
     end
 
     it "works on entry 460" do
       áhkájávrre = loadparagraph '460-áhkájávrre'
       pending "wip"
-      expect(solig.unword(áhkájávrre).to_s).to eq "<div><head><placeName>Áhkájávrre</placeName></head> <p><span type='locale'>vattenregleringsmagasin i Store Luleälven</span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet (med försvenskad stavning <span style='italic'>Akkajaure</span>) är givet efter fjället → <span syle='italic'>Áhkká</span>. Förleden är genitiv singularis av fjällmaassivets namn; efterleden är <span style='italic'>jávrre</span> ’sjö’. Namnet har tillkommit efter regleringen av sjösystemet under 1900-talet.</p></div>"
+      actual = solig.unword(áhkájávrre).to_s
+      expected = "<div><head><placeName>Áhkájávrre</placeName></head> <p><span type='locale'>vattenregleringsmagasin i Stora Luleälven</span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet (med försvenskad stavning <span style='italic'>Akkajaure</span>) är givet efter fjället → <span style='italic'>Áhkká</span>. Förleden är genitiv singularis av fjällmassivets namn; efterleden är <span style='italic'>jávrre</span> ’sjö’. Namnet har tillkommit efter regleringen av sjösystemet under 1900-talet.</p></div>"
+      byebug
+      expect(actual).to eq expected
     end
 
     it "works on entry 465" do
       akkats = loadparagraph '465-akkats'
-      pending "wip"
       expected = "<div><head><placeName>Akkats</placeName></head> <p><span type='locale'>kraftstation i Lilla Luleälven</span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet är bildat till <span style='italic'>Akkatsfallen</span>, namn på ett på platsen tidigare befintligt vattenfallskomplex, bestående av tre fall. Fallets namn är en försvenskning av lulesam. <span style='italic'>Áhkásjgårttje</span>, sammansatt av <span style='italic'>áhkásj</span>, en diminutivform av <span style='italic'>áhkká</span> ’(samisk) gudinna; gumma; hustru’ (jfr → <span style='italic'>Áhkká</span>), med obekant syftning, och <span style='italic'>gårttje</span> ’vattenfall’. Kraftstationens samiska namn är <span style='italic'>Áhkásj</span>.</p></div>"
       actual = solig.unword(akkats).to_s
-      byebug
       expect(actual).to eq expected
     end
 
