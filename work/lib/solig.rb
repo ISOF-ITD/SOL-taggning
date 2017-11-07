@@ -82,7 +82,7 @@ class REXML::Element
       when 'stad'
         tag = 'settlement'
         type = 'stad'
-      when /Småland|Östergötland/
+      when String.landskap_regexp
         tag = 'region'
         type = 'landskap'
       else
