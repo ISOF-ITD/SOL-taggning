@@ -341,6 +341,11 @@ describe Solig do
     end
   end
 
+  it "doesn’t crash on Undersåker" do
+    undersåker = loadparagraph '5855-undersåker'
+    expect { solig.unword(undersåker) }.not_to raise_error
+  end
+
   it "works on the last V entry" # 6344
 
   it "doesn’t crash on Västra Klagstorp" do # 6308

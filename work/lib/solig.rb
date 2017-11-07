@@ -177,7 +177,7 @@ class Solig
           # byebug
           p.add_escaped_text carryover if carryover
           carryover = nil if carryover
-          p.add_escaped_text r.text_bit
+          p.add_escaped_text r.text_bit if r.text_bit
         end
       elsif state == :italic
         if r.isitalic?
