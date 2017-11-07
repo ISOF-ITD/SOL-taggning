@@ -31,7 +31,28 @@ describe String do
     end
   end
 
-  describe '.landskap_regexp' # TODO
+  describe '.landskap_regexp' do
+    it "returns the landskap regexp" do
+      expect(String.landskap_regexp).to be_a Regexp
+    end
+
+    it "matches Småland" do
+      expect('Småland' =~ String.landskap_regexp).to be_truthy
+    end
+
+    it "doesn’t match Värend" do
+      expect('Värend' =~ String.landskap_regexp).to be_falsey
+    end
+
+    it "doesn’t match Jönköping" do
+      expect('Jönköping' =~ String.landskap_regexp).to be_falsey
+    end
+
+    it "caches the regexp" do
+      String.landskap_regexp
+      expect(String.class_variable_get(:@@landskap_regexp)).not_to be_nil
+    end
+  end# TODO
 end
 
 describe REXML::Element do

@@ -25,6 +25,10 @@ class String
   def is_landskap
     @@landskap.include? self
   end
+
+  def self.landskap_regexp
+    @@landskap_regexp ||= /^#{@@landskap.join('|')}$/
+  end
 end
 
 class REXML::Element
