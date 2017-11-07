@@ -56,9 +56,8 @@ class REXML::Element
   end
 
   def add_location_element(loc)
-    loc.strip =~ /(.*)\s+(.*)/
-    if $2 then
-      locale = $2
+    if loc.strip =~ /.*\s+(.*)/ then
+      locale = $1
     else
       locale = loc
     end
