@@ -160,6 +160,7 @@ class Solig
           end
 
           if locale
+            p.add_escaped_text ', '
             location.unshift(locale)
           else
             p.add_text separator
