@@ -57,12 +57,6 @@ describe REXML::Element do
       doc.root.escape_text!
       expect(doc.root.text).to eq 'x f.d. y'
     end
-
-    it "calls Solig.escape" do
-      doc = REXML::Document.new('<doc>p \\fd q</doc>')
-      expect(Solig).to receive(:escape).with('p \\fd q')
-      doc.root.escape_text!
-    end
   end
 
   describe '#add_locale' do
