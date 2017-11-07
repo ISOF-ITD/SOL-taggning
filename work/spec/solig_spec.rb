@@ -46,7 +46,8 @@ describe REXML::Element do
 
     it "calls #add_escaped_text" do
       doc = REXML::Document.new('<doc>content</doc>')
-      expect(foo.root.add_escaped_text('a \fd b')).to receive(:add_escaped_text).with('a \fd b')
+      expect(foo.root).to receive(:add_escaped_text).with('a \fd b')
+      foo.root.add_escaped_text('a \fd b')
     end
   end
 
