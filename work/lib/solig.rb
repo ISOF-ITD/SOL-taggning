@@ -35,7 +35,10 @@ class REXML::Element
   end
 
   def escape_text!
-    text = Solig.esc
+    savedtext = text
+    text = ''
+    add_escaped_text savedtext
+  end
 
   def add_locale(locale)
     span = REXML::Element.new 'span', self
