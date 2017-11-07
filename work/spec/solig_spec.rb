@@ -142,7 +142,7 @@ describe REXML::Element do
 
     it "calls Solig.escape" do
       doc = REXML::Document.new "<w:document xmlns:w=''><w:p><w:r><w:t>foo \\fd bar</w:t></w:r></w:p></w:document>"
-      bit = doc.root.elements.first.elements.first
+      bit = REXML::XPath.first(doc, '/w:document/w:p/w:r')
       expect(Solig).to receive(:escape).with('foo \\fd bar')
       bit.text_bit
     end
