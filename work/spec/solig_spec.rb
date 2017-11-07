@@ -311,16 +311,15 @@ describe Solig do
       pending "wip"
       expected = "<div><head><placeName>Áhkká</placeName></head> <p><span type='locale'>fjällmassiv i Stora Sjöfallets nationalpark</span>, <location><district type='socken'>Jokkmokks sn</district></region type='landskap'>Lappland</region></location>. – Det lulesamiska nammet (med äldre stavning <span style='italic'>Akka</span>) innehåller ett ornamnselement som förekommer i många berg- och sjönamn i Lule lappmark och som betyder ’(samisk) gudinna; gumma; hustru’. Ordet ingår även i kvinnliga gudabeteckningar. Många av <span style='italic'>Áhkká</span>-namnen kan knytas till samernas forntida kult.</p></div>"
       actual = solig.unword(áhkká).to_s
-      byebug
+      # byebug
       expect(actual).to eq expected
     end
 
     it "works on entry 460" do
       áhkájávrre = loadparagraph '460-áhkájávrre'
-      pending "wip"
       actual = solig.unword(áhkájávrre).to_s
       expected = "<div><head><placeName>Áhkájávrre</placeName></head> <p><span type='locale'>vattenregleringsmagasin i Stora Luleälven</span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet (med försvenskad stavning <span style='italic'>Akkajaure</span>) är givet efter fjället → <span style='italic'>Áhkká</span>. Förleden är genitiv singularis av fjällmassivets namn; efterleden är <span style='italic'>jávrre</span> ’sjö’. Namnet har tillkommit efter regleringen av sjösystemet under 1900-talet.</p></div>"
-      byebug
+      # byebug
       expect(actual).to eq expected
     end
 
