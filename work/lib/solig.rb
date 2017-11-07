@@ -136,6 +136,7 @@ class Solig
           state = :locale
         end
       elsif state == :locale
+        # byebug
         unless r.text_bit.strip == ''
           unless p.parent # FIXME Replace with an intermediate state or something
             div.add_escaped_text carryover
@@ -152,8 +153,8 @@ class Solig
 
           locale = location.shift
           while first || locale =~ /\\fd/ || locale && locale.strip !~ /\s/ && !locale.strip.is_landskap
+            p.add_escaped_text ', ' unless first
             p.add_locale locale.strip
-            p.add_escaped_text ', '
             locale = location.shift
             first = false
           end
@@ -161,12 +162,17 @@ class Solig
           if locale
             location.unshift(locale)
           else
+            p.add_text separator
+            p.add_text tail
+            carryover = nil
+            state = :remainder
             next
           end
 
           state = :location
           carryover = [location, separator, tail]
         end
+        # byebug
       elsif state == :location
         retvalue = add_location(p, r, carryover)
         state = retvalue.first

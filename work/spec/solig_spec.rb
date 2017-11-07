@@ -384,6 +384,16 @@ describe Solig do
       actual = formatted.to_s
       expect(actual).to eq expected
     end
+
+    it "works on Ume lappmark" do
+      ume_lappmark = loadparagraph '5848-ume-lappmark'
+      expected = "<div><head><placeName>Ume lappmark</placeName></head> <p><span type='locale'>del av Lappland</span>. – Namnet är ursprungligen en historisk-administrativ benämning på samebygden som handels- och beskattningsområde. Det är givet efter huvudorten → <span style='italic'>Umeå</span> i Västerbotten.</p></div>"
+      actual = solig.unword(ume_lappmark).to_s
+      byebug
+      expect(actual).to eq expected
+      pending "Maybe later"
+      expect(actual).to eq "<div><head><placeName>Ume lappmark</placeName></head> <p><span type='locale'>del av</span><location><region type='landskap'>Lappland</region></location>. – Namnet är ursprungligen en historisk-administrativ benämning på samebygden som handels- och beskattningsområde. Det är givet efter huvudorten → <span style='italic'>Umeå</span> i Västerbotten.</p></div>"
+    end
   end
 
   it "doesn’t crash on Undersåker" do
