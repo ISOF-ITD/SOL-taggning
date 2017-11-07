@@ -102,6 +102,7 @@ class Solig
   end
 
   def unword(element)
+    element = Solig.escape element
     div = REXML::Element.new 'div'
     p = REXML::Element.new 'p'
     carryover = ''
@@ -128,7 +129,7 @@ class Solig
       elsif state == :locale
         unless r.text_bit.strip == ''
           unless p.parent # FIXME Replace with an intermediate state or something
-            div.add_text carryover
+            div.add_escaped_text carryover
             div.add_element p
           end
 
@@ -143,7 +144,7 @@ class Solig
           locale = location.shift
           while locale && locale.strip !~ /\s/ && !locale.strip.is_landskap
             p.add_locale locale.strip
-            p.add_text ', '
+            p.add_escaped_text ', '
             locale = location.shift
           end
 
@@ -167,9 +168,9 @@ class Solig
           state = :italic
         else
           # byebug
-          p.add_text carryover if carryover
+          p.add_escaped_text carryover if carryover
           carryover = nil if carryover
-          p.add_text r.text_bit
+          p.add_escaped_text r.text_bit
         end
       elsif state == :italic
         if r.isitalic?
@@ -177,8 +178,8 @@ class Solig
         else
           p.add_italic_text italic.strip
           carryover = nil
-          p.add_text ' ' if italic =~ /\s$/
-          p.add_text r.text_bit
+          p.add_escaped_text ' ' if italic =~ /\s$/
+          p.add_escaped_text r.text_bit
           state = :remainder
         end
       end
@@ -217,14 +218,14 @@ class Solig
 
           if index == ct - 1
             if loc =~ /\s$/
-              p.add_text ' '
+              p.add_escaped_text ' '
             end
           end
         end
 
         if tail
-          p.add_text separator
-          p.add_text tail
+          p.add_escaped_text separator
+          p.add_escaped_text tail
         end
 
         italic = r.text_bit if r.isitalic?

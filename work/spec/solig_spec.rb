@@ -51,6 +51,14 @@ describe REXML::Element do
     end
   end
 
+  describe '#escape_text' do
+    it "escapes the text" do
+      doc = REXML::Document.new('<doc>x \\fd y</doc>')
+      doc.root.escape_text!
+      expect(doc.root
+    end
+  end
+
   describe '#add_locale' do
     it "adds a locale" do
       styra = REXML::Document.new('<div><head>Styra</head> <p></p></div>')
