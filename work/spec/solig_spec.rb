@@ -374,4 +374,9 @@ describe Solig do
     # byebug
     expect(actual).to eq expected
   end
+
+  it "doesn’t tag Småland and Östergötland as invalid" do
+    valdemarsvik = loadparagraph '5913-valdemarsvik'
+    expect(solig.unword(valdemarsvik).to_s).to be =~ /<region type='landskap'>Småland<\/region>/
+  end
 end
