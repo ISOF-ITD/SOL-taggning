@@ -102,7 +102,7 @@ class Solig
     state = :initial
     headword = ''
     element.each_element('w:r') do |r|
-      # byebug
+      byebug
       if state == :initial
         if r.isbold?
           rt = r.text_bit.uspace
@@ -179,6 +179,8 @@ class Solig
     # byebug
 
     r = REXML::Element.new 'w:r'
+    rt = REXML::Element.new 'w:r', r
+    rt.text = 'foo'
     add_location(p, r, carryover) if carryover && state == :location
 
     # if carryover
