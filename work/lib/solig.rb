@@ -31,13 +31,17 @@ class REXML::Element
   def add_italic_text(text)
     span = REXML::Element.new 'span', self
     span.add_attribute 'style', 'italic'
-    span.add_text text
+    span.add_escaped_text text
   end
 
   def add_locale(locale)
     span = REXML::Element.new 'span', self
     span.add_attribute 'type', 'locale'
     span.add_text locale
+  end
+
+  def add_escaped_text(text)
+    add_text text.gsub(/\\fd/, 'f.d.') # FIXME Extract that somewhere
   end
 
   def add_location_element(loc)
@@ -93,6 +97,10 @@ class REXML::Element
 end
 
 class Solig
+  def self.escape(text)
+    text.gsub(/f\.d\./, '\\fd')
+  end
+
   def unword(element)
     div = REXML::Element.new 'div'
     p = REXML::Element.new 'p'

@@ -46,8 +46,8 @@ describe REXML::Element do
 
     it "calls #add_escaped_text" do
       doc = REXML::Document.new('<doc>content</doc>')
-      expect(foo.root).to receive(:add_escaped_text).with('a \fd b')
-      foo.root.add_escaped_text('a \fd b')
+      expect(doc.root).to receive(:add_escaped_text).with('a \fd b')
+      doc.root.add_escaped_text('a \fd b')
     end
   end
 
@@ -136,8 +136,9 @@ describe REXML::Element do
   describe '#add_escaped_text' do
     it "interprets the escape sequences" do
       doc = REXML::Document.new "<doc><p></p></doc>"
-      doc.add_escaped_text "foo \\fd bar"
-      expect(doc.root.elements.first.text).to eq "foo f.d. bar"
+      element = doc.root.elements.first
+      element.add_escaped_text "foo \\fd bar"
+      expect(element.text).to eq "foo f.d. bar"
     end
   end
 end
