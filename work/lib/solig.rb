@@ -179,7 +179,7 @@ class Solig
     # byebug
 
     r = REXML::Element.new 'w:r'
-    rt = REXML::Element.new 'w:r', r
+    rt = REXML::Element.new 'w:t', r
     rt.text = 'foo'
     add_location(p, r, carryover) if carryover && state == :location
 
