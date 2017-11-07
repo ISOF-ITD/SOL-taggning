@@ -193,11 +193,13 @@ describe Solig do
     it "processes entries with f. d." do
       ultuna = loadparagraph '5831-ultuna'
       expected = "<div><head><placeName>Ultuna</placeName></head> <p><span type='locale'>Sveriges lantbruksuniversitet</span>, <span type='locale'>f.d. gods</span>, <location><region type='landskap'>Uppland</region></location>. (<span style='italic'>in</span>) <span style='italic'>villa Wlertune</span> 1221. – Namnet innehåller genitiv av gudanamnet <span style='italic'>Ull<span> och → <span style='italic'>tuna</span>. Gudanamnet ingår också i häradsnamnet <span style='italic'>Ulleråkers härad</span>. Relationen mellan de båda namnen är omdiskuterad. Se vidare → <span style='italic'>Ulleråkers härad</span>.</p></div>"
+      actual = solig.unword(ultuna).to_s
+      expect(actual).to eq expected
     end
 
     it "works on Ulva Kvarn" do
       ulva_kvarn = loadparagraph '5842-ulva-kvarn'
-      expected = "<div><head><placeName>Ulva kvarn</placeName></head> <p><span type='locale'>hantverksby</span>, <span type='locale'>f.d. kvarn</span>, <location><settlement type='stad'>Uppsala stad</settlement><region type='landskap'>Uppland</region></location>. <span style='italic'>molendino</span> [’kvarnen’] (<span style='italic'>in</span>) <span style='italic'>Vlfawadh</span> 1344. – Namnet är sammansatt av genitiv pluralis av djurbeteckningen <span style='italic'>ulv</span> ’varg’ och <span style='italic'>vad</span>. Kvarnen är byggd vid ett gammalt vadställe. Djurbeteckningar är inte ovanliga i namn på <span style='italic'>-span</span></p></div>"
+      expected = "<div><head><placeName>Ulva kvarn</placeName></head> <p><span type='locale'>hantverksby</span>, <span type='locale'>f.d. kvarn</span>, <location><settlement type='stad'>Uppsala stad</settlement><region type='landskap'>Uppland</region></location>. <span style='italic'>molendino</span> [’kvarnen’] (<span style='italic'>in</span>) <span style='italic'>Vlfawadh</span> 1344. – Namnet är sammansatt av genitiv pluralis av djurbeteckningen <span style='italic'>ulv</span> ’varg’ och <span style='italic'>vad</span>. Kvarnen är byggd vid ett gammalt vadställe. Djurbeteckningar är inte ovanliga i namn på <span style='italic'>-vad</span>. I detta fall bör förleden ha syftat på vargar som lurade på byte vid vadet.</p></div>"
       actual = solig.unword(ulva_kvarn).to_s
       expect(actual).to eq expected
     end
