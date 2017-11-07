@@ -298,8 +298,10 @@ describe Solig do
 
   it "works on Ullvi" do # 5834
     ullvi = loadparagraph '5834-ullvi'
-    expected = "<div><head><placeName>Ullvi</placeName> <p><span type='locale'>gd</span></div>, <location>district type='socken'>Irsta sn</district><district type='härad'>Siende hd</district><region type='district'>Västmanland</region></location>. (<span style='italic'>in</span>) <span style='italic'>Villaui</span> 1371. – Namnets förled innehåller gudanamnet <span style='italic'>Ull</span> och dess efterled → <span style='italic'>vi</span> ’helig plats, kultsplats’. Namnet <span style='italic'>Ullvi</span> bars tidigare av den unga tätorten → <span style='italic'>Irsta</span> strax norr om gården.</p></div>"
+    expected = "<div><head><placeName>Ullvi</placeName></head> <p><span type='locale'>gd</span>, <location><district type='socken'>Irsta sn</district><district type='härad'>Siende hd</district><region type='landskap'>Västmanland</region></location>. (<span style='italic'>in</span>) <span style='italic'>Vllaui</span> 1371. – Namnets förled innehåller gudanamnet <span style='italic'>Ull</span> och dess efterled → <span style='italic'>vi</span> ’helig plats, kultplats’. Namnet <span style='italic'>Ullvi</span> bars tidigare också av den unga tätorten → <span style='italic'>Irsta</span> strax norr om gården.</p></div>"
     formatted = solig.unword(ullvi)
-    expect(formatted.to_s).to eq expected
+    actual = formatted.to_s
+    byebug
+    expect(actual).to eq expected
   end
 end
