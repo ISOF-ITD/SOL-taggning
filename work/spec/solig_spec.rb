@@ -320,21 +320,27 @@ describe Solig do
     it "works on entry 465" do
       akkats = loadparagraph '465-akkats'
       pending "wip"
-      expect(solig.unword(akkats).to_s).to eq "<div><head><placeName>Akkats</placeName></head> <p><span type='locale'>kraftstation i Lilla Luleälven</span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet är bildat till <span style='italic'>Akkatsfallen</span>, namn på ett på platsen tidigare befintligt vattenfallskomplex, bestående av tre fall. Fallets namn är en försvenskning av lulesam. <span style='italic'>Áhkásjgårttje</span>, sammansatt av <span type='italic'>áhkásj</span>, en diminutivform av <span style='italic'>áhkká</span> ’(samisk) gudinna; gumma; hustru’ (jfr. → <span style='italic'>Áhkká</span>), med obekant syftning, och <span style='italic'>gårttje</span> ’vattenfall’. Kraftstationens samiska namn är <span style='italic'>Áhkásj</span>.</p></div>"
+      expected = "<div><head><placeName>Akkats</placeName></head> <p><span type='locale'>kraftstation i Lilla Luleälven</span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet är bildat till <span style='italic'>Akkatsfallen</span>, namn på ett på platsen tidigare befintligt vattenfallskomplex, bestående av tre fall. Fallets namn är en försvenskning av lulesam. <span style='italic'>Áhkásjgårttje</span>, sammansatt av <span style='italic'>áhkásj</span>, en diminutivform av <span style='italic'>áhkká</span> ’(samisk) gudinna; gumma; hustru’ (jfr → <span style='italic'>Áhkká</span>), med obekant syftning, och <span style='italic'>gårttje</span> ’vattenfall’. Kraftstationens samiska namn är <span style='italic'>Áhkásj</span>.</p></div>"
+      actual = solig.unword(akkats).to_s
+      byebug
+      expect(actual).to eq expected
     end
 
     it "works on entry 474" do
       albano = loadparagraph '474-albano'
       pending "wip"
-      expect(solig.unword(albano).to_s).to eq "<div><head><placeName>Albano</placeName></head> <p><span type='locale'>område på Norra Djurgården</span>, <location><settlement type='stad'>Stockholms stad</settlement></location> → <span style='italic'>Frescati</span>.</p></div>"
+      expected = "<div><head><placeName>Albano</placeName></head> <p><span type='locale'>område på Norra Djurgården</span>, <location><settlement type='stad'>Stockholms stad</settlement></location> → <span style='italic'>Frescati</span>.</p></div>"
+      actual = solig.unword(albano).to_s
+      # byebug
+      expect(actual).to eq expected
     end
 
     it "works on entry 3383" do
       letsi = loadparagraph '3383-letsi'
       expected = "<div><head><placeName>Letsi</placeName></head> <p><span type='locale'>vattenkraftverk i Lilla Luleälven<span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet är en försvenskning av lulesam. <span style='italic'>Liehtse</span>, som var namnet på forsen före utbyggnaden. Ordet <span style='italic'>liehtse</span> betyder ’dåligt väder (dimma, duggregn)’ och syftar antagligen på att forsen orsakade dimma om vintern.</p></div>"
       actual = solig.unword(letsi).to_s
-      # byebug
       pending "wip"
+      # byebug
       expect(actual).to eq expected
     end
 
