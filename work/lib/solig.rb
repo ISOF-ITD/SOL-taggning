@@ -108,7 +108,7 @@ class Solig
   end
 
   def unword(element)
-    element = Solig.escape element
+    element.escape_text!
     div = REXML::Element.new 'div'
     p = REXML::Element.new 'p'
     carryover = ''
