@@ -112,6 +112,7 @@ class Solig
     p = REXML::Element.new 'p'
     carryover = ''
     italic = ''
+    first = true
 
     state = :initial
     headword = ''
@@ -147,7 +148,6 @@ class Solig
           end
 
           locale = location.shift
-          first = true
           while first || locale =~ /\\fd/ || locale && locale.strip !~ /\s/ && !locale.strip.is_landskap
             p.add_locale locale.strip
             p.add_escaped_text ', '
