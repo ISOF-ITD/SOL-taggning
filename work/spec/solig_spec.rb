@@ -139,6 +139,13 @@ describe REXML::Element do
       bit = doc.root.elements.first
       expect(bit.text_bit).to be_nil
     end
+
+    it "calls Solig.escape" do
+      doc = REXML::Document.new "<w:document xmlns:w=''><w:p><w:r><w:t>foo \\fd bar</w:t></w:r></w:p></w:document>"
+      bit = doc.root.elements.first.elements.first
+      expect(Solig).to receive(:escape).with('foo \\fd bar')
+      bit.text_bit
+    end
   end
 
   describe '#add_escaped_text' do

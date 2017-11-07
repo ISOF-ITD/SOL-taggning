@@ -34,7 +34,7 @@ class REXML::Element
     span.add_escaped_text text
   end
 
-  def escape_text!
+  def escape_text! # TODO A recursive version?
     savedtext = text
     self.text = ''
     add_escaped_text savedtext
@@ -98,7 +98,7 @@ class REXML::Element
 
   def text_bit
     t = REXML::XPath.first(self, 'w:t')
-    t && t.text
+    t && Solig.escape(t.text)
   end
 end
 
@@ -108,7 +108,6 @@ class Solig
   end
 
   def unword(element)
-    element.escape_text!
     div = REXML::Element.new 'div'
     p = REXML::Element.new 'p'
     carryover = ''
@@ -117,7 +116,7 @@ class Solig
     state = :initial
     headword = ''
     element.each_element('w:r') do |r|
-      byebug
+      # byebug
       if state == :initial
         if r.isbold?
           rt = r.text_bit.uspace
