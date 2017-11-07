@@ -155,6 +155,11 @@ describe REXML::Element do
       element.add_escaped_text "foo \\fd bar"
       expect(element.text).to eq "foo f.d. bar"
     end
+
+    it "doesn’t crash on nil input" do
+      root = REXML::Document.new("<doc></doc>").root
+      expect { root.add_escaped_text nil }.not_to raise_error
+    end
   end
 end
 

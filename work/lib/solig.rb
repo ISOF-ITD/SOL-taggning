@@ -47,7 +47,7 @@ class REXML::Element
   end
 
   def add_escaped_text(text)
-    add_text text.gsub(/\\fd/, 'f.d.') # FIXME Extract that somewhere
+    add_text text.gsub(/\\fd/, 'f.d.') if text # FIXME Extract that somewhere
   end
 
   def add_location_element(loc)
@@ -177,7 +177,7 @@ class Solig
           # byebug
           p.add_escaped_text carryover if carryover
           carryover = nil if carryover
-          p.add_escaped_text r.text_bit if r.text_bit
+          p.add_escaped_text r.text_bit
         end
       elsif state == :italic
         if r.isitalic?
