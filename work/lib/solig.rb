@@ -46,6 +46,7 @@ class REXML::Element
     span.add_escaped_text locale
   end
 
+  # FIXME Figure out what the deal is with w:noBreakHyphen?
   def add_escaped_text(text)
     add_text text.gsub(/\\fd/, 'f.d.') if text # FIXME Extract that somewhere
   end
