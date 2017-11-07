@@ -9,7 +9,7 @@ class String
   @@landskap = [
     'Skåne', 'Blekinge', 'Öland', 'Småland', 'Halland',
     'Västergötland', 'Bohuslän', 'Dalsland', 'Gotland', 'Östergötland',
-    'Södermanland', 'Närke', 'Värmland', 'Uppland', 'Västmandland',
+    'Södermanland', 'Närke', 'Värmland', 'Uppland', 'Västmanland',
     'Dalarna', 'Gästrikland', 'Hälsingland', 'Härjedalen', 'Medelpad',
     'Jämland', 'Ångermanland', 'Västerbotten', 'Lappland', 'Norrbotten',
   ]
