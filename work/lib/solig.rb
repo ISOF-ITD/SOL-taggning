@@ -11,7 +11,7 @@ class String
     'Västergötland', 'Bohuslän', 'Dalsland', 'Gotland', 'Östergötland',
     'Södermanland', 'Närke', 'Värmland', 'Uppland', 'Västmanland',
     'Dalarna', 'Gästrikland', 'Hälsingland', 'Härjedalen', 'Medelpad',
-    'Jämland', 'Ångermanland', 'Västerbotten', 'Lappland', 'Norrbotten',
+    'Jämtland', 'Ångermanland', 'Västerbotten', 'Lappland', 'Norrbotten',
   ]
 
   def ustrip
