@@ -52,6 +52,14 @@ describe String do
       String.landskap_regexp
       expect(String.class_variable_get(:@@landskap_regexp)).not_to be_nil
     end
+
+    it "is not anchored" do
+      expect('Småland och Västergötland' =~ String.landskap_regexp).to be_truthy
+    end
+
+    it "... really not!" do
+      expect(' Skåne' =~ String.landskap_regexp).to be_truthy
+    end
   end# TODO
 end
 
