@@ -458,4 +458,9 @@ describe Solig do
     # byebug
     expect(actual).to eq expected
   end
+
+  it "escapes id’s properly" do
+    w = REXML::XPath.first(REXML::Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Tylösand</w:t></w:r><w:r><w:t>tätort, Söndrums sn, Halmstads hd, Halland</w:t></w:r></w:p></w:document>")
+    expected = "<div xml:id='
+  end
 end
