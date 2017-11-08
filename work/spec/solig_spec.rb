@@ -245,6 +245,7 @@ describe Solig do
       form = solig.unword(kinnekulle)
       expect(form.to_s).to be =~ /^<div><head><placeName>Kinnekulle<\/placeName><\/head> <p><span type='locale'>berg<\/span>, <location><district type='härad'>Kinne<\/district><district type='härad'>Kinnefjärdings hd<\/district><region type='landskap'>Västergötland<\/region><\/location>/
     end 
+
     it "handles the case of two socknar" do
       kivik = loadparagraph '3015-kivik'
       form = solig.unword(kivik)
