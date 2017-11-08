@@ -1,5 +1,17 @@
 require 'spec_helper'
 
+describe NilClass do
+  describe '#uspace' do
+    it "returns nil|" do
+      expect(nil.uspace).to be_nil
+    end
+
+    it "doesn’t crash" do
+      expect { nil.uspace }.not_to raise_error
+    end
+  end
+end
+
 describe String do
   let(:ox) { "Oxie härad " } # With trailing U+2003 EM SPACE and U+2005 FOUR-PER-EM SPACE in the middle
 

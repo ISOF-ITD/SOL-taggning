@@ -4,6 +4,12 @@ require 'byebug'
 class UnexpectedElement < StandardError; end
 class UnexpectedLocation < StandardError; end
 
+class NilClass
+  def uspace
+    nil
+  end
+end
+
 class String
   @@uspaces = '[  ]' # FIXME Complete!
   @@landskap = [
