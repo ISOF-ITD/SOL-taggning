@@ -118,6 +118,7 @@ class Solig
 
   def unword(element)
     div = REXML::Element.new 'div'
+    div.add_attribute 'type', '?'
     p = REXML::Element.new 'p'
     carryover = ''
     italic = ''
