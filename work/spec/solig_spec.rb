@@ -432,4 +432,9 @@ describe Solig do
     valdemarsvik = loadparagraph '5913-valdemarsvik'
     expect(solig.unword(valdemarsvik).to_s).to be =~ /<region type='landskap'>Småland<\/region>/
   end
+
+  it "outputs the id" do
+    w = "<w:document xmlns:w=''><w:p><w:r>Ingelstad tätort, Östra Torsås sn, Konga hd, Småland<w:t></w:t></w:r></w:document>"
+    expect(solig.unword(w).to_s).to eq "<div xml:id='Ingelstad'><head><placeName>Ingelstad</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Östra Torsås sn</district><district type='härad'>Konga hd</district><region type='landskap'>Småland</region></location></p></div>"
+  end
 end
