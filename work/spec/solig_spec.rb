@@ -450,7 +450,7 @@ describe Solig do
   end
 
   it "outputs the id" do
-    w = REXML::XPath.first(REXML::Document.new("<w:document xmlns:w=''><w:p><w:r><w:t>Ingelstad</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>tätort, Östra Torsås sn, Konga hd, Småland</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
+    w = REXML::XPath.first(REXML::Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Ingelstad</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>tätort, Östra Torsås sn, Konga hd, Småland</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
     expected = "<div xml:id='Ingelstad'><head><placeName>Ingelstad</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Östra Torsås sn</district><district type='härad'>Konga hd</district><region type='landskap'>Småland</region></location></p></div>"
     actual = solig.unword(w).to_s
     byebug
