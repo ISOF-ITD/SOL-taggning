@@ -247,7 +247,6 @@ describe Solig do
     it "processes a parish with a compound name" do
       västra_vram = loadparagraph '6331-västra-vram'
       form = solig.unword(västra_vram)
-      pending "Not yet"
       expect(form.to_s).to be =~ /^<div xml:id='Västra_Vram'><head><placeName>Västra Vram<\/placeName><\/head> <p><span type='locale'>sn<\/span>, <location><district type='härad'>Gärds hd<\/district><region type='landskap'>Skåne<\/region><\/location>/
     end
 
@@ -288,7 +287,6 @@ describe Solig do
 
     it "works on Ulva Kvarn" do
       ulva_kvarn = loadparagraph '5842-ulva-kvarn'
-      pending
       expected = "<div xml:id='Ulva_kvarn'><head><placeName>Ulva kvarn</placeName></head> <p><span type='locale'>hantverksby</span>, <span type='locale'>f.d. kvarn</span>, <location><settlement type='stad'>Uppsala stad</settlement><region type='landskap'>Uppland</region></location>. <span style='italic'>molendino</span> [’kvarnen’] (<span style='italic'>in</span>) <span style='italic'>Vlfawadh</span> 1344. – Namnet är sammansatt av genitiv pluralis av djurbeteckningen <span style='italic'>ulv</span> ’varg’ och <span style='italic'>vad</span>. Kvarnen är byggd vid ett gammalt vadställe. Djurbeteckningar är inte ovanliga i namn på -<span style='italic'>vad</span>. I detta fall bör förleden ha syftat på vargar som lurade på byte vid vadet.</p></div>"
       actual = solig.unword(ulva_kvarn).to_s
       expect(actual).to eq expected
@@ -394,7 +392,7 @@ describe Solig do
       expected = "<div xml:id='Oxie_härad'><head><placeName>Oxie härad</placeName></head> <p><span type='locale'>hd</span>, <location><region type='landskap'>Skåne</region></location>. <span style='italic'>Oshøgheret</span> ca 1300. – Häradet har namn efter kyrkbyn i socknen → <span style='italic'>Oxie</span>.</p></div>"
       formatted = solig.unword(oxie)
       actual = formatted.to_s
-      byebug
+      # byebug
       expect(formatted.to_s).to eq expected
     end
 
@@ -466,7 +464,6 @@ describe Solig do
     w = REXML::XPath.first(REXML::Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Mellby, Norra, Södra</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>snr, Kållands hd, Västergötland</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
     expected = "<div xml:id='Mellby._Norra._Södra'><head><placeName>Mellby, Norra, Södra</placeName></head> <p><span type='locale'>snr</span>, <location><district type='härad'>Kållands hd</district><region type='landskap'>Västergötland</region></location></p></div>"
     actual = solig.unword(w).to_s
-    byebug
     expect(actual).to eq expected
   end
 end
