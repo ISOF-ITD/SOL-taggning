@@ -223,7 +223,7 @@ describe Solig do
     it "dismantles the Word XML structure" do
       bro = loadparagraph '1023-bro'
       pending "This is going to be painful"
-      expect(solig.unword(bro).to_s).to eq "<div><head><placeName>Bro</placeName></head> <p><span type='locale'>sn</span>, <location><district type='skeppslag'>Bro och Vätö skg</district><region type='landskap'>Uppland</region></location> → <span style='italic'>Roslags-Bro</span>.</p></div>"
+      expect(solig.unword(bro).to_s).to eq "<div><head><placeName>Bro</placeName></head> <p><span type='locale'>sn</span>, <location><district type='skeppslag'>Bro och Vätö skg</district><region type='landskap'>Uppland</region></location> → <span type='kursiv'>Roslags-Bro</span>.</p></div>"
     end
 
     it "processes a parish without a härad" do
@@ -280,14 +280,14 @@ describe Solig do
 
     it "processes entries with f. d." do
       ultuna = loadparagraph '5841-ultuna'
-      expected = "<div xml:id='Ultuna' type='?'><head><placeName>Ultuna</placeName></head> <p><span type='locale'>Sveriges lantbruksuniversitet</span>, <span type='locale'>f.d. gods</span>, <location><settlement type='stad'>Uppsala stad</settlement><region type='landskap'>Uppland</region></location>. (<span style='italic'>in</span>) <span style='italic'>villa Wlertune</span> 1221. – Namnet innehåller genitiv av gudanamnet <span style='italic'>Ull</span> och → <span style='italic'>tuna</span>. Gudanamnet ingår också i häradsnamnet <span style='italic'>Ulleråkers härad</span>. Relationen mellan de båda namnen är omdiskuterad. Se vidare → <span style='italic'>Ulleråkers härad</span>.</p></div>"
+      expected = "<div xml:id='Ultuna' type='?'><head><placeName>Ultuna</placeName></head> <p><span type='locale'>Sveriges lantbruksuniversitet</span>, <span type='locale'>f.d. gods</span>, <location><settlement type='stad'>Uppsala stad</settlement><region type='landskap'>Uppland</region></location>. (<span type='kursiv'>in</span>) <span type='kursiv'>villa Wlertune</span> 1221. – Namnet innehåller genitiv av gudanamnet <span type='kursiv'>Ull</span> och → <span type='kursiv'>tuna</span>. Gudanamnet ingår också i häradsnamnet <span type='kursiv'>Ulleråkers härad</span>. Relationen mellan de båda namnen är omdiskuterad. Se vidare → <span type='kursiv'>Ulleråkers härad</span>.</p></div>"
       actual = solig.unword(ultuna).to_s
       expect(actual).to eq expected
     end
 
     it "works on Ulva Kvarn" do
       ulva_kvarn = loadparagraph '5842-ulva-kvarn'
-      expected = "<div xml:id='Ulva_kvarn' type='?'><head><placeName>Ulva kvarn</placeName></head> <p><span type='locale'>hantverksby</span>, <span type='locale'>f.d. kvarn</span>, <location><settlement type='stad'>Uppsala stad</settlement><region type='landskap'>Uppland</region></location>. <span style='italic'>molendino</span> [’kvarnen’] (<span style='italic'>in</span>) <span style='italic'>Vlfawadh</span> 1344. – Namnet är sammansatt av genitiv pluralis av djurbeteckningen <span style='italic'>ulv</span> ’varg’ och <span style='italic'>vad</span>. Kvarnen är byggd vid ett gammalt vadställe. Djurbeteckningar är inte ovanliga i namn på -<span style='italic'>vad</span>. I detta fall bör förleden ha syftat på vargar som lurade på byte vid vadet.</p></div>"
+      expected = "<div xml:id='Ulva_kvarn' type='?'><head><placeName>Ulva kvarn</placeName></head> <p><span type='locale'>hantverksby</span>, <span type='locale'>f.d. kvarn</span>, <location><settlement type='stad'>Uppsala stad</settlement><region type='landskap'>Uppland</region></location>. <span type='kursiv'>molendino</span> [’kvarnen’] (<span type='kursiv'>in</span>) <span type='kursiv'>Vlfawadh</span> 1344. – Namnet är sammansatt av genitiv pluralis av djurbeteckningen <span type='kursiv'>ulv</span> ’varg’ och <span type='kursiv'>vad</span>. Kvarnen är byggd vid ett gammalt vadställe. Djurbeteckningar är inte ovanliga i namn på -<span type='kursiv'>vad</span>. I detta fall bör förleden ha syftat på vargar som lurade på byte vid vadet.</p></div>"
       actual = solig.unword(ulva_kvarn).to_s
       expect(actual).to eq expected
     end
@@ -298,7 +298,7 @@ describe Solig do
       abbekås = loadparagraph '444-abbekås'
       form = solig.unword(abbekås)
       actual = form.to_s
-      expected = "<div xml:id='Abbekås' type='?'><head><placeName>Abbekås</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Skivarps sn</district><district type='härad'>Vemmenhögs hd</district><region type='landskap'>Skåne</region></location>. <span style='italic'>Abbekassz</span> 1536. – Namnet på detta gamla fiskeläge innehåller troligen mansnamnet fda. <span style='italic'>Abbi</span>. Efterleden är dialektordet <span style='italic'>kås</span> ’båtplats, mindre hamn’.</p></div>"
+      expected = "<div xml:id='Abbekås' type='?'><head><placeName>Abbekås</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Skivarps sn</district><district type='härad'>Vemmenhögs hd</district><region type='landskap'>Skåne</region></location>. <span type='kursiv'>Abbekassz</span> 1536. – Namnet på detta gamla fiskeläge innehåller troligen mansnamnet fda. <span type='kursiv'>Abbi</span>. Efterleden är dialektordet <span type='kursiv'>kås</span> ’båtplats, mindre hamn’.</p></div>"
       expect(actual).to eq expected
     end
 
@@ -312,7 +312,7 @@ describe Solig do
 
     it "works on an entry with an arrow" do
       lillbäls = loadparagraph '3431-lillbäls'
-      expected = "<div xml:id='Lillbäls' type='?'><head><placeName>Lillbäls</placeName></head> <p><span type='locale'>gd</span>, <location><district type='socken'>Bäls sn</district><region type='landskap'>Gotland</region></location> → <span style='italic'>Bäl</span>.</p></div>"
+      expected = "<div xml:id='Lillbäls' type='?'><head><placeName>Lillbäls</placeName></head> <p><span type='locale'>gd</span>, <location><district type='socken'>Bäls sn</district><region type='landskap'>Gotland</region></location> → <span type='kursiv'>Bäl</span>.</p></div>"
       actual = solig.unword(lillbäls).to_s
       expect(actual).to eq expected
     end
@@ -320,13 +320,13 @@ describe Solig do
     it "doesn’t screw up on arrows" do
       ajmunds = loadparagraph '462-ajmunds'
       beljuset = solig.unword(ajmunds)
-      expect(beljuset.to_s).to eq "<div xml:id='Ajmunds' type='?'><head><placeName>Ajmunds</placeName></head> <p><span type='locale'>gårdnamn</span>, <location><region type='landskap'>Gotland</region></location> → <span style='italic'>Smiss</span>.</p></div>"
+      expect(beljuset.to_s).to eq "<div xml:id='Ajmunds' type='?'><head><placeName>Ajmunds</placeName></head> <p><span type='locale'>gårdnamn</span>, <location><region type='landskap'>Gotland</region></location> → <span type='kursiv'>Smiss</span>.</p></div>"
     end
 
     it "works on entry 459" do
       áhkká = loadparagraph '459-áhkká'
       pending "wip"
-      expected = "<div><head><placeName>Áhkká</placeName></head> <p><span type='locale'>fjällmassiv i Stora Sjöfallets nationalpark</span>, <location><district type='socken'>Jokkmokks sn</district></region type='landskap'>Lappland</region></location>. – Det lulesamiska nammet (med äldre stavning <span style='italic'>Akka</span>) innehåller ett ornamnselement som förekommer i många berg- och sjönamn i Lule lappmark och som betyder ’(samisk) gudinna; gumma; hustru’. Ordet ingår även i kvinnliga gudabeteckningar. Många av <span style='italic'>Áhkká</span>-namnen kan knytas till samernas forntida kult.</p></div>"
+      expected = "<div><head><placeName>Áhkká</placeName></head> <p><span type='locale'>fjällmassiv i Stora Sjöfallets nationalpark</span>, <location><district type='socken'>Jokkmokks sn</district></region type='landskap'>Lappland</region></location>. – Det lulesamiska nammet (med äldre stavning <span type='kursiv'>Akka</span>) innehåller ett ornamnselement som förekommer i många berg- och sjönamn i Lule lappmark och som betyder ’(samisk) gudinna; gumma; hustru’. Ordet ingår även i kvinnliga gudabeteckningar. Många av <span type='kursiv'>Áhkká</span>-namnen kan knytas till samernas forntida kult.</p></div>"
       actual = solig.unword(áhkká).to_s
       # byebug
       expect(actual).to eq expected
@@ -335,14 +335,14 @@ describe Solig do
     it "works on entry 460" do
       áhkájávrre = loadparagraph '460-áhkájávrre'
       actual = solig.unword(áhkájávrre).to_s
-      expected = "<div xml:id='Áhkájávrre' type='?'><head><placeName>Áhkájávrre</placeName></head> <p><span type='locale'>vattenregleringsmagasin i Stora Luleälven</span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet (med försvenskad stavning <span style='italic'>Akkajaure</span>) är givet efter fjället → <span style='italic'>Áhkká</span>. Förleden är genitiv singularis av fjällmassivets namn; efterleden är <span style='italic'>jávrre</span> ’sjö’. Namnet har tillkommit efter regleringen av sjösystemet under 1900-talet.</p></div>"
+      expected = "<div xml:id='Áhkájávrre' type='?'><head><placeName>Áhkájávrre</placeName></head> <p><span type='locale'>vattenregleringsmagasin i Stora Luleälven</span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet (med försvenskad stavning <span type='kursiv'>Akkajaure</span>) är givet efter fjället → <span type='kursiv'>Áhkká</span>. Förleden är genitiv singularis av fjällmassivets namn; efterleden är <span type='kursiv'>jávrre</span> ’sjö’. Namnet har tillkommit efter regleringen av sjösystemet under 1900-talet.</p></div>"
       # byebug
       expect(actual).to eq expected
     end
 
     it "works on entry 465" do
       akkats = loadparagraph '465-akkats'
-      expected = "<div xml:id='Akkats' type='?'><head><placeName>Akkats</placeName></head> <p><span type='locale'>kraftstation i Lilla Luleälven</span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet är bildat till <span style='italic'>Akkatsfallen</span>, namn på ett på platsen tidigare befintligt vattenfallskomplex, bestående av tre fall. Fallets namn är en försvenskning av lulesam. <span style='italic'>Áhkásjgårttje</span>, sammansatt av <span style='italic'>áhkásj</span>, en diminutivform av <span style='italic'>áhkká</span> ’(samisk) gudinna; gumma; hustru’ (jfr → <span style='italic'>Áhkká</span>), med obekant syftning, och <span style='italic'>gårttje</span> ’vattenfall’. Kraftstationens samiska namn är <span style='italic'>Áhkásj</span>.</p></div>"
+      expected = "<div xml:id='Akkats' type='?'><head><placeName>Akkats</placeName></head> <p><span type='locale'>kraftstation i Lilla Luleälven</span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet är bildat till <span type='kursiv'>Akkatsfallen</span>, namn på ett på platsen tidigare befintligt vattenfallskomplex, bestående av tre fall. Fallets namn är en försvenskning av lulesam. <span type='kursiv'>Áhkásjgårttje</span>, sammansatt av <span type='kursiv'>áhkásj</span>, en diminutivform av <span type='kursiv'>áhkká</span> ’(samisk) gudinna; gumma; hustru’ (jfr → <span type='kursiv'>Áhkká</span>), med obekant syftning, och <span type='kursiv'>gårttje</span> ’vattenfall’. Kraftstationens samiska namn är <span type='kursiv'>Áhkásj</span>.</p></div>"
       actual = solig.unword(akkats).to_s
       expect(actual).to eq expected
     end
@@ -350,7 +350,7 @@ describe Solig do
     it "works on entry 474" do
       albano = loadparagraph '474-albano'
       pending "wip"
-      expected = "<div><head><placeName>Albano</placeName></head> <p><span type='locale'>område på Norra Djurgården</span>, <location><settlement type='stad'>Stockholms stad</settlement></location> → <span style='italic'>Frescati</span>.</p></div>"
+      expected = "<div><head><placeName>Albano</placeName></head> <p><span type='locale'>område på Norra Djurgården</span>, <location><settlement type='stad'>Stockholms stad</settlement></location> → <span type='kursiv'>Frescati</span>.</p></div>"
       actual = solig.unword(albano).to_s
       # byebug
       expect(actual).to eq expected
@@ -358,7 +358,7 @@ describe Solig do
 
     it "works on entry 3383" do
       letsi = loadparagraph '3383-letsi'
-      expected = "<div><head><placeName>Letsi</placeName></head> <p><span type='locale'>vattenkraftverk i Lilla Luleälven<span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet är en försvenskning av lulesam. <span style='italic'>Liehtse</span>, som var namnet på forsen före utbyggnaden. Ordet <span style='italic'>liehtse</span> betyder ’dåligt väder (dimma, duggregn)’ och syftar antagligen på att forsen orsakade dimma om vintern.</p></div>"
+      expected = "<div><head><placeName>Letsi</placeName></head> <p><span type='locale'>vattenkraftverk i Lilla Luleälven<span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet är en försvenskning av lulesam. <span type='kursiv'>Liehtse</span>, som var namnet på forsen före utbyggnaden. Ordet <span type='kursiv'>liehtse</span> betyder ’dåligt väder (dimma, duggregn)’ och syftar antagligen på att forsen orsakade dimma om vintern.</p></div>"
       actual = solig.unword(letsi).to_s
       pending "wip"
       # byebug
@@ -368,28 +368,28 @@ describe Solig do
     it "replaces the Unicode spaces" do
       lilla_tjärby = loadparagraph '3426-lilla-tjärby'
       formatted = solig.unword(lilla_tjärby)
-      expected = "<div xml:id='Lilla_Tjärby' type='?'><head><placeName>Lilla Tjärby</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Laholms sn</district><district type='härad'>Höks hd</district><region type='landskap'>Halland</region></location>. – Tätorten har namn efter en intilliggande by, ursprungligen en del av byn Tjärby i grannsocknen → <span style='italic'>Tjärby</span>. Namnet <span style='italic'>Lilla Tjärby</span> är belagt från mitten av 1600-talet. </p></div>"
+      expected = "<div xml:id='Lilla_Tjärby' type='?'><head><placeName>Lilla Tjärby</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Laholms sn</district><district type='härad'>Höks hd</district><region type='landskap'>Halland</region></location>. – Tätorten har namn efter en intilliggande by, ursprungligen en del av byn Tjärby i grannsocknen → <span type='kursiv'>Tjärby</span>. Namnet <span type='kursiv'>Lilla Tjärby</span> är belagt från mitten av 1600-talet. </p></div>"
       expect(formatted.to_s).to eq expected
     end
 
     it "works on an entry with a dot" do
       aitikgruvan = loadparagraph '461-aitikgruvan'
       formatted = solig.unword(aitikgruvan)
-      expected = "<div xml:id='Aitikgruvan' type='?'><head><placeName>Aitikgruvan</placeName></head> <p><span type='locale'>gruva</span>, <location><district type='socken'>Gällivare sn</district><region type='landskap'>Lappland</region></location>. – Namnet är givet efter berget <span style='italic'>Ájtek(várre)</span>, bildat till lulesam. <span style='italic'>ájtte</span> ’förrådsbod, härbre’ och <span style='italic'>várre</span> ’berg, fjäll’.</p></div>"
+      expected = "<div xml:id='Aitikgruvan' type='?'><head><placeName>Aitikgruvan</placeName></head> <p><span type='locale'>gruva</span>, <location><district type='socken'>Gällivare sn</district><region type='landskap'>Lappland</region></location>. – Namnet är givet efter berget <span type='kursiv'>Ájtek(várre)</span>, bildat till lulesam. <span type='kursiv'>ájtte</span> ’förrådsbod, härbre’ och <span type='kursiv'>várre</span> ’berg, fjäll’.</p></div>"
     end
 
     it "works on the first entry in the lexicon" do # 444 Abbekås
       abbekaas = loadparagraph '444-abbekås'
 
       formatted = solig.unword(abbekaas)
-      expected = "<div xml:id='Abbekås' type='?'><head><placeName>Abbekås</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Skivarps sn</district><district type='härad'>Vemmenhögs hd</district><region type='landskap'>Skåne</region></location>. <span style='italic'>Abbekassz</span> 1536. – Namnet på detta gamla fiskeläge innehåller troligen mansnamnet fda. <span style='italic'>Abbi</span>. Efterleden är dialektordet <span style='italic'>kås</span> ’båtplats, mindre hamn’.</p></div>"
+      expected = "<div xml:id='Abbekås' type='?'><head><placeName>Abbekås</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Skivarps sn</district><district type='härad'>Vemmenhögs hd</district><region type='landskap'>Skåne</region></location>. <span type='kursiv'>Abbekassz</span> 1536. – Namnet på detta gamla fiskeläge innehåller troligen mansnamnet fda. <span type='kursiv'>Abbi</span>. Efterleden är dialektordet <span type='kursiv'>kås</span> ’båtplats, mindre hamn’.</p></div>"
       actual = formatted.to_s
       expect(actual).to eq expected
     end
 
     it "works on an entry with a headword in two parts" do # Oxie härad (element 4299)
       oxie = loadparagraph '4299-oxie'
-      expected = "<div xml:id='Oxie_härad' type='?'><head><placeName>Oxie härad</placeName></head> <p><span type='locale'>hd</span>, <location><region type='landskap'>Skåne</region></location>. <span style='italic'>Oshøgheret</span> ca 1300. – Häradet har namn efter kyrkbyn i socknen → <span style='italic'>Oxie</span>.</p></div>"
+      expected = "<div xml:id='Oxie_härad' type='?'><head><placeName>Oxie härad</placeName></head> <p><span type='locale'>hd</span>, <location><region type='landskap'>Skåne</region></location>. <span type='kursiv'>Oshøgheret</span> ca 1300. – Häradet har namn efter kyrkbyn i socknen → <span type='kursiv'>Oxie</span>.</p></div>"
       formatted = solig.unword(oxie)
       actual = formatted.to_s
       # byebug
@@ -400,7 +400,7 @@ describe Solig do
       ucklum = loadparagraph '5813-ucklum'
 
       formatted = solig.unword(ucklum)
-      expected = "<div xml:id='Ucklum' type='?'><head><placeName>Ucklum</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Inlands Nordre hd</district><region type='landskap'>Bohuslän</region></location>. <span style='italic'>Auklanda kirkia</span> 1388. – Socknen har fått sitt namn efter kyrkbyn (numera tätort). Det kan vara identiskt med det från sydvästra Norge kända <span style='italic'>Aukland</span>, som har antagits innehålla ett ord med betydelsen ’ökat eller tillfogat land, nyodling’. Det är här i så fall fråga om en mycket tidig nyodling till byn Grössby.</p></div>"
+      expected = "<div xml:id='Ucklum' type='?'><head><placeName>Ucklum</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Inlands Nordre hd</district><region type='landskap'>Bohuslän</region></location>. <span type='kursiv'>Auklanda kirkia</span> 1388. – Socknen har fått sitt namn efter kyrkbyn (numera tätort). Det kan vara identiskt med det från sydvästra Norge kända <span type='kursiv'>Aukland</span>, som har antagits innehålla ett ord med betydelsen ’ökat eller tillfogat land, nyodling’. Det är här i så fall fråga om en mycket tidig nyodling till byn Grössby.</p></div>"
       actual = formatted.to_s
       # byebug
       expect(actual).to eq expected
@@ -409,12 +409,12 @@ describe Solig do
     it "works on Ume lappmark" do
       ume_lappmark = loadparagraph '5848-ume-lappmark'
       pending "Maybe later"
-      expected = "<div xml:id='Ume_lappmark' type='?'><head><placeName>Ume lappmark</placeName></head> <p><span type='locale'>del av Lappland</span>. – Namnet är ursprungligen en historisk-administrativ benämning på samebygden som handels- och beskattningsområde. Det är givet efter huvudorten → <span style='italic'>Umeå</span> i Västerbotten.</p></div>"
+      expected = "<div xml:id='Ume_lappmark' type='?'><head><placeName>Ume lappmark</placeName></head> <p><span type='locale'>del av Lappland</span>. – Namnet är ursprungligen en historisk-administrativ benämning på samebygden som handels- och beskattningsområde. Det är givet efter huvudorten → <span type='kursiv'>Umeå</span> i Västerbotten.</p></div>"
       actual = solig.unword(ume_lappmark).to_s
       # byebug
       expect(actual).to eq expected
       pending "Maybe even later"
-      expect(actual).to eq "<div xml:id='Ume_lappmark' type='?'><head><placeName>Ume lappmark</placeName></head> <p><span type='locale'>del av</span><location><region type='landskap'>Lappland</region></location>. – Namnet är ursprungligen en historisk-administrativ benämning på samebygden som handels- och beskattningsområde. Det är givet efter huvudorten → <span style='italic'>Umeå</span> i Västerbotten.</p></div>"
+      expect(actual).to eq "<div xml:id='Ume_lappmark' type='?'><head><placeName>Ume lappmark</placeName></head> <p><span type='locale'>del av</span><location><region type='landskap'>Lappland</region></location>. – Namnet är ursprungligen en historisk-administrativ benämning på samebygden som handels- och beskattningsområde. Det är givet efter huvudorten → <span type='kursiv'>Umeå</span> i Västerbotten.</p></div>"
     end
   end
 
@@ -432,7 +432,7 @@ describe Solig do
 
   it "works on Ullvi" do # 5834
     ullvi = loadparagraph '5834-ullvi'
-    expected = "<div xml:id='Ullvi' type='?'><head><placeName>Ullvi</placeName></head> <p><span type='locale'>gd</span>, <location><district type='socken'>Irsta sn</district><district type='härad'>Siende hd</district><region type='landskap'>Västmanland</region></location>. (<span style='italic'>in</span>) <span style='italic'>Vllaui</span> 1371. – Namnets förled innehåller gudanamnet <span style='italic'>Ull</span> och dess efterled → <span style='italic'>vi</span> ’helig plats, kultplats’. Namnet <span style='italic'>Ullvi</span> bars tidigare också av den unga tätorten → <span style='italic'>Irsta</span> strax norr om gården.</p></div>"
+    expected = "<div xml:id='Ullvi' type='?'><head><placeName>Ullvi</placeName></head> <p><span type='locale'>gd</span>, <location><district type='socken'>Irsta sn</district><district type='härad'>Siende hd</district><region type='landskap'>Västmanland</region></location>. (<span type='kursiv'>in</span>) <span type='kursiv'>Vllaui</span> 1371. – Namnets förled innehåller gudanamnet <span type='kursiv'>Ull</span> och dess efterled → <span type='kursiv'>vi</span> ’helig plats, kultplats’. Namnet <span type='kursiv'>Ullvi</span> bars tidigare också av den unga tätorten → <span type='kursiv'>Irsta</span> strax norr om gården.</p></div>"
     formatted = solig.unword(ullvi)
     actual = formatted.to_s
     expect(actual).to eq expected
