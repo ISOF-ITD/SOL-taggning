@@ -164,9 +164,9 @@ class Solig
             p.add_escaped_text ', '
             location.unshift(locale)
           else
-            # p.add_text separator
-            # p.add_text tail
-            # carryover = nil
+            p.add_text separator
+            p.add_text tail
+            carryover = nil
             # state = :remainder
             next
           end
