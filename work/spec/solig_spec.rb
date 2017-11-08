@@ -466,4 +466,6 @@ describe Solig do
     actual = solig.unword(w).to_s
     expect(actual).to eq expected
   end
+
+  it "adds an empty bebyggelsenamn"
 end
