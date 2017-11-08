@@ -138,6 +138,7 @@ class Solig
           headtag = REXML::Element.new 'head', div
           head = REXML::Element.new 'placeName', headtag
           head.text = headword.ustrip
+          div.add_attribute 'xml:id', headword.ustrip
           carryover = r.text_bit.uspace
           state = :locale
         end
