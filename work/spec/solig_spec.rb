@@ -468,7 +468,7 @@ describe Solig do
   end
 
   it "adds an empty bebyggelsenamn" do
-    w = REXML::XPath.first(REXML::Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Kattorp</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>sn, tätort, Luggude härad, Skåne</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
+    w = REXML::XPath.first(REXML::Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Kattorp</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>sn, tätort, Luggude hd, Skåne</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
     expected = "<div xml:id='Kattorp' type='?'><head><placeName>Kattorp</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Luggude härad</district><region type='landskap'>Skåne</region></location></p></div>"
     actual = solig.unword(w).to_s
     expect(actual).to eq expected
