@@ -107,7 +107,7 @@ end
 
 class Solig
   def self.escape(text)
-    text.gsub(/f\.d\./, '\\fd')
+    text.gsub(/f\.d\./, '\\fd') if text
   end
 
   def unword(element)

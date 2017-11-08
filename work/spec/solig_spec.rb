@@ -201,6 +201,10 @@ describe Solig do
     it "replaces “f.d.” with \\fd" do
       expect(Solig.escape('lantbruksuniversitet, f.d. gods')).to eq 'lantbruksuniversitet, \\fd gods'
     end
+
+    it "doesn’t crash on nil input" do
+      expect { Solig.escape(nil) }.not_to raise_error
+    end
   end
 
   describe '#unword' do
@@ -434,7 +438,7 @@ describe Solig do
   end
 
   it "outputs the id" do
-    w = "<w:document xmlns:w=''><w:p><w:r>Ingelstad tätort, Östra Torsås sn, Konga hd, Småland<w:t></w:t></w:r></w:document>"
+    w = REXML::XPath.first(REXML::Document.new("<w:document xmlns:w=''><w:p><w:r>Ingelstad tätort, Östra Torsås sn, Konga hd, Småland<w:t></w:t></w:r></w:p></w:document>"), '/w:document/w:p')
     expect(solig.unword(w).to_s).to eq "<div xml:id='Ingelstad'><head><placeName>Ingelstad</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Östra Torsås sn</district><district type='härad'>Konga hd</district><region type='landskap'>Småland</region></location></p></div>"
   end
 end
