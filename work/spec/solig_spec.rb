@@ -408,7 +408,7 @@ describe Solig do
       pending "Maybe later"
       expected = "<div><head><placeName>Ume lappmark</placeName></head> <p><span type='locale'>del av Lappland</span>. – Namnet är ursprungligen en historisk-administrativ benämning på samebygden som handels- och beskattningsområde. Det är givet efter huvudorten → <span style='italic'>Umeå</span> i Västerbotten.</p></div>"
       actual = solig.unword(ume_lappmark).to_s
-      byebug
+      # byebug
       expect(actual).to eq expected
       pending "Maybe even later"
       expect(actual).to eq "<div><head><placeName>Ume lappmark</placeName></head> <p><span type='locale'>del av</span><location><region type='landskap'>Lappland</region></location>. – Namnet är ursprungligen en historisk-administrativ benämning på samebygden som handels- och beskattningsområde. Det är givet efter huvudorten → <span style='italic'>Umeå</span> i Västerbotten.</p></div>"
@@ -453,7 +453,7 @@ describe Solig do
     w = REXML::XPath.first(REXML::Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Ingelstad</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>tätort, Östra Torsås sn, Konga hd, Småland</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
     expected = "<div xml:id='Ingelstad'><head><placeName>Ingelstad</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Östra Torsås sn</district><district type='härad'>Konga hd</district><region type='landskap'>Småland</region></location></p></div>"
     actual = solig.unword(w).to_s
-    byebug
+    # byebug
     expect(actual).to eq expected
   end
 end
