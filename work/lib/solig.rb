@@ -126,7 +126,7 @@ class Solig
     state = :initial
     headword = ''
     element.each_element('w:r') do |r|
-      # byebug
+      byebug
       if state == :initial
         if r.isbold?
           rt = r.text_bit.uspace
@@ -138,7 +138,7 @@ class Solig
           headtag = REXML::Element.new 'head', div
           head = REXML::Element.new 'placeName', headtag
           head.text = headword.ustrip
-          div.add_attribute 'xml:id', headword.ustrip
+          div.add_attribute 'xml:id', headword.ustrip.gsub(/ /, '_').gsub(/,/, '.')
           carryover = r.text_bit.uspace
           state = :locale
         end
@@ -215,6 +215,7 @@ class Solig
     r = REXML::Element.new 'w:r'
     rt = REXML::Element.new 'w:t', r
     rt.text = 'foo'
+    byebug
     add_location(p, r, carryover) if carryover && state == :location
 
     # if carryover

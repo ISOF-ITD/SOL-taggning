@@ -391,8 +391,11 @@ describe Solig do
 
     it "works on an entry with a headword in two parts" do # Oxie härad (element 4299)
       oxie = loadparagraph '4299-oxie'
+      expected = "<div xml:id='Oxie_härad'><head><placeName>Oxie härad</placeName></head> <p><span type='locale'>hd</span>, <location><region type='landskap'>Skåne</region></location>. <span style='italic'>Oshøgheret</span> ca 1300. – Häradet har namn efter kyrkbyn i socknen → <span style='italic'>Oxie</span>.</p></div>"
       formatted = solig.unword(oxie)
-      expect(formatted.to_s).to eq "<div xml:id='Oxie härad'><head><placeName>Oxie härad</placeName></head> <p><span type='locale'>hd</span>, <location><region type='landskap'>Skåne</region></location>. <span style='italic'>Oshøgheret</span> ca 1300. – Häradet har namn efter kyrkbyn i socknen → <span style='italic'>Oxie</span>.</p></div>"
+      actual = formatted.to_s
+      byebug
+      expect(formatted.to_s).to eq expected
     end
 
     it "works on the first U entry" do
@@ -460,7 +463,10 @@ describe Solig do
   end
 
   it "escapes id’s properly" do
-    w = REXML::XPath.first(REXML::Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Tylösand</w:t></w:r><w:r><w:t>tätort, Söndrums sn, Halmstads hd, Halland</w:t></w:r></w:p></w:document>")
-    expected = "<div xml:id='
+    w = REXML::XPath.first(REXML::Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Mellby, Norra, Södra</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>snr, Kållands hd, Västergötland</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
+    expected = "<div xml:id='Mellby._Norra._Södra'><head><placeName>Mellby, Norra, Södra</placeName></head> <p><span type='locale'>snr</span>, <location><district type='härad'>Kållands hd</district><region type='landskap'>Västergötland</region></location></p></div>"
+    actual = solig.unword(w).to_s
+    byebug
+    expect(actual).to eq expected
   end
 end
