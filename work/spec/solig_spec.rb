@@ -84,7 +84,7 @@ describe REXML::Element do
       foo.add_italic_text 'bar'
       foo.add_text ' quux'
 
-      expect(foo.to_s).to eq "<doc>foo <span style='italic'>bar</span> quux</doc>"
+      expect(foo.to_s).to eq "<doc>foo <span type='kursiv'>bar</span> quux</doc>"
     end
 
     it "calls #add_escaped_text" do

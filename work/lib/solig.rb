@@ -40,7 +40,7 @@ end
 class REXML::Element
   def add_italic_text(text)
     span = REXML::Element.new 'span', self
-    span.add_attribute 'style', 'italic'
+    span.add_attribute 'type', 'kursiv'
     span.add_escaped_text text
   end
 
