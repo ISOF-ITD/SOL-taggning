@@ -415,6 +415,11 @@ describe Solig do
       pending "Maybe even later"
       expect(actual).to eq "<div xml:id='Ume_lappmark' type='?'><head><placeName>Ume lappmark</placeName></head> <p><span type='locale'>del av</span><location><region type='landskap'>Lappland</region></location>. – Namnet är ursprungligen en historisk-administrativ benämning på samebygden som handels- och beskattningsområde. Det är givet efter huvudorten → <span type='kursiv'>Umeå</span> i Västerbotten.</p></div>"
     end
+
+    it "works on Umeå" do
+      umeå = loadparagraph '5849-umeå'
+      expect(solig.unword(umeå).to_s).to be =~ /xml:id='Umeå'/
+    end
   end
 
   it "doesn’t crash on Undersåker" do
