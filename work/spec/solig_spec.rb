@@ -409,6 +409,11 @@ describe Solig do
       expect(actual).to eq expected
     end
 
+    it "remaps initial - to _ for id’s" do
+      w = REXML::XPath.first(REXML::Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>-unga</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>namnelement.</w:t></w:r></w:p></w:document>", "/w:document/w:p"))
+      expect(solig.unword(w).to_s).to eq "<div xml:id='_unga'><head><placeName>-unga</placeName></head> <p><span type='locale'>namnelement.</span></p></div>"
+    end
+
     it "works on -unga" # No extraneous comma
     it "works on Unnaryd" # Recognises Småland etc. as geographic features, and does something reasonable with resp.
     it "works on Uppsala län"
