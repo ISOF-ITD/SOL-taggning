@@ -182,10 +182,10 @@ class Solig
             location.unshift(locale)
           else
             p.add_text separator
-            p.add_text tail
-            carryover = nil
             if tail =~ /[\.→]/
               state = :remainder
+              p.add_text tail
+              carryover = nil
             end
             next
           end
