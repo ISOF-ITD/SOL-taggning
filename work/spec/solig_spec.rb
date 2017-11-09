@@ -19,6 +19,10 @@ describe String do
     it "strips all Unicode space characters" do
       expect(ox.ustrip).to eq "Oxie härad"
     end
+
+    it "even strips out ASCII characters" do
+      expect("Väne härad ".ustrip).to eq "Väne härad"
+    end
   end
 
   describe '#uspace' do

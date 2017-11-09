@@ -21,7 +21,7 @@ class String
   ]
 
   def ustrip
-    gsub(/^#{@@uspaces}*/, '').gsub(/#{@@uspaces}*$/, '')
+    strip.gsub(/^#{@@uspaces}*/, '').gsub(/#{@@uspaces}*$/, '')
   end
 
   def uspace
