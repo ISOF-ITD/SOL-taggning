@@ -159,6 +159,8 @@ class Solig
             location = r.text_bit.split ','
           end
 
+          location.select! { |loc| !loc.strip.empty? }
+
           locale = location.shift
           while first || locale =~ /\\fd/ || locale && locale.strip !~ /\s/ && !locale.strip.is_landskap
             # byebug

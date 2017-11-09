@@ -349,10 +349,9 @@ describe Solig do
 
     it "works on entry 474" do
       albano = loadparagraph '474-albano'
-      pending "wip"
-      expected = "<div><head><placeName>Albano</placeName></head> <p><span type='locale'>område på Norra Djurgården</span>, <location><settlement type='stad'>Stockholms stad</settlement></location> → <span type='kursiv'>Frescati</span>.</p></div>"
+      expected = "<div xml:id='Albano' type='?'><head><placeName>Albano</placeName></head> <p><span type='locale'>område på Norra Djurgården</span>, <location><settlement type='stad'>Stockholms stad</settlement></location> → <span type='kursiv'>Frescati</span>.</p></div>"
       actual = solig.unword(albano).to_s
-      # byebug
+      # byebug
       expect(actual).to eq expected
     end
 
