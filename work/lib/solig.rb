@@ -154,20 +154,16 @@ class Solig
           unless p.parent # FIXME Replace with an intermediate state or something
             div.add_escaped_text ' '
             div.add_element p
-            locale_text = carryover.strip
-            locale_text += r.text_bit
-          else
-            locale_text = carryover
+            carryover.strip!
+            carryover += r.text_bit
           end
 
-          byebug
-
-          if locale_text =~ /^(.*?)([\.→])(.*)$/
+          if carryover =~ /^(.*?)([\.→])(.*)$/
             location = $1.split ','
             separator = $2
             tail = $3
           else
-            location = locale_text ','
+            location = carryover.split ','
           end
 
           location.select! { |loc| !loc.strip.empty? }
