@@ -61,6 +61,14 @@ class REXML::Element
     add_text text.gsub(/\\fd/, 'f.d.') if text # FIXME Extract that somewhere
   end
 
+  def add_head_element(headword, r)
+    headtag = REXML::Element.new 'head', self
+    head = REXML::Element.new 'placeName', headtag
+    head.text = headword.ustrip
+    add_attribute 'xml:id', headword.ustrip.gsub(/ /, '_').gsub(/,/, '.')
+    r.text_bit.uspace
+  end
+
   def add_location_element(loc)
     if loc.strip =~ /.*\s+(.*)/ then
       locale = $1
@@ -136,11 +144,7 @@ class Solig
           end
           headword += rt
         else
-          headtag = REXML::Element.new 'head', div
-          head = REXML::Element.new 'placeName', headtag
-          head.text = headword.ustrip
-          div.add_attribute 'xml:id', headword.ustrip.gsub(/ /, '_').gsub(/,/, '.')
-          carryover = r.text_bit.uspace
+          carryover = div.add_head_element(headword, r)
           state = :locale
         end
       elsif state == :locale

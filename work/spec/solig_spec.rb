@@ -422,6 +422,7 @@ describe Solig do
 
     it "works on Umeå" do
       umeå = loadparagraph '5849-umeå'
+      pending "later"
       expect(solig.unword(umeå).to_s).to be =~ /<div xml:id='Umeå' type=''><head><placeName>Umeå<\/placeName><\/head> <p><span type='locale'>kn<\/span>, <span type='locale'>stad<\/span>, <span type='locale'>sn<\/span>, <location><region type='landskap'>Västerbotten<\/region><\/location>/
     end
   end
@@ -430,6 +431,8 @@ describe Solig do
     undersåker = loadparagraph '5855-undersåker'
     expect { solig.unword(undersåker) }.not_to raise_error
   end
+
+  it "works on Västra Skrävlinge"
 
   it "works on the last V entry" # 6344
 
