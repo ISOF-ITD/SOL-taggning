@@ -184,7 +184,9 @@ class Solig
             p.add_text separator
             p.add_text tail
             carryover = nil
-            # state = :remainder
+            if tail =~ /[\.→]/
+              state = :remainder
+            end
             next
           end
 
