@@ -150,20 +150,20 @@ class Solig
         end
       elsif state == :locale
         # byebug
-        unless r.text_bit.strip == ''
+        t = r.text_bit
+        unless t.strip == ''
           unless p.parent # FIXME Replace with an intermediate state or something
             div.add_escaped_text ' '
             div.add_element p
-            carryover.strip!
-            carryover += r.text_bit
+            t = carryover.strip! + t
           end
 
-          if carryover =~ /^(.*?)([\.→])(.*)$/
+          if t =~ /^(.*?)([\.→])(.*)$/
             location = $1.split ','
             separator = $2
             tail = $3
           else
-            location = carryover.split ','
+            location = t.split ','
           end
 
           location.select! { |loc| !loc.strip.empty? }
