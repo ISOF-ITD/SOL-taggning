@@ -155,7 +155,7 @@ class Solig
           unless p.parent # FIXME Replace with an intermediate state or something
             div.add_escaped_text ' '
             div.add_element p
-            t = carryover.strip! + t
+            t = carryover.strip + t
           end
 
           if t =~ /^(.*?)([\.→])(.*)$/
