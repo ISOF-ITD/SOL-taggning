@@ -409,6 +409,12 @@ describe Solig do
       expect(actual).to eq expected
     end
 
+    it "works on -unga" # No extraneous comma
+    it "works on Unnaryd" # Recognises Småland etc. as geographic features, and does something reasonable with resp.
+    it "works on Uppsala län"
+    it "works on Vájsáluokta" # No extraneous comma
+    it "works on Vantör" # Församling!  And sensible punctuation and spacing around (De)
+
     it "works on Ume lappmark" do
       ume_lappmark = loadparagraph '5848-ume-lappmark'
       expected = "<div xml:id='Ume_lappmark' type='?'><head><placeName>Ume lappmark</placeName></head> <p><span type='locale'>del av Lappland</span>. – Namnet är ursprungligen en historisk-administrativ benämning på samebygden som handels- och beskattningsområde. Det är givet efter huvudorten → <span type='kursiv'>Umeå</span> i Västerbotten.</p></div>"
@@ -426,6 +432,13 @@ describe Solig do
       actual = solig.unword(umeå).to_s
       # byebug
       expect(actual).to be =~ /<div xml:id='Umeå' type='\?'><head><placeName>Umeå<\/placeName><\/head> <p><span type='locale'>kn<\/span>, <span type='locale'>stad<\/span>, <span type='locale'>sn<\/span>, <location><region type='landskap'>Västerbotten<\/region><\/location>/
+    end
+
+    it "outputs (de) correctly for Umeå" do
+      umeå = loadparagraph '5849-umeå'
+      pending "later"
+      actual = solig.unword(umeå).to_s
+      expect(actual).to be =~ /(<span type='kursiv'>de<\/span>)/
     end
   end
 
