@@ -434,7 +434,20 @@ describe Solig do
     expect { solig.unword(undersåker) }.not_to raise_error
   end
 
-  it "works on Västra Skrävlinge"
+  it "works on Västra Skrävlinge" do
+    västra_skrävlinge = loadparagraph '6317-västra-skrävlinge'
+    expect(solig.unword(västra_skrävlinge).to_s).to eq "<div xml:id='Västra_Skrävlinge' type='?'><head><placeName>Västra Skrävlinge</placeName></head> <p><span type='locale'>f.d. sn</span>, <location><district type='härad'>Oxie hd</district><region type='landskap'>Skåne</region></location></p>. (<span type='kursiv'>de</span>) <span type='kursiv'>Scræplingi</span> 1300-talets mitt. (<span type='kursiv'>de</span>) <span type='kursiv'>Westraskræplinge</span> 1400-talets förra del (avser kyrkbyn). – Socknen har sitt namn efter kyrkbyn. Det innehåller en inbyggnarbeteckning (→ -<span type='kursiv'>inge</span>), kanske bildad till ett äldre namn på Husiebäcken, sammanhängande med verbet <span type='kursiv'>skrapa</span> med syftning på vattnets ljud. Kyrkbyn och grannbyn Östra Skrävlinge i Husie f.d. socken utgjorde äldst en enda bebyggelse.</div>"
+  end
+
+  it "works on Lilla och Stora Värtan" do
+    stora_och_lilla_värtan = loadparagraph '6231-stora-och-lilla-värtan'
+    expect(solig.unword(stora_och_lilla_värtan).to_s).to eq "<div xml:id ='Värtan._Stora._Lilla' type='?'><head>Värtan, Stora, Lilla</placeName></head> <p><span type='locale'>fjärdar</span> i Upplandsdelen av Stockholmns inre skärgård. <span type='kursiv'>Wärtänn</span>, <span type='kursiv'>Wärtenn</span>, <span type='kursiv'>Wertenn</span> (1558). – Namnet kan sammanhänga med ordet <span type='kursiv'>vårta</span>, dock med oviss syftning.</p></div>" # FIXME Not much idea what to do! "<div xml:id='Värtan._Stora._Lilla'><head>Värtan, Stora, Lilla</head> <p><span type='locale'>fjärdar</span> i Upplandsdelen av <location><settlement type='stad'>Stockholms inre skärgård </p></div>"
+  end
+
+  it "works on Västanå" do
+    västanå = loadparagraph '6242-västanå'
+    expect(solig.unword(västanå).to_s).to eq "<div xml:id='Västanå' type='?'><head><placeName>Västanå</placeName></head> <p><span type='kursiv'>gods</span>, <location><district type='landsförsamling'>Gränna lfs</district><district type='härad'>Vista hd</district><region type='landskap'>Småland</region></location>. <span type='kursiv'>Westan a </span> 1412. Namnet är givet efter läget väster om Röttleån (jfr → <span type='kursiv'>Östanå</span>).</p></div>" # Inte Skåne!
+  end
 
   it "works on the last V entry" # 6344
 

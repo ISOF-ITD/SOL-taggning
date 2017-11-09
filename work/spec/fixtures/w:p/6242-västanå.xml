@@ -1,0 +1,130 @@
+<w:p w14:paraId='5CB93AFC' w:rsidP='006C2603' w:rsidR='006C2603' w:rsidRDefault='006C2603' w:rsidRPr='004B2EA5' w14:textId='1F6E4F2A'>
+      <w:pPr>
+        <w:autoSpaceDE w:val='0'/>
+        <w:autoSpaceDN w:val='0'/>
+        <w:adjustRightInd w:val='0'/>
+        <w:spacing w:after='0' w:line='220' w:lineRule='atLeast'/>
+        <w:ind w:hanging='113' w:left='113'/>
+        <w:jc w:val='both'/>
+        <w:textAlignment w:val='center'/>
+        <w:rPr>
+          <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+          <w:bCs/>
+          <w:color w:val='000000'/>
+          <w:sz w:val='16'/>
+          <w:szCs w:val='16'/>
+        </w:rPr>
+      </w:pPr>
+      <w:r w:rsidRPr='004B2EA5'>
+        <w:rPr>
+          <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+          <w:b/>
+          <w:bCs/>
+          <w:color w:val='000000'/>
+          <w:sz w:val='16'/>
+          <w:szCs w:val='16'/>
+        </w:rPr>
+        <w:t>Västanå</w:t>
+      </w:r>
+      <w:r w:rsidRPr='004B2EA5'>
+        <w:rPr>
+          <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+          <w:color w:val='000000'/>
+          <w:sz w:val='16'/>
+          <w:szCs w:val='16'/>
+        </w:rPr>
+        <w:t> </w:t>
+      </w:r>
+      <w:r w:rsidRPr='004B2EA5'>
+        <w:rPr>
+          <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+          <w:bCs/>
+          <w:color w:val='000000'/>
+          <w:sz w:val='16'/>
+          <w:szCs w:val='16'/>
+        </w:rPr>
+        <w:t xml:space='preserve'>gods, Gränna lfs, Vista hd, Småland. </w:t>
+      </w:r>
+      <w:r w:rsidRPr='004B2EA5'>
+        <w:rPr>
+          <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+          <w:bCs/>
+          <w:i/>
+          <w:color w:val='000000'/>
+          <w:sz w:val='16'/>
+          <w:szCs w:val='16'/>
+        </w:rPr>
+        <w:t>Westan</w:t>
+      </w:r>
+      <w:r w:rsidRPr='004B2EA5'>
+        <w:rPr>
+          <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+          <w:bCs/>
+          <w:color w:val='000000'/>
+          <w:sz w:val='16'/>
+          <w:szCs w:val='16'/>
+        </w:rPr>
+        <w:t xml:space='preserve'> </w:t>
+      </w:r>
+      <w:r w:rsidRPr='004B2EA5'>
+        <w:rPr>
+          <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+          <w:bCs/>
+          <w:i/>
+          <w:color w:val='000000'/>
+          <w:sz w:val='16'/>
+          <w:szCs w:val='16'/>
+        </w:rPr>
+        <w:t>a</w:t>
+      </w:r>
+      <w:r w:rsidRPr='004B2EA5'>
+        <w:rPr>
+          <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+          <w:bCs/>
+          <w:color w:val='000000'/>
+          <w:sz w:val='16'/>
+          <w:szCs w:val='16'/>
+        </w:rPr>
+        <w:t xml:space='preserve'> 1412. Namnet är givet efter läget väster om Röttleån (jfr </w:t>
+      </w:r>
+      <w:r w:rsidRPr='004B2EA5'>
+        <w:rPr>
+          <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+          <w:color w:val='000000'/>
+          <w:sz w:val='16'/>
+          <w:szCs w:val='16'/>
+        </w:rPr>
+        <w:t>→</w:t>
+      </w:r>
+      <w:r w:rsidRPr='004B2EA5'>
+        <w:rPr>
+          <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+          <w:bCs/>
+          <w:color w:val='000000'/>
+          <w:sz w:val='16'/>
+          <w:szCs w:val='16'/>
+        </w:rPr>
+        <w:t xml:space='preserve'> </w:t>
+      </w:r>
+      <w:r w:rsidRPr='004B2EA5'>
+        <w:rPr>
+          <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+          <w:bCs/>
+          <w:i/>
+          <w:color w:val='000000'/>
+          <w:sz w:val='16'/>
+          <w:szCs w:val='16'/>
+        </w:rPr>
+        <w:t>Östanå</w:t>
+      </w:r>
+      <w:r w:rsidRPr='004B2EA5'>
+        <w:rPr>
+          <w:rFonts w:ascii='Times New Roman' w:hAnsi='Times New Roman'/>
+          <w:bCs/>
+          <w:color w:val='000000'/>
+          <w:sz w:val='16'/>
+          <w:szCs w:val='16'/>
+        </w:rPr>
+        <w:t>).</w:t>
+      </w:r>
+    </w:p>
