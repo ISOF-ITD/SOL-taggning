@@ -152,18 +152,22 @@ class Solig
         # byebug
         unless r.text_bit.strip == ''
           unless p.parent # FIXME Replace with an intermediate state or something
-            File.open('carryed-over.txt', 'a').puts carryover
-            # byebug
-            div.add_escaped_text carryover
+            div.add_escaped_text ' '
             div.add_element p
+            locale_text = carryover.strip
+            locale_text += r.text_bit
+          else
+            locale_text = carryover
           end
 
-          if r.text_bit =~ /^(.*?)([\.→])(.*)$/
+          byebug
+
+          if locale_text =~ /^(.*?)([\.→])(.*)$/
             location = $1.split ','
             separator = $2
             tail = $3
           else
-            location = r.text_bit.split ','
+            location = locale_text ','
           end
 
           location.select! { |loc| !loc.strip.empty? }
