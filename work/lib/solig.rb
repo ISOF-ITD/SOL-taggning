@@ -144,6 +144,7 @@ class Solig
           end
           headword += rt
         else
+          # byebug
           carryover = div.add_head_element(headword, r)
           state = :locale
         end
@@ -151,6 +152,8 @@ class Solig
         # byebug
         unless r.text_bit.strip == ''
           unless p.parent # FIXME Replace with an intermediate state or something
+            File.open('carryed-over.txt', 'a').puts carryover
+            # byebug
             div.add_escaped_text carryover
             div.add_element p
           end
