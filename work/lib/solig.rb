@@ -65,7 +65,7 @@ class REXML::Element
     headtag = REXML::Element.new 'head', self
     head = REXML::Element.new 'placeName', headtag
     head.text = headword.ustrip
-    add_attribute 'xml:id', headword.ustrip.gsub(/ /, '_').gsub(/,/, '.')
+    add_attribute 'xml:id', headword.ustrip.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
     r.text_bit.uspace
   end
 
