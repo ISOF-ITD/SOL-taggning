@@ -109,7 +109,7 @@ class Solig
     i = 0
     while i < l do
       r = rs[i]
-      byebug
+      # byebug
       case @state
       when :initial
         if r.isbold?
@@ -139,6 +139,7 @@ class Solig
             separator = $2
             tail = $3
           else
+            byebug if @carryover.is_a? Array
             location = @carryover.split ','
           end
 
@@ -156,7 +157,8 @@ class Solig
           if locale
             @currelem.add_escaped_text ', '
             location.unshift(locale)
-          else
+            @state = :location
+          elsif tail
             @currelem.add_text separator # FIXME Not necessary a separator here!
             if tail =~ /[\.→]/
               @state = :general
@@ -167,7 +169,6 @@ class Solig
             next
           end
 
-          @state = :location
           @carryover = [location, separator, tail]
         end
         # byebug
