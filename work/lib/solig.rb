@@ -132,8 +132,8 @@ class Solig
   end
 
   def unword(element)
-    div = REXML::Element.new 'div'
-    div.add_attribute 'type', '?'
+    @currelem = REXML::Element.new 'div'
+    @currelem.add_attribute 'type', '?'
     p = REXML::Element.new 'p'
     carryover = ''
     italic = ''
@@ -151,7 +151,7 @@ class Solig
           headword += rt
         else
           # byebug
-          carryover = div.add_head_element(headword, r)
+          carryover = @currelem.add_head_element(headword, r)
           @state = :locale
         end
       elsif @state == :locale
@@ -159,8 +159,9 @@ class Solig
         t = r.text_bit
         unless t.strip == ''
           unless p.parent # FIXME Replace with an intermediate state or something
-            div.add_escaped_text ' '
-            div.add_element p
+            @currelem.add_escaped_text ' '
+            @currelem.add_element p
+            @currelem = p
             t = carryover.strip + t
           end
 
@@ -177,20 +178,20 @@ class Solig
           locale = location.shift
           while first || locale =~ /\\fd/ || locale && locale.strip !~ /\s/ && !locale.strip.is_landskap
             # byebug
-            p.add_escaped_text ', ' unless first
-            p.add_locale locale.strip
+            @currelem.add_escaped_text ', ' unless first
+            @currelem.add_locale locale.strip
             locale = location.shift
             first = false
           end
 
           if locale
-            p.add_escaped_text ', '
+            @currelem.add_escaped_text ', '
             location.unshift(locale)
           else
-            p.add_text separator
+            @currelem.add_text separator
             if tail =~ /[\.→]/
               @state = :general
-              p.add_text tail
+              @currelem.add_text tail
               carryover = nil
             end
             next
@@ -201,7 +202,7 @@ class Solig
         end
         # byebug
       elsif @state == :location
-        retvalue = add_location(p, r, carryover)
+        retvalue = add_location(@currelem, r, carryover)
         carryover = retvalue.first
         italic = retvalue.last
       elsif @state == :general
@@ -210,18 +211,18 @@ class Solig
           @state = :italic
         else
           # byebug
-          p.add_escaped_text carryover if carryover
+          @currelem.add_escaped_text carryover if carryover
           carryover = nil if carryover
-          p.add_escaped_text r.text_bit
+          @currelem.add_escaped_text r.text_bit
         end
       elsif @state == :italic
         if r.isitalic?
           italic += r.text_bit if r.text_bit
         else
-          p.add_italic_text italic.strip
+          @currelem.add_italic_text italic.strip
           carryover = nil
-          p.add_escaped_text ' ' if italic =~ /\s$/
-          p.add_escaped_text r.text_bit
+          @currelem.add_escaped_text ' ' if italic =~ /\s$/
+          @currelem.add_escaped_text r.text_bit
           @state = :general
         end
       end
@@ -232,7 +233,7 @@ class Solig
     r = REXML::Element.new 'w:r'
     rt = REXML::Element.new 'w:t', r
     rt.text = 'foo'
-    add_location(p, r, carryover) if carryover && @state == :location
+    add_location(@currelem, r, carryover) if carryover && @state == :location
 
     # if carryover
     #   if state == :remainder
@@ -242,7 +243,7 @@ class Solig
     #   end # FIXME else raise something
     # end
 
-    div
+    @currelem.parent
   end
 
   def add_location(p, r, carryover = nil) # FIXME Some spec (?)
