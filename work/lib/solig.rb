@@ -272,7 +272,6 @@ class Solig
           @currelem.add_escaped_text tail
         end
 
-        @carryover = r.text_bit if r.isitalic?
         @carryover = r.text_bit
         @state = if r.isitalic? then :italic else :general end
       end
