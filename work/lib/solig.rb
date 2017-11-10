@@ -186,7 +186,7 @@ class Solig
           else
             p.add_text separator
             if tail =~ /[\.→]/
-              state = :remainder
+              state = :general
               p.add_text tail
               carryover = nil
             end
@@ -202,7 +202,7 @@ class Solig
         state = retvalue.first
         carryover = retvalue[1]
         italic = retvalue.last
-      elsif state == :remainder
+      elsif state == :general
         if r.isitalic?
           italic = r.text_bit
           state = :italic
@@ -220,7 +220,7 @@ class Solig
           carryover = nil
           p.add_escaped_text ' ' if italic =~ /\s$/
           p.add_escaped_text r.text_bit
-          state = :remainder
+          state = :general
         end
       end
     end
@@ -270,7 +270,7 @@ class Solig
 
         italic = r.text_bit if r.isitalic?
         carryover = r.text_bit
-        state = if r.isitalic? then :italic else :remainder end
+        state = if r.isitalic? then :italic else :general end
       end
     end
 
