@@ -51,71 +51,19 @@ class REXML::Element
   def add_italic_text(text)
     span = REXML::Element.new 'span', self
     span.add_attribute 'type', 'kursiv'
-    span.add_escaped_text text
+    Solig.add_escaped_text span, text
   end
 
   def escape_text! # TODO A recursive version?
     savedtext = text
     self.text = ''
-    add_escaped_text savedtext
+    Solig.add_escaped_text self, savedtext
   end
 
   def add_locale(locale)
     span = REXML::Element.new 'span', self
     span.add_attribute 'type', 'locale'
-    span.add_escaped_text locale
-  end
-
-  # FIXME Figure out what the deal is with w:noBreakHyphen?
-  def add_escaped_text(text)
-    add_text text.gsub(/\\fd/, 'f.d.') if text # FIXME Extract that somewhere
-  end
-
-  def add_head_element(headword, r)
-    headtag = REXML::Element.new 'head', self
-    head = REXML::Element.new 'placeName', headtag
-    head.text = headword.ustrip
-    add_attribute 'xml:id', headword.ustrip.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
-    r.text_bit.uspace
-  end
-
-  def add_location_element(loc)
-    if loc.strip =~ /.*\s+(.*)/ then
-      locale = $1
-    else
-      locale = loc
-    end
-
-    ls = loc.split('och').map(&:strip)
-    ls.each do |l|
-      case locale
-      when 'sn', 'snr'
-        tag = 'district'
-        type = 'socken'
-      when 'lfs'
-        tag = 'district'
-        type = 'landsförsamling'
-      when 'hd'
-        tag = 'district'
-        type = 'härad'
-      when 'skg'
-        tag = 'district'
-        type = 'skeppslag'
-      when 'stad'
-        tag = 'settlement'
-        type = 'stad'
-      when String.landskap_regexp
-        tag = 'region'
-        type = 'landskap'
-      else
-        tag = 'invalid'
-        type = 'invalid'
-      end
-
-      element = REXML::Element.new tag, self
-      element.add_attribute 'type', type
-      element.add_escaped_text l.strip
-    end
+    Solig.add_escaped_text span, locale
   end
 
   def isitalic?
@@ -170,7 +118,7 @@ class Solig
           @state = :head
         end
       when :head
-        @carryover = @currelem.add_head_element(@carryover, r)
+        @carryover = Solig.add_head_element(@currelem, @carryover, r)
         @state = :locale
         i += 1
       when :locale
@@ -178,7 +126,7 @@ class Solig
         t = r.text_bit
         unless t.strip == ''
           unless p.parent # FIXME Replace with an intermediate state or something
-            @currelem.add_escaped_text ' '
+            Solig.add_escaped_text @currelem, ' '
             @currelem.add_element p
             @currelem = p
             t = @carryover.strip + t
@@ -197,14 +145,14 @@ class Solig
           locale = location.shift
           while first || locale =~ /\\fd/ || locale && locale.strip !~ /\s/ && !locale.strip.is_landskap
             # byebug
-            @currelem.add_escaped_text ', ' unless first
+            Solig.add_escaped_text @currelem, ', ' unless first
             @currelem.add_locale locale.strip if locale
             locale = location.shift
             first = false
           end
 
           if locale
-            @currelem.add_escaped_text ', '
+            Solig.add_escaped_text @currelem, ', '
             location.unshift(locale)
           else
             @currelem.add_text separator
@@ -233,9 +181,9 @@ class Solig
           @state = :italic
         else
           # byebug
-          @currelem.add_escaped_text @carryover if @carryover
+          Solig.add_escaped_text @currelem, @carryover if @carryover
           @carryover = nil if @carryover
-          @currelem.add_escaped_text r.text_bit
+          Solig.add_escaped_text @currelem, r.text_bit
         end
 
         i += 1
@@ -245,13 +193,13 @@ class Solig
           @carryover += r.text_bit if r.text_bit
         else
           @currelem.add_italic_text @carryover.strip
-          @currelem.add_escaped_text ' ' if @carryover =~ /\s$/
+          Solig.add_escaped_text @currelem, ' ' if @carryover =~ /\s$/
           if @carryover =~ /(\s*)$/ # TODO Idiom for that
             @carryover = $1
           else
             @carryover = nil
           end
-          @currelem.add_escaped_text r.text_bit
+          Solig.add_escaped_text @currelem, r.text_bit
           @state = :general
         end
 
@@ -286,18 +234,18 @@ class Solig
         location_element = REXML::Element.new 'location', @currelem
         ct = location.count
         location.each_with_index do |loc, index|
-          location_element.add_location_element loc
+          Solig.add_location_element location_element, loc
 
           if index == ct - 1
             if loc =~ /\s$/
-              @currelem.add_escaped_text ' '
+              Solig.add_escaped_text @currelem, ' '
             end
           end
         end
 
         if tail
-          @currelem.add_escaped_text separator
-          @currelem.add_escaped_text tail
+          Solig.add_escaped_text @currelem, separator
+          Solig.add_escaped_text @currelem, tail
         end
 
         @carryover = r.text_bit
@@ -312,5 +260,57 @@ class Solig
       rt = ' '
     end
     @carryover += rt
+  end
+
+  # FIXME Figure out what the deal is with w:noBreakHyphen?
+  def self.add_escaped_text(element, text)
+    element.add_text text.gsub(/\\fd/, 'f.d.') if text # FIXME Extract that somewhere
+  end
+
+  def self.add_head_element(element, headword, r)
+    headtag = REXML::Element.new 'head', element
+    head = REXML::Element.new 'placeName', headtag
+    head.text = headword.ustrip
+    element.add_attribute 'xml:id', headword.ustrip.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
+    r.text_bit.uspace
+  end
+
+  def self.add_location_element(element, loc)
+    if loc.strip =~ /.*\s+(.*)/ then
+      locale = $1
+    else
+      locale = loc
+    end
+
+    ls = loc.split('och').map(&:strip)
+    ls.each do |l|
+      case locale
+      when 'sn', 'snr'
+        tag = 'district'
+        type = 'socken'
+      when 'lfs'
+        tag = 'district'
+        type = 'landsförsamling'
+      when 'hd'
+        tag = 'district'
+        type = 'härad'
+      when 'skg'
+        tag = 'district'
+        type = 'skeppslag'
+      when 'stad'
+        tag = 'settlement'
+        type = 'stad'
+      when String.landskap_regexp
+        tag = 'region'
+        type = 'landskap'
+      else
+        tag = 'invalid'
+        type = 'invalid'
+      end
+
+      location_element = REXML::Element.new tag, element
+      location_element.add_attribute 'type', type
+      Solig.add_escaped_text location_element, l.strip
+    end
   end
 end

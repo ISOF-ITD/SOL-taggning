@@ -129,17 +129,6 @@ describe REXML::Element do
     end
   end
 
-  describe '#add_location_element' do
-    it "adds a location element" do
-      styra = REXML::Document.new "<div><head>Styra</head> <p><span type='locale'>sn</span> <location></location></p></div>"
-      p = REXML::XPath.first(styra, 'div/p/location')
-
-      p.add_location_element 'Aska hd'
-
-      expect(styra.to_s).to eq "<div><head>Styra</head> <p><span type='locale'>sn</span> <location><district type='härad'>Aska hd</district></location></p></div>"
-    end
-  end
-
   describe '#isitalic?' do
     it "returns true if text bit is italic" do
       doc = REXML::Document.new "<w:document xmlns:w='somelink'><w:r><w:rPr><w:i /></w:rPr></w:r></w:document>"
@@ -204,20 +193,6 @@ describe REXML::Element do
       bit = REXML::XPath.first(doc, '/w:document/w:p/w:r')
       expect(Solig).to receive(:escape).with('foo \\fd bar')
       bit.text_bit
-    end
-  end
-
-  describe '#add_escaped_text' do
-    it "interprets the escape sequences" do
-      doc = REXML::Document.new "<doc><p></p></doc>"
-      element = doc.root.elements.first
-      element.add_escaped_text "foo \\fd bar"
-      expect(element.text).to eq "foo f.d. bar"
-    end
-
-    it "doesn’t crash on nil input" do
-      root = REXML::Document.new("<doc></doc>").root
-      expect { root.add_escaped_text nil }.not_to raise_error
     end
   end
 end
@@ -570,5 +545,30 @@ describe Solig do
   it "doesn’t raise an error on -arp" do
     arp = loadparagraph '597-arp'
     expect { solig.unword arp }.not_to raise_error
+  end
+
+  describe '.add_location_element' do
+    it "adds a location element" do
+      styra = REXML::Document.new "<div><head>Styra</head> <p><span type='locale'>sn</span> <location></location></p></div>"
+      p = REXML::XPath.first(styra, 'div/p/location')
+
+      Solig.add_location_element p, 'Aska hd'
+
+      expect(styra.to_s).to eq "<div><head>Styra</head> <p><span type='locale'>sn</span> <location><district type='härad'>Aska hd</district></location></p></div>"
+    end
+  end
+
+  describe '.add_escaped_text' do
+    it "interprets the escape sequences" do
+      doc = REXML::Document.new "<doc><p></p></doc>"
+      element = doc.root.elements.first
+      Solig.add_escaped_text element, "foo \\fd bar"
+      expect(element.text).to eq "foo f.d. bar"
+    end
+
+    it "doesn’t crash on nil input" do
+      root = REXML::Document.new("<doc></doc>").root
+      expect { Solig.add_escaped_text root, nil }.not_to raise_error
+    end
   end
 end
