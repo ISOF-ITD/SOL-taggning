@@ -225,12 +225,12 @@ class Solig
           @carryover += r.text_bit if r.text_bit
         else
           @currelem.add_italic_text @carryover.strip
+          @currelem.add_escaped_text ' ' if @carryover =~ /\s$/
           if @carryover =~ /(\s*)$/ # TODO Idiom for that
             @carryover = $1
           else
             @carryover = nil
           end
-          @currelem.add_escaped_text ' ' if @carryover =~ /\s$/
           @currelem.add_escaped_text r.text_bit
           @state = :general
         end
