@@ -53,10 +53,6 @@ class REXML::Element
     Solig.add_escaped_text self, escaped_text
   end
 
-  def add_locale(locale)
-    Solig.add_locale self, locale
-  end
-
   def isitalic?
     REXML::XPath.first(self, 'w:rPr/w:i')
   end
@@ -154,7 +150,7 @@ class Solig
           while first || locale =~ /\\fd/ || locale && locale.strip !~ /\s/ && !locale.strip.is_landskap?
             # byebug
             @currelem.add_escaped_text ', ' unless first
-            @currelem.add_locale locale.strip if locale
+            add_locale locale.strip if locale
             locale = location.shift
             first = false
           end
@@ -323,9 +319,9 @@ class Solig
     end
   end
 
-  def self.add_locale(element, locale)
-    span = REXML::Element.new 'span', element
+  def add_locale(locale)
+    span = REXML::Element.new 'span', @currelem
     span.add_attribute 'type', 'locale'
-    add_escaped_text span, locale
+    span.add_escaped_text locale
   end
 end

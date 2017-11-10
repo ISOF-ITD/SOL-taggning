@@ -87,15 +87,6 @@ describe REXML::Element do
     end
   end
 
-  describe "#add_locale" do
-    it "calls Solig.add_locale" do
-      doc = REXML::Document.new('<doc><p>Bar.</p></doc>')
-      element = doc.root.elements.first
-      expect(Solig).to receive(:add_locale).with(element, 'sn')
-      element.add_locale 'sn'
-    end
-  end
-
   describe '#isitalic?' do
     it "returns true if text bit is italic" do
       doc = REXML::Document.new "<w:document xmlns:w='somelink'><w:r><w:rPr><w:i /></w:rPr></w:r></w:document>"
@@ -605,12 +596,13 @@ describe Solig do
     end
   end
 
-  describe '.add_locale' do
+  describe '#add_locale' do
     it "adds a locale" do
       styra = REXML::Document.new('<div><head>Styra</head> <p></p></div>')
       p = REXML::XPath.first(styra, 'div/p')
+      solig.instance_variable_set(:@currelem, p)
 
-      Solig.add_locale p, 'sn'
+      solig.add_locale 'sn'
 
       expect(styra.to_s).to eq "<div><head>Styra</head> <p><span type='locale'>sn</span></p></div>"
     end
