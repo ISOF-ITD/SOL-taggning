@@ -583,6 +583,10 @@ describe Solig do
     end
 
     it "strips the input" do
+      article = REXML::Document.new "<div xml:id='Bockara' type='bebyggelsenamn'></div>"
+      div = article.root.elements.first
+      div.add_head_element ' Bockara '
+      expect(div.to_s).to eq "<div xml:id='Bockara' type='bebyggelsenamn'>Bockara
     end
   end
 
