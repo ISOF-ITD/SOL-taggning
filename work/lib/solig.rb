@@ -201,8 +201,7 @@ class Solig
         end
         # byebug
       elsif @state == :location
-        retvalue = add_location(r, @carryover)
-        @carryover = retvalue.first
+        retvalue = add_location(r)
       elsif @state == :general
         # byebug
         if r.isitalic?
@@ -237,7 +236,7 @@ class Solig
     r = REXML::Element.new 'w:r'
     rt = REXML::Element.new 'w:t', r
     rt.text = 'foo'
-    add_location(r, @carryover) if @carryover && @state == :location
+    add_location(r) if @carryover && @state == :location
 
     # if carryover
     #   if state == :remainder
@@ -250,12 +249,12 @@ class Solig
     @currelem.parent
   end
 
-  def add_location(r, carryover = nil) # FIXME Some spec (?)
+  def add_location(r) # FIXME Some spec (?)
     if r.text_bit
       unless r.text_bit.strip == ''
-        location = carryover.first
-        separator = carryover[1]
-        tail = carryover.last
+        location = @carryover.first
+        separator = @carryover[1]
+        tail = @carryover.last
         location_element = REXML::Element.new 'location', @currelem
         ct = location.count
         location.each_with_index do |loc, index|
@@ -273,12 +272,10 @@ class Solig
           @currelem.add_escaped_text tail
         end
 
-        carryover = r.text_bit if r.isitalic?
-        carryover = r.text_bit
+        @carryover = r.text_bit if r.isitalic?
+        @carryover = r.text_bit
         @state = if r.isitalic? then :italic else :general end
       end
     end
-
-    [carryover, carryover]
   end
 end
