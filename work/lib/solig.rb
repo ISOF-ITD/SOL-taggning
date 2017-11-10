@@ -123,16 +123,15 @@ class Solig
       when :head
         add_head_element(@carryover.ustrip)
         @carryover = r.text_bit.uspace
-        @state = :locale
+        @currelem.add_escaped_text ' '
+        @currelem = REXML::Element.new 'p', @currelem
         i += 1
+        @state = :locale
       when :locale
         # byebug
         t = r.text_bit
         unless t.strip == ''
           unless p.parent # FIXME Replace with an intermediate state or something
-            @currelem.add_escaped_text ' '
-            @currelem.add_element p
-            @currelem = p
             t = @carryover.strip + t
           end
 
