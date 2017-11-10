@@ -10,6 +10,16 @@ class NilClass
   end
 end
 
+class Hash
+  def reverse
+    reversed = { }
+    each do |key, value|
+      reversed[value] = key
+    end
+    reversed
+  end
+end
+
 class String
   @@uspaces = '[   ]' # FIXME Complete!
   @@landskap = [

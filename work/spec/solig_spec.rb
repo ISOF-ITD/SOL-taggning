@@ -12,6 +12,14 @@ describe NilClass do
   end
 end
 
+describe Hash do
+  describe '#reverse' do
+    it "reverses the hash" do
+      expect({ a: 1, b: 2, c: 3 }.reverse).to eq({ 1 => :a, 2 => :b, 3 => :c })
+    end
+  end
+end
+
 describe String do
   let(:ox) { "Oxie härad " } # With trailing U+2003 EM SPACE and U+2005 FOUR-PER-EM SPACE in the middle
 
