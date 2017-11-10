@@ -596,13 +596,13 @@ describe Solig do
     end
   end
 
-  describe '#add_locale' do
+  describe '#add_locale_element' do
     it "adds a locale" do
       styra = REXML::Document.new('<div><head>Styra</head> <p></p></div>')
       p = REXML::XPath.first(styra, 'div/p')
       solig.instance_variable_set(:@currelem, p)
 
-      solig.add_locale 'sn'
+      solig.add_locale_element 'sn'
 
       expect(styra.to_s).to eq "<div><head>Styra</head> <p><span type='locale'>sn</span></p></div>"
     end

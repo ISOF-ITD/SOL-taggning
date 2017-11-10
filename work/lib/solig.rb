@@ -150,7 +150,7 @@ class Solig
           while first || locale =~ /\\fd/ || locale && locale.strip !~ /\s/ && !locale.strip.is_landskap?
             # byebug
             @currelem.add_escaped_text ', ' unless first
-            add_locale locale.strip if locale
+            add_locale_element locale.strip if locale
             locale = location.shift
             first = false
           end
@@ -319,7 +319,7 @@ class Solig
     end
   end
 
-  def add_locale(locale)
+  def add_locale_element(locale)
     span = REXML::Element.new 'span', @currelem
     span.add_attribute 'type', 'locale'
     span.add_escaped_text locale
