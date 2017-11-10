@@ -228,6 +228,11 @@ describe Solig do
       solig = Solig.new
       expect(solig.instance_variable_get(:@state)).to eq :initial
     end
+
+    it "initialises the carryover to the empty string" do
+      solig = Solig.new
+      expect(solig.instance_variable_get(:@carryover)).to eq ''
+    end
   end
 
   describe '#unword' do

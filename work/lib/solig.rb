@@ -129,6 +129,7 @@ class Solig
 
   def initialize
     @state = :initial
+    @carryover = ''
   end
 
   def unword(element)
