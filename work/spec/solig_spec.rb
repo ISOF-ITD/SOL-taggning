@@ -561,14 +561,28 @@ describe Solig do
     expect { solig.unword arp }.not_to raise_error
   end
 
-  describe '.add_location_element' do
+  describe '#start_location'
+
+  describe '#add_location_element' do
     it "adds a location element" do
       styra = REXML::Document.new "<div><head>Styra</head> <p><span type='locale'>sn</span> <location></location></p></div>"
       p = REXML::XPath.first(styra, 'div/p/location')
 
-      Solig.add_location_element p, 'Aska hd'
+      p.add_location_element 'Aska hd'
 
       expect(styra.to_s).to eq "<div><head>Styra</head> <p><span type='locale'>sn</span> <location><district type='härad'>Aska hd</district></location></p></div>"
+    end
+  end
+
+  describe '#add_head_element' do
+    it "adds a head element" do
+      article = REXML::Document.new "<div xml:id='Abisko' type='bebyggelsenamn'></div>"
+      div = article.root.elements.first
+      div.add_head_element 'Abisko'
+      expect(article.to_s).to eq "<div xml:id ='Abisko' type='bebyggelsenamn'>Abisko</div>"
+    end
+
+    it "strips the input" do
     end
   end
 
