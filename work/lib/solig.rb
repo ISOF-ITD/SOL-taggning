@@ -109,7 +109,7 @@ class Solig
     i = 0
     while i < l do
       r = rs[i]
-      # byebug
+      byebug
       case @state
       when :initial
         if r.isbold?
@@ -157,7 +157,7 @@ class Solig
             @currelem.add_escaped_text ', '
             location.unshift(locale)
           else
-            @currelem.add_text separator
+            @currelem.add_text separator # FIXME Not necessary a separator here!
             if tail =~ /[\.→]/
               @state = :general
               @currelem.add_text tail
