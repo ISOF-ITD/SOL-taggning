@@ -127,6 +127,10 @@ class Solig
     text.gsub(/f\.d\./, '\\fd') if text
   end
 
+  def initialize
+    @state = :initial
+  end
+
   def unword(element)
     div = REXML::Element.new 'div'
     div.add_attribute 'type', '?'

@@ -223,6 +223,13 @@ describe Solig do
     end
   end
 
+  describe '#initialize' do
+    it "initialises @state to :initial" do
+      solig = Solig.new
+      expect(solig.instance_variable_get(:@state)).to eq :initial
+    end
+  end
+
   describe '#unword' do
     it "dismantles the Word XML structure" do
       bro = loadparagraph '1023-bro'
