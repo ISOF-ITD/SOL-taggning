@@ -568,7 +568,7 @@ describe Solig do
       styra = REXML::Document.new "<div><head>Styra</head> <p><span type='locale'>sn</span> <location></location></p></div>"
       p = REXML::XPath.first(styra, 'div/p/location')
 
-      p.add_location_element 'Aska hd'
+      solig.add_location_element p, 'Aska hd'
 
       expect(styra.to_s).to eq "<div><head>Styra</head> <p><span type='locale'>sn</span> <location><district type='härad'>Aska hd</district></location></p></div>"
     end
@@ -578,14 +578,15 @@ describe Solig do
     it "adds a head element" do
       article = REXML::Document.new "<div xml:id='Abisko' type='bebyggelsenamn'></div>"
       div = article.root.elements.first
-      div.add_head_element 'Abisko'
+      byebug
+      solig.add_head_element div, 'Abisko'
       expect(article.to_s).to eq "<div xml:id ='Abisko' type='bebyggelsenamn'><head><placeName>Abisko</placeName></head></div>"
     end
 
     it "strips the input" do
       article = REXML::Document.new "<div xml:id='Bockara' type='bebyggelsenamn'></div>"
       div = article.root.elements.first
-      div.add_head_element ' Bockara '
+      solig.add_head_element div, ' Bockara '
       expect(div.to_s).to eq "<div xml:id='Bockara' type='bebyggelsenamn'><head><placeName>Bockara</placeName></head></div>"
     end
   end
