@@ -202,8 +202,7 @@ class Solig
         # byebug
       elsif @state == :location
         retvalue = add_location(p, r, carryover)
-        @state = retvalue.first
-        carryover = retvalue[1]
+        carryover = retvalue.first
         italic = retvalue.last
       elsif @state == :general
         if r.isitalic?
@@ -247,8 +246,6 @@ class Solig
   end
 
   def add_location(p, r, carryover = nil) # FIXME Some spec (?)
-    @state = nil
-
     if r.text_bit
       unless r.text_bit.strip == ''
         location = carryover.first
@@ -277,6 +274,6 @@ class Solig
       end
     end
 
-    [@state, carryover, italic]
+    [carryover, italic]
   end
 end
