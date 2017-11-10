@@ -228,6 +228,8 @@ describe Solig do
       solig = Solig.new
       expect(solig.instance_variable_get(:@state)).to eq :initial
     end
+
+    it "initialises @currelem"
   end
 
   describe '#unword' do
