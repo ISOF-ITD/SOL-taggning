@@ -125,7 +125,8 @@ class Solig
           @state = :head
         end
       when :head
-        @carryover = Solig.add_head_element(@currelem, @carryover, r)
+        Solig.add_head_element(@currelem, @carryover.ustrip)
+        @carryover = r.text_bit.uspace
         @state = :locale
         i += 1
       when :locale
@@ -274,12 +275,11 @@ class Solig
     element.add_text text.gsub(/\\fd/, 'f.d.') if text # FIXME Extract that somewhere
   end
 
-  def self.add_head_element(element, headword, r)
+  def self.add_head_element(element, headword)
     headtag = REXML::Element.new 'head', element
     head = REXML::Element.new 'placeName', headtag
-    head.text = headword.ustrip
-    element.add_attribute 'xml:id', headword.ustrip.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
-    r.text_bit.uspace
+    head.text = headword
+    element.add_attribute 'xml:id', headword.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
   end
 
   def self.add_location_element(element, loc)
