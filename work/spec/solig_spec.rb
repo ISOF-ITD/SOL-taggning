@@ -554,4 +554,9 @@ describe Solig do
     actual = solig.unword(w).to_s
     expect(actual).to eq expected
   end
+
+  it "works on -arp" do
+    arp = loadparagraph '496-arp'
+    expect { solig.unword arp }.not_to raise_error
+  end
 end
