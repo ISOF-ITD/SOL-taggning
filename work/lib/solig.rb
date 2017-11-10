@@ -145,7 +145,8 @@ class Solig
     while i < l do
       r = rs[i]
       # byebug
-      if @state == :initial
+      case @state
+      when :initial
         if r.isbold?
           rt = r.text_bit.uspace
           if rt.length > 0 && rt.ustrip == ''
@@ -157,7 +158,7 @@ class Solig
           @carryover = @currelem.add_head_element(headword, r)
           @state = :locale
         end
-      elsif @state == :locale
+      when :locale
         # byebug
         t = r.text_bit
         unless t.strip == ''
@@ -205,9 +206,9 @@ class Solig
           @carryover = [location, separator, tail]
         end
         # byebug
-      elsif @state == :location
+      when :location
         retvalue = add_location(r)
-      elsif @state == :general
+      when :general
         # byebug
         if r.isitalic?
           @carryover = r.text_bit
@@ -218,7 +219,7 @@ class Solig
           @carryover = nil if @carryover
           @currelem.add_escaped_text r.text_bit
         end
-      elsif @state == :italic
+      when :italic
         # byebug
         if r.isitalic?
           @carryover += r.text_bit if r.text_bit
