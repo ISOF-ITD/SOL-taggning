@@ -134,17 +134,23 @@ class Solig
         # byebug
         t = r.text_bit
         unless t.strip == ''
+          @carryover += t.strip
           if @carryover =~ /^(.*?)([\.→])(.*)$/
             location = $1.split ','
             separator = $2
             tail = $3
           else
-            byebug if @carryover.is_a? Array
-            location = @carryover.split ','
+            if @carryover.is_a? String
+              location = @carryover.split ','
+            else
+              # byebug
+              # location = ['']
+            end
           end
 
           location.select! { |loc| !loc.strip.empty? }
 
+          # byebug
           locale = location.shift
           while first || locale =~ /\\fd/ || locale && locale.strip !~ /\s/ && !locale.strip.is_landskap?
             # byebug
@@ -158,18 +164,23 @@ class Solig
             @currelem.add_escaped_text ', '
             location.unshift(locale)
             @state = :location
+            @carryover = [location, separator, tail]
           elsif tail
             @currelem.add_text separator # FIXME Not necessary a separator here!
             if tail =~ /[\.→]/
               @state = :general
               @currelem.add_text tail
               @carryover = nil
+            else
+              @carryover = [location, separator, tail]
             end
             i += 1
             next
+          else
+            @carryover = ''
           end
 
-          @carryover = [location, separator, tail]
+          # byebug
         end
         # byebug
 
