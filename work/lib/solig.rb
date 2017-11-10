@@ -128,11 +128,16 @@ class Solig
   end
 
   def initialize
+    reset
+  end
+
+  def reset
     @state = :initial
     @carryover = ''
   end
 
   def unword(element)
+    reset
     @currelem = REXML::Element.new 'div'
     @currelem.add_attribute 'type', '?'
     p = REXML::Element.new 'p'

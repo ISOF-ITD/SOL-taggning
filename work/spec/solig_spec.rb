@@ -224,18 +224,30 @@ describe Solig do
   end
 
   describe '#initialize' do
-    it "initialises @state to :initial" do
-      solig = Solig.new
+    it "calls #reset" do
+      expect_any_instance_of(Solig).to receive(:reset)
+      Solig.new
+    end
+  end
+
+  describe '#reset' do
+    it "resets @state to :initial" do
+      solig.reset
       expect(solig.instance_variable_get(:@state)).to eq :initial
     end
 
-    it "initialises the carryover to the empty string" do
-      solig = Solig.new
+    it "resets @carryover to the empty string" do
+      solig.reset
       expect(solig.instance_variable_get(:@carryover)).to eq ''
     end
   end
 
   describe '#unword' do
+    it "calls #reset" do
+      expect(solig).to receive(:reset)
+      solig.unword REXML::Document.new
+    end
+
     it "dismantles the Word XML structure" do
       bro = loadparagraph '1023-bro'
       pending "This is going to be painful"
