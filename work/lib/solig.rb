@@ -136,7 +136,6 @@ class Solig
     @currelem.add_attribute 'type', '?'
     p = REXML::Element.new 'p'
     carryover = ''
-    italic = ''
     first = true
 
     headword = ''
@@ -204,7 +203,6 @@ class Solig
       elsif @state == :location
         retvalue = add_location(r, carryover)
         carryover = retvalue.first
-        italic = retvalue.last
       elsif @state == :general
         # byebug
         if r.isitalic?
