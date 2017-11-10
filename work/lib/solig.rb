@@ -206,8 +206,9 @@ class Solig
         carryover = retvalue.first
         italic = retvalue.last
       elsif @state == :general
+        # byebug
         if r.isitalic?
-          italic = r.text_bit
+          carryover = r.text_bit
           @state = :italic
         else
           # byebug
@@ -216,12 +217,17 @@ class Solig
           @currelem.add_escaped_text r.text_bit
         end
       elsif @state == :italic
+        # byebug
         if r.isitalic?
-          italic += r.text_bit if r.text_bit
+          carryover += r.text_bit if r.text_bit
         else
-          @currelem.add_italic_text italic.strip
-          carryover = nil
-          @currelem.add_escaped_text ' ' if italic =~ /\s$/
+          @currelem.add_italic_text carryover.strip
+          if carryover =~ /(\s*)$/ # TODO Idiom for that
+            carryover = $1
+          else
+            carryover = nil
+          end
+          @currelem.add_escaped_text ' ' if carryover =~ /\s$/
           @currelem.add_escaped_text r.text_bit
           @state = :general
         end
@@ -269,12 +275,12 @@ class Solig
           @currelem.add_escaped_text tail
         end
 
-        italic = r.text_bit if r.isitalic?
+        carryover = r.text_bit if r.isitalic?
         carryover = r.text_bit
         @state = if r.isitalic? then :italic else :general end
       end
     end
 
-    [carryover, italic]
+    [carryover, carryover]
   end
 end
