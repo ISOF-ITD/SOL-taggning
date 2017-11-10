@@ -138,27 +138,25 @@ class Solig
     p = REXML::Element.new 'p'
     first = true
 
-    headword = ''
-    l = element.each_element('w:r') { }.count
-    i = 0
     rs = element.each_element('w:r') { }.to_a
+    l = rs.count
+    i = 0
     while i < l do
       r = rs[i]
       # byebug
       case @state
       when :initial
         if r.isbold?
-          rt = r.text_bit.uspace
-          if rt.length > 0 && rt.ustrip == ''
-            rt = ' '
-          end
-          headword += rt
+          collect_headword(r)
+
+          i += 1
         else
           # byebug
-          @carryover = @currelem.add_head_element(headword, r)
-          @state = :locale
+          @state = :head
         end
-
+      when :head
+        @carryover = @currelem.add_head_element(@carryover, r)
+        @state = :locale
         i += 1
       when :locale
         # byebug
@@ -291,5 +289,13 @@ class Solig
         @state = if r.isitalic? then :italic else :general end
       end
     end
+  end
+
+  def collect_headword(r)
+    rt = r.text_bit.uspace
+    if rt.length > 0 && rt.ustrip == ''
+      rt = ' '
+    end
+    @carryover += rt
   end
 end
