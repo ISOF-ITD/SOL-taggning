@@ -155,9 +155,11 @@ class Solig
           headword += rt
         else
           # byebug
-          @carryover = @currelem.add_head_element(headword, r)
-          @state = :locale
+          @state = :head
         end
+      when :head
+        @carryover = @currelem.add_head_element(headword, r)
+        @state = :locale
       when :locale
         # byebug
         t = r.text_bit
