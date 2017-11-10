@@ -126,21 +126,20 @@ class Solig
         @currelem.add_escaped_text ' '
         @currelem = REXML::Element.new 'p', @currelem
         i += 1
+        r = rs[i]
+        @carryover.strip!
+        @carryover += r.text_bit
         @state = :locale
       when :locale
         # byebug
         t = r.text_bit
         unless t.strip == ''
-          unless p.parent # FIXME Replace with an intermediate state or something
-            t = @carryover.strip + t
-          end
-
-          if t =~ /^(.*?)([\.→])(.*)$/
+          if @carryover =~ /^(.*?)([\.→])(.*)$/
             location = $1.split ','
             separator = $2
             tail = $3
           else
-            location = t.split ','
+            location = @carryover.split ','
           end
 
           location.select! { |loc| !loc.strip.empty? }
