@@ -567,8 +567,9 @@ describe Solig do
     it "adds a location element" do
       styra = REXML::Document.new "<div><head>Styra</head> <p><span type='locale'>sn</span> <location></location></p></div>"
       p = REXML::XPath.first(styra, 'div/p/location')
+      solig.instance_variable_set(:@currelem, p)
 
-      solig.add_location_element p, 'Aska hd'
+      solig.add_location_element 'Aska hd'
 
       expect(styra.to_s).to eq "<div><head>Styra</head> <p><span type='locale'>sn</span> <location><district type='härad'>Aska hd</district></location></p></div>"
     end
@@ -577,16 +578,16 @@ describe Solig do
   describe '#add_head_element' do
     it "adds a head element" do
       article = REXML::Document.new "<div xml:id='Abisko' type='bebyggelsenamn'></div>"
-      div = article.root
-      solig.add_head_element div, 'Abisko'
+      solig.instance_variable_set(:@currelem, article.root)
+      solig.add_head_element 'Abisko'
       expect(article.to_s).to eq "<div xml:id='Abisko' type='bebyggelsenamn'><head><placeName>Abisko</placeName></head></div>"
     end
 
     it "does not strip the input" do
       article = REXML::Document.new "<div xml:id='Bockara' type='bebyggelsenamn'></div>"
-      div = article.root
-      solig.add_head_element div, ' Bockara '
-      expect(div.to_s).to eq "<div xml:id='_Bockara_' type='bebyggelsenamn'><head><placeName> Bockara </placeName></head></div>"
+      solig.instance_variable_set(:@currelem, article.root)
+      solig.add_head_element ' Bockara '
+      expect(article.to_s).to eq "<div xml:id='_Bockara_' type='bebyggelsenamn'><head><placeName> Bockara </placeName></head></div>"
     end
   end
 

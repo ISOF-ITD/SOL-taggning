@@ -125,7 +125,7 @@ class Solig
           @state = :head
         end
       when :head
-        add_head_element(@currelem, @carryover.ustrip)
+        add_head_element(@carryover.ustrip)
         @carryover = r.text_bit.uspace
         @state = :locale
         i += 1
@@ -242,7 +242,9 @@ class Solig
         location_element = REXML::Element.new 'location', @currelem
         ct = location.count
         location.each_with_index do |loc, index|
-          add_location_element location_element, loc
+          @currelem = location_element
+          add_location_element loc
+          @currelem = @currelem.parent
 
           if index == ct - 1
             if loc =~ /\s$/
@@ -275,14 +277,14 @@ class Solig
     element.add_text text.gsub(/\\fd/, 'f.d.') if text # FIXME Extract that somewhere
   end
 
-  def add_head_element(element, headword)
-    headtag = REXML::Element.new 'head', element
+  def add_head_element(headword)
+    headtag = REXML::Element.new 'head', @currelem
     head = REXML::Element.new 'placeName', headtag
     head.text = headword
-    element.add_attribute 'xml:id', headword.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
+    @currelem.add_attribute 'xml:id', headword.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
   end
 
-  def add_location_element(element, loc)
+  def add_location_element(loc)
     if loc.strip =~ /.*\s+(.*)/ then
       locale = $1
     else
@@ -315,7 +317,7 @@ class Solig
         type = 'invalid'
       end
 
-      location_element = REXML::Element.new tag, element
+      location_element = REXML::Element.new tag, @currelem
       location_element.add_attribute 'type', type
       location_element.add_escaped_text l.strip
     end
