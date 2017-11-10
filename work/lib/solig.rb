@@ -139,7 +139,11 @@ class Solig
     first = true
 
     headword = ''
-    element.each_element('w:r') do |r|
+    l = element.each_element('w:r') { }.count
+    i = 0
+    rs = element.each_element('w:r') { }.to_a
+    while i < l do
+      r = rs[i]
       # byebug
       if @state == :initial
         if r.isbold?
@@ -193,6 +197,7 @@ class Solig
               @currelem.add_text tail
               @carryover = nil
             end
+            i += 1
             next
           end
 
@@ -229,6 +234,8 @@ class Solig
           @state = :general
         end
       end
+
+      i += 1
     end
 
     # byebug
