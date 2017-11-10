@@ -60,10 +60,12 @@ class REXML::Element
     Solig.add_escaped_text self, savedtext
   end
 
+  def add_escaped_text(escaped_text)
+    Solig.add_escaped_text self, escaped_text
+  end
+
   def add_locale(locale)
-    span = REXML::Element.new 'span', self
-    span.add_attribute 'type', 'locale'
-    Solig.add_escaped_text span, locale
+    Solig.add_locale self, locale
   end
 
   def isitalic?
@@ -312,5 +314,11 @@ class Solig
       location_element.add_attribute 'type', type
       Solig.add_escaped_text location_element, l.strip
     end
+  end
+
+  def self.add_locale(element, locale)
+    span = REXML::Element.new 'span', element
+    span.add_attribute 'type', 'locale'
+    Solig.add_escaped_text span, locale
   end
 end

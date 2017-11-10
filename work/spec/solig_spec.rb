@@ -118,14 +118,21 @@ describe REXML::Element do
     end
   end
 
-  describe '#add_locale' do
-    it "adds a locale" do
-      styra = REXML::Document.new('<div><head>Styra</head> <p></p></div>')
-      p = REXML::XPath.first(styra, 'div/p')
+  describe '#add_escaped_text' do
+    it "calls Solig.add_escaped_text" do
+      doc = REXML::Document.new('<doc><p>Foo.</p></doc>')
+      element = doc.root.elements.first
+      expect(Solig).to receive(:add_escaped_text).with(element, '\\fd')
+      element.add_escaped_text '\\fd'
+    end
+  end
 
-      p.add_locale 'sn'
-
-      expect(styra.to_s).to eq "<div><head>Styra</head> <p><span type='locale'>sn</span></p></div>"
+  describe "#add_locale" do
+    it "calls Solig.add_locale" do
+      doc = REXML::Document.new('<doc><p>Bar.</p></doc>')
+      element = doc.root.elements.first
+      expect(Solig).to receive(:add_locale).with(element, 'sn')
+      element.add_locale 'sn'
     end
   end
 
@@ -569,6 +576,17 @@ describe Solig do
     it "doesn’t crash on nil input" do
       root = REXML::Document.new("<doc></doc>").root
       expect { Solig.add_escaped_text root, nil }.not_to raise_error
+    end
+  end
+
+  describe '.add_locale' do
+    it "adds a locale" do
+      styra = REXML::Document.new('<div><head>Styra</head> <p></p></div>')
+      p = REXML::XPath.first(styra, 'div/p')
+
+      Solig.add_locale p, 'sn'
+
+      expect(styra.to_s).to eq "<div><head>Styra</head> <p><span type='locale'>sn</span></p></div>"
     end
   end
 end
