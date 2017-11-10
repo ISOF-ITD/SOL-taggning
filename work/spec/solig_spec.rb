@@ -43,52 +43,12 @@ describe String do
     end
   end
 
-  describe '#is_landskap' do
-    it "returns true if self is a landskap name" do
-      expect('Uppland'.is_landskap).to be_truthy
-    end
-
-    it "returns false otherwise" do
-      expect('talgoxe'.is_landskap).to be_falsey
-    end
-
-    it "has an exclusive list of landskap" do
-      landskap = String.class_variable_get(:@@landskap)
-      expect(landskap.count).to eq 25
-      expect(landskap[1]).to eq 'Blekinge'
+  describe '#is_landskap?' do
+    it "calls Solig.is_landskap?" do
+      expect(Solig).to receive(:is_landskap?).with('Södermanland')
+      'Södermanland'.is_landskap?
     end
   end
-
-  describe '.landskap_regexp' do
-    it "returns the landskap regexp" do
-      expect(String.landskap_regexp).to be_a Regexp
-    end
-
-    it "matches Småland" do
-      expect('Småland' =~ String.landskap_regexp).to be_truthy
-    end
-
-    it "doesn’t match Värend" do
-      expect('Värend' =~ String.landskap_regexp).to be_falsey
-    end
-
-    it "doesn’t match Jönköping" do
-      expect('Jönköping' =~ String.landskap_regexp).to be_falsey
-    end
-
-    it "caches the regexp" do
-      String.landskap_regexp
-      expect(String.class_variable_get(:@@landskap_regexp)).not_to be_nil
-    end
-
-    it "is not anchored" do
-      expect('Småland och Västergötland' =~ String.landskap_regexp).to be_truthy
-    end
-
-    it "... really not!" do
-      expect(' Skåne' =~ String.landskap_regexp).to be_truthy
-    end
-  end# TODO
 end
 
 describe REXML::Element do
@@ -206,6 +166,53 @@ end
 
 describe Solig do
   let(:solig) { Solig.new }
+
+  describe '#is_landskap?' do
+    it "returns true if self is a landskap name" do
+      expect('Uppland'.is_landskap?).to be_truthy
+    end
+
+    it "returns false otherwise" do
+      expect('talgoxe'.is_landskap?).to be_falsey
+    end
+
+    it "has an exclusive list of landskap" do
+      landskap = Solig.class_variable_get(:@@landskap)
+      expect(landskap.count).to eq 25
+      expect(landskap[1]).to eq 'Blekinge'
+    end
+  end
+
+  describe '.landskap_regexp' do
+    it "returns the landskap regexp" do
+      expect(Solig.landskap_regexp).to be_a Regexp
+    end
+
+    it "matches Småland" do
+      expect('Småland' =~ Solig.landskap_regexp).to be_truthy
+    end
+
+    it "doesn’t match Värend" do
+      expect('Värend' =~ Solig.landskap_regexp).to be_falsey
+    end
+
+    it "doesn’t match Jönköping" do
+      expect('Jönköping' =~ Solig.landskap_regexp).to be_falsey
+    end
+
+    it "caches the regexp" do
+      Solig.landskap_regexp
+      expect(Solig.class_variable_get(:@@landskap_regexp)).not_to be_nil
+    end
+
+    it "is not anchored" do
+      expect('Småland och Västergötland' =~ Solig.landskap_regexp).to be_truthy
+    end
+
+    it "... really not!" do
+      expect(' Skåne' =~ Solig.landskap_regexp).to be_truthy
+    end
+  end# TODO
 
   describe '.escape' do
     it "replaces “f.d.” with \\fd" do

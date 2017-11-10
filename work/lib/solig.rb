@@ -22,13 +22,6 @@ end
 
 class String
   @@uspaces = '[   ]' # FIXME Complete!
-  @@landskap = [
-    'Skåne', 'Blekinge', 'Öland', 'Småland', 'Halland',
-    'Västergötland', 'Bohuslän', 'Dalsland', 'Gotland', 'Östergötland',
-    'Södermanland', 'Närke', 'Värmland', 'Uppland', 'Västmanland',
-    'Dalarna', 'Gästrikland', 'Hälsingland', 'Härjedalen', 'Medelpad',
-    'Jämtland', 'Ångermanland', 'Västerbotten', 'Lappland', 'Norrbotten',
-  ]
 
   def ustrip
     strip.gsub(/^#{@@uspaces}*/, '').gsub(/#{@@uspaces}*$/, '')
@@ -38,12 +31,8 @@ class String
     gsub(/#{@@uspaces}+/, ' ')
   end
 
-  def is_landskap
-    @@landskap.include? self
-  end
-
-  def self.landskap_regexp
-    @@landskap_regexp ||= Regexp.new @@landskap.join('|')
+  def is_landskap?
+    Solig.is_landskap? self
   end
 end
 
@@ -51,13 +40,13 @@ class REXML::Element
   def add_italic_text(text)
     span = REXML::Element.new 'span', self
     span.add_attribute 'type', 'kursiv'
-    Solig.add_escaped_text span, text
+    span.add_escaped_text text
   end
 
   def escape_text! # TODO A recursive version?
     savedtext = text
     self.text = ''
-    Solig.add_escaped_text self, savedtext
+    add_escaped_text savedtext
   end
 
   def add_escaped_text(escaped_text)
@@ -83,6 +72,22 @@ class REXML::Element
 end
 
 class Solig
+  @@landskap = [
+    'Skåne', 'Blekinge', 'Öland', 'Småland', 'Halland',
+    'Västergötland', 'Bohuslän', 'Dalsland', 'Gotland', 'Östergötland',
+    'Södermanland', 'Närke', 'Värmland', 'Uppland', 'Västmanland',
+    'Dalarna', 'Gästrikland', 'Hälsingland', 'Härjedalen', 'Medelpad',
+    'Jämtland', 'Ångermanland', 'Västerbotten', 'Lappland', 'Norrbotten',
+  ]
+
+  def self.is_landskap? string
+    @@landskap.include? string
+  end
+
+  def self.landskap_regexp
+    @@landskap_regexp ||= Regexp.new @@landskap.join('|')
+  end
+
   def self.escape(text)
     text.gsub(/f\.d\./, '\\fd') if text
   end
@@ -128,7 +133,7 @@ class Solig
         t = r.text_bit
         unless t.strip == ''
           unless p.parent # FIXME Replace with an intermediate state or something
-            Solig.add_escaped_text @currelem, ' '
+            @currelem.add_escaped_text ' '
             @currelem.add_element p
             @currelem = p
             t = @carryover.strip + t
@@ -145,16 +150,16 @@ class Solig
           location.select! { |loc| !loc.strip.empty? }
 
           locale = location.shift
-          while first || locale =~ /\\fd/ || locale && locale.strip !~ /\s/ && !locale.strip.is_landskap
+          while first || locale =~ /\\fd/ || locale && locale.strip !~ /\s/ && !locale.strip.is_landskap?
             # byebug
-            Solig.add_escaped_text @currelem, ', ' unless first
+            @currelem.add_escaped_text ', ' unless first
             @currelem.add_locale locale.strip if locale
             locale = location.shift
             first = false
           end
 
           if locale
-            Solig.add_escaped_text @currelem, ', '
+            @currelem.add_escaped_text ', '
             location.unshift(locale)
           else
             @currelem.add_text separator
@@ -183,9 +188,9 @@ class Solig
           @state = :italic
         else
           # byebug
-          Solig.add_escaped_text @currelem, @carryover if @carryover
+          @currelem.add_escaped_text @carryover if @carryover
           @carryover = nil if @carryover
-          Solig.add_escaped_text @currelem, r.text_bit
+          @currelem.add_escaped_text r.text_bit
         end
 
         i += 1
@@ -195,13 +200,13 @@ class Solig
           @carryover += r.text_bit if r.text_bit
         else
           @currelem.add_italic_text @carryover.strip
-          Solig.add_escaped_text @currelem, ' ' if @carryover =~ /\s$/
+          @currelem.add_escaped_text ' ' if @carryover =~ /\s$/
           if @carryover =~ /(\s*)$/ # TODO Idiom for that
             @carryover = $1
           else
             @carryover = nil
           end
-          Solig.add_escaped_text @currelem, r.text_bit
+          @currelem.add_escaped_text r.text_bit
           @state = :general
         end
 
@@ -240,14 +245,14 @@ class Solig
 
           if index == ct - 1
             if loc =~ /\s$/
-              Solig.add_escaped_text @currelem, ' '
+              @currelem.add_escaped_text ' '
             end
           end
         end
 
         if tail
-          Solig.add_escaped_text @currelem, separator
-          Solig.add_escaped_text @currelem, tail
+          @currelem.add_escaped_text separator
+          @currelem.add_escaped_text tail
         end
 
         @carryover = r.text_bit
@@ -302,7 +307,7 @@ class Solig
       when 'stad'
         tag = 'settlement'
         type = 'stad'
-      when String.landskap_regexp
+      when Solig.landskap_regexp
         tag = 'region'
         type = 'landskap'
       else
@@ -312,13 +317,13 @@ class Solig
 
       location_element = REXML::Element.new tag, element
       location_element.add_attribute 'type', type
-      Solig.add_escaped_text location_element, l.strip
+      add_escaped_text location_element, l.strip
     end
   end
 
   def self.add_locale(element, locale)
     span = REXML::Element.new 'span', element
     span.add_attribute 'type', 'locale'
-    Solig.add_escaped_text span, locale
+    add_escaped_text span, locale
   end
 end
