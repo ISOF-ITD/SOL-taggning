@@ -29,6 +29,10 @@ describe String do
     it "replaces all Unicode space characters" do
       expect(ox.uspace).to eq "Oxie härad "
     end
+
+    it "replaces U+2002 EN SPACE" do
+      expect('a b'.uspace).to eq 'a b'
+    end
   end
 
   describe '#is_landskap' do

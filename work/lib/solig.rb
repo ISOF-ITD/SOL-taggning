@@ -11,7 +11,7 @@ class NilClass
 end
 
 class String
-  @@uspaces = '[  ]' # FIXME Complete!
+  @@uspaces = '[   ]' # FIXME Complete!
   @@landskap = [
     'Skåne', 'Blekinge', 'Öland', 'Småland', 'Halland',
     'Västergötland', 'Bohuslän', 'Dalsland', 'Gotland', 'Östergötland',
