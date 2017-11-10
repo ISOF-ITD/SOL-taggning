@@ -180,7 +180,7 @@ class Solig
 
         i += 1
       when :location
-        retvalue = add_location(r)
+        add_location(r)
         i += 1
       when :general
         # byebug
