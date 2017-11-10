@@ -139,11 +139,10 @@ class Solig
     italic = ''
     first = true
 
-    state = :initial
     headword = ''
     element.each_element('w:r') do |r|
       # byebug
-      if state == :initial
+      if @state == :initial
         if r.isbold?
           rt = r.text_bit.uspace
           if rt.length > 0 && rt.ustrip == ''
@@ -153,9 +152,9 @@ class Solig
         else
           # byebug
           carryover = div.add_head_element(headword, r)
-          state = :locale
+          @state = :locale
         end
-      elsif state == :locale
+      elsif @state == :locale
         # byebug
         t = r.text_bit
         unless t.strip == ''
@@ -190,33 +189,33 @@ class Solig
           else
             p.add_text separator
             if tail =~ /[\.→]/
-              state = :general
+              @state = :general
               p.add_text tail
               carryover = nil
             end
             next
           end
 
-          state = :location
+          @state = :location
           carryover = [location, separator, tail]
         end
         # byebug
-      elsif state == :location
+      elsif @state == :location
         retvalue = add_location(p, r, carryover)
-        state = retvalue.first
+        @state = retvalue.first
         carryover = retvalue[1]
         italic = retvalue.last
-      elsif state == :general
+      elsif @state == :general
         if r.isitalic?
           italic = r.text_bit
-          state = :italic
+          @state = :italic
         else
           # byebug
           p.add_escaped_text carryover if carryover
           carryover = nil if carryover
           p.add_escaped_text r.text_bit
         end
-      elsif state == :italic
+      elsif @state == :italic
         if r.isitalic?
           italic += r.text_bit if r.text_bit
         else
@@ -224,7 +223,7 @@ class Solig
           carryover = nil
           p.add_escaped_text ' ' if italic =~ /\s$/
           p.add_escaped_text r.text_bit
-          state = :general
+          @state = :general
         end
       end
     end
@@ -234,7 +233,7 @@ class Solig
     r = REXML::Element.new 'w:r'
     rt = REXML::Element.new 'w:t', r
     rt.text = 'foo'
-    add_location(p, r, carryover) if carryover && state == :location
+    add_location(p, r, carryover) if carryover && @state == :location
 
     # if carryover
     #   if state == :remainder
@@ -248,7 +247,7 @@ class Solig
   end
 
   def add_location(p, r, carryover = nil) # FIXME Some spec (?)
-    state = nil
+    @state = nil
 
     if r.text_bit
       unless r.text_bit.strip == ''
@@ -274,10 +273,10 @@ class Solig
 
         italic = r.text_bit if r.isitalic?
         carryover = r.text_bit
-        state = if r.isitalic? then :italic else :general end
+        @state = if r.isitalic? then :italic else :general end
       end
     end
 
-    [state, carryover, italic]
+    [@state, carryover, italic]
   end
 end
