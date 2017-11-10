@@ -155,11 +155,11 @@ class Solig
           headword += rt
         else
           # byebug
-          @state = :head
+          @carryover = @currelem.add_head_element(headword, r)
+          @state = :locale
         end
-      when :head
-        @carryover = @currelem.add_head_element(headword, r)
-        @state = :locale
+
+        i += 1
       when :locale
         # byebug
         t = r.text_bit
@@ -208,8 +208,11 @@ class Solig
           @carryover = [location, separator, tail]
         end
         # byebug
+
+        i += 1
       when :location
         retvalue = add_location(r)
+        i += 1
       when :general
         # byebug
         if r.isitalic?
@@ -221,6 +224,8 @@ class Solig
           @carryover = nil if @carryover
           @currelem.add_escaped_text r.text_bit
         end
+
+        i += 1
       when :italic
         # byebug
         if r.isitalic?
@@ -236,9 +241,9 @@ class Solig
           @currelem.add_escaped_text r.text_bit
           @state = :general
         end
-      end
 
-      i += 1
+        i += 1
+      end
     end
 
     # byebug
