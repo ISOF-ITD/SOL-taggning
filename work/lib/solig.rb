@@ -136,7 +136,6 @@ class Solig
     @currelem = REXML::Element.new 'div'
     @currelem.add_attribute 'type', '?'
     p = REXML::Element.new 'p'
-    carryover = ''
     first = true
 
     headword = ''
@@ -151,7 +150,7 @@ class Solig
           headword += rt
         else
           # byebug
-          carryover = @currelem.add_head_element(headword, r)
+          @carryover = @currelem.add_head_element(headword, r)
           @state = :locale
         end
       elsif @state == :locale
@@ -162,7 +161,7 @@ class Solig
             @currelem.add_escaped_text ' '
             @currelem.add_element p
             @currelem = p
-            t = carryover.strip + t
+            t = @carryover.strip + t
           end
 
           if t =~ /^(.*?)([\.→])(.*)$/
@@ -192,41 +191,41 @@ class Solig
             if tail =~ /[\.→]/
               @state = :general
               @currelem.add_text tail
-              carryover = nil
+              @carryover = nil
             end
             next
           end
 
           @state = :location
-          carryover = [location, separator, tail]
+          @carryover = [location, separator, tail]
         end
         # byebug
       elsif @state == :location
-        retvalue = add_location(r, carryover)
-        carryover = retvalue.first
+        retvalue = add_location(r, @carryover)
+        @carryover = retvalue.first
       elsif @state == :general
         # byebug
         if r.isitalic?
-          carryover = r.text_bit
+          @carryover = r.text_bit
           @state = :italic
         else
           # byebug
-          @currelem.add_escaped_text carryover if carryover
-          carryover = nil if carryover
+          @currelem.add_escaped_text @carryover if @carryover
+          @carryover = nil if @carryover
           @currelem.add_escaped_text r.text_bit
         end
       elsif @state == :italic
         # byebug
         if r.isitalic?
-          carryover += r.text_bit if r.text_bit
+          @carryover += r.text_bit if r.text_bit
         else
-          @currelem.add_italic_text carryover.strip
-          if carryover =~ /(\s*)$/ # TODO Idiom for that
-            carryover = $1
+          @currelem.add_italic_text @carryover.strip
+          if @carryover =~ /(\s*)$/ # TODO Idiom for that
+            @carryover = $1
           else
-            carryover = nil
+            @carryover = nil
           end
-          @currelem.add_escaped_text ' ' if carryover =~ /\s$/
+          @currelem.add_escaped_text ' ' if @carryover =~ /\s$/
           @currelem.add_escaped_text r.text_bit
           @state = :general
         end
@@ -238,7 +237,7 @@ class Solig
     r = REXML::Element.new 'w:r'
     rt = REXML::Element.new 'w:t', r
     rt.text = 'foo'
-    add_location(r, carryover) if carryover && @state == :location
+    add_location(r, @carryover) if @carryover && @state == :location
 
     # if carryover
     #   if state == :remainder
