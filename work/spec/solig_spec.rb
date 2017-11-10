@@ -577,17 +577,16 @@ describe Solig do
   describe '#add_head_element' do
     it "adds a head element" do
       article = REXML::Document.new "<div xml:id='Abisko' type='bebyggelsenamn'></div>"
-      div = article.root.elements.first
-      byebug
+      div = article.root
       solig.add_head_element div, 'Abisko'
-      expect(article.to_s).to eq "<div xml:id ='Abisko' type='bebyggelsenamn'><head><placeName>Abisko</placeName></head></div>"
+      expect(article.to_s).to eq "<div xml:id='Abisko' type='bebyggelsenamn'><head><placeName>Abisko</placeName></head></div>"
     end
 
-    it "strips the input" do
+    it "does not strip the input" do
       article = REXML::Document.new "<div xml:id='Bockara' type='bebyggelsenamn'></div>"
-      div = article.root.elements.first
+      div = article.root
       solig.add_head_element div, ' Bockara '
-      expect(div.to_s).to eq "<div xml:id='Bockara' type='bebyggelsenamn'><head><placeName>Bockara</placeName></head></div>"
+      expect(div.to_s).to eq "<div xml:id='_Bockara_' type='bebyggelsenamn'><head><placeName> Bockara </placeName></head></div>"
     end
   end
 
