@@ -134,7 +134,6 @@ class Solig
         # byebug
         t = r.text_bit
         unless t.strip == ''
-          @carryover += t.strip
           if @carryover =~ /^(.*?)([\.→])(.*)$/
             location = $1.split ','
             separator = $2
@@ -177,7 +176,10 @@ class Solig
             i += 1
             next
           else
-            @carryover = ''
+            i += 1
+            r = rs[i]
+            @carryover = r.text_bit
+            next
           end
 
           # byebug
