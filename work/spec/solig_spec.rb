@@ -555,8 +555,8 @@ describe Solig do
     expect(actual).to eq expected
   end
 
-  it "works on -arp" do
-    arp = loadparagraph '496-arp'
+  it "doesn’t raise an error on -arp" do
+    arp = loadparagraph '597-arp'
     expect { solig.unword arp }.not_to raise_error
   end
 end

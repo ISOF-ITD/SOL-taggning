@@ -188,7 +188,7 @@ class Solig
           while first || locale =~ /\\fd/ || locale && locale.strip !~ /\s/ && !locale.strip.is_landskap
             # byebug
             @currelem.add_escaped_text ', ' unless first
-            @currelem.add_locale locale.strip
+            @currelem.add_locale locale.strip if locale
             locale = location.shift
             first = false
           end
