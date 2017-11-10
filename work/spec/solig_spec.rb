@@ -579,14 +579,14 @@ describe Solig do
       article = REXML::Document.new "<div xml:id='Abisko' type='bebyggelsenamn'></div>"
       div = article.root.elements.first
       div.add_head_element 'Abisko'
-      expect(article.to_s).to eq "<div xml:id ='Abisko' type='bebyggelsenamn'>Abisko</div>"
+      expect(article.to_s).to eq "<div xml:id ='Abisko' type='bebyggelsenamn'><head><placeName>Abisko</placeName></head></div>"
     end
 
     it "strips the input" do
       article = REXML::Document.new "<div xml:id='Bockara' type='bebyggelsenamn'></div>"
       div = article.root.elements.first
       div.add_head_element ' Bockara '
-      expect(div.to_s).to eq "<div xml:id='Bockara' type='bebyggelsenamn'>Bockara
+      expect(div.to_s).to eq "<div xml:id='Bockara' type='bebyggelsenamn'><head><placeName>Bockara</placeName></head></div>"
     end
   end
 
