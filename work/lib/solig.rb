@@ -127,6 +127,7 @@ class Solig
         @carryover = r.text_bit.uspace
         @currelem.add_escaped_text ' '
         @currelem = Element.new 'p', @currelem
+
         i += 1
         r = rs[i]
         @carryover.strip!
@@ -135,7 +136,7 @@ class Solig
       when :locale
         # byebug
         t = r.text_bit
-        unless t.strip == ''
+        unless false
           if @carryover =~ /^(.*?)([\.→])(.*)$/
             location = $1.split ','
             separator = $2
