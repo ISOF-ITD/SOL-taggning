@@ -19,9 +19,9 @@ class NilClass
     false
   end
 
-  # def text_bit
-    # ''
-  # end
+  def text_bit
+    ''
+  end
 end
 
 class Hash
