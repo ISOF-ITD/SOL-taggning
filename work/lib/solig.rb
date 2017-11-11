@@ -150,32 +150,29 @@ class Solig
         @currtext = r.text_bit
         while @currtext =~ /(.*?),/
           @currtext.gsub /([^,]*)/, ''
-          add_locale_element $1 if $1.is_locale?
+          add_locale_element $1
         end
 
-        @state = :location
-      when :location
+        r = rs.shift
+        @state = :further_locales
+      when :further_locales
+        @currtext = r.text_bit
+        while @currtext =~ /(.*?),/
+          @currtext.gsub /([^,]*)/, ''
+          add_locale_element $1 if $1.is_locale?
+        end
+        r = rs.shift
+
         while @currtext !~ /(.*)[\.→]/
           @currtext.gsub /([^\.→]*)/, ''
           r = rs.shift
           @currtext += r.text_bit
         end
 
-        if r.text_bit =~ /^(.*?)([\.→].*)$/
-          current_run = $1
-          # Do the locale and location thing
-          @carryover = $2
-          @state = :general
-        else
-          @carryover = r.text_bit # current_run?
-          while @carryover =~ /^(.*?),/
-            locale = $1
-            if first || $1.is_locale?
-              add_locale_element locale.strip
-            end
-          end
-          # Now stay in :locale!
-        end
+        @currelem.init_location_elements
+        @state = :location
+      when :location
+
 #         byebug
 #         if @carryover =~ /^(.*?)[\.→]/
 #           location = $1.split ','
