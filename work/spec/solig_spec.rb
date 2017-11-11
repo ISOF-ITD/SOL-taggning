@@ -542,92 +542,94 @@ describe Solig do
     end
   end
 
-  it "doesn’t crash on Undersåker" do
-    undersåker = loadparagraph '5855-undersåker'
-    expect { solig.unword(undersåker) }.not_to raise_error
-  end
+  describe 'Intensive tests for #unword' do
+    it "doesn’t crash on Undersåker" do
+      undersåker = loadparagraph '5855-undersåker'
+      expect { solig.unword(undersåker) }.not_to raise_error
+    end
 
-  it "works on Västra Skrävlinge" do
-    västra_skrävlinge = loadparagraph '6317-västra-skrävlinge'
-    expected = "<div xml:id='Västra_Skrävlinge' type='?'><head><placeName>Västra Skrävlinge</placeName></head> <p><span type='locale'>f.d. sn</span>, <location><district type='härad'>Oxie hd</district><region type='landskap'>Skåne</region></location></p>. (<span type='kursiv'>de</span>) <span type='kursiv'>Scræplingi</span> 1300-talets mitt. (<span type='kursiv'>de</span>) <span type='kursiv'>Westraskræplinge</span> 1400-talets förra del (avser kyrkbyn). – Socknen har sitt namn efter kyrkbyn. Det innehåller en inbyggnarbeteckning (→ -<span type='kursiv'>inge</span>), kanske bildad till ett äldre namn på Husiebäcken, sammanhängande med verbet <span type='kursiv'>skrapa</span> med syftning på vattnets ljud. Kyrkbyn och grannbyn Östra Skrävlinge i Husie f.d. socken utgjorde äldst en enda bebyggelse.</div>"
-    actual = solig.unword(västra_skrävlinge).to_s
-    pending "Later"
-    # byebug
-    expect(actual).to eq expected
-  end
+    it "works on Västra Skrävlinge" do
+      västra_skrävlinge = loadparagraph '6317-västra-skrävlinge'
+      expected = "<div xml:id='Västra_Skrävlinge' type='?'><head><placeName>Västra Skrävlinge</placeName></head> <p><span type='locale'>f.d. sn</span>, <location><district type='härad'>Oxie hd</district><region type='landskap'>Skåne</region></location></p>. (<span type='kursiv'>de</span>) <span type='kursiv'>Scræplingi</span> 1300-talets mitt. (<span type='kursiv'>de</span>) <span type='kursiv'>Westraskræplinge</span> 1400-talets förra del (avser kyrkbyn). – Socknen har sitt namn efter kyrkbyn. Det innehåller en inbyggnarbeteckning (→ -<span type='kursiv'>inge</span>), kanske bildad till ett äldre namn på Husiebäcken, sammanhängande med verbet <span type='kursiv'>skrapa</span> med syftning på vattnets ljud. Kyrkbyn och grannbyn Östra Skrävlinge i Husie f.d. socken utgjorde äldst en enda bebyggelse.</div>"
+      actual = solig.unword(västra_skrävlinge).to_s
+      pending "Later"
+      # byebug
+      expect(actual).to eq expected
+    end
 
-  it "works on Lilla och Stora Värtan" do
-    stora_och_lilla_värtan = loadparagraph '6231-stora-och-lilla-värtan'
-    expected = "<div xml:id ='Värtan._Stora._Lilla' type='?'><head>Värtan, Stora, Lilla</placeName></head> <p><span type='locale'>fjärdar</span> i Upplandsdelen av Stockholmns inre skärgård. <span type='kursiv'>Wärtänn</span>, <span type='kursiv'>Wärtenn</span>, <span type='kursiv'>Wertenn</span> (1558). – Namnet kan sammanhänga med ordet <span type='kursiv'>vårta</span>, dock med oviss syftning.</p></div>" # FIXME Not much idea what to do! "<div xml:id='Värtan._Stora._Lilla'><head>Värtan, Stora, Lilla</head> <p><span type='locale'>fjärdar</span> i Upplandsdelen av <location><settlement type='stad'>Stockholms inre skärgård </p></div>"
-    actual = solig.unword(stora_och_lilla_värtan).to_s
-    pending "That’s going to be painful"
-    # byebug
-    expect(actual).to eq expected
-  end
+    it "works on Lilla och Stora Värtan" do
+      stora_och_lilla_värtan = loadparagraph '6231-stora-och-lilla-värtan'
+      expected = "<div xml:id ='Värtan._Stora._Lilla' type='?'><head>Värtan, Stora, Lilla</placeName></head> <p><span type='locale'>fjärdar</span> i Upplandsdelen av Stockholmns inre skärgård. <span type='kursiv'>Wärtänn</span>, <span type='kursiv'>Wärtenn</span>, <span type='kursiv'>Wertenn</span> (1558). – Namnet kan sammanhänga med ordet <span type='kursiv'>vårta</span>, dock med oviss syftning.</p></div>" # FIXME Not much idea what to do! "<div xml:id='Värtan._Stora._Lilla'><head>Värtan, Stora, Lilla</head> <p><span type='locale'>fjärdar</span> i Upplandsdelen av <location><settlement type='stad'>Stockholms inre skärgård </p></div>"
+      actual = solig.unword(stora_och_lilla_värtan).to_s
+      pending "That’s going to be painful"
+      # byebug
+      expect(actual).to eq expected
+    end
 
-  it "works on Västanå" do
-    västanå = loadparagraph '6242-västanå'
-    pending "later"
-    expect(solig.unword(västanå).to_s).to eq "<div xml:id='Västanå' type='?'><head><placeName>Västanå</placeName></head> <p><span type='kursiv'>gods</span>, <location><district type='landsförsamling'>Gränna lfs</district><district type='härad'>Vista hd</district><region type='landskap'>Småland</region></location>. <span type='kursiv'>Westan a </span> 1412. Namnet är givet efter läget väster om Röttleån (jfr → <span type='kursiv'>Östanå</span>).</p></div>" # Inte Skåne!
-  end
+    it "works on Västanå" do
+      västanå = loadparagraph '6242-västanå'
+      pending "later"
+      expect(solig.unword(västanå).to_s).to eq "<div xml:id='Västanå' type='?'><head><placeName>Västanå</placeName></head> <p><span type='kursiv'>gods</span>, <location><district type='landsförsamling'>Gränna lfs</district><district type='härad'>Vista hd</district><region type='landskap'>Småland</region></location>. <span type='kursiv'>Westan a </span> 1412. Namnet är givet efter läget väster om Röttleån (jfr → <span type='kursiv'>Östanå</span>).</p></div>" # Inte Skåne!
+    end
 
-  it "works on Västanfors"
+    it "works on Västanfors"
 
-  it "works on the last V entry" # 6344
+    it "works on the last V entry" # 6344
 
-  it "doesn’t crash on Västra Klagstorp" do # 6308
-    västra_klagstorp = loadparagraph '6308-västra-klagstorp'
-    expect { solig.unword västra_klagstorp }.to_not raise_error # Raised TypeError (at some point)
-  end
+    it "doesn’t crash on Västra Klagstorp" do # 6308
+      västra_klagstorp = loadparagraph '6308-västra-klagstorp'
+      expect { solig.unword västra_klagstorp }.to_not raise_error # Raised TypeError (at some point)
+    end
 
-  it "works on Ullvi" do # 5834
-    ullvi = loadparagraph '5834-ullvi'
-    expected = "<div xml:id='Ullvi' type='?'><head><placeName>Ullvi</placeName></head> <p><span type='locale'>gd</span>, <location><district type='socken'>Irsta sn</district><district type='härad'>Siende hd</district><region type='landskap'>Västmanland</region></location>. (<span type='kursiv'>in</span>) <span type='kursiv'>Vllaui</span> 1371. – Namnets förled innehåller gudanamnet <span type='kursiv'>Ull</span> och dess efterled → <span type='kursiv'>vi</span> ’helig plats, kultplats’. Namnet <span type='kursiv'>Ullvi</span> bars tidigare också av den unga tätorten → <span type='kursiv'>Irsta</span> strax norr om gården.</p></div>"
-    formatted = solig.unword(ullvi)
-    actual = formatted.to_s
-    # byebug
-    expect(actual).to eq expected
-  end
+    it "works on Ullvi" do # 5834
+      ullvi = loadparagraph '5834-ullvi'
+      expected = "<div xml:id='Ullvi' type='?'><head><placeName>Ullvi</placeName></head> <p><span type='locale'>gd</span>, <location><district type='socken'>Irsta sn</district><district type='härad'>Siende hd</district><region type='landskap'>Västmanland</region></location>. (<span type='kursiv'>in</span>) <span type='kursiv'>Vllaui</span> 1371. – Namnets förled innehåller gudanamnet <span type='kursiv'>Ull</span> och dess efterled → <span type='kursiv'>vi</span> ’helig plats, kultplats’. Namnet <span type='kursiv'>Ullvi</span> bars tidigare också av den unga tätorten → <span type='kursiv'>Irsta</span> strax norr om gården.</p></div>"
+      formatted = solig.unword(ullvi)
+      actual = formatted.to_s
+      # byebug
+      expect(actual).to eq expected
+    end
 
-  it "works on Ulrika" do # 5837
-    ulrika = loadparagraph '5837-ulrika'
-    expected = "<div xml:id='Ulrika' type='?'><head><placeName>Ulrika</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Valkebo hd</district><region type='landskap'>Östergötland</region></location>. – Socknen bildades 1736 av områden från flera äldre socknar. Namnet gavs för att hedra Ulrika Eleonora. Tätorten har vuxit fram i anslutning till sockenkyrkan.</p></div>"
-    actual = solig.unword(ulrika).to_s
-    # pending "Later"
-    # byebug
-    expect(actual).to eq expected
-  end
+    it "works on Ulrika" do # 5837
+      ulrika = loadparagraph '5837-ulrika'
+      expected = "<div xml:id='Ulrika' type='?'><head><placeName>Ulrika</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Valkebo hd</district><region type='landskap'>Östergötland</region></location>. – Socknen bildades 1736 av områden från flera äldre socknar. Namnet gavs för att hedra Ulrika Eleonora. Tätorten har vuxit fram i anslutning till sockenkyrkan.</p></div>"
+      actual = solig.unword(ulrika).to_s
+      # pending "Later"
+      # byebug
+      expect(actual).to eq expected
+    end
 
-  it "doesn’t tag Småland and Östergötland as invalid" do
-    valdemarsvik = loadparagraph '5913-valdemarsvik'
-    expect(solig.unword(valdemarsvik).to_s).to be =~ /<region type='landskap'>Småland<\/region>/
-  end
+    it "doesn’t tag Småland and Östergötland as invalid" do
+      valdemarsvik = loadparagraph '5913-valdemarsvik'
+      expect(solig.unword(valdemarsvik).to_s).to be =~ /<region type='landskap'>Småland<\/region>/
+    end
 
-  it "outputs the id" do
-    w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Ingelstad</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>tätort, Östra Torsås sn, Konga hd, Småland.</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
-    expected = "<div xml:id='Ingelstad' type='?'><head><placeName>Ingelstad</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Östra Torsås sn</district><district type='härad'>Konga hd</district><region type='landskap'>Småland</region></location>.</p></div>"
-    actual = solig.unword(w).to_s
-    # byebug
-    expect(actual).to eq expected
-  end
+    it "outputs the id" do
+      w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Ingelstad</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>tätort, Östra Torsås sn, Konga hd, Småland.</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
+      expected = "<div xml:id='Ingelstad' type='?'><head><placeName>Ingelstad</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Östra Torsås sn</district><district type='härad'>Konga hd</district><region type='landskap'>Småland</region></location>.</p></div>"
+      actual = solig.unword(w).to_s
+      # byebug
+      expect(actual).to eq expected
+    end
 
-  it "escapes id’s properly" do
-    w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Mellby, Norra, Södra</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>snr, Kållands hd, Västergötland.</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
-    expected = "<div xml:id='Mellby._Norra._Södra' type='?'><head><placeName>Mellby, Norra, Södra</placeName></head> <p><span type='locale'>snr</span>, <location><district type='härad'>Kållands hd</district><region type='landskap'>Västergötland</region></location>.</p></div>"
-    actual = solig.unword(w).to_s
-    expect(actual).to eq expected
-  end
+    it "escapes id’s properly" do
+      w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Mellby, Norra, Södra</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>snr, Kållands hd, Västergötland.</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
+      expected = "<div xml:id='Mellby._Norra._Södra' type='?'><head><placeName>Mellby, Norra, Södra</placeName></head> <p><span type='locale'>snr</span>, <location><district type='härad'>Kållands hd</district><region type='landskap'>Västergötland</region></location>.</p></div>"
+      actual = solig.unword(w).to_s
+      expect(actual).to eq expected
+    end
 
-  it "adds an empty bebyggelsenamn" do
-    w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Kattorp</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>sn, tätort, Luggude hd, Skåne.</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
-    expected = "<div xml:id='Kattorp' type='?'><head><placeName>Kattorp</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Luggude hd</district><region type='landskap'>Skåne</region></location>.</p></div>"
-    actual = solig.unword(w).to_s
-    expect(actual).to eq expected
-  end
+    it "adds an empty bebyggelsenamn" do
+      w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Kattorp</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>sn, tätort, Luggude hd, Skåne.</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
+      expected = "<div xml:id='Kattorp' type='?'><head><placeName>Kattorp</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Luggude hd</district><region type='landskap'>Skåne</region></location>.</p></div>"
+      actual = solig.unword(w).to_s
+      expect(actual).to eq expected
+    end
 
-  it "doesn’t raise an error on -arp" do
-    arp = loadparagraph '597-arp'
-    expect { solig.unword arp }.not_to raise_error
+    it "doesn’t raise an error on -arp" do
+      arp = loadparagraph '597-arp'
+      expect { solig.unword arp }.not_to raise_error
+    end
   end
 
   describe '#start_location'
