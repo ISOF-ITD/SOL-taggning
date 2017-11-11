@@ -215,8 +215,8 @@ class Solig
           @currtext += r.wtext if r.wtext
         else
           @currelem.add_italic_text @currtext.strip
-          @currelem.add_escaped_text ' ' if @currtext =~ /\s$/
-          @currtext = r.wtext
+          @currtext = if @currtext =~ /\s$/ then ' ' else '' end
+          @currtext += r.wtext
           @state = :general
         end
 
