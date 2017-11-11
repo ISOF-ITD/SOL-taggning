@@ -19,9 +19,9 @@ class NilClass
     false
   end
 
-  def text_bit
-    ''
-  end
+  # def text_bit
+    # ''
+  # end
 end
 
 class Hash
@@ -156,6 +156,7 @@ class Solig
         end
         while @currtext !~ /,/ && !(rs.first && rs.first.isitalic?) # Search for full first locale
           r = rs.shift
+          break unless r
           @currtext += r.text_bit
         end
 
