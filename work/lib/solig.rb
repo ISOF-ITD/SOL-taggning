@@ -297,7 +297,8 @@ class Solig
     # puts 'foo' if @state == :head
     add_locale_element @currtext if @state == :first_locale
     location = XPath.first(@currelem.root, '//location')
-    @currelem.root.remove if location.to_s == '<location/>'
+    # byebug
+    location.remove if location.to_s == '<location/>'
     # add_location(r) if @carryover && @state == :location
 
     # if carryover
