@@ -293,6 +293,11 @@ describe Solig do
       solig.reset
       expect(solig.instance_variable_get(:@carryover)).to eq ''
     end
+
+    it "resets @currtext to the empty string" do
+      solig.reset
+      expect(solig.instance_variable_get(:@currtext)).to eq ''
+    end
   end
 
   describe '#unword' do

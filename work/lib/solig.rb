@@ -112,6 +112,7 @@ class Solig
 
   def reset
     @state = :initial
+    @currtext = ''
     @carryover = ''
   end
 
