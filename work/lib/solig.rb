@@ -177,6 +177,9 @@ class Solig
           add_location_element $1
           @currtext.gsub! /[^,]*,\s*/, ''
         end
+        add_location_element @currtext
+        r = rs.shift
+        @state = if r.is_italic? then :italic else :general end
 
 #         byebug
 #         if @carryover =~ /^(.*?)[\.→]/
@@ -272,7 +275,7 @@ class Solig
   end
 
   def init_location_elements
-    Element.new 'location', @currelem
+    @currelem = Element.new 'location', @currelem
   end
 
   def add_location(r) # FIXME Some spec (?)
