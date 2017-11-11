@@ -156,6 +156,7 @@ class Solig
         end
         while @currtext !~ /,/ && !(rs.first && rs.first.isitalic?) # Search for full first locale
           r = rs.shift
+          byebug unless r
           break unless r
           @currtext += r.text_bit
         end
