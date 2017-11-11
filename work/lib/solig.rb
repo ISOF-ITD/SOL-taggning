@@ -149,7 +149,16 @@ class Solig
       when :locale
         @currtext = r.text_bit
         while @currtext =~ /(.*?),/
+          @currtext.gsub /([^,]*)/, ''
           add_locale_element $1 if $1.is_locale?
+        end
+
+        @state = :location
+      when :location
+        while @currtext !~ /(.*)[\.→]/
+          @currtext.gsub /([^\.→]*)/, ''
+          r = rs.shift
+          @currtext += r.text_bit
         end
 
         if r.text_bit =~ /^(.*?)([\.→].*)$/
@@ -206,9 +215,9 @@ class Solig
 #           @carryover = r.text_bit
 #           next
 #         end
-      when :location
-        add_location(r)
-        r = rs.shift
+#       when :location
+#         add_location(r)
+#         r = rs.shift
       when :general
         # byebug
         if r.isitalic?
