@@ -305,7 +305,10 @@ describe Solig do
     it "processes a parish without a härad" do
       husby = loadparagraph '2498-husby'
       form = solig.unword(husby)
-      expect(form.to_s).to be =~ /^<div xml:id='Husby' type='\?'><head><placeName>Husby<\/placeName><\/head> <p><span type='locale'>sn<\/span>, <span type='locale'>tätort<\/span>, <location><region type='landskap'>Dalarna<\/region><\/location>/
+      expected = /^<div xml:id='Husby' type='\?'><head><placeName>Husby<\/placeName><\/head> <p><span type='locale'>sn<\/span>, <span type='locale'>tätort<\/span>, <location><region type='landskap'>Dalarna<\/region><\/location>/
+      actual = form.to_s
+      byebug
+      expect(actual).to be =~ expected
     end
 
     it "processes a parish with an extra locale" do
