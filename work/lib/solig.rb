@@ -126,7 +126,7 @@ class Solig
     rs = element.each_element('w:r') { }.to_a
     r = rs.shift
     while r do
-      # byebug
+      # byebug
       case @state
       when :initial
         if r.isbold?
