@@ -156,12 +156,12 @@ class Solig
 
         @state = :first_locale
       when :first_locale
-        byebug
+        # byebug
         add_locale_element @currtext.gsub /(.*?),.*/, '\1'
         @currelem.add_text ', '
         @currtext.gsub! /^.*?,\s*/, ''
         while @currtext =~ /(.*?),/ # Take as many locales in current run
-          byebug
+          # byebug
           if $1.is_locale?
             add_locale_element $1
             @currelem.add_text ', '

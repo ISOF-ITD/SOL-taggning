@@ -516,7 +516,7 @@ describe Solig do
       umeå = loadparagraph '5849-umeå'
       # pending "later"
       actual = solig.unword(umeå).to_s
-      byebug
+      # byebug
       expect(actual).to be =~ /<div xml:id='Umeå' type='\?'><head><placeName>Umeå<\/placeName><\/head> <p><span type='locale'>kn<\/span>, <span type='locale'>stad<\/span>, <span type='locale'>sn<\/span>, <location><region type='landskap'>Västerbotten<\/region><\/location>/
     end
 
