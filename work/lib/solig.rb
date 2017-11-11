@@ -1,6 +1,8 @@
 require 'rexml/document'
 require 'byebug'
 
+include REXML
+
 class UnexpectedElement < StandardError; end
 class UnexpectedLocation < StandardError; end
 
@@ -36,9 +38,9 @@ class String
   end
 end
 
-class REXML::Element
+class Element
   def add_italic_text(text)
-    span = REXML::Element.new 'span', self
+    span = Element.new 'span', self
     span.add_attribute 'type', 'kursiv'
     span.add_escaped_text text
   end
@@ -54,15 +56,15 @@ class REXML::Element
   end
 
   def isitalic?
-    REXML::XPath.first(self, 'w:rPr/w:i')
+    XPath.first(self, 'w:rPr/w:i')
   end
 
   def isbold?
-    REXML::XPath.first(self, 'w:rPr/w:b')
+    XPath.first(self, 'w:rPr/w:b')
   end
 
   def text_bit
-    t = REXML::XPath.first(self, 'w:t')
+    t = XPath.first(self, 'w:t')
     t && Solig.escape(t.text)
   end
 end
@@ -99,9 +101,9 @@ class Solig
 
   def unword(element)
     reset
-    @currelem = REXML::Element.new 'div'
+    @currelem = Element.new 'div'
     @currelem.add_attribute 'type', '?'
-    p = REXML::Element.new 'p'
+    p = Element.new 'p'
     first = true
 
     rs = element.each_element('w:r') { }.to_a
@@ -124,7 +126,7 @@ class Solig
         add_head_element(@carryover.ustrip)
         @carryover = r.text_bit.uspace
         @currelem.add_escaped_text ' '
-        @currelem = REXML::Element.new 'p', @currelem
+        @currelem = Element.new 'p', @currelem
         i += 1
         r = rs[i]
         @carryover.strip!
@@ -220,8 +222,8 @@ class Solig
 
     # byebug
 
-    r = REXML::Element.new 'w:r'
-    rt = REXML::Element.new 'w:t', r
+    r = Element.new 'w:r'
+    rt = Element.new 'w:t', r
     rt.text = 'foo'
     add_location(r) if @carryover && @state == :location
 
@@ -242,7 +244,7 @@ class Solig
         location = @carryover.first
         separator = @carryover[1]
         tail = @carryover.last
-        location_element = REXML::Element.new 'location', @currelem
+        location_element = Element.new 'location', @currelem
         ct = location.count
         location.each_with_index do |loc, index|
           @currelem = location_element
@@ -281,8 +283,8 @@ class Solig
   end
 
   def add_head_element(headword)
-    headtag = REXML::Element.new 'head', @currelem
-    head = REXML::Element.new 'placeName', headtag
+    headtag = Element.new 'head', @currelem
+    head = Element.new 'placeName', headtag
     head.text = headword
     @currelem.add_attribute 'xml:id', headword.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
   end
@@ -320,14 +322,14 @@ class Solig
         type = 'invalid'
       end
 
-      location_element = REXML::Element.new tag, @currelem
+      location_element = Element.new tag, @currelem
       location_element.add_attribute 'type', type
       location_element.add_escaped_text l.strip
     end
   end
 
   def add_locale_element(locale)
-    span = REXML::Element.new 'span', @currelem
+    span = Element.new 'span', @currelem
     span.add_attribute 'type', 'locale'
     span.add_escaped_text locale
   end

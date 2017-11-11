@@ -51,10 +51,10 @@ describe String do
   end
 end
 
-describe REXML::Element do
+describe Element do
   describe '#add_italic_text' do
     it "adds italic text" do
-      foo = REXML::Document.new('<doc>foo</doc>').root
+      foo = Document.new('<doc>foo</doc>').root
 
       foo.add_text ' '
       foo.add_italic_text 'bar'
@@ -64,7 +64,7 @@ describe REXML::Element do
     end
 
     it "calls #add_escaped_text" do
-      doc = REXML::Document.new('<doc>content</doc>')
+      doc = Document.new('<doc>content</doc>')
       expect(doc.root).to receive(:add_escaped_text).with('a \\fd b')
       doc.root.add_escaped_text('a \\fd b')
     end
@@ -72,7 +72,7 @@ describe REXML::Element do
 
   describe '#escape_text!' do
     it "escapes the text" do
-      doc = REXML::Document.new('<doc>x \\fd y</doc>')
+      doc = Document.new('<doc>x \\fd y</doc>')
       doc.root.escape_text!
       expect(doc.root.text).to eq 'x f.d. y'
     end
@@ -80,7 +80,7 @@ describe REXML::Element do
 
   describe '#add_escaped_text' do
     it "calls Solig.add_escaped_text" do
-      doc = REXML::Document.new('<doc><p>Foo.</p></doc>')
+      doc = Document.new('<doc><p>Foo.</p></doc>')
       element = doc.root.elements.first
       expect(Solig).to receive(:add_escaped_text).with(element, '\\fd')
       element.add_escaped_text '\\fd'
@@ -89,19 +89,19 @@ describe REXML::Element do
 
   describe '#isitalic?' do
     it "returns true if text bit is italic" do
-      doc = REXML::Document.new "<w:document xmlns:w='somelink'><w:r><w:rPr><w:i /></w:rPr></w:r></w:document>"
+      doc = Document.new "<w:document xmlns:w='somelink'><w:r><w:rPr><w:i /></w:rPr></w:r></w:document>"
       text = doc.root.elements.first
       expect(text.isitalic?).to be_truthy
     end
 
     it "returns false otherwise" do
-      doc = REXML::Document.new "<w:document xmlns:w='ns'><w:r><w:rPr></w:rPr></w:r></w:document>"
+      doc = Document.new "<w:document xmlns:w='ns'><w:r><w:rPr></w:rPr></w:r></w:document>"
       text = doc.root.elements.first
       expect(text.isitalic?).to be_falsey
     end
 
     it "doesn’t crash if element doesn’t conform to the .docx format" do
-      doc = REXML::Document.new "<w:document xmlns:w='ns'><w:p></w:p></w:document>"
+      doc = Document.new "<w:document xmlns:w='ns'><w:p></w:p></w:document>"
       text = doc.root.elements.first
       expect { text.isitalic? }.to_not raise_error
     end
@@ -109,19 +109,19 @@ describe REXML::Element do
 
   describe '#isbold?' do
     it "returns true if text bit is bold" do
-      doc = REXML::Document.new "<w:document xmlns:w=''><w:r><w:rPr><w:b /></w:rPr></w:r></w:document>"
+      doc = Document.new "<w:document xmlns:w=''><w:r><w:rPr><w:b /></w:rPr></w:r></w:document>"
       bold = doc.root.elements.first
       expect(bold.isbold?).to be_truthy
     end
 
     it "returns false otherwise" do
-      doc = REXML::Document.new "<w:document xmlns:w=''><w:r><w:rPr></w:rPr></w:r></w:document>"
+      doc = Document.new "<w:document xmlns:w=''><w:r><w:rPr></w:rPr></w:r></w:document>"
       notbold = doc.root.elements.first
       expect(notbold.isbold?).to be_falsey
     end
 
     it "doesn’t crash if element doesn’t have an rPr child" do
-      doc = REXML::Document.new "<w:document xmlns:w=''><w:p></w:p></w:document>"
+      doc = Document.new "<w:document xmlns:w=''><w:p></w:p></w:document>"
       not_a_text_bit = doc.root.elements.first
       expect(not_a_text_bit.isbold?).to be_falsey
     end
@@ -129,26 +129,26 @@ describe REXML::Element do
 
   describe '#text_bit' do
     it "returns the text bit" do
-      doc = REXML::Document.new "<w:document xmlns:w=''><w:r><w:t>foo</w:t></w:r></w:document>"
+      doc = Document.new "<w:document xmlns:w=''><w:r><w:t>foo</w:t></w:r></w:document>"
       bit = doc.root.elements.first
       expect(bit.text_bit).to eq 'foo'
     end
 
     it "doesn’t crash if element doesn’t contain a text bit" do
-      doc = REXML::Document.new "<w:document xmlns:w=''><w:p>bar</w:p></w:document>"
+      doc = Document.new "<w:document xmlns:w=''><w:p>bar</w:p></w:document>"
       bit = doc.root.elements.first
       expect { bit.text_bit }.to_not raise_error
     end
 
     it "returns nil if element doesn’t contain a text bit" do
-      doc = REXML::Document.new "<w:document xmlns:w=''><w:p>quux</w:p></w:document>"
+      doc = Document.new "<w:document xmlns:w=''><w:p>quux</w:p></w:document>"
       bit = doc.root.elements.first
       expect(bit.text_bit).to be_nil
     end
 
     it "calls Solig.escape" do
-      doc = REXML::Document.new "<w:document xmlns:w=''><w:p><w:r><w:t>foo \\fd bar</w:t></w:r></w:p></w:document>"
-      bit = REXML::XPath.first(doc, '/w:document/w:p/w:r')
+      doc = Document.new "<w:document xmlns:w=''><w:p><w:r><w:t>foo \\fd bar</w:t></w:r></w:p></w:document>"
+      bit = XPath.first(doc, '/w:document/w:p/w:r')
       expect(Solig).to receive(:escape).with('foo \\fd bar')
       bit.text_bit
     end
@@ -237,7 +237,7 @@ describe Solig do
   describe '#unword' do
     it "calls #reset" do
       expect(solig).to receive(:reset)
-      solig.unword REXML::Document.new
+      solig.unword Document.new
     end
 
     it "dismantles the Word XML structure" do
@@ -427,7 +427,7 @@ describe Solig do
     end
 
     it "remaps initial - to _ for id’s" do
-      w = REXML::XPath.first(REXML::Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>-unga</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>namnelement.</w:t></w:r></w:p></w:document>"), "/w:document/w:p")
+      w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>-unga</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>namnelement.</w:t></w:r></w:p></w:document>"), "/w:document/w:p")
       expect(solig.unword(w).to_s).to eq "<div xml:id='_unga' type='?'><head><placeName>-unga</placeName></head> <p><span type='locale'>namnelement</span>.</p></div>"
     end
 
@@ -526,7 +526,7 @@ describe Solig do
   end
 
   it "outputs the id" do
-    w = REXML::XPath.first(REXML::Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Ingelstad</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>tätort, Östra Torsås sn, Konga hd, Småland</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
+    w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Ingelstad</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>tätort, Östra Torsås sn, Konga hd, Småland</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
     expected = "<div xml:id='Ingelstad' type='?'><head><placeName>Ingelstad</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Östra Torsås sn</district><district type='härad'>Konga hd</district><region type='landskap'>Småland</region></location></p></div>"
     actual = solig.unword(w).to_s
     # byebug
@@ -534,14 +534,14 @@ describe Solig do
   end
 
   it "escapes id’s properly" do
-    w = REXML::XPath.first(REXML::Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Mellby, Norra, Södra</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>snr, Kållands hd, Västergötland</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
+    w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Mellby, Norra, Södra</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>snr, Kållands hd, Västergötland</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
     expected = "<div xml:id='Mellby._Norra._Södra' type='?'><head><placeName>Mellby, Norra, Södra</placeName></head> <p><span type='locale'>snr</span>, <location><district type='härad'>Kållands hd</district><region type='landskap'>Västergötland</region></location></p></div>"
     actual = solig.unword(w).to_s
     expect(actual).to eq expected
   end
 
   it "adds an empty bebyggelsenamn" do
-    w = REXML::XPath.first(REXML::Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Kattorp</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>sn, tätort, Luggude hd, Skåne</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
+    w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Kattorp</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>sn, tätort, Luggude hd, Skåne</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
     expected = "<div xml:id='Kattorp' type='?'><head><placeName>Kattorp</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Luggude hd</district><region type='landskap'>Skåne</region></location></p></div>"
     actual = solig.unword(w).to_s
     expect(actual).to eq expected
@@ -556,8 +556,8 @@ describe Solig do
 
   describe '#add_location_element' do
     it "adds a location element" do
-      styra = REXML::Document.new "<div><head>Styra</head> <p><span type='locale'>sn</span> <location></location></p></div>"
-      p = REXML::XPath.first(styra, 'div/p/location')
+      styra = Document.new "<div><head>Styra</head> <p><span type='locale'>sn</span> <location></location></p></div>"
+      p = XPath.first(styra, 'div/p/location')
       solig.instance_variable_set(:@currelem, p)
 
       solig.add_location_element 'Aska hd'
@@ -568,14 +568,14 @@ describe Solig do
 
   describe '#add_head_element' do
     it "adds a head element" do
-      article = REXML::Document.new "<div xml:id='Abisko' type='bebyggelsenamn'></div>"
+      article = Document.new "<div xml:id='Abisko' type='bebyggelsenamn'></div>"
       solig.instance_variable_set(:@currelem, article.root)
       solig.add_head_element 'Abisko'
       expect(article.to_s).to eq "<div xml:id='Abisko' type='bebyggelsenamn'><head><placeName>Abisko</placeName></head></div>"
     end
 
     it "does not strip the input" do
-      article = REXML::Document.new "<div xml:id='Bockara' type='bebyggelsenamn'></div>"
+      article = Document.new "<div xml:id='Bockara' type='bebyggelsenamn'></div>"
       solig.instance_variable_set(:@currelem, article.root)
       solig.add_head_element ' Bockara '
       expect(article.to_s).to eq "<div xml:id='_Bockara_' type='bebyggelsenamn'><head><placeName> Bockara </placeName></head></div>"
@@ -584,22 +584,22 @@ describe Solig do
 
   describe '.add_escaped_text' do
     it "interprets the escape sequences" do
-      doc = REXML::Document.new "<doc><p></p></doc>"
+      doc = Document.new "<doc><p></p></doc>"
       element = doc.root.elements.first
       Solig.add_escaped_text element, "foo \\fd bar"
       expect(element.text).to eq "foo f.d. bar"
     end
 
     it "doesn’t crash on nil input" do
-      root = REXML::Document.new("<doc></doc>").root
+      root = Document.new("<doc></doc>").root
       expect { Solig.add_escaped_text root, nil }.not_to raise_error
     end
   end
 
   describe '#add_locale_element' do
     it "adds a locale" do
-      styra = REXML::Document.new('<div><head>Styra</head> <p></p></div>')
-      p = REXML::XPath.first(styra, 'div/p')
+      styra = Document.new('<div><head>Styra</head> <p></p></div>')
+      p = XPath.first(styra, 'div/p')
       solig.instance_variable_set(:@currelem, p)
 
       solig.add_locale_element 'sn'
