@@ -158,9 +158,13 @@ class Solig
         @state = :first_locale
       when :first_locale
         # byebug
-        add_locale_element @currtext.gsub /(.*?),.*/, '\1'
-        @currelem.add_text ', '
-        @currtext.gsub! /^.*?,\s*/, ''
+        add_locale_element @currtext.gsub /(.*?)[,\.→].*/, '\1'
+        if @currtext =~ /^.*?,\s*/
+          @currelem.add_text ', '
+          @currtext.gsub! /^.*?,\s*/, ''
+        else
+          @currtext.gsub! /^.*?([\.→])/, '\1'
+        end
         while @currtext !~ /[\.→]/ && !(rs.first && rs.first.isitalic?)
           r = rs.shift # !!!
           @currtext += r.text_bit
