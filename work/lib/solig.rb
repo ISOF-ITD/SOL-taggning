@@ -178,6 +178,9 @@ class Solig
           @currtext.gsub! /[^,]*,\s*/, ''
         end
         add_location_element @currtext
+        @currelem = @currelem.parent
+        @currelem.add_text $1 if @carryover =~ /([\.→]\s*)/
+        @carryover.gsub /^[\.→]\s*/, ''
         r = rs.shift
         @state = if r.isitalic? then :italic else :general end
 
