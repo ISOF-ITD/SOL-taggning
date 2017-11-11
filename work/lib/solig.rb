@@ -169,8 +169,9 @@ class Solig
         @currelem.init_location_elements
         @state = :location
       when :location
-        while @currtext =~ /,/ # Take as many location elements in current run
-          @currtext.gsub! /([^,]*),\s*/, ''
+        while @currtext =~ /(.*?),/ # Take as many location elements in current run
+          add_location_element $1
+          @currtext.gsub! /[^,]*,\s*/, ''
         end
 
 #         byebug
