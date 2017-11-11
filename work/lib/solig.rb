@@ -126,7 +126,7 @@ class Solig
     rs = element.each_element('w:r') { }.to_a
     r = rs.shift
     while r do
-      # byebug
+      byebug
       case @state
       when :initial
         if r.isbold?
@@ -162,7 +162,7 @@ class Solig
         @currelem.add_text ', '
         @currtext.gsub! /^.*?,\s*/, ''
         while @currtext !~ /[\.→]/ && !(rs.first && rs.first.isitalic?)
-          rs.shift
+          r = rs.shift # !!!
           @currtext += r.text_bit
         end
 
