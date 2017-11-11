@@ -164,6 +164,11 @@ class Solig
       when :no_further_locales
         @currtext += r.text_bit
 
+        if @currtext =~ /(.*?)([\.→].*)/ # Search for end of run
+          @currtext = $1
+          @carryover = $2
+        end
+
         @currelem.init_location_elements
         @state = :location
       when :location
