@@ -10,10 +10,6 @@ class NilClass
   def uspace
     nil
   end
-
-  def is_one_word?
-    
-  end
 end
 
 class Hash

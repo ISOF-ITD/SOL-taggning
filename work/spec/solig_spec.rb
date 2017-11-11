@@ -12,7 +12,12 @@ describe NilClass do
   end
 
   describe '#is_one_word?' do
-    it "doesn’t crash on a nil input"
+    it "doesn’t crash on a nil input" do
+    end
+
+    it "returns false" do
+      expect(nil.is_one_word?).to be_falsey
+    end
   end
 end
 
@@ -55,9 +60,17 @@ describe String do
   end
 
   describe '#is_one_word?' do
-    it "returns true if string is one word"
-    it "returns false if not"
-    it "strips the input first"
+    it "returns true if string is one word" do
+      expect('foo'.is_one_word?).to be_truthy
+    end
+
+    it "returns false if not" do
+      expect('foo bar'.is_one_word?).to be_falsey
+    end
+
+    it "strips the input first" do
+      expect(' foo '.is_one_word?).to be_truthy
+    end
   end
 end
 
