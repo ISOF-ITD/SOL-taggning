@@ -31,9 +31,9 @@ describe NilClass do
     end
   end
 
-  describe '#text_bit' do
+  describe '#wtext' do
     it "returns the empty string" do
-      expect(nil.text_bit).to eq ''
+      expect(nil.wtext).to eq ''
     end
   end
 end
@@ -194,30 +194,30 @@ describe Element do
     end
   end
 
-  describe '#text_bit' do
+  describe '#wtext' do
     it "returns the text bit" do
       doc = Document.new "<w:document xmlns:w=''><w:r><w:t>foo</w:t></w:r></w:document>"
       bit = doc.root.elements.first
-      expect(bit.text_bit).to eq 'foo'
+      expect(bit.wtext).to eq 'foo'
     end
 
     it "doesn’t crash if element doesn’t contain a text bit" do
       doc = Document.new "<w:document xmlns:w=''><w:p>bar</w:p></w:document>"
       bit = doc.root.elements.first
-      expect { bit.text_bit }.to_not raise_error
+      expect { bit.wtext }.to_not raise_error
     end
 
     it "returns nil if element doesn’t contain a text bit" do
       doc = Document.new "<w:document xmlns:w=''><w:p>quux</w:p></w:document>"
       bit = doc.root.elements.first
-      expect(bit.text_bit).to be_nil
+      expect(bit.wtext).to be_nil
     end
 
     it "calls Solig.escape" do
       doc = Document.new "<w:document xmlns:w=''><w:p><w:r><w:t>foo \\fd bar</w:t></w:r></w:p></w:document>"
       bit = XPath.first(doc, '/w:document/w:p/w:r')
       expect(Solig).to receive(:escape).with('foo \\fd bar')
-      bit.text_bit
+      bit.wtext
     end
   end
 end

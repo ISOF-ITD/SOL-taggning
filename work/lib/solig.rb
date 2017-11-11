@@ -19,7 +19,7 @@ class NilClass
     false
   end
 
-  def text_bit
+  def wtext
     ''
   end
 end
@@ -83,7 +83,7 @@ class Element
     XPath.first(self, 'w:rPr/w:b')
   end
 
-  def text_bit
+  def wtext
     t = XPath.first(self, 'w:t')
     t && Solig.escape(t.text)
   end
@@ -139,18 +139,18 @@ class Solig
         end
       when :head
         add_head_element(@currtext.ustrip)
-        @currtext = r.text_bit.uspace.strip
+        @currtext = r.wtext.uspace.strip
         @currelem.add_escaped_text ' '
         @currelem = Element.new 'p', @currelem
 
         unless rs.first && rs.first.isitalic? # FIXME And something else?
           r = rs.shift
-          @currtext += r.text_bit
+          @currtext += r.wtext
         end
         while @currtext !~ /,/ && !(rs.first && rs.first.isitalic?) # Search for full first locale
           r = rs.shift
           break unless r
-          @currtext += r.text_bit
+          @currtext += r.wtext
         end
 
         @state = :first_locale
@@ -164,7 +164,7 @@ class Solig
         end
         while @currtext !~ /[\.→]/ && !(rs.first && rs.first.isitalic?)
           r = rs.shift
-          @currtext += r.text_bit
+          @currtext += r.wtext
         end
 
         while @currtext =~ /(.*?),/ # Take as many locales in current run
@@ -202,18 +202,18 @@ class Solig
         @state = if r.isitalic? then :italic else :general end
       when :general
         if r.isitalic?
-          @currtext = r.text_bit
+          @currtext = r.wtext
           @state = :italic
         else
           @currelem.add_escaped_text @currtext if @currtext
           @currtext = nil if @currtext
-          @currelem.add_escaped_text r.text_bit
+          @currelem.add_escaped_text r.wtext
         end
 
         r = rs.shift
       when :italic
         if r.isitalic?
-          @currtext += r.text_bit if r.text_bit
+          @currtext += r.wtext if r.wtext
         else
           @currelem.add_italic_text @currtext.strip
           @currelem.add_escaped_text ' ' if @currtext =~ /\s$/
@@ -222,7 +222,7 @@ class Solig
           else
             @currtext = nil
           end
-          @currelem.add_escaped_text r.text_bit
+          @currelem.add_escaped_text r.wtext
           @state = :general
         end
 
@@ -242,7 +242,7 @@ class Solig
   end
 
   def collect_headword(r)
-    rt = r.text_bit.uspace
+    rt = r.wtext.uspace
     if rt.length > 0 && rt.ustrip == ''
       rt = ' '
     end
