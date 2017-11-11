@@ -125,7 +125,7 @@ class Solig
     rs = element.each_element('w:r') { }.to_a
     r = rs.shift
     while r do
-      # byebug
+      byebug
       case @state
       when :initial
         if r.isbold?
@@ -153,10 +153,10 @@ class Solig
         @state = :first_locale
       when :first_locale
         add_locale_element @currtext
-        @currtext.gsub /.*?,/, ','
+        @currtext.gsub! /.*?,/, ','
         while @currtext =~ /(.*?),/ # Take as many locales in current run
           add_locale_element $1 if $1.is_locale?
-          @currtext.gsub /([^,]*)/, ''
+          @currtext.gsub! /([^,]*)/, ''
         end
 
         r = rs.shift
@@ -173,7 +173,7 @@ class Solig
         @state = :location
       when :location
         while @currtext =~ /(.*)[\.→]/ # Take as many location elements in current run
-          @currtext.gsub /([^\.→]*)/, ''
+          @currtext.gsub! /([^\.→]*)/, ''
           r = rs.shift
           @currtext += r.text_bit
         end
