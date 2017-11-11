@@ -141,22 +141,28 @@ class Solig
         @carryover = r.text_bit.uspace
         @currelem.add_escaped_text ' '
         @currelem = Element.new 'p', @currelem
+        @carryover.strip!
 
         r = rs.shift
-        @carryover.strip!
-        @carryover += r.text_bit
-        @state = :locale
-      when :locale
         @currtext = r.text_bit
-        while @currtext =~ /(.*?),/
+        while @currtext !~ /,/ # Search for full first locale
+          r = rs.shift
+          @currtext += r.text_bit
+        end
+
+        @state = :first_locale
+      when :first_locale
+        add_locale_element @currtext
+        @currtext.gsub /.*?,/, ','
+        while @currtext =~ /(.*?),/ # Take as many locales in current run
+          add_locale_element $1 if $1.is_locale?
           @currtext.gsub /([^,]*)/, ''
-          add_locale_element $1
         end
 
         r = rs.shift
-        @state = :further_locales
-      when :further_locales
-        @currtext = r.text_bit
+        @state = :no_further_locales
+      when :no_further_locales
+        @currtext += r.text_bit
         while @currtext =~ /(.*?),/
           @currtext.gsub /([^,]*)/, ''
           add_locale_element $1 if $1.is_locale?
