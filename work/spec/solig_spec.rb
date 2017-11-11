@@ -635,6 +635,11 @@ describe Solig do
       benning = loadparagraph '704-benning'
       expect { solig.unword benning }.not_to raise_error
     end
+
+    it "doesn’t raise an error on bo" do
+      bo2 = loadparagraph '874-bo-andra-paragraf'
+      expect { solig.unword bo2 }.not_to raise_error
+    end
   end
 
   describe '#start_location'
