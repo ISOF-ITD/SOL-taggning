@@ -394,7 +394,7 @@ describe Solig do
     it "calls a city a settlement" do
       abborrberget = loadparagraph '445-abborrberget'
       formatted = solig.unword abborrberget
-      pending "This is just bizarre.  Strä[new element]ngnäs"
+      # pending "This is just bizarre.  Strä[new element]ngnäs"
       # byebug
       expect(formatted.to_s).to be =~ /<div xml:id='Abborrberget' type='\?'><head><placeName>Abborrberget<\/placeName><\/head> <p><span type='locale'>tätort<\/span>, <location><settlement type='stad'>Strängnäs stad<\/settlement><region type='landskap'>Södermanland<\/region><\/location>/ # FIXME Allow non-landskap areas as last entries!
     end
