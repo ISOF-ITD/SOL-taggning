@@ -147,7 +147,6 @@ class Solig
         @carryover += r.text_bit
         @state = :locale
       when :locale
-        # byebug
         if @carryover =~ /^(.*?)([\.→])(.*)$/
           location = $1.split ','
           separator = $2
