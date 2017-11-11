@@ -153,10 +153,12 @@ class Solig
         @state = :first_locale
       when :first_locale
         add_locale_element @currtext.gsub /(.*?),.*/, '\1'
+        @currelem.add_text ', '
         @currtext.gsub! /^.*?,\s*/, ''
         while @currtext =~ /(.*?),/ # Take as many locales in current run
           if $1.is_locale?
             add_locale_element $1
+            @currelem.add_text ', '
             @currtext.gsub! /[^,]*,\s*/, ''
           else
             break
@@ -170,7 +172,6 @@ class Solig
           @carryover = $2
         end
 
-        @currelem.add_text ', '
         init_location_elements
         @state = :location
       when :location
