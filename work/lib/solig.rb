@@ -180,13 +180,12 @@ class Solig
           else
             @carryover = location.join(', ') + @carryover
           end
+          r = rs.shift
         else
           r = rs.shift
           @carryover = r.text_bit
           next
         end
-
-        r = rs.shift
       when :location
         add_location(r)
         r = rs.shift
