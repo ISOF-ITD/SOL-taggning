@@ -641,9 +641,9 @@ describe Solig do
       expect { solig.unword bo2 }.not_to raise_error
     end
 
-    # FIXME Paragraphs are really not identical!
+    # FIXME Paragraph probably shouldn’t be on its own
     it "doesn‘t raise an error on bod" do # Crash line 148
-      bod3 = loadparagraph '878-bod-tredje-paragraf'
+      bod3 = loadparagraph '888-bod-tredje-paragraf'
       expect { solig.unword bod3 }.not_to raise_error
     end
   end

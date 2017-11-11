@@ -145,7 +145,7 @@ class Solig
 
         unless rs.first && rs.first.isitalic? # FIXME And something else?
           r = rs.shift
-          @currtext += r.wtext
+          @currtext += r.wtext if r.wtext
         end
         while @currtext !~ /,/ && !(rs.first && rs.first.isitalic?) # Search for full first locale
           r = rs.shift
