@@ -42,7 +42,7 @@ class String
   end
 
   def is_locale?
-    self =~ /\\fd/ || is_one_word? || !is_landskap?
+    self =~ /\\fd/ || is_one_word? && !is_landskap?
   end
 
   def is_landskap?

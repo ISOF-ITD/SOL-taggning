@@ -81,7 +81,7 @@ describe String do
     end
 
     it "returns false on names of landskap" do
-      expect('Västmanland'.is_locale?).to be_truthy
+      expect('Västmanland'.is_locale?).to be_falsey
     end
   end
 
