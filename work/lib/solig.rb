@@ -236,8 +236,8 @@ class Solig
   end
 
   def add_location(r) # FIXME Some spec (?)
-    if r.text_bit
-      unless r.text_bit.strip == ''
+    if true
+      unless false
         location = @carryover.first
         separator = @carryover[1]
         tail = @carryover.last
