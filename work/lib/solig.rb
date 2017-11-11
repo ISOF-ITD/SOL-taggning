@@ -202,28 +202,21 @@ class Solig
         @state = if r.isitalic? then :italic else :general end
       when :general
         if r.isitalic?
+          @currelem.add_escaped_text @currtext
           @currtext = r.wtext
           @state = :italic
         else
-          @currelem.add_escaped_text @currtext if @currtext
-          @currtext = nil if @currtext
-          @currelem.add_escaped_text r.wtext
+          @currtext += r.wtext if r.wtext
         end
 
         r = rs.shift
       when :italic
         if r.isitalic?
-          lambda { r = rs.shift; next } unless r.wtext
           @currtext += r.wtext if r.wtext
         else
           @currelem.add_italic_text @currtext.strip
           @currelem.add_escaped_text ' ' if @currtext =~ /\s$/
-          if @currtext =~ /(\s*)$/ # TODO Idiom for that
-            @currtext = $1
-          else
-            @currtext = nil
-          end
-          @currelem.add_escaped_text r.wtext
+          @currtext = r.wtext
           @state = :general
         end
 
@@ -232,6 +225,8 @@ class Solig
     end
 
     add_locale_element @currtext if @state == :first_locale
+    @currelem.add_escaped_text @currtext if @state == :general
+    @currelem.add_italic_text @currtext if @state == :italic
     location = XPath.first(@currelem.root, '//location')
     location.remove if location.to_s == '<location/>'
 
