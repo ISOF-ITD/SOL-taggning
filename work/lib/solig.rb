@@ -179,7 +179,7 @@ class Solig
         end
         add_location_element @currtext
         r = rs.shift
-        @state = if r.is_italic? then :italic else :general end
+        @state = if r.isitalic? then :italic else :general end
 
 #         byebug
 #         if @carryover =~ /^(.*?)[\.→]/
