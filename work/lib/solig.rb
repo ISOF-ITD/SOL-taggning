@@ -161,9 +161,12 @@ class Solig
         add_locale_element @currtext.gsub /(.*?),.*/, '\1'
         @currelem.add_text ', '
         @currtext.gsub! /^.*?,\s*/, ''
+        n = 0
         while @currtext !~ /[\.→]/ && !(rs.first && rs.first.isitalic?)
           rs.shift
           @currtext += r.text_bit
+          n += 1
+          byebug if n == 1000
         end
 
         while @currtext =~ /(.*?),/ # Take as many locales in current run
