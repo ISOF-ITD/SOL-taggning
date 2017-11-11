@@ -159,9 +159,7 @@ class Solig
             add_locale_element $1
             @currtext.gsub! /[^,]*,\s*/, ''
           else
-            @state = :no_further_locales
-            r = rs.shift
-            next
+            break
           end
         end
 
