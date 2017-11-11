@@ -141,10 +141,11 @@ class Solig
         @carryover = r.text_bit.uspace
         @currelem.add_escaped_text ' '
         @currelem = Element.new 'p', @currelem
-        @carryover.strip!
+        @currtext = @carryover.strip
+        @carryover = ''
 
         r = rs.shift
-        @currtext = r.text_bit
+        @currtext += r.text_bit
         while @currtext !~ /,/ # Search for full first locale
           r = rs.shift
           @currtext += r.text_bit
