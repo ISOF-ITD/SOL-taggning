@@ -171,11 +171,10 @@ class Solig
           location.unshift(locale)
           @state = :location
           @carryover = location.join ', ' + @carryover
-        elsif tail
-          @currelem.add_text separator
-          if tail =~ /[\.→]/
+        elsif @carryover.length > 1
+          if @carryover =~ /[\.→]/
             @state = :general
-            @currelem.add_text tail
+            @currelem.add_text @carryover
             @carryover = nil
           else
             @carryover = location.join ', ' + @carryover
@@ -243,7 +242,7 @@ class Solig
 
   def add_location(r) # FIXME Some spec (?)
     @carryover =~ /^([^\.→]*?)/
-    location = $1.first.split(', ').select { |loc| !loc.strip.empty? }
+    location = $1.split(', ').select { |loc| !loc.strip.empty? }
     @carryover.gsub /^([^\.→]*?)/, ''
     location_element = Element.new 'location', @currelem
     ct = location.count
