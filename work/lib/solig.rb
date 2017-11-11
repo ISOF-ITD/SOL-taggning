@@ -147,8 +147,21 @@ class Solig
         @carryover += r.text_bit
         @state = :locale
       when :locale
-        if r.text_bit =~ /^(.*?)[\.→]/
-          current_run = r.text_bit.gsub /^[^\.→]*/
+        if r.text_bit =~ /^(.*?)([\.→].*)$/
+          current_run = $1
+          # Do the locale and location thing
+          @carryover = $2
+          @state = :general
+        else
+          @carryover = r.text_bit # current_run?
+          while @carryover =~ /^(.*?),/
+            locale = $1
+            if first || $1.is_locale?
+              add_locale_element locale.strip
+            end
+          end
+          # Now stay in :locale!
+        end
 #         byebug
 #         if @carryover =~ /^(.*?)[\.→]/
 #           location = $1.split ','
