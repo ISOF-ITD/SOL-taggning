@@ -242,6 +242,7 @@ class Solig
   end
 
   def add_location(r) # FIXME Some spec (?)
+    byebug
     @carryover =~ /^([^\.→]*?)/
     location = $1.split(', ').select { |loc| !loc.strip.empty? }
     @carryover.gsub! /^([^\.→]*)/, ''
