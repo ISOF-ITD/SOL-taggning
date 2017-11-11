@@ -165,7 +165,7 @@ class Solig
           if $1.is_locale?
             add_locale_element $1
             @currelem.add_text ', '
-            @currtext.gsub! /[^,]*,\s*/, ''
+            @currtext.gsub! /^[^,]*,\s*/, ''
           else
             break
           end
