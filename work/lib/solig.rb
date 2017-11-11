@@ -138,13 +138,8 @@ class Solig
             location = $1.split ','
             separator = $2
             tail = $3
-          else
-            if @carryover.is_a? String
-              location = @carryover.split ','
-            else
-              # byebug
-              # location = ['']
-            end
+          elsif @carryover.is_a? String
+            location = @carryover.split ','
           end
 
           location.select! { |loc| !loc.strip.empty? }
