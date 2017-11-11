@@ -108,6 +108,8 @@ describe String do
 end
 
 describe Element do
+  # TODO #has_invalid?
+
   describe '#add_italic_text' do
     it "adds italic text" do
       foo = Document.new('<doc>foo</doc>').root
