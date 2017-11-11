@@ -170,6 +170,7 @@ class Solig
           @carryover = $2
         end
 
+        @currelem.add_text ', '
         init_location_elements
         @state = :location
       when :location

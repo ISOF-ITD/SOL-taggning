@@ -312,7 +312,7 @@ describe Solig do
       form = solig.unword(husby)
       expected = /^<div xml:id='Husby' type='\?'><head><placeName>Husby<\/placeName><\/head> <p><span type='locale'>sn<\/span>, <span type='locale'>tätort<\/span>, <location><region type='landskap'>Dalarna<\/region><\/location>/
       actual = form.to_s
-      # byebug
+      byebug
       expect(actual).to be =~ expected
     end
 
