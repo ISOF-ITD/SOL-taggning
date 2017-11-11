@@ -522,7 +522,6 @@ describe Solig do
 
     it "outputs (de) correctly for Umeå" do
       umeå = loadparagraph '5849-umeå'
-      pending "later"
       actual = solig.unword(umeå).to_s
       # byebug
       expect(actual).to be =~ /(<span type='kursiv'>de<\/span>)/
