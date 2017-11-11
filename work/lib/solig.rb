@@ -167,7 +167,7 @@ class Solig
         @currelem.init_location_elements
         @state = :location
       when :location
-        while @currtext !~ /(.*)[\.→]/ # Searching for location elements
+        while @currtext =~ /(.*)[\.→]/ # Take as many location elements in current run
           @currtext.gsub /([^\.→]*)/, ''
           r = rs.shift
           @currtext += r.text_bit
