@@ -20,6 +20,16 @@ describe NilClass do
       expect(nil.is_one_word?).to be_falsey
     end
   end
+
+  describe '#is_locale?' do
+    it "doesn’t crash" do
+      expect { nil.is_locale? }.not_to raise_error
+    end
+
+    it "returns false" do
+      expect(nil.is_locale?).to be_falsey
+    end
+  end
 end
 
 describe Hash do
@@ -82,6 +92,10 @@ describe String do
 
     it "returns false on names of landskap" do
       expect('Västmanland'.is_locale?).to be_falsey
+    end
+
+    it "returns false on Dalarna" do
+      expect('Dalarna'.is_locale?).to be_falsey
     end
   end
 

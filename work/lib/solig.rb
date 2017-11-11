@@ -14,6 +14,10 @@ class NilClass
   def is_one_word?
     false
   end
+
+  def is_locale?
+    false
+  end
 end
 
 class Hash
@@ -156,7 +160,7 @@ class Solig
 
         # byebug
         locale = location.shift
-        while first || locale =~ /\\fd/ || locale.is_one_word? && !locale.strip.is_landskap?
+        while first || locale.is_locale?
           # byebug
           @currelem.add_escaped_text ', ' unless first
           add_locale_element locale.strip if locale
