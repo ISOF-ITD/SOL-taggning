@@ -30,6 +30,12 @@ describe NilClass do
       expect(nil.is_locale?).to be_falsey
     end
   end
+
+  describe '#text_bit' do
+    it "returns the empty string" do
+      expect(nil.text_bit).to eq ''
+    end
+  end
 end
 
 describe Hash do

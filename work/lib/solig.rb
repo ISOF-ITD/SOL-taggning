@@ -18,6 +18,10 @@ class NilClass
   def is_locale?
     false
   end
+
+  def text_bit
+    ''
+  end
 end
 
 class Hash
