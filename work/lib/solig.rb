@@ -152,18 +152,15 @@ class Solig
 
         @state = :first_locale
       when :first_locale
-        add_locale_element @currtext
-        @currtext.gsub! /.*?,/, ','
+        add_locale_element @currtext.gsub /(.*?),.*/, '\1'
+        @currtext.gsub! /^.*?,\s*/, ''
         while @currtext =~ /(.*?),/ # Take as many locales in current run
           add_locale_element $1 if $1.is_locale?
-          @currtext.gsub! /([^,]*)/, ''
+          @currtext.gsub! /[^,]*,\s*/, ''
         end
 
-        r = rs.shift
         @state = :no_further_locales
       when :no_further_locales
-        @currtext += r.text_bit
-
         if @currtext =~ /(.*?)([\.→].*)/ # Search for end of run
           @currtext = $1
           @carryover = $2
