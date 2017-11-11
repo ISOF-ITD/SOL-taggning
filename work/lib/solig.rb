@@ -115,17 +115,15 @@ class Solig
     first = true
 
     rs = element.each_element('w:r') { }.to_a
-    l = rs.count
-    i = 0
-    while i < l do
-      r = rs[i]
+    r = rs.shift
+    while r do
       # byebug
       case @state
       when :initial
         if r.isbold?
           collect_headword(r)
 
-          i += 1
+          r = rs.shift
         else
           # byebug
           @state = :head
@@ -136,8 +134,7 @@ class Solig
         @currelem.add_escaped_text ' '
         @currelem = Element.new 'p', @currelem
 
-        i += 1
-        r = rs[i]
+        r = rs.shift
         @carryover.strip!
         @carryover += r.text_bit
         @state = :locale
@@ -178,16 +175,15 @@ class Solig
             @carryover = [location, separator, tail]
           end
         else
-          i += 1
-          r = rs[i]
+          r = rs.shift
           @carryover = r.text_bit
           next
         end
 
-        i += 1
+        r = rs.shift
       when :location
         add_location(r)
-        i += 1
+        r = rs.shift
       when :general
         # byebug
         if r.isitalic?
@@ -200,7 +196,7 @@ class Solig
           @currelem.add_escaped_text r.text_bit
         end
 
-        i += 1
+        r = rs.shift
       when :italic
         # byebug
         if r.isitalic?
@@ -217,7 +213,7 @@ class Solig
           @state = :general
         end
 
-        i += 1
+        r = rs.shift
       end
     end
 
