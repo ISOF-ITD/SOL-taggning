@@ -94,8 +94,8 @@ describe String do
       expect('Västmanland'.is_locale?).to be_falsey
     end
 
-    it "returns false on Dalarna" do
-      expect('Dalarna'.is_locale?).to be_falsey
+    it "strips names of landskap before checking them" do
+      expect(' Dalarna'.is_locale?).to be_falsey
     end
   end
 
