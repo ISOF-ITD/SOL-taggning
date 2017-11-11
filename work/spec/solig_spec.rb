@@ -108,7 +108,10 @@ describe String do
 end
 
 describe Element do
-  # TODO #has_invalid?
+  describe '#has_invalid?' do
+    it "returns true if element has <invalid> children"
+    it "returns false otherwise"
+  end
 
   describe '#add_italic_text' do
     it "adds italic text" do
