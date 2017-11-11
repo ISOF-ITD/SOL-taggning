@@ -13,6 +13,7 @@ describe NilClass do
 
   describe '#is_one_word?' do
     it "doesn’t crash on a nil input" do
+      expect { nil.is_one_word? }.not_to raise_error
     end
 
     it "returns false" do

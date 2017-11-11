@@ -10,6 +10,10 @@ class NilClass
   def uspace
     nil
   end
+
+  def is_one_word?
+    false
+  end
 end
 
 class Hash
@@ -35,6 +39,10 @@ class String
 
   def is_landskap?
     Solig.is_landskap? self
+  end
+
+  def is_one_word?
+    strip !~ /\s/
   end
 end
 
