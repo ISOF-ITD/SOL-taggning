@@ -155,7 +155,7 @@ class Solig
 
         # byebug
         locale = location.shift
-        while first || locale =~ /\\fd/ || locale && locale.strip !~ /\s/ && !locale.strip.is_landskap?
+        while first || locale =~ /\\fd/ || locale.is_one_word? && !locale.strip.is_landskap?
           # byebug
           @currelem.add_escaped_text ', ' unless first
           add_locale_element locale.strip if locale
