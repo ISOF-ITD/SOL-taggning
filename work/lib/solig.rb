@@ -156,7 +156,7 @@ class Solig
         end
         while @currtext !~ /,/ && !(rs.first && rs.first.isitalic?) # Search for full first locale
           r = rs.shift
-          byebug unless r
+          # byebug unless r
           break unless r
           @currtext += r.text_bit
         end
@@ -294,6 +294,8 @@ class Solig
     r = Element.new 'w:r'
     rt = Element.new 'w:t', r
     rt.text = 'foo'
+    # puts 'foo' if @state == :head
+    add_locale_element @currtext if @state == :first_locale
     # add_location(r) if @carryover && @state == :location
 
     # if carryover
