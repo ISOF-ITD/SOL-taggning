@@ -147,6 +147,11 @@ class Solig
         @carryover += r.text_bit
         @state = :locale
       when :locale
+        currtext = r.text_bit
+        while currtext =~ /(.*?),/
+          add_locale_element $1 if $1.is_locale?
+        end
+
         if r.text_bit =~ /^(.*?)([\.→].*)$/
           current_run = $1
           # Do the locale and location thing
