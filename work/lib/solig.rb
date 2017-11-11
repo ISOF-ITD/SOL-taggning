@@ -213,6 +213,7 @@ class Solig
         r = rs.shift
       when :italic
         if r.isitalic?
+          lambda { r = rs.shift; next } unless r.wtext
           @currtext += r.wtext if r.wtext
         else
           @currelem.add_italic_text @currtext.strip
