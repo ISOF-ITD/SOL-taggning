@@ -183,13 +183,6 @@ class Solig
         r = rs.shift
       when :location
         add_location(r)
-        if @carryover.count > 1
-          @currelem.add_escaped_text @carryover[1]
-          @currelem.add_escaped_text @carryover.last
-        end
-
-        @carryover = r.text_bit
-        @state = if r.isitalic? then :italic else :general end
         r = rs.shift
       when :general
         # byebug
@@ -259,6 +252,14 @@ class Solig
         end
       end
     end
+
+    if tail
+      @currelem.add_escaped_text separator
+      @currelem.add_escaped_text tail
+    end
+
+    @carryover = r.text_bit
+    @state = if r.isitalic? then :italic else :general end
   end
 
   def collect_headword(r)
