@@ -37,12 +37,16 @@ class String
     gsub(/#{@@uspaces}+/, ' ')
   end
 
-  def is_landskap?
-    Solig.is_landskap? self
-  end
-
   def is_one_word?
     strip !~ /\s/
+  end
+
+  def is_locale?
+    self =~ /\\fd/ || is_one_word? || !is_landskap?
+  end
+
+  def is_landskap?
+    Solig.is_landskap? self
   end
 end
 

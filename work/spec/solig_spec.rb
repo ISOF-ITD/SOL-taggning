@@ -53,13 +53,6 @@ describe String do
     end
   end
 
-  describe '#is_landskap?' do
-    it "calls Solig.is_landskap?" do
-      expect(Solig).to receive(:is_landskap?).with('Södermanland')
-      'Södermanland'.is_landskap?
-    end
-  end
-
   describe '#is_one_word?' do
     it "returns true if string is one word" do
       expect('foo'.is_one_word?).to be_truthy
@@ -71,6 +64,31 @@ describe String do
 
     it "strips the input first" do
       expect(' foo '.is_one_word?).to be_truthy
+    end
+  end
+
+  describe '#is_locale?' do
+    it "returns true on single words" do
+      expect('foo'.is_locale?).to be_truthy
+    end
+
+    it "returns false on multiple words" do
+      expect('foo bar'.is_locale?).to be_falsey
+    end
+
+    it "returns true on strings that contain \\fd" do
+      expect('\\fd sn'.is_locale?).to be_truthy
+    end
+
+    it "returns false on names of landskap" do
+      expect('Västmanland'.is_locale?).to be_truthy
+    end
+  end
+
+  describe '#is_landskap?' do
+    it "calls Solig.is_landskap?" do
+      expect(Solig).to receive(:is_landskap?).with('Södermanland')
+      'Södermanland'.is_landskap?
     end
   end
 end
