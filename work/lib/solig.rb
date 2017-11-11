@@ -125,7 +125,7 @@ class Solig
     rs = element.each_element('w:r') { }.to_a
     r = rs.shift
     while r do
-      byebug
+      # byebug
       case @state
       when :initial
         if r.isbold?
@@ -147,9 +147,10 @@ class Solig
         @carryover += r.text_bit
         @state = :locale
       when :locale
+        byebug
         if @carryover =~ /^(.*?)[\.→]/
           location = $1.split ','
-          @carryover.gsub! /^[^\.→]*?/, ''
+          @carryover.gsub! /^[^\.→]*/, ''
         elsif @carryover.is_a? String
           location = @carryover.split ','
         end
@@ -243,7 +244,7 @@ class Solig
   def add_location(r) # FIXME Some spec (?)
     @carryover =~ /^([^\.→]*?)/
     location = $1.split(', ').select { |loc| !loc.strip.empty? }
-    @carryover.gsub! /^([^\.→]*?)/, ''
+    @carryover.gsub! /^([^\.→]*)/, ''
     location_element = Element.new 'location', @currelem
     ct = location.count
     location.each_with_index do |loc, index|
