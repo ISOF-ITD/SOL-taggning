@@ -216,7 +216,7 @@ class Solig
         else
           @currelem.add_italic_text @currtext.strip
           @currtext = if @currtext =~ /\s$/ then ' ' else '' end
-          @currtext += r.wtext
+          @currtext += r.wtext if r.wtext
           @state = :general
         end
 

@@ -646,6 +646,13 @@ describe Solig do
       bod3 = loadparagraph '888-bod-tredje-paragraf'
       expect { solig.unword bod3 }.not_to raise_error
     end
+
+    it "sees the hyphen on 888?"
+
+    it "doesn’t crash on the last paragraph of the description for -inge" do # Line 219
+      inge_last = loadparagraph '2749-inge-sista-tolknings-paragraf'
+      expect { solig.unword(inge_last) }.not_to raise_error
+    end
   end
 
   describe '#start_location'
