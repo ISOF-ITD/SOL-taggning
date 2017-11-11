@@ -159,7 +159,7 @@ class Solig
       when :first_locale
         # byebug
         add_locale_element @currtext.gsub /(.*?)[,\.→].*/, '\1'
-        if @currtext =~ /^.*?,\s*/
+        if @currtext =~ /,/
           @currelem.add_text ', '
           @currtext.gsub! /^.*?,\s*/, ''
         else

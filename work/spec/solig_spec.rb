@@ -586,7 +586,7 @@ describe Solig do
     expected = "<div xml:id='Ulrika' type='?'><head><placeName>Ulrika</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Valkebo hd</district><region type='landskap'>Östergötland</region></location>. – Socknen bildades 1736 av områden från flera äldre socknar. Namnet gavs för att hedra Ulrika Eleonora. Tätorten har vuxit fram i anslutning till sockenkyrkan.</p></div>"
     actual = solig.unword(ulrika).to_s
     # pending "Later"
-    byebug
+    # byebug
     expect(actual).to eq expected
   end
 
