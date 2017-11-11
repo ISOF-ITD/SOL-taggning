@@ -631,12 +631,12 @@ describe Solig do
       expect { solig.unword arp }.not_to raise_error
     end
 
-    it "doesn’t raise an error on benning" do
+    it "doesn’t raise an error on benning" do # Crash line 167
       benning = loadparagraph '704-benning'
       expect { solig.unword benning }.not_to raise_error
     end
 
-    it "doesn’t raise an error on bo" do
+    it "doesn’t raise an error on bo" do # Crash line 153
       bo2 = loadparagraph '874-bo-andra-paragraf'
       expect { solig.unword bo2 }.not_to raise_error
     end
