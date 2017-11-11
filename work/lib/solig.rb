@@ -125,7 +125,7 @@ class Solig
     rs = element.each_element('w:r') { }.to_a
     r = rs.shift
     while r do
-      byebug
+      # byebug
       case @state
       when :initial
         if r.isbold?
@@ -179,6 +179,7 @@ class Solig
         end
         add_location_element @currtext
         @currelem = @currelem.parent
+        @currelem.add_text ' ' if @currtext =~ /\s$/
         @currelem.add_text $1 if @carryover =~ /([\.→]\s*)/
         @carryover.gsub /^[\.→]\s*/, ''
         r = rs.shift
