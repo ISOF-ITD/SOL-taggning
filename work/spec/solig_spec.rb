@@ -630,6 +630,11 @@ describe Solig do
       arp = loadparagraph '597-arp'
       expect { solig.unword arp }.not_to raise_error
     end
+
+    it "doesn’t raise an error on benning" do
+      benning = loadparagraph '704-benning'
+      expect { solig.unword benning }.not_to raise_error
+    end
   end
 
   describe '#start_location'

@@ -164,7 +164,7 @@ class Solig
         end
         while @currtext !~ /[\.→]/ && !(rs.first && rs.first.isitalic?)
           r = rs.shift
-          @currtext += r.wtext
+          @currtext += r.wtext if r.wtext
         end
 
         while @currtext =~ /(.*?),/ # Take as many locales in current run
