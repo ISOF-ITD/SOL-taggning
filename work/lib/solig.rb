@@ -161,7 +161,7 @@ class Solig
           @state = :location
           @carryover = [location, separator, tail]
         elsif tail
-          @currelem.add_text separator # FIXME Not necessary a separator here!
+          @currelem.add_text separator
           if tail =~ /[\.→]/
             @state = :general
             @currelem.add_text tail
@@ -169,8 +169,6 @@ class Solig
           else
             @carryover = [location, separator, tail]
           end
-          i += 1
-          next
         else
           i += 1
           r = rs[i]
