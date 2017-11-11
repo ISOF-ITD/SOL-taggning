@@ -284,7 +284,7 @@ class Solig
     r = Element.new 'w:r'
     rt = Element.new 'w:t', r
     rt.text = 'foo'
-    add_location(r) if @carryover && @state == :location
+    # add_location(r) if @carryover && @state == :location
 
     # if carryover
     #   if state == :remainder
