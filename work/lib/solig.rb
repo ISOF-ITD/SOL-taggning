@@ -200,6 +200,7 @@ class Solig
         # byebug
         r = rs.shift
         @carryover = ''
+        next unless r
         @state = if r.isitalic? then :italic else :general end
         # byebug
 
