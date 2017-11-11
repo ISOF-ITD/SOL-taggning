@@ -595,23 +595,23 @@ describe Solig do
   end
 
   it "outputs the id" do
-    w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Ingelstad</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>tätort, Östra Torsås sn, Konga hd, Småland</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
-    expected = "<div xml:id='Ingelstad' type='?'><head><placeName>Ingelstad</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Östra Torsås sn</district><district type='härad'>Konga hd</district><region type='landskap'>Småland</region></location></p></div>"
+    w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Ingelstad</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>tätort, Östra Torsås sn, Konga hd, Småland.</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
+    expected = "<div xml:id='Ingelstad' type='?'><head><placeName>Ingelstad</placeName></head> <p><span type='locale'>tätort</span>, <location><district type='socken'>Östra Torsås sn</district><district type='härad'>Konga hd</district><region type='landskap'>Småland</region></location>.</p></div>"
     actual = solig.unword(w).to_s
     # byebug
     expect(actual).to eq expected
   end
 
   it "escapes id’s properly" do
-    w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Mellby, Norra, Södra</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>snr, Kållands hd, Västergötland</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
-    expected = "<div xml:id='Mellby._Norra._Södra' type='?'><head><placeName>Mellby, Norra, Södra</placeName></head> <p><span type='locale'>snr</span>, <location><district type='härad'>Kållands hd</district><region type='landskap'>Västergötland</region></location></p></div>"
+    w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Mellby, Norra, Södra</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>snr, Kållands hd, Västergötland.</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
+    expected = "<div xml:id='Mellby._Norra._Södra' type='?'><head><placeName>Mellby, Norra, Södra</placeName></head> <p><span type='locale'>snr</span>, <location><district type='härad'>Kållands hd</district><region type='landskap'>Västergötland</region></location>.</p></div>"
     actual = solig.unword(w).to_s
     expect(actual).to eq expected
   end
 
   it "adds an empty bebyggelsenamn" do
-    w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Kattorp</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>sn, tätort, Luggude hd, Skåne</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
-    expected = "<div xml:id='Kattorp' type='?'><head><placeName>Kattorp</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Luggude hd</district><region type='landskap'>Skåne</region></location></p></div>"
+    w = XPath.first(Document.new("<w:document xmlns:w=''><w:p><w:r><w:rPr><w:b /></w:rPr><w:t>Kattorp</w:t></w:r><w:r><w:t> </w:t></w:r><w:r><w:t>sn, tätort, Luggude hd, Skåne.</w:t></w:r></w:p></w:document>"), '/w:document/w:p')
+    expected = "<div xml:id='Kattorp' type='?'><head><placeName>Kattorp</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Luggude hd</district><region type='landskap'>Skåne</region></location>.</p></div>"
     actual = solig.unword(w).to_s
     expect(actual).to eq expected
   end
