@@ -124,13 +124,10 @@ class Solig
     reset
     @currelem = Element.new 'div'
     @currelem.add_attribute 'type', '?'
-    p = Element.new 'p'
-    first = true
 
     rs = element.each_element('w:r') { }.to_a
     r = rs.shift
     while r do
-      # byebug
       case @state
       when :initial
         if r.isbold?
@@ -138,17 +135,13 @@ class Solig
 
           r = rs.shift
         else
-          # byebug
           @state = :head
         end
       when :head
-        # byebug
-        add_head_element(@carryover.ustrip)
-        @carryover = r.text_bit.uspace
+        add_head_element(@currtext.ustrip)
+        @currtext = r.text_bit.uspace.strip
         @currelem.add_escaped_text ' '
         @currelem = Element.new 'p', @currelem
-        @currtext = @carryover.strip
-        @carryover = ''
 
         unless rs.first && rs.first.isitalic? # FIXME And something else?
           r = rs.shift
@@ -156,14 +149,12 @@ class Solig
         end
         while @currtext !~ /,/ && !(rs.first && rs.first.isitalic?) # Search for full first locale
           r = rs.shift
-          # byebug unless r
           break unless r
           @currtext += r.text_bit
         end
 
         @state = :first_locale
       when :first_locale
-        # byebug
         add_locale_element @currtext.gsub /(.*?)[,\.→].*/, '\1'
         if @currtext =~ /,/
           @currelem.add_text ', '
@@ -172,12 +163,11 @@ class Solig
           @currtext.gsub! /^.*?([\.→])/, '\1'
         end
         while @currtext !~ /[\.→]/ && !(rs.first && rs.first.isitalic?)
-          r = rs.shift # !!!
+          r = rs.shift
           @currtext += r.text_bit
         end
 
         while @currtext =~ /(.*?),/ # Take as many locales in current run
-          # byebug
           if $1.is_locale?
             add_locale_element $1
             @currelem.add_text ', '
@@ -189,7 +179,6 @@ class Solig
 
         @state = :no_further_locales
       when :no_further_locales
-        # byebug
         if @currtext =~ /(.*?)([\.→].*)/ # Search for end of run
           @currtext = $1
           @carryover = $2
@@ -198,7 +187,6 @@ class Solig
         init_location_elements
         @state = :location
       when :location
-        # byebug
         while @currtext =~ /(.*?),/ # Take as many location elements in current run
           add_location_element $1
           @currtext.gsub! /^[^,]*,\s*/, ''
@@ -207,79 +195,32 @@ class Solig
         @currelem = @currelem.parent
         @currelem.add_text ' ' if @currtext =~ /\s$/
         @currelem.add_text @carryover if @carryover
-        # byebug
+
         r = rs.shift
-        @carryover = ''
+        @currtext = ''
         next unless r
         @state = if r.isitalic? then :italic else :general end
-        # byebug
-
-#         byebug
-#         if @carryover =~ /^(.*?)[\.→]/
-#           location = $1.split ','
-#           @carryover.gsub! /^[^\.→]*/, ''
-#         elsif @carryover.is_a? String
-#           location = @carryover.split ','
-#         end
-# 
-#         location.select! { |loc| !loc.strip.empty? }
-# 
-#         # byebug
-#         locale = location.shift
-#         while first || locale.is_locale?
-#           # byebug
-#           @currelem.add_escaped_text ', ' unless first
-#           add_locale_element locale.strip if locale
-#           locale = location.shift
-#           first = false
-#         end
-# 
-#         if locale
-#           @currelem.add_escaped_text ', '
-#           location.unshift(locale)
-#           @state = :location
-#           @carryover = location.join(', ') + @carryover
-#         elsif @carryover.length > 1
-#           if @carryover =~ /[\.→]/
-#             @state = :general
-#             @currelem.add_text @carryover
-#             @carryover = nil
-#           else
-#             @carryover = location.join(', ') + @carryover
-#           end
-#           r = rs.shift
-#         else
-#           r = rs.shift
-#           @carryover = r.text_bit
-#           next
-#         end
-#       when :location
-#         add_location(r)
-#         r = rs.shift
       when :general
-        # byebug
         if r.isitalic?
-          @carryover = r.text_bit
+          @currtext = r.text_bit
           @state = :italic
         else
-          # byebug
-          @currelem.add_escaped_text @carryover if @carryover
-          @carryover = nil if @carryover
+          @currelem.add_escaped_text @currtext if @currtext
+          @currtext = nil if @currtext
           @currelem.add_escaped_text r.text_bit
         end
 
         r = rs.shift
       when :italic
-        # byebug
         if r.isitalic?
-          @carryover += r.text_bit if r.text_bit
+          @currtext += r.text_bit if r.text_bit
         else
-          @currelem.add_italic_text @carryover.strip
-          @currelem.add_escaped_text ' ' if @carryover =~ /\s$/
-          if @carryover =~ /(\s*)$/ # TODO Idiom for that
-            @carryover = $1
+          @currelem.add_italic_text @currtext.strip
+          @currelem.add_escaped_text ' ' if @currtext =~ /\s$/
+          if @currtext =~ /(\s*)$/ # TODO Idiom for that
+            @currtext = $1
           else
-            @carryover = nil
+            @currtext = nil
           end
           @currelem.add_escaped_text r.text_bit
           @state = :general
@@ -289,56 +230,15 @@ class Solig
       end
     end
 
-    # byebug
-
-    r = Element.new 'w:r'
-    rt = Element.new 'w:t', r
-    rt.text = 'foo'
-    # puts 'foo' if @state == :head
     add_locale_element @currtext if @state == :first_locale
     location = XPath.first(@currelem.root, '//location')
-    # byebug
     location.remove if location.to_s == '<location/>'
-    # add_location(r) if @carryover && @state == :location
 
-    # if carryover
-    #   if state == :remainder
-    #     p.add_text carryover
-    #   elsif state == :italic
-    #     p.add_italic_text carryover
-    #   end # FIXME else raise something
-    # end
-
-    @currelem.parent
+    @currelem.root
   end
 
   def init_location_elements
     @currelem = Element.new 'location', @currelem
-  end
-
-  def add_location(r) # FIXME Some spec (?)
-    byebug
-    @carryover =~ /^([^\.→]*?)/
-    location = $1.split(', ').select { |loc| !loc.strip.empty? }
-    @carryover.gsub! /^([^\.→]*)/, ''
-    location_element = Element.new 'location', @currelem
-    ct = location.count
-    location.each_with_index do |loc, index|
-      @currelem = location_element
-      add_location_element loc
-      @currelem = @currelem.parent
-
-      if index == ct - 1
-        if loc =~ /\s$/
-          @currelem.add_escaped_text ' '
-        end
-      end
-    end
-
-    @currelem.add_escaped_text @carryover
-
-    @carryover = r.text_bit
-    @state = if r.isitalic? then :italic else :general end
   end
 
   def collect_headword(r)
@@ -346,7 +246,7 @@ class Solig
     if rt.length > 0 && rt.ustrip == ''
       rt = ' '
     end
-    @carryover += rt
+    @currtext += rt
   end
 
   # FIXME Figure out what the deal is with w:noBreakHyphen?
@@ -354,22 +254,22 @@ class Solig
     element.add_text text.gsub(/\\fd/, 'f.d.') if text # FIXME Extract that somewhere
   end
 
-  def add_head_element(headword)
-    headtag = Element.new 'head', @currelem
-    head = Element.new 'placeName', headtag
-    head.text = headword
-    @currelem.add_attribute 'xml:id', headword.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
+  def add_head_element(head)
+    head_element = Element.new 'head', @currelem
+    place_name_element = Element.new 'placeName', head_element
+    place_name_element.text = head
+    @currelem.add_attribute 'xml:id', head.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
   end
 
-  def add_location_element(loc)
-    if loc.strip =~ /.*\s+(.*)/ then
+  def add_location_element(location)
+    if location.strip =~ /.*\s+(.*)/ then
       locale = $1
     else
-      locale = loc
+      locale = location
     end
 
-    ls = loc.split('och').map(&:strip)
-    ls.each do |l|
+    locations = location.split('och').map(&:strip)
+    locations.each do |location|
       case locale
       when 'sn', 'snr'
         tag = 'district'
@@ -396,7 +296,7 @@ class Solig
 
       location_element = Element.new tag, @currelem
       location_element.add_attribute 'type', type
-      location_element.add_escaped_text l.strip
+      location_element.add_escaped_text location.strip
     end
   end
 
