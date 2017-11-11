@@ -147,10 +147,9 @@ class Solig
         @carryover += r.text_bit
         @state = :locale
       when :locale
-        if @carryover =~ /^(.*?)([\.→])(.*)$/
+        if @carryover =~ /^(.*?)[\.→]/
           location = $1.split ','
-          separator = $2
-          tail = $3
+          @carryover.gsub /^[^\.→]*?/, ''
         elsif @carryover.is_a? String
           location = @carryover.split ','
         end
@@ -171,7 +170,7 @@ class Solig
           @currelem.add_escaped_text ', '
           location.unshift(locale)
           @state = :location
-          @carryover = [location, separator, tail]
+          @carryover = location.join ', ' + @carryover
         elsif tail
           @currelem.add_text separator
           if tail =~ /[\.→]/
@@ -179,7 +178,7 @@ class Solig
             @currelem.add_text tail
             @carryover = nil
           else
-            @carryover = [location, separator, tail]
+            @carryover = location.join ', ' + @carryover
           end
         else
           r = rs.shift
@@ -243,9 +242,9 @@ class Solig
   end
 
   def add_location(r) # FIXME Some spec (?)
-    location = @carryover.first
-    separator = @carryover[1]
-    tail = @carryover.last
+    @carryover =~ /^([^\.→]*?)/
+    location = $1.first.split(', ').select { |loc| !loc.strip.empty? }
+    @carryover.gsub /^([^\.→]*?)/, ''
     location_element = Element.new 'location', @currelem
     ct = location.count
     location.each_with_index do |loc, index|
@@ -260,10 +259,7 @@ class Solig
       end
     end
 
-    if tail
-      @currelem.add_escaped_text separator
-      @currelem.add_escaped_text tail
-    end
+    @currelem.add_escaped_text @carryover
 
     @carryover = r.text_bit
     @state = if r.isitalic? then :italic else :general end
