@@ -147,45 +147,47 @@ class Solig
         @carryover += r.text_bit
         @state = :locale
       when :locale
-        byebug
-        if @carryover =~ /^(.*?)[\.→]/
-          location = $1.split ','
-          @carryover.gsub! /^[^\.→]*/, ''
-        elsif @carryover.is_a? String
-          location = @carryover.split ','
-        end
-
-        location.select! { |loc| !loc.strip.empty? }
-
-        # byebug
-        locale = location.shift
-        while first || locale.is_locale?
-          # byebug
-          @currelem.add_escaped_text ', ' unless first
-          add_locale_element locale.strip if locale
-          locale = location.shift
-          first = false
-        end
-
-        if locale
-          @currelem.add_escaped_text ', '
-          location.unshift(locale)
-          @state = :location
-          @carryover = location.join(', ') + @carryover
-        elsif @carryover.length > 1
-          if @carryover =~ /[\.→]/
-            @state = :general
-            @currelem.add_text @carryover
-            @carryover = nil
-          else
-            @carryover = location.join(', ') + @carryover
-          end
-          r = rs.shift
-        else
-          r = rs.shift
-          @carryover = r.text_bit
-          next
-        end
+        if r.text_bit =~ /^(.*?)[\.→]/
+          current_run = r.text_bit.gsub /^[^\.→]*/
+#         byebug
+#         if @carryover =~ /^(.*?)[\.→]/
+#           location = $1.split ','
+#           @carryover.gsub! /^[^\.→]*/, ''
+#         elsif @carryover.is_a? String
+#           location = @carryover.split ','
+#         end
+# 
+#         location.select! { |loc| !loc.strip.empty? }
+# 
+#         # byebug
+#         locale = location.shift
+#         while first || locale.is_locale?
+#           # byebug
+#           @currelem.add_escaped_text ', ' unless first
+#           add_locale_element locale.strip if locale
+#           locale = location.shift
+#           first = false
+#         end
+# 
+#         if locale
+#           @currelem.add_escaped_text ', '
+#           location.unshift(locale)
+#           @state = :location
+#           @carryover = location.join(', ') + @carryover
+#         elsif @carryover.length > 1
+#           if @carryover =~ /[\.→]/
+#             @state = :general
+#             @currelem.add_text @carryover
+#             @carryover = nil
+#           else
+#             @carryover = location.join(', ') + @carryover
+#           end
+#           r = rs.shift
+#         else
+#           r = rs.shift
+#           @carryover = r.text_bit
+#           next
+#         end
       when :location
         add_location(r)
         r = rs.shift
