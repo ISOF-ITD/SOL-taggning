@@ -171,14 +171,14 @@ class Solig
           @currelem.add_escaped_text ', '
           location.unshift(locale)
           @state = :location
-          @carryover = location.join ', ' + @carryover
+          @carryover = location.join(', ') + @carryover
         elsif @carryover.length > 1
           if @carryover =~ /[\.→]/
             @state = :general
             @currelem.add_text @carryover
             @carryover = nil
           else
-            @carryover = location.join ', ' + @carryover
+            @carryover = location.join(', ') + @carryover
           end
         else
           r = rs.shift
