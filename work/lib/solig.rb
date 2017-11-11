@@ -137,6 +137,7 @@ class Solig
           @state = :head
         end
       when :head
+        # byebug
         add_head_element(@carryover.ustrip)
         @carryover = r.text_bit.uspace
         @currelem.add_escaped_text ' '
@@ -144,20 +145,23 @@ class Solig
         @currtext = @carryover.strip
         @carryover = ''
 
-        r = rs.shift
-        @currtext += r.text_bit
-        while @currtext !~ /,/ # Search for full first locale
+        unless rs.first && rs.first.isitalic? # FIXME And something else?
+          r = rs.shift
+          @currtext += r.text_bit
+        end
+        while @currtext !~ /,/ && !(rs.first && rs.first.isitalic?) # Search for full first locale
           r = rs.shift
           @currtext += r.text_bit
         end
 
         @state = :first_locale
       when :first_locale
-        # byebug
+        byebug
         add_locale_element @currtext.gsub /(.*?),.*/, '\1'
         @currelem.add_text ', '
         @currtext.gsub! /^.*?,\s*/, ''
         while @currtext =~ /(.*?),/ # Take as many locales in current run
+          byebug
           if $1.is_locale?
             add_locale_element $1
             @currelem.add_text ', '
@@ -191,6 +195,7 @@ class Solig
         r = rs.shift
         @carryover = ''
         @state = if r.isitalic? then :italic else :general end
+        # byebug
 
 #         byebug
 #         if @carryover =~ /^(.*?)[\.→]/
