@@ -126,7 +126,7 @@ class Solig
     rs = element.each_element('w:r') { }.to_a
     r = rs.shift
     while r do
-      byebug
+      # byebug
       case @state
       when :initial
         if r.isbold?
@@ -157,7 +157,7 @@ class Solig
 
         @state = :first_locale
       when :first_locale
-        byebug
+        # byebug
         add_locale_element @currtext.gsub /(.*?),.*/, '\1'
         @currelem.add_text ', '
         @currtext.gsub! /^.*?,\s*/, ''

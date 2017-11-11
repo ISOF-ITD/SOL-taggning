@@ -396,7 +396,7 @@ describe Solig do
       formatted = solig.unword abborrberget
       pending "This is just bizarre.  Strä[new element]ngnäs"
       # byebug
-      expect(formatted.to_s).to be =~ /<div><head><placeName>Abborrberget<\/placeName><\/head> <p><span type='locale'>tätort<\/span>, <location><settlement type='stad'>Strängnäs stad<\/settlement><region type='landskap'>Södermanland<\/region><\/location>/ # FIXME Allow non-landskap areas as last entries!
+      expect(formatted.to_s).to be =~ /<div xml:id='Abborrberget' type='\?'><head><placeName>Abborrberget<\/placeName><\/head> <p><span type='locale'>tätort<\/span>, <location><settlement type='stad'>Strängnäs stad<\/settlement><region type='landskap'>Södermanland<\/region><\/location>/ # FIXME Allow non-landskap areas as last entries!
     end
 
     it "works on an entry with an arrow" do
