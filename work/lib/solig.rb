@@ -125,7 +125,7 @@ class Solig
     rs = element.each_element('w:r') { }.to_a
     r = rs.shift
     while r do
-      byebug
+      # byebug
       case @state
       when :initial
         if r.isbold?
@@ -166,7 +166,7 @@ class Solig
           @carryover = $2
         end
 
-        @currelem.init_location_elements
+        init_location_elements
         @state = :location
       when :location
         while @currtext =~ /(.*?),/ # Take as many location elements in current run
@@ -268,7 +268,7 @@ class Solig
   end
 
   def init_location_elements
-    location_element = Element.new 'location', @currelem
+    Element.new 'location', @currelem
   end
 
   def add_location(r) # FIXME Some spec (?)
