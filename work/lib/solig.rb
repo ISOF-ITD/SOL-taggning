@@ -169,10 +169,8 @@ class Solig
         @currelem.init_location_elements
         @state = :location
       when :location
-        while @currtext =~ /(.*)[\.→]/ # Take as many location elements in current run
-          @currtext.gsub! /([^\.→]*)/, ''
-          r = rs.shift
-          @currtext += r.text_bit
+        while @currtext =~ /,/ # Take as many location elements in current run
+          @currtext.gsub! /([^,]*),\s*/, ''
         end
 
 #         byebug
@@ -266,6 +264,10 @@ class Solig
     # end
 
     @currelem.parent
+  end
+
+  def init_location_elements
+    location_element = Element.new 'location', @currelem
   end
 
   def add_location(r) # FIXME Some spec (?)
