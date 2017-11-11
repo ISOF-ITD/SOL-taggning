@@ -387,6 +387,6 @@ class Solig
   def add_locale_element(locale)
     span = Element.new 'span', @currelem
     span.add_attribute 'type', 'locale'
-    span.add_escaped_text locale
+    span.add_escaped_text locale.strip
   end
 end
