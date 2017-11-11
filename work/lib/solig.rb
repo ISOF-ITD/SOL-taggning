@@ -163,21 +163,15 @@ class Solig
         @state = :no_further_locales
       when :no_further_locales
         @currtext += r.text_bit
-        while @currtext =~ /(.*?),/
-          @currtext.gsub /([^,]*)/, ''
-          add_locale_element $1 if $1.is_locale?
-        end
-        r = rs.shift
-
-        while @currtext !~ /(.*)[\.→]/
-          @currtext.gsub /([^\.→]*)/, ''
-          r = rs.shift
-          @currtext += r.text_bit
-        end
 
         @currelem.init_location_elements
         @state = :location
       when :location
+        while @currtext !~ /(.*)[\.→]/ # Searching for location elements
+          @currtext.gsub /([^\.→]*)/, ''
+          r = rs.shift
+          @currtext += r.text_bit
+        end
 
 #         byebug
 #         if @carryover =~ /^(.*?)[\.→]/
