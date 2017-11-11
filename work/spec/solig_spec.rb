@@ -10,6 +10,10 @@ describe NilClass do
       expect { nil.uspace }.not_to raise_error
     end
   end
+
+  describe '#is_one_word?' do
+    it "doesn’t crash on a nil input"
+  end
 end
 
 describe Hash do
@@ -48,6 +52,12 @@ describe String do
       expect(Solig).to receive(:is_landskap?).with('Södermanland')
       'Södermanland'.is_landskap?
     end
+  end
+
+  describe '#is_one_word?' do
+    it "returns true if string is one word"
+    it "returns false if not"
+    it "strips the input first"
   end
 end
 
