@@ -152,6 +152,7 @@ class Solig
 
         @state = :first_locale
       when :first_locale
+        # byebug
         add_locale_element @currtext.gsub /(.*?),.*/, '\1'
         @currelem.add_text ', '
         @currtext.gsub! /^.*?,\s*/, ''
@@ -167,6 +168,7 @@ class Solig
 
         @state = :no_further_locales
       when :no_further_locales
+        # byebug
         if @currtext =~ /(.*?)([\.→].*)/ # Search for end of run
           @currtext = $1
           @carryover = $2
@@ -175,9 +177,10 @@ class Solig
         init_location_elements
         @state = :location
       when :location
+        # byebug
         while @currtext =~ /(.*?),/ # Take as many location elements in current run
           add_location_element $1
-          @currtext.gsub! /[^,]*,\s*/, ''
+          @currtext.gsub! /^[^,]*,\s*/, ''
         end
         add_location_element @currtext
         @currelem = @currelem.parent

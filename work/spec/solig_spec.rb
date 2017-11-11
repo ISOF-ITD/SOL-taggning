@@ -572,6 +572,7 @@ describe Solig do
     expected = "<div xml:id='Ullvi' type='?'><head><placeName>Ullvi</placeName></head> <p><span type='locale'>gd</span>, <location><district type='socken'>Irsta sn</district><district type='härad'>Siende hd</district><region type='landskap'>Västmanland</region></location>. (<span type='kursiv'>in</span>) <span type='kursiv'>Vllaui</span> 1371. – Namnets förled innehåller gudanamnet <span type='kursiv'>Ull</span> och dess efterled → <span type='kursiv'>vi</span> ’helig plats, kultplats’. Namnet <span type='kursiv'>Ullvi</span> bars tidigare också av den unga tätorten → <span type='kursiv'>Irsta</span> strax norr om gården.</p></div>"
     formatted = solig.unword(ullvi)
     actual = formatted.to_s
+    byebug
     expect(actual).to eq expected
   end
 
