@@ -236,34 +236,30 @@ class Solig
   end
 
   def add_location(r) # FIXME Some spec (?)
-    if true
-      unless false
-        location = @carryover.first
-        separator = @carryover[1]
-        tail = @carryover.last
-        location_element = Element.new 'location', @currelem
-        ct = location.count
-        location.each_with_index do |loc, index|
-          @currelem = location_element
-          add_location_element loc
-          @currelem = @currelem.parent
+    location = @carryover.first
+    separator = @carryover[1]
+    tail = @carryover.last
+    location_element = Element.new 'location', @currelem
+    ct = location.count
+    location.each_with_index do |loc, index|
+      @currelem = location_element
+      add_location_element loc
+      @currelem = @currelem.parent
 
-          if index == ct - 1
-            if loc =~ /\s$/
-              @currelem.add_escaped_text ' '
-            end
-          end
+      if index == ct - 1
+        if loc =~ /\s$/
+          @currelem.add_escaped_text ' '
         end
-
-        if tail
-          @currelem.add_escaped_text separator
-          @currelem.add_escaped_text tail
-        end
-
-        @carryover = r.text_bit
-        @state = if r.isitalic? then :italic else :general end
       end
     end
+
+    if tail
+      @currelem.add_escaped_text separator
+      @currelem.add_escaped_text tail
+    end
+
+    @carryover = r.text_bit
+    @state = if r.isitalic? then :italic else :general end
   end
 
   def collect_headword(r)
