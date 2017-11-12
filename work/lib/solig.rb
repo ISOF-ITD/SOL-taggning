@@ -155,26 +155,7 @@ class Solig
       # byebug
       case @state
       when :initial
-        while @r.isbold?
-          collect_headword(@r)
-          @r = @rs.shift
-        end
-
-        # Set head
-        add_head_element(@currtext.ustrip)
-        @currelem.add_escaped_text ' '
-        @currtext = @r.wtext.uspace.strip
-        @currelem = Element.new 'p', @currelem
-
-        unless @rs.first && @rs.first.isitalic? # FIXME And something else?
-          @r = @rs.shift
-          @currtext += @r.wtext if @r.wtext
-        end
-        while @currtext !~ /,/ && !(@rs.first && @rs.first.isitalic?) # Search for full first locale
-          @r = @rs.shift
-          break unless @r
-          @currtext += @r.wtext if @r.wtext
-        end
+        process_head
 
         @state = :first_locale
       when :first_locale
@@ -255,6 +236,29 @@ class Solig
 
     @currelem.root
   end
+
+        def process_head
+        while @r.isbold?
+          collect_headword(@r)
+          @r = @rs.shift
+        end
+
+        # Set head
+        add_head_element(@currtext.ustrip)
+        @currelem.add_escaped_text ' '
+        @currtext = @r.wtext.uspace.strip
+        @currelem = Element.new 'p', @currelem
+
+        unless @rs.first && @rs.first.isitalic? # FIXME And something else?
+          @r = @rs.shift
+          @currtext += @r.wtext if @r.wtext
+        end
+        while @currtext !~ /,/ && !(@rs.first && @rs.first.isitalic?) # Search for full first locale
+          @r = @rs.shift
+          break unless @r
+          @currtext += @r.wtext if @r.wtext
+        end
+        end
 
   def init_location_elements
     @currelem = Element.new 'location', @currelem
