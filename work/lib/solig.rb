@@ -223,8 +223,9 @@ class Solig
       @currelem = Element.new 'p', @currelem
       span_element = Element.new 'span', @currelem
       span_element.add_attribute 'type', 'fet'
-      span_element.text = @currtext.ustrip
+      span_element.text = head
       @currelem.add_escaped_text ' '
+      @currtext = @r.wtext.uspace.strip
     end
 
     unless @rs.first && @rs.first.isitalic? # FIXME And something else?
