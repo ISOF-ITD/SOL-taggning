@@ -109,7 +109,7 @@ describe String do
     end
 
     it "doesn’t return true if “nu” is somewhere else" do
-      expect('Aliseatnu'.is_locale?).to be_falsey
+      expect('älven Aliseatnu'.is_locale?).to be_falsey
     end
 
     it "returns true on strings starting with “samt”" do # TODO Fix all that!
