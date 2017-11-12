@@ -710,12 +710,12 @@ describe Solig do
     end
 
     it "works on Álggavárre" do # nationalpark as a location type
-      álggavárre = loadparagraph 'xxx-álggavárre'
+      álggavárre = loadparagraph '486-álggavárre'
       expect(solig.unword(álggavárre).to_s).to eq "<div xml:id='Álggavárre' type='?'><head><placeName>Álggavárre</placeName></head> <p><span type='locale'>fjäll</span>, <location><district type='nationalpark'>Sareks nationalpark</district><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. <span type='kursiv'>Alkiewari</span> 1768. – Förleden i det lulesamiska namnet (med försvenskad stavning <span type='kursiv'>Alkavare</span>) innehåller en bildning till verbet <span type='kursiv'>álgget</span> ’börja’, kanske med syftning på att dalgångarna österut har sin början här. Efterleden <span type='kursiv'>várre</span> betyder ’berg, fjäll’. Fjället är känt genom ett samiskt kapell samt gruvverksamhet under slutet av 1600-talet.</p></div"
     end
 
     it "works on Bjärsgård" do # kn as a location type
-      bjärsgård = loadparagraph 'yyy-bjärsgård'
+      bjärsgård = loadparagraph '798-bjärsgård'
       expect(solig.unword(bjärsgård).to_s).to eq "<div xml:id='Bjärsgård' type='?'><head><placeName>Bjärsgård</placeName></head> <p><span type='locale'>sn</span>, <location><district type='kommun'>Klippans kn</district><region type='landskap'>Skåne</region>. (<span type='kursiv'>i</span>) <span type='kursiv'>Bierssgardt</span> 1503. – Godset är beläget i f.d. Gråmanstorps socken, Norra Åsbo härad. Huvudbyggnaden ligger på en liten holme i Borgasjön nära sjöns södra strandkant. Namnets förled, genitiv av fda. <span type='kursiv'>biærgh</span> ’berg’, åsyftar ett markant höjdparti vid stranden mitt emot holmen.</p>" # TODO Tagga Gråmanstorp osv.?
     end
 
