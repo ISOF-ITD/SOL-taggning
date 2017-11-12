@@ -49,6 +49,10 @@ end
 describe String do
   let(:ox) { "Oxie härad " } # With trailing U+2003 EM SPACE and U+2005 FOUR-PER-EM SPACE in the middle
 
+  describe '#upcase?' do
+    it "returns true if 
+  end
+
   describe '#ustrip' do
     it "strips all Unicode space characters" do
       expect(ox.ustrip).to eq "Oxie härad"
@@ -246,6 +250,26 @@ describe Element do
       bit = XPath.first(doc, '/w:document/w:p/w:r')
       expect(Solig).to receive(:escape).with('foo \\fd bar')
       bit.wtext
+    end
+  end
+
+  describe '#isplacename?' do
+    it "returns true if first word is bold and capitalised" do
+      doc = Element.new "<w:document xmlns:w=''><w:r><w:rPr><w:b /><w:t>Locketorp</w:t></w:r></w:document>"
+      element = doc.root.elements.first
+      expect(element.isplacename?).to be_truthy
+    end
+
+    it "returns false if first word isn’t bold" do
+      doc = Element.new "<w:document xmlns:w=''><w:r><w:t>Luvigsborg</w:t></w:r></w:document>"
+      element = doc.root.elements.first
+      expect(element.isplacename?).to be_falsey
+    end
+
+    it "returns false is first word isn’t capitalised" do
+      doc = Element.new "<w:document xmlns:w=''><w:r><w:b /><w:t>hem</w:t></w:r></w:document>"
+      element = doc.root.elements.first
+      expect(element.isplacename?).to be_falsey
     end
   end
 end
