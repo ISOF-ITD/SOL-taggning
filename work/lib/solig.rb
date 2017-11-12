@@ -158,11 +158,10 @@ class Solig
           r = rs.shift
         end
 
-        @state = :head
-      when :head
+        # Set head
         add_head_element(@currtext.ustrip)
-        @currtext = r.wtext.uspace.strip
         @currelem.add_escaped_text ' '
+        @currtext = r.wtext.uspace.strip
         @currelem = Element.new 'p', @currelem
 
         unless rs.first && rs.first.isitalic? # FIXME And something else?
