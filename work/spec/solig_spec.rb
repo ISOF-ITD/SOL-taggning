@@ -411,7 +411,12 @@ describe Solig do
       expect(form.to_s).to be =~ /<div xml:id='Klagshamn' type='\?'><head><placeName>Klagshamn<\/placeName><\/head> <p><span type='locale'>samhälle<\/span>, <location><district type='socken'>Västra Klagstorps<\/district><district type='socken'>Tygelsjö snr<\/district><district type='härad'>Oxie hd<\/district><region type='landskap'>Skåne<\/region><\/location>/
     end
 
-    it "handles two landskap?"
+    it "handles two landskap" do
+      kolmården = loadparagraph '3063-kolmården'
+      expected = "<div xml:id='Kolmården' type='?'><head><placeName>Kolmården</placeName> <p><span type='locale'>skog</span>, <location><region type='landskap'>Södermanland</region><region type='landskap'>Östergötland</region></location>. <span type='kursiv'>Culmard</span> 1303. – Namnet innehåller ett fornsvenskt *<span type='kursiv'>mardher</span> ’grusig mark; stenrik eller blockrik mark; grusig eller stenig skog’ e.d. Förleden <span type='kursiv'>Kol-</span> står snarast för ’mörk, skuggig’ e.d. eller för ’svart, förkolnad (på grund av skogsbrand)’, även om ett samband med kolning inte kan uteslutas. Jfr → <span type='kursiv'>Åmål</span> och → <span type='kursiv'>Ödmarden</span>.</p></div>"
+      actual = solig.unword(kolmården).to_s
+    end
+
     it "processes the entry for Norberg"
     it "processes the entry for Bålsta (kn och hd osv.)"
 
@@ -747,6 +752,7 @@ describe Solig do
     it "works on Norberg" # bergslag as location type
     it "works on Näset" # “officiellt” repeated
     it "works on Oppunda härad" # Second paragraph has “Vid sidan av” repeated
+    it "works on Kapparmora" # bound to be confused by “och”!
 
     it "doesn’t change paragraphs starting with regular type"
     it "doesn’t change either paragraphs starting with a headword in lowercase"
