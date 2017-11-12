@@ -356,7 +356,7 @@ describe Solig do
 
     it "dismantles the Word XML structure" do
       bro = loadparagraph '1023-bro'
-      pending "This is going to be painful"
+      # pending "This is going to be painful"
       expected = "<div xml:id='Bro' type='?'><head><placeName>Bro</placeName></head> <p><span type='locale'>sn</span>, <location><district type='skeppslag'>Bro och Vätö skg</district><region type='landskap'>Uppland</region></location> → <span type='kursiv'>Roslags-Bro</span>.</p></div>"
       actual = solig.unword(bro).to_s
       # byebug
