@@ -429,7 +429,10 @@ describe Solig do
       expect(actual).to eq expected
     end
 
-    it "processes entries with longer strings such as the one for Kattegatt"
+    it "processes entries with longer strings such as the one for Kattegatt" do
+      kattegatt = loadparagraph '2955-kattegatt'
+      expect(solig.unword(kattegatt).to_s).to be =~ /<div xml:id='Kattegat' type='\?'><head><placeName>Kattegatt<\/placeName> <p><span type='locale'>havsområde avgränsat av Jylland och Själland samt svenska västkusten<\/span>\. – Liksom → <span type='kursiv'>Skagerrak<\/span> härrör namnet från 1600-talet och är av holländskt ursprung\./
+    end
 
     it "stops at the first full stop" do
       abbekås = loadparagraph '444-abbekås'
