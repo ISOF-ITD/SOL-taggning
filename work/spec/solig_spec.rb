@@ -573,7 +573,13 @@ describe Solig do
       expect(actual).to eq expected
     end
 
-    it "works on Västanfors"
+    it "works on Västanfors" do
+      västanfors = loadparagraph '6240-västanfors'
+      expected = "<div xml:id='Västanfors' type='?'><head><placeName>Västanfors</placeName></head> <p><span type='locale'>f.d. sn</span>, nu <span type='locale'>stadsdel</span>, <location><settlement type='town'>Fagersta stad</settlement><region type='landskap'>Västmanland</region></location>. – Det gamla sockennamnet <span type='kursiv'>Västanfors</span> avsåg ursprungligen en järnframställningshytta (<span type='kursiv'>Westhan forss</span> 1486). Namnet åsyftar hyttans läge väster om en fors i Kolbäcksån. 1944 ombildades socknen, vars tätort kring kyrkan och den gamla bruksbebyggelsen varit municipalsamhälle sedan 1927, till staden → <span type='kursiv'>Fagersta</span>.</p></div>"
+      actual = solig.unword(västanfors).to_s
+      byebug
+      expect(actual).to eq expected
+    end
 
     it "works on the last V entry" # 6344
 
