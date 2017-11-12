@@ -169,7 +169,7 @@ class Solig
     @r = ''
   end
 
-  def unword(element)
+  def unword(element, reformat_head = true)
     reset
     @currelem = Element.new 'div'
     @currelem.add_attribute 'type', '?'
@@ -387,5 +387,14 @@ class Solig
     span = Element.new 'span', @currelem
     span.add_attribute 'type', 'locale'
     span.add_escaped_text locale.strip
+  end
+
+  def format(element)
+    formatted = unword(element)
+    if formatted.has_invalid?
+      unword(element, false)
+    else
+      formatted
+    end
   end
 end

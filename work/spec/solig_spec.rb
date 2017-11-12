@@ -631,14 +631,15 @@ describe Solig do
 
   describe '#format' do
     let(:albano) { loadparagraph '474-albano' }
+    let(:solig) { Solig.new }
 
     it "calls #unword" do
-      expect(solig).to receive(:unword).with(albano)
+      expect(solig).to receive(:unword).with(albano).and_return Element.new
       solig.format(albano)
     end
 
     it "calls #has_invalid?" do
-      expect(albano).to receive(:has_invalid?)
+      expect_any_instance_of(Element).to receive(:has_invalid?)
       solig.format(albano)
     end
   end
