@@ -54,7 +54,7 @@ class String
   end
 
   def is_locale?
-    self =~ /\\fd/ || is_one_word? && !strip.is_landskap?
+    self =~ /\\fd/ || is_one_word? && !strip.is_landskap? || self =~ /^samt\s/ || self =~ /^och\s/
   end
 end
 
