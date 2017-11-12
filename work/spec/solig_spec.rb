@@ -413,11 +413,18 @@ describe Solig do
 
     it "handles two landskap" do
       kolmården = loadparagraph '3063-kolmården'
-      expected = "<div xml:id='Kolmården' type='?'><head><placeName>Kolmården</placeName> <p><span type='locale'>skog</span>, <location><region type='landskap'>Södermanland</region><region type='landskap'>Östergötland</region></location>. <span type='kursiv'>Culmard</span> 1303. – Namnet innehåller ett fornsvenskt *<span type='kursiv'>mardher</span> ’grusig mark; stenrik eller blockrik mark; grusig eller stenig skog’ e.d. Förleden <span type='kursiv'>Kol-</span> står snarast för ’mörk, skuggig’ e.d. eller för ’svart, förkolnad (på grund av skogsbrand)’, även om ett samband med kolning inte kan uteslutas. Jfr → <span type='kursiv'>Åmål</span> och → <span type='kursiv'>Ödmarden</span>.</p></div>"
+      expected = "<div xml:id='Kolmården' type='?'><head><placeName>Kolmården</placeName></head> <p><span type='locale'>skog</span>, <location><region type='landskap'>Södermanland</region><region type='landskap'>Östergötland</region></location>. <span type='kursiv'>Culmard</span> 1303. – Namnet innehåller ett fornsvenskt *<span type='kursiv'>mardher</span> ’grusig mark; stenrik eller blockrik mark; grusig eller stenig skog’ e.d. Förleden <span type='kursiv'>Kol</span>- står snarast för ’mörk, skuggig’ e.d. eller för ’svart, förkolnad (på grund av skogsbrand)’, även om ett samband med kolning inte kan uteslutas. Jfr → <span type='kursiv'>Åmål</span> och → <span type='kursiv'>Ödmården</span>.</p></div>"
       actual = solig.unword(kolmården).to_s
+      byebug
+      expect(actual).to eq expected
     end
 
-    it "processes the entry for Norberg"
+    it "processes the entry for Norberg" do
+      pending
+      norberg = loadparagraph 'xxxx-norberg'
+      expected = "<TODO"
+    end
+
     it "processes the entry for Bålsta (kn och hd osv.)"
 
     it "processes entries with f. d." do
@@ -753,6 +760,7 @@ describe Solig do
     it "works on Näset" # “officiellt” repeated
     it "works on Oppunda härad" # Second paragraph has “Vid sidan av” repeated
     it "works on Kapparmora" # bound to be confused by “och”!
+    it "works on Kolsva" # with “(f.d. sn)” in parentheses.  Are they necessary, though?
 
     it "doesn’t change paragraphs starting with regular type"
     it "doesn’t change either paragraphs starting with a headword in lowercase"
