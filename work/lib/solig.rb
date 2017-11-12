@@ -126,10 +126,8 @@ class Solig
   def self.add_escaped_text(element, text)
     if text
       copy = text
-      byebug
-      @@escape_sequences.reverse do |escape, abbrev|
-        byebug
-        copy.gsub escape, abbrev
+      @@escape_sequences.reverse.each do |escape, abbrev|
+        copy.gsub! escape, abbrev
       end
       element.add_text copy
     end
