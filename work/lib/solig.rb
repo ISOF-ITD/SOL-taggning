@@ -103,7 +103,7 @@ class Element
 
   def isplacename?
     r = XPath.first(self, 'w:r')
-    r.isbold? && r.wtext.capitalised?
+    r && r.isbold? && r.wtext.capitalised?
   end
 end
 
