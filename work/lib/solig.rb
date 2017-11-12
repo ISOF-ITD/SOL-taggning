@@ -206,74 +206,74 @@ class Solig
   end
 
   def process_locales
-        add_locale_element @currtext.gsub /(.*?)[,\.→].*/, '\1'
-        if @currtext =~ /,/
-          @currelem.add_text ', '
-          @currtext.gsub! /^.*?,\s*/, ''
-        else
-          @currtext.gsub! /^.*?([\.→])/, '\1'
-        end
-        while @currtext !~ /[\.→]/ && !(@rs.first && @rs.first.isitalic?)
-          @r = @rs.shift
-          @currtext += @r.wtext if @r.wtext
-        end
+    add_locale_element @currtext.gsub /(.*?)[,\.→].*/, '\1'
+    if @currtext =~ /,/
+      @currelem.add_text ', '
+      @currtext.gsub! /^.*?,\s*/, ''
+    else
+      @currtext.gsub! /^.*?([\.→])/, '\1'
+    end
+    while @currtext !~ /[\.→]/ && !(@rs.first && @rs.first.isitalic?)
+      @r = @rs.shift
+      @currtext += @r.wtext if @r.wtext
+    end
 
-        while @currtext =~ /(.*?),/ # Take as many locales in current run
-          if $1.is_locale?
-            add_locale_element $1
-            @currelem.add_text ', '
-            @currtext.gsub! /^[^,]*,\s*/, ''
-          else
-            break
-          end
-        end
+    while @currtext =~ /(.*?),/ # Take as many locales in current run
+      if $1.is_locale?
+        add_locale_element $1
+        @currelem.add_text ', '
+        @currtext.gsub! /^[^,]*,\s*/, ''
+      else
+        break
+      end
+    end
 
-        # No more locales from this point on.
-        if @currtext =~ /(.*?)([\.→].*)/ # Search for end of run
-          @currtext = $1
-          @carryover = $2
-        end
+    # No more locales from this point on.
+    if @currtext =~ /(.*?)([\.→].*)/ # Search for end of run
+      @currtext = $1
+      @carryover = $2
+    end
   end
 
   def process_location
-        init_location_elements
-        while @currtext =~ /(.*?),/ # Take as many location elements in current run
-          add_location_element $1
-          @currtext.gsub! /^[^,]*,\s*/, ''
-        end
-        add_location_element @currtext
-        @currelem = @currelem.parent
-        @currelem.add_text ' ' if @currtext =~ /\s$/
-        @currelem.add_text @carryover if @carryover
+    init_location_elements
+    while @currtext =~ /(.*?),/ # Take as many location elements in current run
+      add_location_element $1
+      @currtext.gsub! /^[^,]*,\s*/, ''
+    end
+    add_location_element @currtext
+    @currelem = @currelem.parent
+    @currelem.add_text ' ' if @currtext =~ /\s$/
+    @currelem.add_text @carryover if @carryover
 
-        @r = @rs.shift
-        @currtext = ''
+    @r = @rs.shift
+    @currtext = ''
   end
 
   def process_general_text
-        if @r.isitalic?
-          @currelem.add_escaped_text @currtext
-          @currtext = @r.wtext
-          @state = :italic
-        else
-          @currtext += @r.wtext if @r.wtext
-        end
+    if @r.isitalic?
+      @currelem.add_escaped_text @currtext
+      @currtext = @r.wtext
+      @state = :italic
+    else
+      @currtext += @r.wtext if @r.wtext
+    end
 
-        @r = @rs.shift
+    @r = @rs.shift
   end
 
   def process_italic
-        if @r.isitalic?
-          @currtext += @r.wtext if @r.wtext
-        else
-          @currelem.add_text ' ' if @currtext =~ /^\s/
-          @currelem.add_italic_text @currtext.strip
-          @currtext = if @currtext =~ /\s$/ then ' ' else '' end
-          @currtext += @r.wtext if @r.wtext
-          @state = :general
-        end
+    if @r.isitalic?
+      @currtext += @r.wtext if @r.wtext
+    else
+      @currelem.add_text ' ' if @currtext =~ /^\s/
+      @currelem.add_italic_text @currtext.strip
+      @currtext = if @currtext =~ /\s$/ then ' ' else '' end
+      @currtext += @r.wtext if @r.wtext
+      @state = :general
+    end
 
-        @r = @rs.shift
+    @r = @rs.shift
   end
 
   def init_location_elements
