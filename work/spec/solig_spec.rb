@@ -49,8 +49,14 @@ end
 describe String do
   let(:ox) { "Oxie härad " } # With trailing U+2003 EM SPACE and U+2005 FOUR-PER-EM SPACE in the middle
 
-  describe '#upcase?' do
-    it "returns true if 
+  describe '#capitalised?' do
+    it "returns true if self is capitalised" do
+      expect('Sakkat'.capitalised?).to be_truthy
+    end
+
+    it "returns false otherwise" do
+      expect('sal'.capitalised?).to be_falsey
+    end
   end
 
   describe '#ustrip' do
