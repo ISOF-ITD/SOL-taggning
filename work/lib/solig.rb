@@ -159,33 +159,7 @@ class Solig
 
         @state = :first_locale
       when :first_locale
-        add_locale_element @currtext.gsub /(.*?)[,\.→].*/, '\1'
-        if @currtext =~ /,/
-          @currelem.add_text ', '
-          @currtext.gsub! /^.*?,\s*/, ''
-        else
-          @currtext.gsub! /^.*?([\.→])/, '\1'
-        end
-        while @currtext !~ /[\.→]/ && !(@rs.first && @rs.first.isitalic?)
-          @r = @rs.shift
-          @currtext += @r.wtext if @r.wtext
-        end
-
-        while @currtext =~ /(.*?),/ # Take as many locales in current run
-          if $1.is_locale?
-            add_locale_element $1
-            @currelem.add_text ', '
-            @currtext.gsub! /^[^,]*,\s*/, ''
-          else
-            break
-          end
-        end
-
-        # No more locales from this point on.
-        if @currtext =~ /(.*?)([\.→].*)/ # Search for end of run
-          @currtext = $1
-          @carryover = $2
-        end
+        process_locales
 
         init_location_elements
         @state = :location
@@ -258,6 +232,36 @@ class Solig
       break unless @r
       @currtext += @r.wtext if @r.wtext
     end
+  end
+
+  def process_locales
+        add_locale_element @currtext.gsub /(.*?)[,\.→].*/, '\1'
+        if @currtext =~ /,/
+          @currelem.add_text ', '
+          @currtext.gsub! /^.*?,\s*/, ''
+        else
+          @currtext.gsub! /^.*?([\.→])/, '\1'
+        end
+        while @currtext !~ /[\.→]/ && !(@rs.first && @rs.first.isitalic?)
+          @r = @rs.shift
+          @currtext += @r.wtext if @r.wtext
+        end
+
+        while @currtext =~ /(.*?),/ # Take as many locales in current run
+          if $1.is_locale?
+            add_locale_element $1
+            @currelem.add_text ', '
+            @currtext.gsub! /^[^,]*,\s*/, ''
+          else
+            break
+          end
+        end
+
+        # No more locales from this point on.
+        if @currtext =~ /(.*?)([\.→].*)/ # Search for end of run
+          @currtext = $1
+          @carryover = $2
+        end
   end
 
   def init_location_elements
