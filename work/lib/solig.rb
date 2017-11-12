@@ -113,8 +113,7 @@ class Solig
   def self.escape(text)
     if text
       @@escape_sequences.each do |abbrev, escape|
-        byebug
-        text.gsub!(Regexp.new abbrev, escape)
+        text.gsub!(abbrev, escape)
       end
     end
 
