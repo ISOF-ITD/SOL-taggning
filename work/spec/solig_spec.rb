@@ -320,6 +320,16 @@ describe Solig do
       solig.reset
       expect(solig.instance_variable_get(:@currtext)).to eq ''
     end
+
+    it "resets @rs to the empty array " do
+      solig.reset
+      expect(solig.instance_variable_get(:@rs)).to eq []
+    end
+
+    it "resets @r to the empty string" do
+      solig.reset
+      expect(solig.instance_variable_get(:@r)).to eq ''
+    end
   end
 
   describe '#unword' do

@@ -140,6 +140,8 @@ class Solig
     @state = :initial
     @currtext = ''
     @carryover = ''
+    @rs = []
+    @r = ''
   end
 
   def unword(element)
