@@ -428,7 +428,7 @@ describe Solig do
     end
 
     it "processes the entry for Bålsta (kn och hd osv.)" do
-      bålsta = loadparagraph '2013-bålsta'
+      bålsta = loadparagraph '1135-bålsta'
       expected = "<div xml:id='Bålsta' type='?'><head><placeName>Bålsta</placeName></head> <p><span type='kursiv'>kn</span>, <span type='kursiv'>tätort</span>, <location><district type='socken'>Yttergrans</district><district>Kalmars snr</district><district type='härad'>Håbo</district><region type='landskap'>Uppland</region></location>. (<span type='kursiv'>in</span>) <span type='kursiv'>Bardestum</span> 1316. – Ortnamnet, som äldst avsåg en by i Yttergarnds socken, kan i förleden innhålla genitiv av mansnamnet fsv. <span type='kursiv'>Bardhe</span>. Alternativt innehåller förleden fsv. *<span type='kursiv'>bardhe</span> ’kant, rand’, svarande mot det norska dialektordet <span type='kursiv'>bard</span>(<span type='kursiv'>e</span>), syftande på någon terrängformation. Efterleden är → <span type='kursiv'>sta</span>(<span type='kursiv'>d</span>). Tätorten har snarast fått sitt namn efter järnvägsstationen Bålsta på banan Stockholm–Enköping–Västerås, öppnad 1879.</p></div>" # Obs. Stockholm-Enköping-Västerås har U+2013!
       actual = solig.unword(bålsta).to_s
       expect(actual).to eq expected
