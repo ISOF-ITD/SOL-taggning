@@ -454,8 +454,6 @@ describe Solig do
       letsi = loadparagraph '3383-letsi'
       expected = "<div xml:id='Letsi' type='?'><head><placeName>Letsi</placeName></head> <p><span type='locale'>vattenkraftverk i Lilla Luleälven</span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet är en försvenskning av lulesam. <span type='kursiv'>Liehtse</span>, som var namnet på forsen före utbyggnaden. Ordet <span type='kursiv'>liehtse</span> betyder ’dåligt väder (dimma, duggregn)’ och syftar antagligen på att forsen orsakade dimma om vintern.</p></div>"
       actual = solig.unword(letsi).to_s
-      pending "wip"
-      # byebug
       expect(actual).to eq expected
     end
 
@@ -550,7 +548,7 @@ describe Solig do
 
     it "works on Västra Skrävlinge" do
       västra_skrävlinge = loadparagraph '6317-västra-skrävlinge'
-      expected = "<div xml:id='Västra_Skrävlinge' type='?'><head><placeName>Västra Skrävlinge</placeName></head> <p><span type='locale'>f.d. sn</span>, <location><district type='härad'>Oxie hd</district><region type='landskap'>Skåne</region></location></p>. (<span type='kursiv'>de</span>) <span type='kursiv'>Scræplingi</span> 1300-talets mitt. (<span type='kursiv'>de</span>) <span type='kursiv'>Westraskræplinge</span> 1400-talets förra del (avser kyrkbyn). – Socknen har sitt namn efter kyrkbyn. Det innehåller en inbyggnarbeteckning (→ -<span type='kursiv'>inge</span>), kanske bildad till ett äldre namn på Husiebäcken, sammanhängande med verbet <span type='kursiv'>skrapa</span> med syftning på vattnets ljud. Kyrkbyn och grannbyn Östra Skrävlinge i Husie f.d. socken utgjorde äldst en enda bebyggelse.</div>"
+      expected = "<div xml:id='Västra_Skrävlinge' type='?'><head><placeName>Västra Skrävlinge</placeName></head> <p><span type='locale'>f.d. sn</span>, <location><district type='härad'>Oxie hd</district><region type='landskap'>Skåne</region></location>. (<span type='kursiv'>de</span>) <span type='kursiv'>Scræplingi</span> 1300-talets mitt, (<span type='kursiv'>de</span>) <span type='kursiv'>Westraskræplinge</span> 1400-talets förra del (avser kyrkbyn). – Socknen har sitt namn efter kyrkbyn. Det innehåller en inbyggarbeteckning (→ -<span type='kursiv'>inge</span>), kanske bildad till ett äldre namn på Husiebäcken, sammanhängande med verbet <span type='kursiv'>skrapa</span> med syftning på vattnets ljud. Kyrkbyn och grannbyn Östra Skrävlinge i Husie f.d. socken utgjorde äldst en enda bebyggelse.</p></div>"
       actual = solig.unword(västra_skrävlinge).to_s
       pending "Later"
       # byebug
