@@ -104,6 +104,7 @@ class Solig
 
   @@escape_sequences = {
     'f.d.' => '\\fd',
+    'förs.' => '\\förs',
   }
 
   @@locale_words = [
@@ -334,12 +335,21 @@ class Solig
       when 'lfs'
         tag = 'district'
         type = 'landsförsamling'
+      when '\\förs', 'förs'
+        tag = 'district'
+        type = 'församling'
+      when 'nationalpark'
+        tag = 'district'
+        type = 'nationalpark'
       when 'hd'
         tag = 'district'
         type = 'härad'
       when 'skg'
         tag = 'district'
         type = 'skeppslag'
+      when 'kn'
+        tag = 'district'
+        type = 'kommun'
       when 'stad'
         tag = 'settlement'
         type = 'stad'
