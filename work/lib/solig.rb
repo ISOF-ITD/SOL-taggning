@@ -180,7 +180,8 @@ class Solig
       # byebug
       case @state
       when :initial
-        process_head
+        byebug
+        process_head(reformat_head)
 
         @state = :first_locale
       when :first_locale
@@ -203,17 +204,17 @@ class Solig
     @currelem.root
   end
 
-  def process_head
+  def process_head(reformat_head = true)
     while @r.isbold?
       collect_headword(@r)
       @r = @rs.shift
     end
 
     # Set head
-    add_head_element(@currtext.ustrip)
+    add_head_element(@currtext.ustrip, reformat_head)
     @currelem.add_escaped_text ' '
     @currtext = @r.wtext.uspace.strip
-    @currelem = Element.new 'p', @currelem
+    @currelem = Element.new 'p', @currelem if reformat_head
 
     unless @rs.first && @rs.first.isitalic? # FIXME And something else?
       @r = @rs.shift
@@ -317,10 +318,17 @@ class Solig
     @currtext += rt
   end
 
-  def add_head_element(head)
-    head_element = Element.new 'head', @currelem
-    place_name_element = Element.new 'placeName', head_element
-    place_name_element.text = head
+  def add_head_element(head, reformat_head = true)
+    if reformat_head
+      head_element = Element.new 'head', @currelem
+      place_name_element = Element.new 'placeName', head_element
+      place_name_element.text = head
+    else
+      span_element = Element.new 'span', @currelem
+      span_element.add_attribute 'type', 'fet'
+      span_element.text = head
+    end
+
     @currelem.add_attribute 'xml:id', head.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
   end
 
