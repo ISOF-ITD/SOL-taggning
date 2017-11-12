@@ -653,6 +653,26 @@ describe Solig do
       inge_last = loadparagraph '2749-inge-sista-tolknings-paragraf'
       expect { solig.unword(inge_last) }.not_to raise_error
     end
+
+    it "works on Abisko" # förs. as a locale type
+    it "works on g"
+    it "works on Bjärsgård" # kn as a location type
+    it "works on Finnveden" # hdr, not consistent with hd in other places (as pl. too)
+    it "works on Fjärmåla" # kapellförs.
+    it "recognises f.d. on Fudal"
+    it "works on Hardemo" # Weird tagging around parenthesese
+    it "works on Husie" # “(f.d. sn” comfuses things
+    it "works on Hörsne" # Funny repeating bug? “sn (fullständigt namn” appearing twice
+    it "works on Jättene" # o. for och!
+    it "works on Karlaby" # Beginning of description repeated!
+    it "works on Kulladal" # Invalid tag crossing over the full stop.
+    it "works on Löderup" # Complicated use of samt
+    it "works on Markaryd" # Simple use of samt
+    it "works on Möckeln" # köping as location type!
+    it "works on Möckelby, Norra, Södra" # Use of resp
+    it "works on Norberg" # bergslag as location type
+    it "works on Näset" # “officiellt” repeated
+    it "works on Oppunda härad" # Second paragraph has “Vid sidan av” repeated
   end
 
   describe '#start_location'
