@@ -37,6 +37,10 @@ end
 class String
   @@uspaces = '[   ]' # FIXME Complete!
 
+  def capitalised?
+    self == self.capitalize
+  end
+
   def ustrip
     strip.gsub(/^#{@@uspaces}*/, '').gsub(/#{@@uspaces}*$/, '')
   end
@@ -95,6 +99,11 @@ class Element
   def wtext
     t = XPath.first(self, 'w:t')
     t && Solig.escape(t.text)
+  end
+
+  def isplacename?
+    r = XPath.first(self, 'w:r')
+    r.isbold? && r.wtext.capitalised?
   end
 end
 

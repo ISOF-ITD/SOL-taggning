@@ -261,19 +261,20 @@ describe Element do
 
   describe '#isplacename?' do
     it "returns true if first word is bold and capitalised" do
-      doc = Element.new "<w:document xmlns:w=''><w:r><w:rPr><w:b /><w:t>Locketorp</w:t></w:r></w:document>"
+      doc = Document.new "<w:document xmlns:w=''><w:r><w:rPr><w:b /><w:t>Locketorp</w:t></w:r></w:document>"
       element = doc.root.elements.first
+      byebug
       expect(element.isplacename?).to be_truthy
     end
 
     it "returns false if first word isn’t bold" do
-      doc = Element.new "<w:document xmlns:w=''><w:r><w:t>Luvigsborg</w:t></w:r></w:document>"
+      doc = Document.new "<w:document xmlns:w=''><w:r><w:t>Luvigsborg</w:t></w:r></w:document>"
       element = doc.root.elements.first
       expect(element.isplacename?).to be_falsey
     end
 
     it "returns false is first word isn’t capitalised" do
-      doc = Element.new "<w:document xmlns:w=''><w:r><w:b /><w:t>hem</w:t></w:r></w:document>"
+      doc = Document.new "<w:document xmlns:w=''><w:r><w:b /><w:t>hem</w:t></w:r></w:document>"
       element = doc.root.elements.first
       expect(element.isplacename?).to be_falsey
     end
