@@ -452,7 +452,7 @@ describe Solig do
 
     it "works on entry 3383" do
       letsi = loadparagraph '3383-letsi'
-      expected = "<div><head><placeName>Letsi</placeName></head> <p><span type='locale'>vattenkraftverk i Lilla Luleälven<span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet är en försvenskning av lulesam. <span type='kursiv'>Liehtse</span>, som var namnet på forsen före utbyggnaden. Ordet <span type='kursiv'>liehtse</span> betyder ’dåligt väder (dimma, duggregn)’ och syftar antagligen på att forsen orsakade dimma om vintern.</p></div>"
+      expected = "<div xml:id='Letsi' type='?'><head><placeName>Letsi</placeName></head> <p><span type='locale'>vattenkraftverk i Lilla Luleälven</span>, <location><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. – Namnet är en försvenskning av lulesam. <span type='kursiv'>Liehtse</span>, som var namnet på forsen före utbyggnaden. Ordet <span type='kursiv'>liehtse</span> betyder ’dåligt väder (dimma, duggregn)’ och syftar antagligen på att forsen orsakade dimma om vintern.</p></div>"
       actual = solig.unword(letsi).to_s
       pending "wip"
       # byebug
