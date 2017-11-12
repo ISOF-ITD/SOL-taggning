@@ -415,14 +415,16 @@ describe Solig do
       kolmården = loadparagraph '3063-kolmården'
       expected = "<div xml:id='Kolmården' type='?'><head><placeName>Kolmården</placeName></head> <p><span type='locale'>skog</span>, <location><region type='landskap'>Södermanland</region><region type='landskap'>Östergötland</region></location>. <span type='kursiv'>Culmard</span> 1303. – Namnet innehåller ett fornsvenskt *<span type='kursiv'>mardher</span> ’grusig mark; stenrik eller blockrik mark; grusig eller stenig skog’ e.d. Förleden <span type='kursiv'>Kol</span>- står snarast för ’mörk, skuggig’ e.d. eller för ’svart, förkolnad (på grund av skogsbrand)’, även om ett samband med kolning inte kan uteslutas. Jfr → <span type='kursiv'>Åmål</span> och → <span type='kursiv'>Ödmården</span>.</p></div>"
       actual = solig.unword(kolmården).to_s
-      byebug
+      # byebug
       expect(actual).to eq expected
     end
 
     it "processes the entry for Norberg" do
-      pending
-      norberg = loadparagraph 'xxxx-norberg'
-      expected = "<TODO"
+      norberg = loadparagraph '4012-norberg'
+      expected = "<div xml:id='Norberg' type='?'><head><placeName>Norberg</placeName></head> <p><span type='locale'>kn</span>, <span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='bergslag'>Gamla Norbergs bergslag</district><region type='landskap'>Västmanland</region></location>. <span type='kursiv'>Norobergh</span> 1303 sen avskr., (<span type='kursiv'>af</span>) <span type='kursiv'>Noraberghe</span> 1367. – Namnet, vars efterled är <span type='kursiv'>berg</span> i en äldre betydelse ’bergslag’ (jfr → <span type='kursiv'>Bergslagen</span>), är ett ursprungligt bygdenamn. Förleden innehåller troligen ett äldre ånamn *<span type='kursiv'>Nora</span> på Norbergsån, sjön Norens avloppså till Trätten. Sjönamnet <span type='kursiv'>Noren</span> i sin tur innehåller <span type='kursiv'>nor</span> ’smalt vattendrag som förenar två vattenpartier’ med syftning på den korta ån mellan Noren och den lilla sjön Kalven. Det sistnämnda namnet, vanligt på flera håll i Sverige, betecknar sjön som den större sjön Norens »kalv». Kommunen Norberg har sitt namn efter socknen. Tätorten har vuxit fram ur bebyggelsen kring kyrkan och kringliggande byar.</p></div>"
+      actual = solig.unword(norberg).to_s
+      # byebug
+      expect(actual).to eq expected
     end
 
     it "processes the entry for Bålsta (kn och hd osv.)"
