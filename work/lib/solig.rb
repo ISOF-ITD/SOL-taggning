@@ -173,11 +173,7 @@ class Solig
       end
     end
 
-    add_locale_element @currtext if @state == :first_locale
-    @currelem.add_escaped_text @currtext if @state == :general
-    # @currelem.add_italic_text @currtext if @state == :italic
-    location = XPath.first(@currelem.root, '//location')
-    location.remove if location.to_s == '<location/>'
+    flush_text
 
     @currelem.root
   end
@@ -274,6 +270,14 @@ class Solig
     end
 
     @r = @rs.shift
+  end
+
+  def flush_text
+    add_locale_element @currtext if @state == :first_locale
+    @currelem.add_escaped_text @currtext if @state == :general
+    # @currelem.add_italic_text @currtext if @state == :italic
+    location = XPath.first(@currelem.root, '//location')
+    location.remove if location.to_s == '<location/>'
   end
 
   def init_location_elements
