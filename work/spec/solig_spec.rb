@@ -703,9 +703,22 @@ describe Solig do
       expect { solig.unword(inge_last) }.not_to raise_error
     end
 
-    it "works on Abisko" # förs. as a locale type
-    it "works on Álggavárre" # nationalpark as a locale type
-    it "works on Bjärsgård" # kn as a location type
+    # FIXME Kiruna *stad*?  It’s more the tag that’s questionable, of course.
+    it "works on Abisko" do # förs. as a location type
+      abisko = loadparagraph '448-abisko'
+      expect(solig.unword(abisko).to_s).to eq "<div xml:id='Abisko' type='?'><heads><placeName>Abisko</placeName></head> <p><span type='locale'>nationalpark</span>, <span type='locale'>turistort</span>, <location><district type='församling'>Jukkasjärvi förs.<district><settlement type='stad'>Kiruna stad</settlement><region type='landskap'>Lappland</region></location>. – Namnet är en försvenskning av nordsam. <span type='kursiv'>Ábeskovvu</span>, vars efterled är genitiv singularis av sam. <span type='kursiv'>áhppi</span> ’hav, stort vatten’ (nordiskt lånord). Namnet kan möjligen tolkas som ’skogen vid havet (det stora vattnet, dvs. Torneträsk)’. En annan möljighet är att namnet syftar på skogens sträckning till norska kusten.</p></div>"
+    end
+
+    it "works on Álggavárre" do # nationalpark as a location type
+      álggavárre = loadparagraph 'xxx-álggavárre'
+      expect(solig.unword(álggavárre).to_s).to eq "<div xml:id='Álggavárre' type='?'><head><placeName>Álggavárre</placeName></head> <p><span type='locale'>fjäll</span>, <location><district type='nationalpark'>Sareks nationalpark</district><district type='socken'>Jokkmokks sn</district><region type='landskap'>Lappland</region></location>. <span type='kursiv'>Alkiewari</span> 1768. – Förleden i det lulesamiska namnet (med försvenskad stavning <span type='kursiv'>Alkavare</span>) innehåller en bildning till verbet <span type='kursiv'>álgget</span> ’börja’, kanske med syftning på att dalgångarna österut har sin början här. Efterleden <span type='kursiv'>várre</span> betyder ’berg, fjäll’. Fjället är känt genom ett samiskt kapell samt gruvverksamhet under slutet av 1600-talet.</p></div"
+    end
+
+    it "works on Bjärsgård" do # kn as a location type
+      bjärsgård = loadparagraph 'yyy-bjärsgård'
+      expect(solig.unword(bjärsgård).to_s).to eq "<div xml:id='Bjärsgård' type='?'><head><placeName>Bjärsgård</placeName></head> <p><span type='locale'>sn</span>, <location><district type='kommun'>Klippans kn</district><region type='landskap'>Skåne</region>. (<span type='kursiv'>i</span>) <span type='kursiv'>Bierssgardt</span> 1503. – Godset är beläget i f.d. Gråmanstorps socken, Norra Åsbo härad. Huvudbyggnaden ligger på en liten holme i Borgasjön nära sjöns södra strandkant. Namnets förled, genitiv av fda. <span type='kursiv'>biærgh</span> ’berg’, åsyftar ett markant höjdparti vid stranden mitt emot holmen.</p>" # TODO Tagga Gråmanstorp osv.?
+    end
+
     it "works on Finnveden" # hdr, not consistent with hd in other places (as pl. too)
     it "works on Fjärmåla" # kapellförs.
     it "recognises f.d. on Fudal"
