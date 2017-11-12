@@ -122,7 +122,7 @@ class Solig
       return true if string =~ word
     end
 
-    string =~ string.is_one_word? && !string.strip.is_landskap?
+    string.is_one_word? && !string.strip.is_landskap?
   end
 
   def self.escape(text)
