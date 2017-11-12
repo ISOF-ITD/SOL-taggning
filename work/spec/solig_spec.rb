@@ -673,6 +673,9 @@ describe Solig do
     it "works on Norberg" # bergslag as location type
     it "works on Näset" # “officiellt” repeated
     it "works on Oppunda härad" # Second paragraph has “Vid sidan av” repeated
+
+    it "doesn’t change paragraphs starting with regular type"
+    it "doesn’t change either paragraphs starting with a headword in lowercase"
   end
 
   describe '#start_location'
