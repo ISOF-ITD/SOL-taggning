@@ -59,6 +59,10 @@ class String
 end
 
 class Element
+  def has_invalid?
+    XPath.first(self, '//invalid')
+  end
+
   def add_italic_text(text)
     span = Element.new 'span', self
     span.add_attribute 'type', 'kursiv'

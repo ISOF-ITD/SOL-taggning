@@ -120,8 +120,17 @@ end
 
 describe Element do
   describe '#has_invalid?' do
-    it "returns true if element has <invalid> children"
-    it "returns false otherwise"
+    it "returns true if element has <invalid> children" do
+      doc = Document.new "<doc><p>foo <invalid>nonsense</invalid> bar.</p> <p>Baz quux!</p></doc>"
+      element = doc.root
+      expect(element.has_invalid?).to be_truthy
+    end
+
+    it "returns false otherwise" do
+      doc = Document.new "<doc><p>foo <locale>nonsense</locale> bar.</p> <p>Baz quux!</p></doc>"
+      element = doc.root
+      expect(element.has_invalid?).to be_falsey
+    end
   end
 
   describe '#add_italic_text' do
