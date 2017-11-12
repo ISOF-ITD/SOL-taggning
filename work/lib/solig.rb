@@ -111,9 +111,8 @@ class Solig
   end
 
   def self.escape(text)
-    retvalue = text
-
-    if retvalue
+    if text
+      retvalue = text
       @@escape_sequences.each do |abbrev, escape|
         retvalue.gsub!(abbrev, escape)
       end
