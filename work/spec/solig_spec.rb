@@ -357,7 +357,10 @@ describe Solig do
     it "dismantles the Word XML structure" do
       bro = loadparagraph '1023-bro'
       pending "This is going to be painful"
-      expect(solig.unword(bro).to_s).to eq "<div><head><placeName>Bro</placeName></head> <p><span type='locale'>sn</span>, <location><district type='skeppslag'>Bro och Vätö skg</district><region type='landskap'>Uppland</region></location> → <span type='kursiv'>Roslags-Bro</span>.</p></div>"
+      expected = "<div xml:id='Bro' type='?'><head><placeName>Bro</placeName></head> <p><span type='locale'>sn</span>, <location><district type='skeppslag'>Bro och Vätö skg</district><region type='landskap'>Uppland</region></location> → <span type='kursiv'>Roslags-Bro</span>.</p></div>"
+      actual = solig.unword(bro).to_s
+      # byebug
+      expect(actual).to eq expected
     end
 
     it "processes a parish without a härad" do

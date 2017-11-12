@@ -326,6 +326,14 @@ class Solig
       locale = location
     end
 
+    # Special cases FIXME Put that somewhere else!  As well as the list below
+    if location == 'Bro och Vätö skg'
+      location_element = Element.new 'district', @currelem
+      location_element.add_attribute 'type', 'skeppslag'
+      location_element.text = location
+      return
+    end
+
     locations = location.split('och').map(&:strip)
     locations.each do |location|
       case locale
