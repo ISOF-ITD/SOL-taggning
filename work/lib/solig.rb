@@ -161,20 +161,9 @@ class Solig
       when :first_locale
         process_locales
 
-        init_location_elements
         @state = :location
       when :location
-        while @currtext =~ /(.*?),/ # Take as many location elements in current run
-          add_location_element $1
-          @currtext.gsub! /^[^,]*,\s*/, ''
-        end
-        add_location_element @currtext
-        @currelem = @currelem.parent
-        @currelem.add_text ' ' if @currtext =~ /\s$/
-        @currelem.add_text @carryover if @carryover
-
-        @r = @rs.shift
-        @currtext = ''
+        process_location
         next unless @r
         @state = if @r.isitalic? then :italic else :general end
       when :general
@@ -262,6 +251,21 @@ class Solig
           @currtext = $1
           @carryover = $2
         end
+  end
+
+  def process_location
+        init_location_elements
+        while @currtext =~ /(.*?),/ # Take as many location elements in current run
+          add_location_element $1
+          @currtext.gsub! /^[^,]*,\s*/, ''
+        end
+        add_location_element @currtext
+        @currelem = @currelem.parent
+        @currelem.add_text ' ' if @currtext =~ /\s$/
+        @currelem.add_text @carryover if @carryover
+
+        @r = @rs.shift
+        @currtext = ''
   end
 
   def init_location_elements
