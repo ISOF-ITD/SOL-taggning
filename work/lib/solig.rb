@@ -88,6 +88,10 @@ class Element
     XPath.first(self, 'w:rPr/w:b')
   end
 
+  def isnbsp?
+    XPath.first(self, 'w:noBreakHyphen')
+  end
+
   def wtext
     t = XPath.first(self, 'w:t')
     t && Solig.escape(t.text)
