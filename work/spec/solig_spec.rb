@@ -620,6 +620,27 @@ describe Solig do
       # byebug
       expect(actual).to be =~ /(<span type='kursiv'>de<\/span>)/
     end
+
+    it "takes an optional second argument" do
+      albano = loadparagraph '474-albano'
+      actual = solig.unword(albano, true)
+      expected = "<div xml:id='Albano' type='?'><p><span type='fet'>Albano</span> område på Norra Djurgården, Stockholms stad → <span type='kursiv'>Frescati</span></p>"
+      expect(actual).to eq expected
+    end
+  end
+
+  describe '#format' do
+    let(:albano) { loadparagraph '474-albano' }
+
+    it "calls #unword" do
+      expect(solig).to receive(:unword).with(albano)
+      solig.format(albano)
+    end
+
+    it "calls #has_invalid?" do
+      expect(albano).to receive(:has_invalid?)
+      solig.format(albano)
+    end
   end
 
   describe 'Intensive tests for #unword' do
