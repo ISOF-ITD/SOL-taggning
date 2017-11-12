@@ -98,6 +98,10 @@ class Solig
     'Jämtland', 'Ångermanland', 'Västerbotten', 'Lappland', 'Norrbotten',
   ]
 
+  @@escape_sequences = {
+    'f.d.' => '\\fd',
+  }
+
   def self.is_landskap? string
     @@landskap.include? string
   end
@@ -107,7 +111,19 @@ class Solig
   end
 
   def self.escape(text)
-    text.gsub(/f\.d\./, '\\fd') if text
+    if text
+      @@escape_sequences.each do |abbrev, escape|
+        byebug
+        text.gsub!(Regexp.new abbrev, escape)
+      end
+    end
+
+    text
+  end
+
+  # FIXME Figure out what the deal is with w:noBreakHyphen?
+  def self.add_escaped_text(element, text)
+    element.add_text text.gsub(/\\fd/, 'f.d.') if text # FIXME Extract that somewhere
   end
 
   def initialize
@@ -243,11 +259,6 @@ class Solig
       rt = ' '
     end
     @currtext += rt
-  end
-
-  # FIXME Figure out what the deal is with w:noBreakHyphen?
-  def self.add_escaped_text(element, text)
-    element.add_text text.gsub(/\\fd/, 'f.d.') if text # FIXME Extract that somewhere
   end
 
   def add_head_element(head)
