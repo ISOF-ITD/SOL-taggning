@@ -102,6 +102,13 @@ class Solig
     'f.d.' => '\\fd',
   }
 
+  @@locale_words = [
+    /\\fd/,
+    /^nu\s/,
+    /^samt\s/,
+    /^och\s/,
+  ]
+
   def self.is_landskap? string
     @@landskap.include? string
   end
@@ -111,12 +118,11 @@ class Solig
   end
 
   def self.is_locale? string
-    string =~ /\\fd/ ||
-      string.is_one_word? &&
-      !string.strip.is_landskap? ||
-      string =~ /^nu\s/ ||
-      string =~ /^samt\s/ ||
-      string =~ /^och\s/
+    @@locale_words.each do |word|
+      return true if string =~ word
+    end
+
+    string =~ string.is_one_word? && !string.strip.is_landskap?
   end
 
   def self.escape(text)
