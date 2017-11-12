@@ -655,7 +655,7 @@ describe Solig do
     end
 
     it "works on Abisko" # förs. as a locale type
-    it "works on g"
+    it "works on Álggavárre" # nationalpark as a locale type
     it "works on Bjärsgård" # kn as a location type
     it "works on Finnveden" # hdr, not consistent with hd in other places (as pl. too)
     it "works on Fjärmåla" # kapellförs.
