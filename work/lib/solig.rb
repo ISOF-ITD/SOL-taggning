@@ -189,7 +189,7 @@ class Solig
 
         @state = :location
       when :location
-        byebug
+        # byebug
         process_location(reformat_head)
         next unless @r
         @state = if @r.isitalic? then :italic else :general end
@@ -339,7 +339,7 @@ class Solig
   end
 
   def add_location_element(location, reformat_head = true)
-    byebug
+    # byebug
     unless reformat_head
       @currelem.add_escaped_text location
       return
