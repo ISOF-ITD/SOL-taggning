@@ -623,7 +623,7 @@ describe Solig do
 
     it "takes an optional second argument" do
       albano = loadparagraph '474-albano'
-      actual = solig.unword(albano, true)
+      actual = solig.unword(albano, false)
       expected = "<div xml:id='Albano' type='?'><p><span type='fet'>Albano</span> område på Norra Djurgården, Stockholms stad → <span type='kursiv'>Frescati</span></p>"
       expect(actual).to eq expected
     end
