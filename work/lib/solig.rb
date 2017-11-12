@@ -147,31 +147,31 @@ class Solig
     @currelem = Element.new 'div'
     @currelem.add_attribute 'type', '?'
 
-    rs = element.each_element('w:r') { }.to_a
-    r = rs.shift
-    while r do
+    @rs = element.each_element('w:r') { }.to_a
+    @r = @rs.shift
+    while @r do
       # byebug
       case @state
       when :initial
-        while r.isbold?
-          collect_headword(r)
-          r = rs.shift
+        while @r.isbold?
+          collect_headword(@r)
+          @r = @rs.shift
         end
 
         # Set head
         add_head_element(@currtext.ustrip)
         @currelem.add_escaped_text ' '
-        @currtext = r.wtext.uspace.strip
+        @currtext = @r.wtext.uspace.strip
         @currelem = Element.new 'p', @currelem
 
-        unless rs.first && rs.first.isitalic? # FIXME And something else?
-          r = rs.shift
-          @currtext += r.wtext if r.wtext
+        unless @rs.first && @rs.first.isitalic? # FIXME And something else?
+          @r = @rs.shift
+          @currtext += @r.wtext if @r.wtext
         end
-        while @currtext !~ /,/ && !(rs.first && rs.first.isitalic?) # Search for full first locale
-          r = rs.shift
-          break unless r
-          @currtext += r.wtext if r.wtext
+        while @currtext !~ /,/ && !(@rs.first && @rs.first.isitalic?) # Search for full first locale
+          @r = @rs.shift
+          break unless @r
+          @currtext += @r.wtext if @r.wtext
         end
 
         @state = :first_locale
@@ -183,9 +183,9 @@ class Solig
         else
           @currtext.gsub! /^.*?([\.→])/, '\1'
         end
-        while @currtext !~ /[\.→]/ && !(rs.first && rs.first.isitalic?)
-          r = rs.shift
-          @currtext += r.wtext if r.wtext
+        while @currtext !~ /[\.→]/ && !(@rs.first && @rs.first.isitalic?)
+          @r = @rs.shift
+          @currtext += @r.wtext if @r.wtext
         end
 
         while @currtext =~ /(.*?),/ # Take as many locales in current run
@@ -216,32 +216,32 @@ class Solig
         @currelem.add_text ' ' if @currtext =~ /\s$/
         @currelem.add_text @carryover if @carryover
 
-        r = rs.shift
+        @r = @rs.shift
         @currtext = ''
-        next unless r
-        @state = if r.isitalic? then :italic else :general end
+        next unless @r
+        @state = if @r.isitalic? then :italic else :general end
       when :general
-        if r.isitalic?
+        if @r.isitalic?
           @currelem.add_escaped_text @currtext
-          @currtext = r.wtext
+          @currtext = @r.wtext
           @state = :italic
         else
-          @currtext += r.wtext if r.wtext
+          @currtext += @r.wtext if @r.wtext
         end
 
-        r = rs.shift
+        @r = @rs.shift
       when :italic
-        if r.isitalic?
-          @currtext += r.wtext if r.wtext
+        if @r.isitalic?
+          @currtext += @r.wtext if @r.wtext
         else
           @currelem.add_text ' ' if @currtext =~ /^\s/
           @currelem.add_italic_text @currtext.strip
           @currtext = if @currtext =~ /\s$/ then ' ' else '' end
-          @currtext += r.wtext if r.wtext
+          @currtext += @r.wtext if @r.wtext
           @state = :general
         end
 
-        r = rs.shift
+        @r = @rs.shift
       end
     end
 
