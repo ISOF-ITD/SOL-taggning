@@ -621,7 +621,7 @@ describe Solig do
       expect(actual).to be =~ /(<span type='kursiv'>de<\/span>)/
     end
 
-    it "takes an optional second argument" do
+    it "takes an optional second argument" do # FIXME Stop this madness that cascades down, and replace with atribute
       albano = loadparagraph '474-albano'
       actual = solig.unword(albano, false).to_s
       expected = "<div xml:id='Albano' type='?'><p><span type='fet'>Albano</span> område på Norra Djurgården, Stockholms stad → <span type='kursiv'>Frescati</span></p>"

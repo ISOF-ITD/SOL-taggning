@@ -277,8 +277,8 @@ class Solig
       @currtext.gsub! /^[^,]*,\s*/, ''
     end
     add_location_element(@currtext, reformat_head)
-    @currelem = @currelem.parent
-    @currelem.add_text ' ' if @currtext =~ /\s$/
+    @currelem = @currelem.parent if reformat_head
+    @currelem.add_text ' ' if @currtext =~ /\s$/ && reformat_head
     @currelem.add_text @carryover if @carryover
 
     @r = @rs.shift
@@ -320,7 +320,7 @@ class Solig
   end
 
   def init_location_elements(reformat_head = true)
-    @currelem = Element.new 'location', @currelem
+    @currelem = Element.new 'location', @currelem if reformat_head
   end
 
   def collect_headword(r)
