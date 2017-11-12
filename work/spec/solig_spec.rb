@@ -566,8 +566,11 @@ describe Solig do
 
     it "works on Västanå" do
       västanå = loadparagraph '6242-västanå'
-      pending "later"
-      expect(solig.unword(västanå).to_s).to eq "<div xml:id='Västanå' type='?'><head><placeName>Västanå</placeName></head> <p><span type='kursiv'>gods</span>, <location><district type='landsförsamling'>Gränna lfs</district><district type='härad'>Vista hd</district><region type='landskap'>Småland</region></location>. <span type='kursiv'>Westan a </span> 1412. Namnet är givet efter läget väster om Röttleån (jfr → <span type='kursiv'>Östanå</span>).</p></div>" # Inte Skåne!
+      # pending "later"
+      expected = "<div xml:id='Västanå' type='?'><head><placeName>Västanå</placeName></head> <p><span type='locale'>gods</span>, <location><district type='landsförsamling'>Gränna lfs</district><district type='härad'>Vista hd</district><region type='landskap'>Småland</region></location>. <span type='kursiv'>Westan</span> <span type='kursiv'>a</span> 1412. Namnet är givet efter läget väster om Röttleån (jfr → <span type='kursiv'>Östanå</span>).</p></div>" # Inte Skåne! # FIXME Kanske i källan?
+      actual = solig.unword(västanå).to_s
+      # byebug
+      expect(actual).to eq expected
     end
 
     it "works on Västanfors"
