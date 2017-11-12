@@ -167,27 +167,9 @@ class Solig
         next unless @r
         @state = if @r.isitalic? then :italic else :general end
       when :general
-        if @r.isitalic?
-          @currelem.add_escaped_text @currtext
-          @currtext = @r.wtext
-          @state = :italic
-        else
-          @currtext += @r.wtext if @r.wtext
-        end
-
-        @r = @rs.shift
+        process_general_text
       when :italic
-        if @r.isitalic?
-          @currtext += @r.wtext if @r.wtext
-        else
-          @currelem.add_text ' ' if @currtext =~ /^\s/
-          @currelem.add_italic_text @currtext.strip
-          @currtext = if @currtext =~ /\s$/ then ' ' else '' end
-          @currtext += @r.wtext if @r.wtext
-          @state = :general
-        end
-
-        @r = @rs.shift
+        process_italic
       end
     end
 
@@ -266,6 +248,32 @@ class Solig
 
         @r = @rs.shift
         @currtext = ''
+  end
+
+  def process_general_text
+        if @r.isitalic?
+          @currelem.add_escaped_text @currtext
+          @currtext = @r.wtext
+          @state = :italic
+        else
+          @currtext += @r.wtext if @r.wtext
+        end
+
+        @r = @rs.shift
+  end
+
+  def process_italic
+        if @r.isitalic?
+          @currtext += @r.wtext if @r.wtext
+        else
+          @currelem.add_text ' ' if @currtext =~ /^\s/
+          @currelem.add_italic_text @currtext.strip
+          @currtext = if @currtext =~ /\s$/ then ' ' else '' end
+          @currtext += @r.wtext if @r.wtext
+          @state = :general
+        end
+
+        @r = @rs.shift
   end
 
   def init_location_elements
