@@ -180,16 +180,16 @@ class Solig
       # byebug
       case @state
       when :initial
-        byebug
+        # byebug
         process_head(reformat_head)
 
         @state = :first_locale
       when :first_locale
-        process_locales
+        process_locales(reformat_head)
 
         @state = :location
       when :location
-        process_location
+        process_location(reformat_head)
         next unless @r
         @state = if @r.isitalic? then :italic else :general end
       when :general
@@ -210,11 +210,22 @@ class Solig
       @r = @rs.shift
     end
 
+    # byebug
     # Set head
-    add_head_element(@currtext.ustrip, reformat_head)
-    @currelem.add_escaped_text ' '
-    @currtext = @r.wtext.uspace.strip
-    @currelem = Element.new 'p', @currelem if reformat_head
+    head = @currtext.ustrip
+    if reformat_head
+      add_head_element(head) # TODO Change method to do that test itself
+      @currelem.add_escaped_text ' '
+      @currtext = @r.wtext.uspace.strip
+      @currelem = Element.new 'p', @currelem
+    else
+      @currelem.add_attribute 'xml:id', head.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
+      @currelem = Element.new 'p', @currelem
+      span_element = Element.new 'span', @currelem
+      span_element.add_attribute 'type', 'fet'
+      span_element.text = @currtext.ustrip
+      @currelem.add_escaped_text ' '
+    end
 
     unless @rs.first && @rs.first.isitalic? # FIXME And something else?
       @r = @rs.shift
@@ -227,8 +238,8 @@ class Solig
     end
   end
 
-  def process_locales
-    add_locale_element @currtext.gsub /(.*?)[,\.→].*/, '\1'
+  def process_locales(reformat_head = true)
+    add_locale_element(@currtext.gsub(/(.*?)[,\.→].*/, '\1'), reformat_head)
     if @currtext =~ /,/
       @currelem.add_text ', '
       @currtext.gsub! /^.*?,\s*/, ''
@@ -242,7 +253,7 @@ class Solig
 
     while @currtext =~ /(.*?),/ # Take as many locales in current run
       if $1.is_locale?
-        add_locale_element $1
+        add_locale_element($1, reformat_head)
         @currelem.add_text ', '
         @currtext.gsub! /^[^,]*,\s*/, ''
       else
@@ -257,13 +268,13 @@ class Solig
     end
   end
 
-  def process_location
-    init_location_elements
+  def process_location(reformat_head = true)
+    init_location_elements(reformat_head = true)
     while @currtext =~ /(.*?),/ # Take as many location elements in current run
-      add_location_element $1
+      add_location_element($1, reformat_head)
       @currtext.gsub! /^[^,]*,\s*/, ''
     end
-    add_location_element @currtext
+    add_location_element(@currtext, reformat_head)
     @currelem = @currelem.parent
     @currelem.add_text ' ' if @currtext =~ /\s$/
     @currelem.add_text @carryover if @carryover
@@ -306,7 +317,7 @@ class Solig
     location.remove if location.to_s == '<location/>'
   end
 
-  def init_location_elements
+  def init_location_elements(reformat_head = true)
     @currelem = Element.new 'location', @currelem
   end
 
@@ -318,21 +329,19 @@ class Solig
     @currtext += rt
   end
 
-  def add_head_element(head, reformat_head = true)
-    if reformat_head
-      head_element = Element.new 'head', @currelem
-      place_name_element = Element.new 'placeName', head_element
-      place_name_element.text = head
-    else
-      span_element = Element.new 'span', @currelem
-      span_element.add_attribute 'type', 'fet'
-      span_element.text = head
-    end
-
+  def add_head_element(head)
+    head_element = Element.new 'head', @currelem
+    place_name_element = Element.new 'placeName', head_element
+    place_name_element.text = head
     @currelem.add_attribute 'xml:id', head.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
   end
 
-  def add_location_element(location)
+  def add_location_element(location, reformat_head = true)
+    unless reformat_head
+      @currelem.add_escaped_text location
+      return
+    end
+
     if location.strip =~ /.*\s+(.*)/ then
       locale = $1
     else
@@ -391,10 +400,14 @@ class Solig
     end
   end
 
-  def add_locale_element(locale)
-    span = Element.new 'span', @currelem
-    span.add_attribute 'type', 'locale'
-    span.add_escaped_text locale.strip
+  def add_locale_element(locale, reformat_head = true)
+    if reformat_head
+      span = Element.new 'span', @currelem
+      span.add_attribute 'type', 'locale'
+      span.add_escaped_text locale.strip
+    else
+      @currelem.add_escaped_text locale.strip
+    end
   end
 
   def format(element)
