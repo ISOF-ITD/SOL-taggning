@@ -625,7 +625,7 @@ describe Solig do
 
     it "works on Lilla och Stora Värtan" do
       stora_och_lilla_värtan = loadparagraph '6231-stora-och-lilla-värtan'
-      expected = "<div xml:id ='Värtan._Stora._Lilla' type='?'><head><placeName>Värtan, Stora, Lilla</placeName></head> <p><span type='locale'>fjärdar</span> i Upplandsdelen av Stockholmns inre skärgård. <span type='kursiv'>Wärtänn</span>, <span type='kursiv'>Wärtenn</span>, <span type='kursiv'>Wertenn</span> (1558). – Namnet kan sammanhänga med ordet <span type='kursiv'>vårta</span>, dock med oviss syftning.</p></div>" # FIXME Not much idea what to do! "<div xml:id='Värtan._Stora._Lilla'><head>Värtan, Stora, Lilla</head> <p><span type='locale'>fjärdar</span> i Upplandsdelen av <location><settlement type='stad'>Stockholms inre skärgård </p></div>"
+      expected = "<div xml:id='Värtan._Stora._Lilla' type='?'><head><placeName>Värtan, Stora, Lilla</placeName></head> <p><span type='locale'>fjärdar i Saltsjön i Upplandsdelen av Stockholms inre skärgård</span>. <span type='kursiv'>Wärtänn</span>, <span type='kursiv'>Wärtenn</span>, <span type='kursiv'>Wertenn</span> (1558). – Namnet kan sammanhänga med ordet <span type='kursiv'>vårta</span>, dock med oviss syftning.</p></div>" # FIXME Not much idea what to do! "<div xml:id='Värtan._Stora._Lilla'><head>Värtan, Stora, Lilla</head> <p><span type='locale'>fjärdar</span> i Upplandsdelen av <location><settlement type='stad'>Stockholms inre skärgård </p></div>"
       actual = solig.unword(stora_och_lilla_värtan).to_s
       pending "That’s going to be painful"
       # byebug

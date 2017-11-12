@@ -53,6 +53,7 @@ class String
     Solig.is_landskap? self
   end
 
+  # TODO “del av” som lokaltyp!
   def is_locale?
     Solig.is_locale? self
   end
