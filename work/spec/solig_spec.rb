@@ -629,21 +629,6 @@ describe Solig do
     end
   end
 
-  describe '#format' do
-    let(:albano) { loadparagraph '474-albano' }
-    let(:solig) { Solig.new }
-
-    it "calls #unword" do
-      expect(solig).to receive(:unword).with(albano).and_return Element.new
-      solig.format(albano)
-    end
-
-    it "calls #has_invalid?" do
-      expect_any_instance_of(Element).to receive(:has_invalid?)
-      solig.format(albano)
-    end
-  end
-
   describe 'Intensive tests for #unword' do
     it "doesn’t crash on Undersåker" do
       undersåker = loadparagraph '5855-undersåker'
@@ -866,6 +851,21 @@ describe Solig do
       solig.add_locale_element 'sn'
 
       expect(styra.to_s).to eq "<div><head>Styra</head> <p><span type='locale'>sn</span></p></div>"
+    end
+  end
+
+  describe '#format' do
+    let(:albano) { loadparagraph '474-albano' }
+    let(:solig) { Solig.new }
+
+    it "calls #unword" do
+      expect(solig).to receive(:unword).with(albano).and_return Element.new
+      solig.format(albano)
+    end
+
+    it "calls #has_invalid?" do
+      expect_any_instance_of(Element).to receive(:has_invalid?)
+      solig.format(albano)
     end
   end
 end
