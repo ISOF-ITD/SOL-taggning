@@ -200,6 +200,7 @@ class Solig
           end
         end
 
+        # No more locales from this point on.
         if @currtext =~ /(.*?)([\.→].*)/ # Search for end of run
           @currtext = $1
           @carryover = $2
