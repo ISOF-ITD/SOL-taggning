@@ -200,8 +200,6 @@ class Solig
           end
         end
 
-        @state = :no_further_locales
-      when :no_further_locales
         if @currtext =~ /(.*?)([\.→].*)/ # Search for end of run
           @currtext = $1
           @carryover = $2
