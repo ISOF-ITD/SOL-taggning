@@ -247,7 +247,7 @@ class Solig
 
     add_locale_element @currtext if @state == :first_locale
     @currelem.add_escaped_text @currtext if @state == :general
-    @currelem.add_italic_text @currtext if @state == :italic
+    # @currelem.add_italic_text @currtext if @state == :italic
     location = XPath.first(@currelem.root, '//location')
     location.remove if location.to_s == '<location/>'
 
