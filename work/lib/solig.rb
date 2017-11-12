@@ -111,18 +111,28 @@ class Solig
   end
 
   def self.escape(text)
-    if text
+    retvalue = text
+
+    if retvalue
       @@escape_sequences.each do |abbrev, escape|
-        text.gsub!(abbrev, escape)
+        retvalue.gsub!(abbrev, escape)
       end
     end
 
-    text
+    retvalue
   end
 
   # FIXME Figure out what the deal is with w:noBreakHyphen?
   def self.add_escaped_text(element, text)
-    element.add_text text.gsub(/\\fd/, 'f.d.') if text # FIXME Extract that somewhere
+    if text
+      copy = text
+      byebug
+      @@escape_sequences.reverse do |escape, abbrev|
+        byebug
+        copy.gsub escape, abbrev
+      end
+      element.add_text copy
+    end
   end
 
   def initialize
