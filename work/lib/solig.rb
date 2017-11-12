@@ -153,13 +153,12 @@ class Solig
       # byebug
       case @state
       when :initial
-        if r.isbold?
+        while r.isbold?
           collect_headword(r)
-
           r = rs.shift
-        else
-          @state = :head
         end
+
+        @state = :head
       when :head
         add_head_element(@currtext.ustrip)
         @currtext = r.wtext.uspace.strip
