@@ -104,20 +104,9 @@ describe String do
       expect(' Dalarna'.is_locale?).to be_falsey
     end
 
-    it "returns true on strings starting with “nu”" do
-      expect('nu stadsdel'.is_locale?).to be_truthy
-    end
-
-    it "doesn’t return true if “nu” is somewhere else" do
-      expect('älven Aliseatnu'.is_locale?).to be_falsey
-    end
-
-    it "returns true on strings starting with “samt”" do # TODO Fix all that!
-      expect('samt sn'.is_locale?).to be_truthy
-    end
-
-    it "returns true on strings starting with “och”" do
-      expect('och tätort'.is_locale?).to be_truthy # FIXME CHeck too
+    it "calls Solig.is_locale?" do
+      expect(Solig).to receive(:is_locale?).with('by')
+      'by'.is_locale?
     end
   end
 
@@ -287,6 +276,24 @@ describe Solig do
       expect(' Skåne' =~ Solig.landskap_regexp).to be_truthy
     end
   end# TODO
+
+  describe '#is_locale?' do
+    it "returns true on strings starting with “nu”" do
+      expect(Solig.is_locale?('nu stadsdel')).to be_truthy
+    end
+
+    it "doesn’t return true if “nu” is somewhere else" do # FIXME Find another solution
+      expect(Solig.is_locale?('älven Aliseatnu')).to be_falsey
+    end
+
+    it "returns true on strings starting with “samt”" do # TODO Fix all that!
+      expect(Solig.is_locale?('samt sn')).to be_truthy
+    end
+
+    it "returns true on strings starting with “och”" do
+      expect(Solig.is_locale?('och tätort')).to be_truthy # FIXME CHeck too
+    end
+  end
 
   describe '.escape' do
     it "replaces “f.d.” with \\fd" do

@@ -54,7 +54,7 @@ class String
   end
 
   def is_locale?
-    self =~ /\\fd/ || is_one_word? && !strip.is_landskap? || self =~ /^nu\s/ || self =~ /^samt\s/ || self =~ /^och\s/
+    Solig.is_locale? self
   end
 end
 
@@ -108,6 +108,15 @@ class Solig
 
   def self.landskap_regexp
     @@landskap_regexp ||= Regexp.new @@landskap.join('|')
+  end
+
+  def self.is_locale? string
+    string =~ /\\fd/ ||
+      string.is_one_word? &&
+      !string.strip.is_landskap? ||
+      string =~ /^nu\s/ ||
+      string =~ /^samt\s/ ||
+      string =~ /^och\s/
   end
 
   def self.escape(text)
