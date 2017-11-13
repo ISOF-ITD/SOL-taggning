@@ -215,7 +215,7 @@ class Solig
   end
 
   def process_head(reformat_head = true)
-    while @r.isbold?
+    while @r && @r.isbold?
       collect_headword(@r)
       @r = @rs.shift
     end
