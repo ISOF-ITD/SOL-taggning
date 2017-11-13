@@ -906,5 +906,11 @@ describe Solig do
       ret = solig.process_range(trefär, (1..3))
       expect(ret.root.elements.count).to eq 3
     end
+
+    it "does not create <head> elements for articles about name elements" do
+      al = loadparagraph '467--469-al'
+      ret = solig.process_range(al, (1..3))
+      expect(XPath.first(ret, '//head')).to be_nil
+    end
   end
 end
