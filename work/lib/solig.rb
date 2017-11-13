@@ -255,7 +255,11 @@ class Solig
       @currelem.add_text ', '
       @currtext.gsub! /^.*?,\s*/, ''
     else
-      @currtext.gsub! /^.*?([\.→])/, '\1'
+      if reformat_head # Now this is really spaghetti again ...
+        @currtext.gsub! /^.*?([\.→])/, '\1'
+      else
+        @currtext = ''
+      end
     end
     while @currtext !~ /[\.→]/ && !(@rs.first && @rs.first.isitalic?)
       @r = @rs.shift
@@ -420,7 +424,6 @@ class Solig
       span.add_escaped_text locale.strip
     else
       @currelem.add_escaped_text locale
-      @currtext = ''
     end
   end
 
