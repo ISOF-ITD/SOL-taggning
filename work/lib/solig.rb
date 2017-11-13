@@ -430,4 +430,12 @@ class Solig
       formatted
     end
   end
+
+  def process_range(element, range)
+    retvalue = Document.new '<range></range>'
+    range.each do |number|
+      retvalue.root.add_element unword(element)
+    end
+    retvalue
+  end
 end

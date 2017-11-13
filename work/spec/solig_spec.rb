@@ -899,4 +899,12 @@ describe Solig do
       solig.format(albano)
     end
   end
+
+  describe '#process_range' do
+    it "processes a range of elements" do
+      trefär = loadparagraph '1742--1744-färgelanda--färingtofta'
+      ret = solig.process_range(trefär, (1..3))
+      expect(ret.root.elements.count).to eq 3
+    end
+  end
 end
