@@ -808,8 +808,9 @@ describe Solig do
 
     it "works on al" do
       allal = loadparagraph '467--469-al'
-      al = allal.root.elements.first
-      expect(solig.unword(al, false)).to be =~ /<div xml:id='al' type='\?'><p><span type='fet'>al<\/span> Sedan länge har man räknat med att en motsvarighet till gotiskans <span type='kursiv'>ahls<\/span> ’tempel’ ingår i några svenska ortnamn\./
+      al = allal.elements.first
+      # byebug
+      expect(solig.unword(al, false).to_s).to be =~ /<div xml:id='al' type='\?'><p><span type='fet'>al<\/span> Sedan länge har man räknat med att en motsvarighet till gotiskans <span type='kursiv'>alhs<\/span> ’tempel’ ingår i några svenska ortnamn\./
     end
 
     it "works on Finnveden" # hdr, not consistent with hd in other places (as pl. too)

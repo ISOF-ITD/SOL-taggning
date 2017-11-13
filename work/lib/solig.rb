@@ -413,12 +413,14 @@ class Solig
   end
 
   def add_locale_element(locale, reformat_head = true)
+    # byebug
     if reformat_head
       span = Element.new 'span', @currelem
       span.add_attribute 'type', 'locale'
       span.add_escaped_text locale.strip
     else
-      @currelem.add_escaped_text locale.strip
+      @currelem.add_escaped_text locale
+      @currtext = ''
     end
   end
 
