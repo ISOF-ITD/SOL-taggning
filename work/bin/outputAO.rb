@@ -10,8 +10,8 @@ pars = solig.process_range paragrafer, (444..4299)
 
 pars_file = File.open(File.expand_path('../../artiklarA-O.xml', __FILE__), 'w')
 # pars_file.puts pars.to_s
-pars.each_element do |element|
-  f.puts element
-  f.puts ''
+pars.root.each_element do |element|
+  pars_file.puts element
+  pars_file.puts ''
 end
 pars_file.close
