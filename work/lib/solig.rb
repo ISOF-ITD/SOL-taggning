@@ -435,11 +435,7 @@ class Solig
     retvalue = Document.new '<range></range>'
     range.each do |number|
       paragraph = element.elements[number]
-      if paragraph.isplacename?
-        retvalue.root.add_element unword(paragraph)
-      else
-        retvalue.root.add_element unword(paragraph, false)
-      end
+      retvalue.root.add_element unword(paragraph, paragraph.isplacename?)
     end
     retvalue
   end
