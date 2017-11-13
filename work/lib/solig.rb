@@ -434,7 +434,7 @@ class Solig
   def process_range(element, range)
     retvalue = Document.new '<range></range>'
     range.each do |number|
-      retvalue.root.add_element unword(element[number])
+      retvalue.root.add_element unword(element.elements[number])
     end
     retvalue
   end
