@@ -816,7 +816,7 @@ describe Solig do
     it "sets nothing in bold if there is nothing" do
       allal = loadparagraph '467--469-al'
       al2 = allal.elements[2]
-      expect(XPath.first(solig.unword(al2, false), 'span[@type="fet"]')).to be_nil
+      expect(XPath.first(solig.unword(al2, false), 'p/span[@type="fet"]')).to be_nil
     end
 
     it "sets type to namnelement automatically?"
