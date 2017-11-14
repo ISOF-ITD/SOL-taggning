@@ -231,9 +231,11 @@ class Solig
     else
       @currelem.add_attribute 'xml:id', head.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
       @currelem = Element.new 'p', @currelem
-      span_element = Element.new 'span', @currelem
-      span_element.add_attribute 'type', 'fet'
-      span_element.text = head
+      unless head.ustrip == ''
+        span_element = Element.new 'span', @currelem
+        span_element.add_attribute 'type', 'fet'
+        span_element.text = head
+      end
       @currelem.add_escaped_text ' '
       @currtext = @r.wtext.uspace.strip
     end
