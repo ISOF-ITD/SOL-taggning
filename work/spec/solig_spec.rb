@@ -854,6 +854,11 @@ describe Solig do
 
     it "doesn’t change paragraphs starting with regular type"
     it "doesn’t change either paragraphs starting with a headword in lowercase"
+
+    it "works on Lilla Luleälven" do
+      lilla_luleälven = loadparagraph '3421-lilla-luleälven'
+      expect(solig.unword(lilla_luleälven).to_s).to eq "<div xml:id='Lilla_Luleälven' type='?'><head><placeName>Lilla Luleälven</placeName></head> <p><span type='locale'>älv</span>, <location><region type='landskap'>Lappland</region></location> → <span type='kursiv'>Luleälven</span>.</p></div>"
+    end
   end
 
   describe '#start_location'
