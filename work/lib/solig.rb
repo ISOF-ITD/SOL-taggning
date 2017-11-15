@@ -181,7 +181,6 @@ class Solig
   def unword(element, reformat_head = true)
     reset
     @currelem = Element.new 'div'
-    @currelem.add_attribute 'type', '?'
 
     @rs = element.each_element('w:r') { }.to_a
     @r = @rs.shift
@@ -350,6 +349,7 @@ class Solig
     head_element = Element.new 'head', @currelem
     place_name_element = Element.new 'placeName', head_element
     place_name_element.text = head
+    @currelem.add_attribute 'type', '?' unless @currelem.attributes['type']
     @currelem.add_attribute 'xml:id', head.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
   end
 
