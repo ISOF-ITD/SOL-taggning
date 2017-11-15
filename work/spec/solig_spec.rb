@@ -831,6 +831,8 @@ describe Solig do
       expect(solig.unword(al2, false).attributes['type']).to be_nil
     end
 
+    it "really doesn’t generate a type!"
+
     it "does not tag Oskar-Fredriksborg as a name element"
 
     it "works on Finnveden" # hdr, not consistent with hd in other places (as pl. too)
