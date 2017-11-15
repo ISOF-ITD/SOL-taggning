@@ -229,6 +229,13 @@ class Solig
       @currelem = Element.new 'p', @currelem
     else
       @currelem.add_attribute 'xml:id', head.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
+      if head.length > 0
+        if head.capitalised?
+          @currelem.add_attribute 'type', '?'
+        else
+          @currelem.add_attribute 'type', 'namnelement'
+        end
+      end
       @currelem = Element.new 'p', @currelem
       unless head.ustrip == ''
         span_element = Element.new 'span', @currelem
