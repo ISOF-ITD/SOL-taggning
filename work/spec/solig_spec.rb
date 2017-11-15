@@ -831,6 +831,8 @@ describe Solig do
       expect(solig.unword(al2, false).attributes['type']).to be_nil
     end
 
+    it "does not tag Oskar-Fredriksborg as a name element"
+
     it "works on Finnveden" # hdr, not consistent with hd in other places (as pl. too)
     it "works on Fjärmåla" # kapellförs.
     it "recognises f.d. on Fudal"
