@@ -618,6 +618,8 @@ describe Solig do
       expect(solig.unword(w).to_s).to eq "<div xml:id='_unga' type='?'><head><placeName>-unga</placeName></head> <p><span type='locale'>namnelement.</span></p></div>"
     end
 
+    it "remaps the id for Barkarö(by)"
+
     it "works on -unga" # No extraneous comma
     it "works on Unnaryd" # Recognises Småland etc. as geographic features, and does something reasonable with resp.
     it "works on Uppsala län"
