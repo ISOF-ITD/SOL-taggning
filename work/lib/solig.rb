@@ -229,7 +229,7 @@ class Solig
       @currelem = Element.new 'p', @currelem
     else
       @currelem.add_attribute 'xml:id', head.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
-      if head.length > 0
+      unless head.empty?
         if head.capitalised?
           @currelem.add_attribute 'type', '?'
         else
