@@ -825,10 +825,10 @@ describe Solig do
       expect(solig.unword(al, false).attributes['type']).to eq 'namnelement'
     end
 
-    it "doesn’t set the type for non-initial paragraphs" do
+    it "removes the type attribute for non-initial paragraphs" do
       allal = loadparagraph '467--469-al'
       al2 = allal.elements[2]
-      expect(solig.unword(al2, false).attributes['type']).to be_ni
+      expect(solig.unword(al2, false).attributes['type']).to be_nil
     end
 
     it "works on Finnveden" # hdr, not consistent with hd in other places (as pl. too)
