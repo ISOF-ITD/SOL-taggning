@@ -810,7 +810,7 @@ describe Solig do
       allal = loadparagraph '467--469-al'
       al = allal.elements.first
       # byebug
-      expect(solig.unword(al, false).to_s).to be =~ /<div xml:id='al' type='\?'><p><span type='fet'>al<\/span> Sedan länge har man räknat med att en motsvarighet till gotiskans <span type='kursiv'>alhs<\/span> ’tempel’ ingår i några svenska ortnamn\./
+      expect(solig.unword(al, false).to_s).to be =~ /<div xml:id='al' type='namnelement'><p><span type='fet'>al<\/span> Sedan länge har man räknat med att en motsvarighet till gotiskans <span type='kursiv'>alhs<\/span> ’tempel’ ingår i några svenska ortnamn\./
     end
 
     it "sets nothing in bold if there is nothing" do
