@@ -29,15 +29,21 @@
 </xsl:template>
 -->
 
-<html><head><meta encoding="UTF-8" /></head><body>
-<h2>First test</h2>
-<div>
-<xsl:template match="/TEI/text/body/div[2]">
-<xsl:for-each select="div[23]">
-<xsl:value-of select="head/placeName" />
-</xsl:for-each>
-</xsl:template>
-</div>
-</body></html>
+<html>
+  <head>
+    <meta encoding="UTF-8" />
+  </head>
 
-</xsl:stylesheet>
+  <body>
+    <h2>First test</h2>
+      <div>
+        <xsl:template match="/TEI/text/body/div[2]">
+          <xsl:for-each select="div[23]">
+            <xsl:value-of select="head/placeName" />
+          </xsl:for-each>
+        </xsl:template>
+      </div>
+  </body>
+</html>
+
+  </xsl:stylesheet>
