@@ -30,7 +30,7 @@
 -->
 
 <xsl:for-each select="/TEI/text/body/div[2]/div[23]">
-<xsl:value-of select="key('placeName')
+<xsl:value-of select="head/placeName" />
 </xsl:for-each>
 
 </xsl:stylesheet>
