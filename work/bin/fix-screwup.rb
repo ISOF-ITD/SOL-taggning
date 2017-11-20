@@ -11,6 +11,7 @@ def erase_element(element)
   element.elements do |one_element|
     element.delete one_element
   end
+  element.text = ''
 end
 
 n = 444
@@ -19,12 +20,16 @@ File.read('list-of-screwups.txt').each_line do |id|
   id.strip!
   article_tei = XPath.first(sol2_tei, "//div[@xml:id='#{id}']")
   title_tei = XPath.first(article_tei, 'p/span[@type="fet"]').text
-  puts title_tei
+  puts "Found article to replace: #{title_tei}, looking for same in source ..."
   while title_docx != title_tei
     n += 1
     article_formatted = solig.unword(artiklar_element.elements[n])
     title_element_docx = XPath.first(article_formatted, 'head/placeName') 
     title_docx = title_element_docx.text if title_element_docx
+    puts "  ... got #{title_docx} ..."
     byebug
   end
+  puts "Got #{title_docx!}"
+  article_tei.erase_element
+  article_tei.add_element article_formatted
 end
