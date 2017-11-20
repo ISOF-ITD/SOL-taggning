@@ -6,7 +6,7 @@ sol2_tei = Document.new File.read 'SOL2.xml'
 artiklar_element = sol2_docx.root.elements.first
 solig = Solig.new
 
-n = 0
+n = 444
 title_docx = ''
 File.read('list-of-screwups.txt').each_line do |id|
   id.strip!
@@ -16,7 +16,8 @@ File.read('list-of-screwups.txt').each_line do |id|
   while title_docx != title_tei
     n += 1
     article_formatted = solig.unword(artiklar_element.elements[n])
-    title_docx = XPath.first(article_formatted, 'head/placeName')
+    title_element_docx = XPath.first(article_formatted, 'head/placeName') 
+    title_docx = title_element_docx.text if title_element_docx
     byebug
   end
 end
