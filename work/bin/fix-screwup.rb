@@ -37,3 +37,5 @@ File.read('list-of-screwups.txt').each_line do |id|
   article_tei.erase
   article_tei.add_element article_formatted
 end
+
+byebug
