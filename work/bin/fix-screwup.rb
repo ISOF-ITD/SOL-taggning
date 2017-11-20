@@ -23,6 +23,7 @@ n = 444
 title_docx = ''
 File.read('list-of-screwups.txt').each_line do |id|
   id.strip!
+  next if id =~ /^%/
   article_tei = XPath.first(sol2_tei, "//div[@xml:id='#{id}']")
   title_tei_element = XPath.first(article_tei, 'p/span[@type="fet"]')
   unless title_tei_element

@@ -40,9 +40,9 @@ Gla._Stora._Övre
 Gotska_Sandön
 Grevie._Mellan-._Västra._Östra
 Gröna_Lund
-Gustav_Adolf1
-Gustav_Adolf2
-Gustav_Adolf3
+% Gustav_Adolf1
+% Gustav_Adolf2
+% Gustav_Adolf3
 Gåsinge-Dillnäs
 Gärds_Köpinge
 Göinge_härad._Västra._Östra
@@ -75,8 +75,8 @@ Inlands_Torpe_härad
 Ire._Stora.
 Isie._Stora.
 Karaby._Västra._Östra
-Karl_Gustav1
-Karl_Gustav2
+% Karl_Gustav1
+% Karl_Gustav2
 Karlsö._Lilla._Stora
 Karup._Västra._Östra
 Kedum._Norra._Södra
