@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/solig'
-puts "Laddar Word filen ..."
+puts "Laddar Word filen..."
 sol2_docx = Document.new File.read 'SOL2-from-docx-with-edits.xml'
-puts "... laddar.  Laddar TEI filen ..."
+puts "... laddar.  Laddar TEI filen..."
 sol2_tei = Document.new File.read 'SOL2.xml'
-puts "Laddad.  Kör ..."
+puts "Laddad.  Kör..."
 artiklar_element = sol2_docx.root.elements.first
 solig = Solig.new
 
@@ -36,7 +36,7 @@ File.read('list-of-screwups.txt').each_line do |id|
     article_formatted = solig.unword(artiklar_element.elements[n])
     title_element_docx = XPath.first(article_formatted, 'head/placeName') 
     title_docx = title_element_docx.text if title_element_docx
-    puts "  ... fick #{title_docx} ..."
+    puts "  ... fick #{title_docx}..."
   end
   puts "Fick #{title_docx}!"
   article_tei.erase
