@@ -15,7 +15,7 @@ File.read('list-of-screwups.txt').each_line do |id|
   puts title_tei
   while title_docx != title_tei
     n += 1
-    article_formatted = solig.unword(artiklar_elements.elements[n])
+    article_formatted = solig.unword(artiklar_element.elements[n])
     title_docx = XPath.first(article_formatted, 'head/placeName')
     byebug
   end
