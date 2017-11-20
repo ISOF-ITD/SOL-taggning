@@ -6,6 +6,13 @@ sol2_tei = Document.new File.read 'SOL2.xml'
 artiklar_element = sol2_docx.root.elements.first
 solig = Solig.new
 
+# There has to be a better of doing that, but well!
+def erase_element(element)
+  element.elements do |one_element|
+    element.deletement
+  end
+end
+
 n = 444
 title_docx = ''
 File.read('list-of-screwups.txt').each_line do |id|
