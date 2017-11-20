@@ -30,7 +30,7 @@ File.read('list-of-screwups.txt').each_line do |id|
     title_docx = title_element_docx.text if title_element_docx
     puts "  ... got #{title_docx} ..."
   end
-  puts "Got #{title_docx!}"
+  puts "Got #{title_docx}!"
   article_tei.erase
   article_tei.add_element article_formatted
 end
