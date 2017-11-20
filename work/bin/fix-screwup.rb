@@ -1,8 +1,11 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/solig'
+puts "Loading Word file ..."
 sol2_docx = Document.new File.read 'SOL2-from-docx-with-edits.xml'
+puts "... loaded.  Loading TEI file ..."
 sol2_tei = Document.new File.read 'SOL2.xml'
+puts "Loaded.  Now running!"
 artiklar_element = sol2_docx.root.elements.first
 solig = Solig.new
 
