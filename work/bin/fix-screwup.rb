@@ -44,4 +44,8 @@ File.read('list-of-screwups.txt').each_line do |id|
   article_tei.add_element article_formatted
 end
 
+output = File.open('out.xml', 'w')
+output.puts sol2_tei
+output.close
+
 byebug
