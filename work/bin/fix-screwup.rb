@@ -9,7 +9,7 @@ solig = Solig.new
 # There has to be a better of doing that, but well!
 def erase_element(element)
   element.elements do |one_element|
-    element.delete element
+    element.delete one_element
   end
 end
 
