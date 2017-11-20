@@ -30,6 +30,6 @@ File.read('list-of-screwups.txt').each_line do |id|
     byebug
   end
   puts "Got #{title_docx!}"
-  article_tei.erase_element
+  erase_element article_tei
   article_tei.add_element article_formatted
 end
