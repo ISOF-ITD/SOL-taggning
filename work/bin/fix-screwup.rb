@@ -29,7 +29,6 @@ File.read('list-of-screwups.txt').each_line do |id|
     title_element_docx = XPath.first(article_formatted, 'head/placeName') 
     title_docx = title_element_docx.text if title_element_docx
     puts "  ... got #{title_docx} ..."
-    byebug
   end
   puts "Got #{title_docx!}"
   article_tei.erase
