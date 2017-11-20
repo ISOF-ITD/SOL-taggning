@@ -25,7 +25,10 @@ File.read('list-of-screwups.txt').each_line do |id|
   id.strip!
   article_tei = XPath.first(sol2_tei, "//div[@xml:id='#{id}']")
   title_tei_element = XPath.first(article_tei, 'p/span[@type="fet"]')
-  byebug unless title_tei_element
+  unless title_tei_element
+    head_element = XPath.first(article_tei, 'head')
+    next if head_element
+  end
   title_tei = title_tei_element.text
   puts "Found article to replace: #{title_tei}, looking for same in source ..."
   while title_docx != title_tei
