@@ -3,11 +3,20 @@
 require_relative '../lib/solig'
 sol2_docx = Document.new File.read 'SOL2-from-docx-with-edits.xml'
 sol2_tei = Document.new File.read 'SOL2.xml'
+artiklar_element = sol2_docx.root.elements.first
+solig = Solig.new
 
+n = 0
+title_docx = ''
 File.read('list-of-screwups.txt').each_line do |id|
   id.strip!
   article_tei = XPath.first(sol2_tei, "//div[@xml:id='#{id}']")
-  title = XPath.first(article_tei, 'p/span[@type="fet"]').text
-  puts title
-  byebug
+  title_tei = XPath.first(article_tei, 'p/span[@type="fet"]').text
+  puts title_tei
+  while title_docx != title_tei
+    n += 1
+    article_formatted = solig.unword(artiklar_elements.elements[n])
+    title_docx = XPath.first(article_formatted, 'head/placeName')
+    byebug
+  end
 end
