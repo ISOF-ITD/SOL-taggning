@@ -115,7 +115,7 @@ class Element
       if child.is_a? Element
         child.plaintexts
       else
-        child.text
+        child
       end
     end
   end
