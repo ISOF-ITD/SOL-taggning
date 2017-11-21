@@ -289,7 +289,7 @@ describe Element do
   describe '#plaintexts' do
     it "returns the plain texts recursively" do
       doc = Document.new '<doc>foo <a> bar <b> baz </b> quux </a></doc>'
-      expect(doc.plaintexts).to eq ['foo ', [' bar ', [' baz '], ' quux ']]
+      expect(doc.plaintexts).to eq [['foo ', [' bar ', [' baz '], ' quux ']]]
     end
   end
 end
