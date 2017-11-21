@@ -92,7 +92,7 @@ class Element
     XPath.first(self, 'w:rPr/w:b')
   end
 
-  def isnbsp?
+  def isnbhy?
     XPath.first(self, 'w:noBreakHyphen')
   end
 

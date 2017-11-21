@@ -218,17 +218,17 @@ describe Element do
     end
   end
 
-  describe '#isnbsp?' do
+  describe '#isnbhy?' do
     it "returns true if element contains a no-break space child" do
       doc = Document.new "<w:document xmlns:w=''><w:r><w:noBreakHyphen /></w:r></w:document>"
-      nbsp = doc.root.elements.first
-      expect(nbsp.isnbsp?).to be_truthy
+      nbhy = doc.root.elements.first
+      expect(nbhy.isnbhy?).to be_truthy
     end
 
     it "returns false otherwise" do
       doc = Document.new "<w:document xmlns:w=''><w:r><w:t>foo</w:t></w:r></w:document>"
-      not_nbsp = doc.root.elements.first
-      expect(not_nbsp.isnbsp?).to be_falsey
+      not_nbhy = doc.root.elements.first
+      expect(not_nbhy.isnbhy?).to be_falsey
     end
   end
 
