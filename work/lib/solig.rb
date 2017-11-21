@@ -105,6 +105,20 @@ class Element
     r = XPath.first(self, 'w:r')
     r && r.isbold? && r.wtext.capitalised?
   end
+
+  def plaintext
+    plaintexts.flatten.join ''
+  end
+
+  def plaintexts
+    map do |child|
+      if child.is_a? Element
+        child.plaintexts
+      else
+        child.text
+      end
+    end
+  end
 end
 
 class Solig

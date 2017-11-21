@@ -278,6 +278,20 @@ describe Element do
       expect(element.isplacename?).to be_falsey
     end
   end
+
+  describe '#plaintext' do
+    it "returns a plain text version of the element" do
+      doc = Document.new '<doc><a>foo</a><b>bar <c>baz</c> quux</b></doc>'
+      expect(doc.plaintext).to eq 'foobar baz quux'
+    end
+  end
+
+  describe '#plaintexts' do
+    it "returns the plain texts recursively" do
+      doc = Document.new '<doc>foo <a> bar <b> baz </b> quux </a></doc>'
+      expect(doc.plaintexts).to eq ['foo ', [' bar ', [' baz '], ' quux ']]
+    end
+  end
 end
 
 describe Solig do
