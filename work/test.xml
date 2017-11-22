@@ -2,11 +2,11 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"?>
 <TEI>
   <teiHeader>
-    <p>Här är en inledning.</p>
+    <p>Här är headern.</p>
   </teiHeader>
   <text>
     <body>
-      <div>Här är få ortnamn.</div>
+      <div xml:id='introduction'>Här är inledningen.</div>
       <div><head><placeName>Abbekås</placeName></head> <p><span type='locale'>tätort</span></p></div>
       <div><head><placeName>Abisko</placeName></head> <p><span type='locale'>fjällstation</span></p></div>
     </body>
