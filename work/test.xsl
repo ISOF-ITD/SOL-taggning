@@ -47,7 +47,7 @@
   <xsl:template match="div[@xml:id='introduction']" />
   <xsl:template match="div">
     <div>
-      <xsl:value-of select="head/placeName" /><xsl:text> </xsl:text><xsl:value-of select="p" />
+      <strong><xsl:value-of select="head/placeName" /></strong><xsl:text> </xsl:text><xsl:value-of select="p" />
     </div>
   </xsl:template>
 
