@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
 
-<xsl:output method="xml" indent="yes" encoding="UTF-8" />
+  <xsl:output method="xml" indent="yes" encoding="UTF-8" />
 
 <!--
 <xsl:template match="/TEI/text/body/div[2]/div[23]">
@@ -37,9 +37,7 @@
 
       <body>
         <h2>First test</h2>
-        <xsl:apply-templates select="div">
-          <xsl:sort select="head/placeName" />
-        </xsl:apply-templates>
+        <xsl:apply-templates select="div" />
       </body>
     </html>
   </xsl:template>
