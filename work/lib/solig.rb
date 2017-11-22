@@ -199,7 +199,7 @@ class Solig
     @rs = element.each_element('w:r') { }.to_a
     @r = @rs.shift
     while @r do
-      byebug
+      # byebug
       case @state
       when :initial
         # byebug
@@ -228,14 +228,14 @@ class Solig
   end
 
   def process_head(reformat_head = true)
-    byebug
+    # byebug
 
     while @r && @r.isbold?
       collect_headword(@r)
       @r = @rs.shift
     end
 
-    byebug
+    # byebug
     # Set head
     head = @currtext.ustrip
     if reformat_head
@@ -268,7 +268,7 @@ class Solig
       @currtext += @r.wtext if @r.wtext
     end
 
-    byebug
+    # byebug
 
     while @currtext !~ /,/ && !(@rs.first && @rs.first.isitalic?) # Search for full first locale
       @r = @rs.shift
