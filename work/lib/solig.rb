@@ -199,7 +199,7 @@ class Solig
     @rs = element.each_element('w:r') { }.to_a
     @r = @rs.shift
     while @r do
-      # byebug
+      byebug
       case @state
       when :initial
         # byebug
@@ -228,6 +228,8 @@ class Solig
   end
 
   def process_head(reformat_head = true)
+    byebug
+
     while @r && @r.isbold?
       collect_headword(@r)
       @r = @rs.shift
@@ -237,6 +239,7 @@ class Solig
     # Set head
     head = @currtext.ustrip
     if reformat_head
+      byebug
       add_head_element(head) # TODO Change method to do that test itself
       @currelem.add_escaped_text ' '
       @currtext = @r.wtext.uspace.strip
@@ -264,6 +267,9 @@ class Solig
       @r = @rs.shift
       @currtext += @r.wtext if @r.wtext
     end
+
+    byebug
+
     while @currtext !~ /,/ && !(@rs.first && @rs.first.isitalic?) # Search for full first locale
       @r = @rs.shift
       break unless @r
