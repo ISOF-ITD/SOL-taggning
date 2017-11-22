@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"?>
 <TEI>
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Svenst ortnamnslexikon</title>
-      </titleStmt>
-      <publicationStmt>
-	<publisher>Institutet för språk och folkminnen</publisher>
-	<pubPlace>Uppsala</pubPlace>
-	<date when="2016" />
-      </publicationStmt>
-      <sourceDesc>
-        <p>Original research</p>
-      </sourceDesc>
-    </fileDesc>
-  </teiHeader>
   <text>
     <body>
       <div>Här är få ortnamn.</div>
