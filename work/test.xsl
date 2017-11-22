@@ -29,7 +29,7 @@
 </xsl:template>
 -->
 
-  <xsl:template match="/TEI/text/teiHeader" />
+  <xsl:template match="/TEI/teiHeader" />
 
   <xsl:template match="/TEI/text/body">
     <html>
