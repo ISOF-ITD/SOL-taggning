@@ -3,32 +3,6 @@
 
   <xsl:output method="xml" indent="yes" encoding="UTF-8" />
 
-<!--
-<xsl:template match="/TEI/text/body/div[2]/div[23]">
-  <html>
-    <head>
-      <meta encoding="UTF-8" />
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Testing XSLT</title>
-    </head>
-    <body>
-      <h2>Articles</h2>
-      <ul>
-        <xsl:apply-templates select="div">
-          <xsl:sort select="head" />
-        </xsl:apply-templates>
-      </ul>
-    </body>
-  </html>
-</xsl:template>
-
-<xsl:template match="div">
-  <li>
-    <xsl:value-of select="head" />
-  </li>
-</xsl:template>
--->
-
   <xsl:template match="/TEI/teiHeader" />
 
   <xsl:template match="/TEI/text/body">
