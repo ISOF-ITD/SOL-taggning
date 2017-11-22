@@ -44,6 +44,7 @@
     </html>
   </xsl:template>
 
+  <xsl:template match="div[@xml:id='introduction']" />
   <xsl:template match="div">
     <div>
       <xsl:value-of select="head/placeName" />
