@@ -879,6 +879,14 @@ describe Solig do
       lilla_luleälven = loadparagraph '3421-lilla-luleälven'
       expect(solig.unword(lilla_luleälven).to_s).to eq "<div xml:id='Lilla_Luleälven' type='?'><head><placeName>Lilla Luleälven</placeName></head> <p><span type='locale'>älv</span>, <location><region type='landskap'>Lappland</region></location> → <span type='kursiv'>Luleälven</span>.</p></div>"
     end
+
+    it "works on Arjeplog" do
+      arjeplog = loadparagraph '587-arjeplog'
+      expected = "<div xml:id='Arjeplog' type='?'><head><placeName>Arjeplog</placeName></head> <p><span type='locale'>kn</span>, <span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><region type='landskap'>Lappland</region></location>. – Namnet, äldst belagt 1671, är en försvenskning av pitesam. <span type='kursiv'>Árjepluovve</span>. Förleden innehåller genitiv av (<span type='kursiv'>h</span>)<span type='kursiv'>árjje</span> ’ås’ och efterleden <span type='kursiv'>pluovve</span> ’blöt myr’, avseende den nu upptorkade terrängen i samhällets centrala del.</p></div>"
+      actual = solig.unword(arjeplog).to_s
+      # byebug
+      expect(actual).to eq expected
+    end
   end
 
   describe '#start_location'
