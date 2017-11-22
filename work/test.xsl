@@ -29,9 +29,9 @@
 </xsl:template>
 -->
 
-  <xsl:template match="/TEI/text/teiHeader">
-    <xsl:apply-templates select="" />
-  <xsl:template/>
+  <xsl:template match="/TEI/text/teiHeader/*">
+    <xsl:apply-templates select="*" />
+  </xsl:template>
 
   <xsl:template match="/TEI/text/body">
     <html>
@@ -51,5 +51,7 @@
       <xsl:value-of select="head/placeName" />
     </div>
   </xsl:template>
+
+  <xsl:template match="*" />
 
 </xsl:stylesheet>
