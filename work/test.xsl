@@ -37,13 +37,15 @@
     <body>
       <h2>First test</h2>
         <div>
-          <xsl:template match="/TEI/text/body/div[2]/div[23]">
-            <xsl:for-each select="div">
-              <xsl:value-of select="head/placeName" />
-            </xsl:for-each>
+          <xsl:template match="/TEI/text/body">
+            <xsl:apply-templates name="div" />
           </xsl:template>
         </div>
     </body>
   </html>
+
+  <xsl:template match="div">
+    <xsl:value-of select="head/placeName" />
+  </xsl:template>
 
 </xsl:stylesheet>
