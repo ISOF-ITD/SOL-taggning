@@ -235,11 +235,11 @@ class Solig
       @r = @rs.shift
     end
 
-    # byebug
+    byebug
     # Set head
     head = @currtext.ustrip
     if reformat_head
-      byebug
+      # byebug
       add_head_element(head) # TODO Change method to do that test itself
       @currelem.add_escaped_text ' '
       @currtext = @r.wtext.uspace.strip
