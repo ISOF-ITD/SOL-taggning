@@ -29,20 +29,20 @@
 </xsl:template>
 -->
 
-  <html>
-    <head>
-      <meta encoding="UTF-8" />
-    </head>
+  <xsl:template match="/TEI/text/body">
+    <html>
+      <head>
+        <meta encoding="UTF-8" />
+      </head>
 
-    <body>
-      <h2>First test</h2>
+      <body>
+        <h2>First test</h2>
         <div>
-          <xsl:template match="/TEI/text/body">
-            <xsl:apply-templates name="div" />
-          </xsl:template>
+          <xsl:apply-templates name="div" />
         </div>
-    </body>
-  </html>
+      </body>
+    </html>
+  </xsl:template>
 
   <xsl:template match="div">
     <xsl:value-of select="head/placeName" />
