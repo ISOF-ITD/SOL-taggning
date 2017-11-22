@@ -25,4 +25,10 @@
     </div>
   </xsl:template>
 
+  <xsl:template match="location">
+    <xsl:for-each select="*">
+      <xsl:value-of select="*">
+    </xsl:for-each>
+  </xsl:template>
+
 </xsl:stylesheet>
