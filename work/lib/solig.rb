@@ -242,7 +242,7 @@ class Solig
       # byebug
       add_head_element(head) # TODO Change method to do that test itself
       @currelem.add_escaped_text ' '
-      @currtext = @r.wtext.uspace.strip
+      @currtext = @r.wtext.uspace
       @currelem = Element.new 'p', @currelem
     else
       @currelem.add_attribute 'xml:id', head.gsub(/ /, '_').gsub(/,/, '.').gsub(/^-/, '_')
