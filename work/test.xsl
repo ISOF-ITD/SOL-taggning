@@ -44,7 +44,7 @@
 
   <xsl:template match="div">
     <div>
-      <xsl:value-of select="head/placeName" />
+      <xsl:value-of select="head" />
     </div>
   </xsl:template>
 
