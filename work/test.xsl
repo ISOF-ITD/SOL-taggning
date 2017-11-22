@@ -29,7 +29,9 @@
 </xsl:template>
 -->
 
-  <xsl:template match="/TEI/text/teiHeader" />
+  <xsl:template match="/TEI/text/teiHeader">
+    <xsl:apply-templates select="" />
+  <xsl:template/>
 
   <xsl:template match="/TEI/text/body">
     <html>
