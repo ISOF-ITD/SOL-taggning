@@ -37,15 +37,15 @@
 
       <body>
         <h2>First test</h2>
-        <div>
-          <xsl:apply-templates name="div" />
-        </div>
+        <xsl:apply-templates select="div" />
       </body>
     </html>
   </xsl:template>
 
   <xsl:template match="div">
-    <xsl:value-of select="head/placeName" />
+    <div>
+      <xsl:value-of select="head/placeName" />
+    </div>
   </xsl:template>
 
 </xsl:stylesheet>
