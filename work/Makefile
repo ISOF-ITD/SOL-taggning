@@ -2,4 +2,4 @@ validate: sol2.xml
 	xmllint --relaxng schema/tei_all.rng SOL2.xml
 
 html: sol2.xml
-	saxon test.xml test.xsl >test.html
+	saxon SOL2.xml test.xsl >test.html
