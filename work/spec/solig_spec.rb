@@ -983,7 +983,7 @@ describe Solig do
   describe '#mark_belägg' do
     it "marks belägg" do
       akalla = loaddiv '22-akalla'
-      expect(solig.mark_belagg(akalla).to_s).to be =~ /<span type='belägg'>Akarli<\/span>/
+      expect(solig.mark_belägg(akalla).to_s).to be =~ /<span type='belägg'>Akarli<\/span>/
     end
   end
 end
