@@ -43,7 +43,7 @@
     </xsl:for-each>
   </xsl:template>
 
-  <xsl:template match="span">
+  <xsl:template match="span[@type='kursiv']">
     <xsl:text>foo foo foo</xsl:text>
   </xsl:template>
 
