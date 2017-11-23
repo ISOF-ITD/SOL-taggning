@@ -23,11 +23,16 @@
   <xsl:template match="div">
     <div>
       <xsl:apply-templates select="head" />
+      <xsl:apply-templates select="p" />
     </div>
   </xsl:template>
 
   <xsl:template match="head">
     <strong><xsl:value-of select="placeName" /></strong>
+  </xsl:template>
+
+  <xsl:template match="p">
+    <xsl:apply-templates select="span" />
   </xsl:template>
 
   <!-- <xsl:text> </xsl:text><xsl:value-of select="p" /> -->
