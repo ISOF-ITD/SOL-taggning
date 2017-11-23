@@ -477,16 +477,21 @@ class Solig
   def mark_belägg(element)
     p = XPath.first(element, 'p')
     state = :prendash
-    element.each do |child|
+    p.each do |child|
+      byebug
       if state == :prendash
         if child.is_a? Element
           if child.name == 'span' || child.attributes['type'] == 'kursiv'
             child.attributes['type'] = 'belägg'
           end
         elsif child.is_a? Text
-          state = :postndash if child.text
+          state = :postndash if child.to_s =~ /–/ # U+2013 EN DASH
         end
       end
     end
+
+    byebug
+
+    element
   end
 end
