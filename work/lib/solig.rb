@@ -483,8 +483,9 @@ class Solig
           if child.name == 'span' || child.attributes['type'] == 'kursiv'
             child.attributes['type'] = 'belägg'
           end
+        else
         end
-      elsif state == :postndash
+      end
     end
   end
 end
