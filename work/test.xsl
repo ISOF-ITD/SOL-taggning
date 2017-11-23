@@ -45,11 +45,11 @@
   </xsl:template>
 
   <xsl:template match="span[@type='locale']">
-    <xsl:text>locale</xsl:text>
+    <xsl:apply-templates />
   </xsl:template>
 
   <xsl:template match="span[@type='kursiv']">
-    <xsl:text>kursiv</xsl:text>
+    <emph><xsl:apply-templates /></emph>
   </xsl:template>
 
 </xsl:stylesheet>
