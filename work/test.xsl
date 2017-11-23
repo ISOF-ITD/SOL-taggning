@@ -14,7 +14,7 @@
       <body>
         <h2>First test</h2>
         <xsl:apply-templates select="div" />
-        <xsl:apply-templates select="//span[@type='kursiv']" />
+        <xsl:apply-templates select="span" />
       </body>
     </html>
   </xsl:template>
@@ -33,7 +33,7 @@
   </xsl:template>
 
   <xsl:template match="//span[@type='kursiv']">
-    <xsl:value-of select="/text" />
+    <xsl:text>foo foo foo</xsl:text>
   </xsl:template>
 
 </xsl:stylesheet>
