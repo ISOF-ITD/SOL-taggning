@@ -979,4 +979,11 @@ describe Solig do
       expect(XPath.first(ret, '//head')).to be_nil
     end
   end
+
+  describe '#mark_belägg' do
+    it "marks belägg" do
+      akalla = loadparagraph '463-akalla'
+      expect(solig.unword(
+    end
+  end
 end
