@@ -478,15 +478,14 @@ class Solig
     p = XPath.first(element, 'p')
     state = :prendash
     p.each do |child|
-      byebug
+      # byebug
       if state == :prendash
         if child.is_a? Element
           if child.name == 'span' || child.attributes['type'] == 'kursiv'
             child.attributes['type'] = 'belägg'
-            byebug
           end
         elsif child.is_a? Text
-          break if child.to_s =~ /–/ # U+2013 EN DASH
+          break if child.to_s =~ /\. [-–] / # U+2013 EN DASH # TODO More specs for that
         end
       end
     end
