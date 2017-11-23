@@ -49,7 +49,7 @@
   </xsl:template>
 
   <xsl:template match="span[@type='kursiv']">
-    <emph><xsl:apply-templates /></emph>
+    <em><xsl:apply-templates /></em>
   </xsl:template>
 
 </xsl:stylesheet>
