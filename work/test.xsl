@@ -50,8 +50,6 @@
     <xsl:apply-templates />
   </xsl:template>
 
-  <xsl:template match="span[@type='kursiv']">
-    <em><xsl:apply-templates /></em>
-  </xsl:template>
+  <xsl:template match="span[@type='kursiv']"><em><xsl:apply-templates /></em></xsl:template>
 
 </xsl:stylesheet>
