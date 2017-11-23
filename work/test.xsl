@@ -13,17 +13,21 @@
 
       <body>
         <h2>First test</h2>
-        <xsl:apply-templates select="div/head" />
+        <xsl:apply-templates select="div" />
         <xsl:apply-templates select="span" />
       </body>
     </html>
   </xsl:template>
 
   <xsl:template match="div[@xml:id='introduction']" />
-  <xsl:template match="div/head">
+  <xsl:template match="div">
     <div>
-      <strong><xsl:value-of select="placeName" /></strong>
+      <xsl:apply-templates select="head" />
     </div>
+  </xsl:template>
+
+  <xsl:template match="head">
+    <strong><xsl:value-of select="placeName" /></strong>
   </xsl:template>
 
   <!-- <xsl:text> </xsl:text><xsl:value-of select="p" /> -->
@@ -34,7 +38,7 @@
     </xsl:for-each>
   </xsl:template>
 
-  <xsl:template match="//span[@type='kursiv']">
+  <xsl:template match="span">
     <xsl:text>foo foo foo</xsl:text>
   </xsl:template>
 
