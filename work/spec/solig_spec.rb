@@ -982,8 +982,8 @@ describe Solig do
 
   describe '#mark_belägg' do
     it "marks belägg" do
-      akalla = loadparagraph '463-akalla'
-      expect(solig.unword(
+      akalla = loaddiv '22-akalla'
+      expect(solig.mark_belagg(akalla).to_s).to be =~ /<span type='belägg'>Akarli<\/span>/
     end
   end
 end
