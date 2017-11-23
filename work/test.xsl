@@ -40,8 +40,9 @@
     <xsl:variable name='count' select='count(*)' />
     <xsl:for-each select="*">
       <xsl:apply-templates />
-      <xsl:value-of select='position()' />
-      <xsl:value-of select='$count' />
+      <xsl:if test="position()=$count">
+        <xsl:text>, </xsl:text>
+      </xsl:if>
     </xsl:for-each>
   </xsl:template>
 
