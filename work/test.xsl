@@ -39,9 +39,11 @@
   <!-- <xsl:text> </xsl:text><xsl:value-of select="p" /> -->
 
   <xsl:template match="location">
-    <xsl:for-each select="*">
-      <xsl:value-of select="*" />
-    </xsl:for-each>
+    <xsl:apply-templates select="settlement|district|region" />
+  </xsl:template>
+
+  <xsl:template match="settlement|district|region">
+    <xsl:apply-templates />
   </xsl:template>
 
   <xsl:template match="span[@type='locale']">
