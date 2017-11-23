@@ -38,6 +38,7 @@
 
   <xsl:template match="location">
     <xsl:for-each select="*">
+      <xsl:apply-templates />
       <xsl:value-of select='position()' />
     </xsl:for-each>
   </xsl:template>
