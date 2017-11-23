@@ -38,10 +38,8 @@
 
   <xsl:template match="location">
     <xsl:apply-templates select="settlement|district|region" />
-    <xsl:variable name='loop_counter' select='0' />
     <xsl:for-each select="*">
-      <xsl:value-of select='$loop_counter' />
-      <xsl:variable name='loop_counter' select='sum($loop_counter, 1)' />
+      <xsl:value-of select='position()' />
     </xsl:for-each>
   </xsl:template>
 
