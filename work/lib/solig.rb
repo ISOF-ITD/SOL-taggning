@@ -483,7 +483,6 @@ class Solig
         if child.name == 'span' || child.attributes['type'] == 'kursiv'
           child.attributes['type'] = 'belägg'
         end
-      else
       end
     end
   end
