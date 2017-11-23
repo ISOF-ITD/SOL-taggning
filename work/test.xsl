@@ -31,7 +31,7 @@
   </xsl:template>
 
   <xsl:template match="p">
-    <xsl:apply-templates select="span" />
+    <xsl:apply-templates />
   </xsl:template>
 
   <!-- <xsl:text> </xsl:text><xsl:value-of select="p" /> -->
