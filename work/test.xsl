@@ -14,6 +14,7 @@
       <body>
         <h2>First test</h2>
         <xsl:apply-templates select="div" />
+        <xsl:apply-templates select="//span[@type='kursiv']" />
       </body>
     </html>
   </xsl:template>
@@ -29,6 +30,10 @@
     <xsl:for-each select="*">
       <xsl:value-of select="*" />
     </xsl:for-each>
+  </xsl:template>
+
+  <xsl:template match="//span[@type='kursiv']">
+    <xsl:value-of select="/text" />
   </xsl:template>
 
 </xsl:stylesheet>
