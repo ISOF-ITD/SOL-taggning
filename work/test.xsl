@@ -44,8 +44,12 @@
     </xsl:for-each>
   </xsl:template>
 
+  <xsl:template match="span[@type='locale']">
+    <xsl:text>locale</xsl:text>
+  </xsl:template>
+
   <xsl:template match="span[@type='kursiv']">
-    <xsl:text>foo foo foo</xsl:text>
+    <xsl:text>kursiv</xsl:text>
   </xsl:template>
 
 </xsl:stylesheet>
