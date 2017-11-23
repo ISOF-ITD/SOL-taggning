@@ -22,9 +22,7 @@
   <xsl:template match="div[@xml:id='introduction']" />
   <xsl:template match="div">
     <div>
-      <xsl:apply-templates select="head" />
-      <xsl:apply-templates select="p" />
-      <xsl:apply-templates select="location" />
+      <xsl:apply-templates />
     </div>
   </xsl:template>
 
