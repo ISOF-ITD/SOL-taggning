@@ -37,10 +37,13 @@
   <!-- <xsl:text> </xsl:text><xsl:value-of select="p" /> -->
 
   <xsl:template match="location">
-    <xsl:apply-templates select="settlement|district|region" />
     <xsl:for-each select="*">
       <xsl:value-of select='position()' />
     </xsl:for-each>
+  </xsl:template>
+
+  <xsl:template match="location/*">
+    <xsl:apply-templates />
   </xsl:template>
 
   <xsl:template match="settlement|district|region">
