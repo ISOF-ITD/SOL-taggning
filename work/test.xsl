@@ -13,18 +13,20 @@
 
       <body>
         <h2>First test</h2>
-        <xsl:apply-templates select="div" />
+        <xsl:apply-templates select="div/head" />
         <xsl:apply-templates select="span" />
       </body>
     </html>
   </xsl:template>
 
   <xsl:template match="div[@xml:id='introduction']" />
-  <xsl:template match="div">
+  <xsl:template match="div/head">
     <div>
-      <strong><xsl:value-of select="head/placeName" /></strong><xsl:text> </xsl:text><xsl:value-of select="p" />
+      <strong><xsl:value-of select="placeName" /></strong>
     </div>
   </xsl:template>
+
+  <!-- <xsl:text> </xsl:text><xsl:value-of select="p" /> -->
 
   <xsl:template match="location">
     <xsl:for-each select="*">
