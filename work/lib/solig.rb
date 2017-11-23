@@ -479,11 +479,12 @@ class Solig
     state = :prendash
     element.each do |child|
       if state == :prendash
-      if child.is_a? Element
-        if child.name == 'span' || child.attributes['type'] == 'kursiv'
-          child.attributes['type'] = 'belägg'
+        if child.is_a? Element
+          if child.name == 'span' || child.attributes['type'] == 'kursiv'
+            child.attributes['type'] = 'belägg'
+          end
         end
-      end
+      elsif state == :postndash
     end
   end
 end
