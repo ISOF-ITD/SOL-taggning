@@ -473,4 +473,18 @@ class Solig
     end
     retvalue
   end
+
+  def mark_belägg(element)
+    p = XPath.first(element, 'p')
+    state = :prendash
+    element.each do |child|
+      if state == :prendash
+      if child.is_a? Element
+        if child.name == 'span' || child.attributes['type'] == 'kursiv'
+          child.attributes['type'] = 'belägg'
+        end
+      else
+      end
+    end
+  end
 end
