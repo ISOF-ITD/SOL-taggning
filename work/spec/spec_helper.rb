@@ -9,3 +9,10 @@ def loadparagraph(id)
   doc = REXML::Document.new docstring
   doc.root.elements.first
 end
+
+def loaddiv(id)
+  featdir = File.expand_path('../fixtures/div', __FILE__)
+  xmlstring = File.read(File.join(featdir, id + '.xml'))
+  doc = REXML::Document.new xmlstring
+  doc.root.elements.first
+end
