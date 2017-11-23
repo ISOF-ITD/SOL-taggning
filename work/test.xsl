@@ -24,6 +24,7 @@
     <div>
       <xsl:apply-templates select="head" />
       <xsl:apply-templates select="p" />
+      <xsl:apply-templates select="location" />
     </div>
   </xsl:template>
 
