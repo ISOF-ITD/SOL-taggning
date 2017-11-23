@@ -37,10 +37,11 @@
   <!-- <xsl:text> </xsl:text><xsl:value-of select="p" /> -->
 
   <xsl:template match="location">
-    <xsl:value-of select='count(*)' />
+    <xsl:variable name='count' select='count(*)' />
     <xsl:for-each select="*">
       <xsl:apply-templates />
       <xsl:value-of select='position()' />
+      <xsl:value-of select='$count' />
     </xsl:for-each>
   </xsl:template>
 
