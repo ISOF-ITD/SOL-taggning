@@ -997,10 +997,10 @@ describe Solig do
     end
   end
 
-  describe '#mark_reference'
-  describe '#mark_constructed'
+  describe '#analyse_kursiv' do
+    it "marks references"
+    it "marks constructed forms"
 
-  describe '#mark_belägg' do
     it "marks belägg" do
       akalla = loaddiv '22-akalla'
       expect(solig.mark_belägg(akalla).to_s).to be =~ /<span type='belägg'>Akarli<\/span>/
@@ -1015,5 +1015,7 @@ describe Solig do
       akalla = loaddiv '22-akalla'
       expect(solig.mark_belägg(akalla).to_s).to be =~ /<span type='belägg'>\(in villa\) Akalla<\/span>/
     end
+
+    it "extracts the language name"
   end
 end
