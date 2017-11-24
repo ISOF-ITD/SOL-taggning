@@ -292,6 +292,23 @@ describe Element do
       expect(doc.plaintexts).to eq [['foo ', [' bar ', [' baz '], ' quux ']]]
     end
   end
+
+  describe '#is_open_parenthesis' do
+    it "says yes if element ends with an opening parenthesis" do
+      element = Element.new 'span'
+      element.text = '. ('
+      expect(element.is_open_parenthesis).to be_truthy
+    end
+
+    it "says no otherwise" do
+      element = Element.new 'span'
+      element.text = 'a (b'
+      expect(element.is_open_parenthesis).to be_falsey
+    end
+  end
+
+  describe '#is_closing_parenthesis'
+  describe '#is_kursiv'
 end
 
 describe Solig do
