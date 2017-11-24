@@ -997,6 +997,9 @@ describe Solig do
     end
   end
 
+  describe '#mark_reference'
+  describe '#mark_constructed'
+
   describe '#mark_belägg' do
     it "marks belägg" do
       akalla = loaddiv '22-akalla'
