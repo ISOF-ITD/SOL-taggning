@@ -119,6 +119,32 @@ class Element
       end
     end
   end
+
+  def is_open_parenthesis
+    false
+  end
+
+  def is_closing_parenthesis
+    false
+  end
+
+  def is_kursiv
+    element.name == 'kursiv' && element.attributes['type'] == 'kursiv'
+  end
+end
+
+class Text
+  def is_open_parenthesis
+    to_s =~ /\($/
+  end
+
+  def is_closing_parenthesis
+    to_s =~ /^\)/
+  end
+  
+  def is_kursiv
+    false
+  end
 end
 
 class Solig
