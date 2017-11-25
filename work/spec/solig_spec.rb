@@ -346,7 +346,7 @@ describe Text do
 
   describe '#is_kursiv' do
     it "returns false" do
-      expect(Text.new.is_kursiv).to be_falsey
+      expect(Text.new('foo').is_kursiv).to be_falsey
     end
   end
 end

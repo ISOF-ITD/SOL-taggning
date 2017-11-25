@@ -129,7 +129,7 @@ class Element
   end
 
   def is_kursiv
-    element.name == 'kursiv' && element.attributes['type'] == 'kursiv'
+    name == 'span' && attributes['type'] == 'kursiv'
   end
 end
 
