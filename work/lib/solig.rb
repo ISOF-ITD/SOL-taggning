@@ -516,9 +516,13 @@ class Solig
         elsif child.to_s =~ /\. [-–] / # U+2013 EN DASH # TODO More specs for that
           break
         end
-      if state == :prebelägg
+      elsif state == :prebelägg
         belägg = '(' + child.text + ') '
-        state = :prendash
+        child.parent.delete_element child
+        state = :interbelägg
+      elsif state == :interbelägg
+        raise unless !child.is_a? Element || child.text !~ /^\)\s+$/
+        child.parent.delete_element child
       elsif state == :belägg
         if child.is_closing_parenthesis?
           belägg_element.attributes['type'] = 'belägg'
