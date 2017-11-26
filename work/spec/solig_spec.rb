@@ -1057,8 +1057,15 @@ describe Solig do
     it "takes parenthesised entries into account" do
       akalla = loaddiv '22-akalla'
       actual = solig.analyse_kursiv(akalla).to_s
-      byebug
+      # byebug
       expect(actual).to be =~ /<span type='belägg'>\(in villa\) Akarli<\/span>/
+    end
+
+    it "removes useless spaces" do
+      akalla = loaddiv '22-akalla'
+      actual = solig.analyse_kursiv(akalla).to_s
+      # byebug
+      expect(actual).to be =~ /\. <span type='belägg'>\(in villa\) Akarli<\/span>/
     end
 
     it "extracts the language name"
