@@ -535,6 +535,7 @@ class Solig
     end
 
     todelete.each do |child|
+      byebug if child.is_a? Text
       p.delete child
     end
     # byebug
