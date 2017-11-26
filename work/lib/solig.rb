@@ -511,7 +511,7 @@ class Solig
       # byebug
       if state == :prendash
         if child.is_opening_parenthesis?
-          child = child.to_s.gsub /\($/, '' # TODO Något snyggare?
+          child.value = child.to_s.gsub /\($/, '' # TODO Något snyggare?
           state = :prebelägg
         elsif child.is_kursiv?
           belägg += child.text
@@ -528,14 +528,13 @@ class Solig
         # byebug
       elsif state == :interbelägg
         # byebug
-        raise unless "Unexpected data" unless child.is_a?(Element) && child.text =~ /^\)\s+$/
-        todelete << child
+        raise unless "Unexpected data" unless child.is_a?(Text) && child.to_s =~ /^\)\s+$/
+        child.value = child.to_s.gsub /^\(/, ''
         state = :prendash
       end
     end
 
     todelete.each do |child|
-      byebug if child.is_a? Text
       p.delete child
     end
     # byebug
