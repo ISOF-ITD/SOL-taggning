@@ -509,6 +509,7 @@ class Solig
       # byebug
       if state == :prendash
         if child.is_opening_parenthesis?
+          child.text = child.text.gsub /\($/, '' # TODO Något snyggare?
           state = :prebelägg
         elsif child.is_kursiv?
           belägg += child.text
