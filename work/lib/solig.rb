@@ -519,7 +519,7 @@ class Solig
           child.text = belägg
         end
       elsif state == :prebelägg
-        belägg = '(' + child.text + ') '
+        belägg = '(' + child.text
         # byebug
         todelete << child
         state = :interbelägg
@@ -529,6 +529,7 @@ class Solig
         # byebug
         raise "Unexpected data" unless child.is_a?(Text) && child.to_s =~ /^\s*(…|\.\.\.)?\)\s+$/
         belägg += $1 if $1
+        belägg += ') '
         todelete << child
         state = :prendash
       end
