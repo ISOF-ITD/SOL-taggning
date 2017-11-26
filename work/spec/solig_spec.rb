@@ -1079,9 +1079,14 @@ describe Solig do
 
     it "doesn’t raise en exception on Algutsrum" do
       algutsrum = loaddiv '45-algutsrum'
+      expect { solig.analyse_kursiv(algutsrum) }.not_to raise_exception
+    end
+
+    it "returns something sensible on Algutsrum" do
+      algutsrum = loaddiv '45-algutsrum'
       expected = "<div xml:id='Algutsrum' type='?'><head><placeName>Algutsrum</placeName></head> <p><span type='locale'>sn</span>, <span type='locale'>tätort</span>, <location><district type='härad'>Algutsrums hd</district><region type='landskap>Öland</region></location>. <span type='belägg'>(de …) Asgutzrume</span> ca 1320 avskr., <span type='belägg'>Parochia Algudzrwm</span> 1466. – Till grund för sockennamnet ligger ett bynamn. De äldre beläggen visar att namnet i förleden ursprungligen innehållit det fornsvenska mansnamnet <span xml:id='fsv' type='etymon'>Asgot</span>, vilket mot slutet av medeltiden ändrat till det vanligare <span type='kursiv'>Algot</span>. Efterleden är → <placeName>rum</placeName> ’öppen plats’.</p><div>"
       actual = solig.analyse_kursiv(algutsrum).to_s
-      pending
+      pending "Maybe later too"
       # byebug
       expect(actual).to eq expected
     end
