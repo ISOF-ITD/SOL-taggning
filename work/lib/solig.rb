@@ -503,14 +503,18 @@ class Solig
   def analyse_kursiv(element)
     p = XPath.first(element, 'p')
     state = :prendash
+    belägg = ''
     p.each do |child|
       # byebug
       if state == :prendash
-        if child.is_kursiv?
+        if child.is_opening_parenthesis?
+          state = :leftparen
+        elsif child.is_kursiv?
           child.attributes['type'] = 'belägg'
         elsif child.to_s =~ /\. [-–] / # U+2013 EN DASH # TODO More specs for that
           break
         end
+      elsif state == :leftparen
       end
     end
 
