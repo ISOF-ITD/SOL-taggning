@@ -535,11 +535,7 @@ class Solig
     end
 
     todelete.each do |child|
-      begin
-        p.delete_element child
-      rescue
-        byebug
-      end
+      p.delete child
     end
     # byebug
 
