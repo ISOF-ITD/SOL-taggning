@@ -523,11 +523,13 @@ class Solig
       elsif state == :interbelägg
         raise unless child.is_a? Element && child.text =~ /^\)\s+$/
         child.parent.delete_element child
+        state = :belägg
       elsif state == :belägg
         if child.is_closing_parenthesis?
           belägg_element.attributes['type'] = 'belägg'
           belägg.text = belägg
         end
+        state = :prendash
       end
     end
 
