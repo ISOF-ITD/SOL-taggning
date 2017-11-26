@@ -1112,8 +1112,8 @@ describe Solig do
     end
 
     it "returns the input if it already contains belägg’s" do
-      alnö = loaddiv '69-alnö'
-      expect(solig.analyse_kursiv(alnö)).to eq alnö
+      algutsrum = loaddiv '45-algutsrum'
+      expect(solig.analyse_kursiv(algutsrum)).to eq algutsrum
     end
 
     it "returns the input if it doesn’t have an id"
