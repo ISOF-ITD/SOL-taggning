@@ -1128,6 +1128,11 @@ describe Solig do
 
     it "outputs something nice on Bestorp"
 
+    it "doesn’t crash on Bjärnum" do
+      bjärnum = loaddiv '345-bjärnum'
+      expect { solig.analyse_kursiv(bjärnum) }.not_to raise_exception
+    end
+
     it "adds the date to the mix"
     it "extracts the language name"
   end
