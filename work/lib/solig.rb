@@ -513,7 +513,7 @@ class Solig
           break
         end
       if state == :prebelägg
-        belägg = child.to_s
+        belägg = '(' + child.to_s + ') '
         state = :prendash
       elsif state == :belägg
         if child.is_closing_parenthesis?
