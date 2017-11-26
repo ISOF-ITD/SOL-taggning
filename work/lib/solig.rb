@@ -509,10 +509,11 @@ class Solig
       # byebug
       if state == :prendash
         if child.is_opening_parenthesis?
-          state += :prebelägg
+          state = :prebelägg
         elsif child.is_kursiv?
-          belägg = child.text
-          belägg_element = child
+          belägg += child.text
+          child.attributes['type'] = 'belägg'
+          child.text = belägg
         elsif child.to_s =~ /\. [-–] / # U+2013 EN DASH # TODO More specs for that
           break
         end
@@ -523,12 +524,6 @@ class Solig
       elsif state == :interbelägg
         raise unless child.is_a? Element && child.text =~ /^\)\s+$/
         child.parent.delete_element child
-        state = :prendash
-      elsif state == :prendash
-        if child.is_closing_parenthesis?
-          belägg_element.attributes['type'] = 'belägg'
-          belägg.text = belägg
-        end
         state = :prendash
       end
     end
