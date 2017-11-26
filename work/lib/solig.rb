@@ -521,7 +521,7 @@ class Solig
         child.parent.delete_element child
         state = :interbelägg
       elsif state == :interbelägg
-        raise unless !child.is_a? Element || child.text !~ /^\)\s+$/
+        raise unless child.is_a? Element && child.text =~ /^\)\s+$/
         child.parent.delete_element child
       elsif state == :belägg
         if child.is_closing_parenthesis?
