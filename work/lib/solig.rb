@@ -527,7 +527,7 @@ class Solig
       elsif state == :interbelägg
         # byebug
         # byebug
-        raise "Unexpected data" unless child.is_a?(Text) && child.to_s =~ /^(\s*)(…|\.\.\.)?\)\s+$/
+        raise "Unexpected data" unless child.is_a?(Text) && child.to_s =~ /^(\s*)(…|\.\.\.|\[.*\])?\)\s+$/
         belägg += $1 if $1
         belägg += $2 if $2
         belägg += ') '
