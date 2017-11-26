@@ -529,7 +529,7 @@ class Solig
       elsif state == :interbelägg
         # byebug
         raise "Unexpected data" unless child.is_a?(Text) && child.to_s =~ /^\)\s+$/
-        child.value = ''
+        todelete << child
         state = :prendash
       end
     end
