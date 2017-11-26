@@ -1116,7 +1116,10 @@ describe Solig do
       expect(solig.analyse_kursiv(algutsrum)).to eq algutsrum
     end
 
-    it "returns the input if it doesn’t have an id"
+    it "returns the input if it doesn’t have an id" do
+      div = Element.new 'div'
+      expect(solig.analyse_kursiv(div)).to eq div
+    end
 
     it "adds the date to the mix"
     it "extracts the language name"
