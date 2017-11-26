@@ -1111,6 +1111,13 @@ describe Solig do
       expect(solig.analyse_kursiv(arin)).to eq arin
     end
 
+    it "returns the input if it already contains belägg’s" do
+      alnö = loaddiv '69-alnö'
+      expect(solig.analyse_kursiv(alnö)).to eq alnö
+    end
+
+    it "returns the input if it doesn’t have an id"
+
     it "adds the date to the mix"
     it "extracts the language name"
   end
