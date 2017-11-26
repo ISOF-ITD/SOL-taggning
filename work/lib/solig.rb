@@ -528,14 +528,18 @@ class Solig
         # byebug
       elsif state == :interbelägg
         # byebug
-        raise "Unexpected data" unless child.is_a?(Element) && child.text =~ /^\)\s+$/
-        child.parent.delete_element child
+        raise unless "Unexpected data" unless child.is_a?(Element) && child.text =~ /^\)\s+$/
+        todelete << child
         state = :prendash
       end
     end
 
     todelete.each do |child|
-      p.delete_element child
+      begin
+        p.delete_element child
+      rescue
+        byebug
+      end
     end
     # byebug
 
