@@ -1121,10 +1121,10 @@ describe Solig do
       expect(solig.analyse_kursiv(div)).to eq div
     end
 
-   it "doesn’t crash on Bestorp" do
-     bestorp = loaddiv '300-bestorp'
-     expect { solig.analyse_kursiv(bestorp) }.not_to raise_exception
-   end
+    it "doesn’t crash on Bestorp" do
+      bestorp = loaddiv '300-bestorp'
+      expect { solig.analyse_kursiv(bestorp) }.not_to raise_exception
+    end
 
     it "adds the date to the mix"
     it "extracts the language name"
