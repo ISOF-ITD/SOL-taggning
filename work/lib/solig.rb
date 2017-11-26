@@ -517,8 +517,6 @@ class Solig
           belägg += child.text
           child.attributes['type'] = 'belägg'
           child.text = belägg
-        elsif child.to_s =~ /\. [-–] / # U+2013 EN DASH # TODO More specs for that
-          break
         end
       elsif state == :prebelägg
         belägg = '(' + child.text + ') '
@@ -532,6 +530,8 @@ class Solig
         todelete << child
         state = :prendash
       end
+
+      break if child.to_s =~ /\. [-–] / # U+2013 EN DASH # TODO More specs for that
     end
 
     todelete.each do |child|
