@@ -1096,6 +1096,11 @@ describe Solig do
       expect { solig.analyse_kursiv(alisjávri) }.not_to raise_exception
     end
 
+    it "doesn’t crash on Alnö" do
+      alnö = loaddiv '69-alnö'
+      expect { solig.analyse_kursiv(alnö) }.not_to raise_exception
+    end
+
     it "adds the date to the mix"
     it "extracts the language name"
   end

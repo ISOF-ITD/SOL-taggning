@@ -507,7 +507,7 @@ class Solig
     belägg_element = nil
     todelete = []
     p.each do |child|
-      # puts "#{state}, #{child.to_s}"
+      puts "#{state}, #{child.to_s}"
       # byebug
       if state == :prendash
         if child.is_opening_parenthesis?
@@ -535,7 +535,8 @@ class Solig
         state = :prendash
       end
 
-      break if child.to_s =~ /\.\s+[-–] / # U+2013 EN DASH # TODO More specs for that
+      # byebug
+      break if child.to_s =~ /\.\s+[-–]( |)/ # U+2013 EN DASH # TODO More specs for that
     end
 
     todelete.each do |child|
