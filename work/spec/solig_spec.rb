@@ -293,60 +293,60 @@ describe Element do
     end
   end
 
-  describe '#is_open_parenthesis' do
+  describe '#is_opening_parenthesis?' do
     it "returns false" do
-      expect(Element.new.is_open_parenthesis).to be_falsey
+      expect(Element.new.is_opening_parenthesis?).to be_falsey
     end
   end
 
-  describe '#is_closing_parenthesis' do
+  describe '#is_closing_parenthesis?' do
     it "returns false" do
-      expect(Element.new.is_closing_parenthesis).to be_falsey
+      expect(Element.new.is_closing_parenthesis?).to be_falsey
     end
   end
 
-  describe '#is_kursiv' do
+  describe '#is_kursiv?' do
     it "says no if element is span with type kursiv" do
       element = Element.new 'span'
       element.add_attribute 'type', 'kursiv'
-      expect(element.is_kursiv).to be_truthy
+      expect(element.is_kursiv?).to be_truthy
     end
 
     it "says no otherwise" do
       element = Element.new 'span'
-      expect(element.is_kursiv).to be_falsey
+      expect(element.is_kursiv?).to be_falsey
     end
   end
 end
 
 describe Text do
-  describe '#is_open_parenthesis' do
+  describe '#is_opening_parenthesis?' do
     it "says yes if text ends with an opening parenthesis" do
       text = Text.new '. ('
-      expect(text.is_open_parenthesis).to be_truthy
+      expect(text.is_opening_parenthesis?).to be_truthy
     end
 
     it "says no otherwise" do
       text = Text.new 'a (b'
-      expect(text.is_open_parenthesis).to be_falsey
+      expect(text.is_opening_parenthesis?).to be_falsey
     end
   end
 
-  describe '#is_closing_parenthesis' do
+  describe '#is_closing_parenthesis?' do
     it "says yes if text starts with a closing parenthesis" do
       text = Text.new '), '
-      expect(text.is_closing_parenthesis).to be_truthy
+      expect(text.is_closing_parenthesis?).to be_truthy
     end
 
     it "says no otherwise" do
       text = Text.new 'c) d'
-      expect(text.is_closing_parenthesis).to be_falsey
+      expect(text.is_closing_parenthesis?).to be_falsey
     end
   end
 
-  describe '#is_kursiv' do
+  describe '#is_kursiv?' do
     it "returns false" do
-      expect(Text.new('foo').is_kursiv).to be_falsey
+      expect(Text.new('foo').is_kursiv?).to be_falsey
     end
   end
 end

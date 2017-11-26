@@ -120,29 +120,29 @@ class Element
     end
   end
 
-  def is_open_parenthesis
+  def is_opening_parenthesis?
     false
   end
 
-  def is_closing_parenthesis
+  def is_closing_parenthesis?
     false
   end
 
-  def is_kursiv
+  def is_kursiv?
     name == 'span' && attributes['type'] == 'kursiv'
   end
 end
 
 class Text
-  def is_open_parenthesis
+  def is_opening_parenthesis?
     to_s =~ /\($/
   end
 
-  def is_closing_parenthesis
+  def is_closing_parenthesis?
     to_s =~ /^\)/
   end
   
-  def is_kursiv
+  def is_kursiv?
     false
   end
 end
