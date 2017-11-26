@@ -526,7 +526,8 @@ class Solig
         # byebug
       elsif state == :interbelägg
         # byebug
-        raise "Unexpected data" unless child.is_a?(Text) && child.to_s =~ /^\)\s+(…|\.\.\.)?$/
+        # byebug
+        raise "Unexpected data" unless child.is_a?(Text) && child.to_s =~ /^\s*(…|\.\.\.)?\)\s+$/
         belägg += $1 if $1
         todelete << child
         state = :prendash
