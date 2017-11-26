@@ -1068,6 +1068,11 @@ describe Solig do
       expect(actual).to be =~ /\. <span type='belägg'>\(in villa\) Akarli<\/span>/
     end
 
+    it "works on Akebäck" do
+      akebäck = loaddiv '23-akebäck'
+      expect(solig.analyse_kursiv(akebäck).to_s).to eq "<div xml:id='Akebäck' type='?'><head><placeName>Akebäck</placeName></head> <p><span type='locale'>sn</span>, <location><region type='landskap'>Gotland</region></location>. – Namnet omtalas redan i Gutasagan från 1300-talets mitt <span type='belägg'>(af Acubek)</span>. Efterleden är <span type='kursiv'>bäck</span>. Förleden tycks innehålla genitiv av ett forngutniskt *<span type='kursiv'>aka</span>, kanske snarast med betydelsen ’smuts’, och namnet har då ursprungligen syftat på en liten bäck omedelbart norr om kyrkan.</p></div>"
+    end
+
     it "extracts the language name"
   end
 end
