@@ -1106,6 +1106,11 @@ describe Solig do
       expect { solig.analyse_kursiv(anundshögen) }.not_to raise_exception
     end
 
+    it "returns the input on name elements" do
+      arin = loaddiv '141-arin'
+      expect(solig.analyse_kursiv(arin)).to eq arin
+    end
+
     it "adds the date to the mix"
     it "extracts the language name"
   end

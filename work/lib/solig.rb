@@ -501,6 +501,7 @@ class Solig
   end
 
   def analyse_kursiv(element)
+    return element if element.attributes['type'] == 'namnelement'
     p = XPath.first(element, 'p')
     state = :prendash
     belägg = ''
