@@ -1043,7 +1043,10 @@ describe Solig do
 
     it "marks belägg" do
       akalla = loaddiv '22-akalla'
-      expect(solig.analyse_kursiv(akalla).to_s).to be =~ /<span type='belägg'>Akarli<\/span>/
+      analysed = solig.analyse_kursiv(akalla)
+      belägg = XPath.first(analysed, 'p/span[@type="belägg"]')
+      expect(belägg).not_to be_nil
+      expect(belägg.text).to be =~ /Akarli/
     end
 
     it "doesn’t tag everything as belägg" do
