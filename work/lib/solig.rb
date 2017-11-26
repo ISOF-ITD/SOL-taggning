@@ -508,17 +508,20 @@ class Solig
       # byebug
       if state == :prendash
         if child.is_opening_parenthesis? || child.is_kursiv?
-          state = :belägg
+          state = :prebelägg
         elsif child.to_s =~ /\. [-–] / # U+2013 EN DASH # TODO More specs for that
           break
         end
+      if state == :prebelägg
+        belägg = child.to_s
+        state = :prendash
       elsif state == :belägg
         if child.is_closing_parenthesis?
           parent = child.parent
           parent.delete_element child
           element = Element.new 'span'
           element.attributes['type'] = 'belägg'
-          parent.add_element element
+          parent.add_element element # FIXME in the right place!
         end
       end
     end
