@@ -500,7 +500,7 @@ class Solig
     retvalue
   end
 
-  def mark_belägg(element)
+  def analyse_kursiv(element)
     p = XPath.first(element, 'p')
     state = :prendash
     p.each do |child|
