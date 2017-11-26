@@ -505,8 +505,9 @@ class Solig
     state = :prendash
     belägg = ''
     belägg_element = nil
+    todelete = []
     p.each do |child|
-      puts state, child.to_s
+      puts "#{state}, #{child.to_s}"
       # byebug
       if state == :prendash
         if child.is_opening_parenthesis?
@@ -521,7 +522,8 @@ class Solig
         end
       elsif state == :prebelägg
         belägg = '(' + child.text + ') '
-        child.parent.delete_element child
+        # byebug
+        todelete << child
         state = :interbelägg
         # byebug
       elsif state == :interbelägg
@@ -532,6 +534,9 @@ class Solig
       end
     end
 
+    todelete.each do |child|
+      p.delete_element child
+    end
     # byebug
 
     element
