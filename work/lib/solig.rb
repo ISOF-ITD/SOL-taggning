@@ -506,10 +506,11 @@ class Solig
     belägg = ''
     belägg_element = nil
     p.each do |child|
+      puts state, child.to_s
       # byebug
       if state == :prendash
         if child.is_opening_parenthesis?
-          child.text = child.text.gsub /\($/, '' # TODO Något snyggare?
+          child = child.to_s.gsub /\($/, '' # TODO Något snyggare?
           state = :prebelägg
         elsif child.is_kursiv?
           belägg += child.text
@@ -522,8 +523,10 @@ class Solig
         belägg = '(' + child.text + ') '
         child.parent.delete_element child
         state = :interbelägg
+        # byebug
       elsif state == :interbelägg
-        raise unless child.is_a? Element && child.text =~ /^\)\s+$/
+        # byebug
+        raise "Unexpected data" unless child.is_a?(Element) && child.text =~ /^\)\s+$/
         child.parent.delete_element child
         state = :prendash
       end
