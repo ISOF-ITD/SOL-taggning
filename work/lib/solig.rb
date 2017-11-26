@@ -507,14 +507,19 @@ class Solig
     p.each do |child|
       # byebug
       if state == :prendash
-        if child.is_opening_parenthesis?
-          state = :leftparen
-        elsif child.is_kursiv?
-          child.attributes['type'] = 'belägg'
+        if child.is_opening_parenthesis? || child.is_kursiv?
+          state = :belägg
         elsif child.to_s =~ /\. [-–] / # U+2013 EN DASH # TODO More specs for that
           break
         end
-      elsif state == :leftparen
+      elsif state == :belägg
+        if child.is_closing_parenthesis?
+          parent = child.parent
+          parent.delete_element child
+          element = Element.new 'span'
+          element.attributes['type'] = 'belägg'
+          parent.add_element element
+        end
       end
     end
 
