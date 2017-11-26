@@ -509,7 +509,7 @@ class Solig
       # byebug
       if state == :prendash
         if child.is_opening_parenthesis?
-          state = :prebelägg
+          state += :prebelägg
         elsif child.is_kursiv?
           belägg = child.text
           belägg_element = child
@@ -523,8 +523,8 @@ class Solig
       elsif state == :interbelägg
         raise unless child.is_a? Element && child.text =~ /^\)\s+$/
         child.parent.delete_element child
-        state = :belägg
-      elsif state == :belägg
+        state = :prendash
+      elsif state == :prendash
         if child.is_closing_parenthesis?
           belägg_element.attributes['type'] = 'belägg'
           belägg.text = belägg
