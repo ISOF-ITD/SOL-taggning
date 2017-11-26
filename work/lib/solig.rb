@@ -535,7 +535,7 @@ class Solig
         state = :prendash
       end
 
-      break if child.to_s =~ /\. [-–] / # U+2013 EN DASH # TODO More specs for that
+      break if child.to_s =~ /\.\s+[-–] / # U+2013 EN DASH # TODO More specs for that
     end
 
     todelete.each do |child|

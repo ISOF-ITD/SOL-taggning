@@ -1091,6 +1091,11 @@ describe Solig do
       expect(actual).to eq expected
     end
 
+    it "doesn’t crash on Alisjávri" do
+      alisjávri = loaddiv '49-alisjávri'
+      expect { solig.analyse_kursiv(alisjávri) }.not_to raise_exception
+    end
+
     it "adds the date to the mix"
     it "extracts the language name"
   end
