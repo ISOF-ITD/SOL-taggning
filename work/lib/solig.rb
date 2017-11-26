@@ -504,11 +504,15 @@ class Solig
     p = XPath.first(element, 'p')
     state = :prendash
     belägg = ''
+    belägg_element = nil
     p.each do |child|
       # byebug
       if state == :prendash
-        if child.is_opening_parenthesis? || child.is_kursiv?
+        if child.is_opening_parenthesis?
           state = :prebelägg
+        elsif child.is_kursiv?
+          belägg = child.text
+          belägg_element = child
         elsif child.to_s =~ /\. [-–] / # U+2013 EN DASH # TODO More specs for that
           break
         end
@@ -517,11 +521,8 @@ class Solig
         state = :prendash
       elsif state == :belägg
         if child.is_closing_parenthesis?
-          parent = child.parent
-          parent.delete_element child
-          element = Element.new 'span'
-          element.attributes['type'] = 'belägg'
-          parent.add_element element # FIXME in the right place!
+          belägg_element.attributes['type'] = 'belägg'
+          belägg.text = belägg
         end
       end
     end
