@@ -1126,6 +1126,8 @@ describe Solig do
       expect { solig.analyse_kursiv(bestorp) }.not_to raise_exception
     end
 
+    it "outputs something nice on Bestorp"
+
     it "adds the date to the mix"
     it "extracts the language name"
   end
