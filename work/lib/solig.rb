@@ -506,12 +506,10 @@ class Solig
     p.each do |child|
       # byebug
       if state == :prendash
-        if child.is_a? Element
-          if child.name == 'span' || child.attributes['type'] == 'kursiv'
-            child.attributes['type'] = 'belägg'
-          end
-        elsif child.is_a? Text
-          break if child.to_s =~ /\. [-–] / # U+2013 EN DASH # TODO More specs for that
+        if child.is_kursiv?
+          child.attributes['type'] = 'belägg'
+        elsif child.to_s =~ /\. [-–] / # U+2013 EN DASH # TODO More specs for that
+          break
         end
       end
     end
