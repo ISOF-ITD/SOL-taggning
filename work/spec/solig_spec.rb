@@ -1043,17 +1043,17 @@ describe Solig do
 
     it "marks belägg" do
       akalla = loaddiv '22-akalla'
-      expect(solig.mark_belägg(akalla).to_s).to be =~ /<span type='belägg'>Akarli<\/span>/
+      expect(solig.analyse_kursiv(akalla).to_s).to be =~ /<span type='belägg'>Akarli<\/span>/
     end
 
     it "doesn’t tag everything as belägg" do
       akalla = loaddiv '22-akalla'
-      expect(solig.mark_belägg(akalla).to_s).not_to be =~ /<span type='belägg'>akærli<\/span>/
+      expect(solig.analyse_kursiv(akalla).to_s).not_to be =~ /<span type='belägg'>akærli<\/span>/
     end
 
     it "takes parenthesised entries into account" do
       akalla = loaddiv '22-akalla'
-      expect(solig.mark_belägg(akalla).to_s).to be =~ /<span type='belägg'>\(in villa\) Akalla<\/span>/
+      expect(solig.analyse_kursiv(akalla).to_s).to be =~ /<span type='belägg'>\(in villa\) Akalla<\/span>/
     end
 
     it "extracts the language name"
