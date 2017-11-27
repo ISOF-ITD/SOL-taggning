@@ -461,6 +461,11 @@ describe Solig do
       solig.reset
       expect(solig.instance_variable_get(:@r)).to eq ''
     end
+
+    it "resets @belägg"
+    it "resets @belägg_element"
+    it "resets @todelete"
+    it "resets @preprebelägg_element"
   end
 
   describe '#unword' do
@@ -1038,6 +1043,13 @@ describe Solig do
   end
 
   describe '#analyse_kursiv' do
+    it "calls reset" do
+      akalla = loaddiv '22-akalla'
+      expect(solig).to receive(:reset)
+      pending
+      solig.analyse_kursiv(akalla)
+    end
+
     it "marks references"
     it "marks constructed forms"
 
@@ -1152,6 +1164,8 @@ describe Solig do
       dellensjöarna = loaddiv '783-dellensjöarna'
       expect { solig.analyse_kursiv(dellensjöarna) }.not_to raise_exception
     end
+
+    it "doesn’t screw up on Alvastra"
 
     it "sees other occurrences of belägg after the dash, such as (<kurs>bel.</kurs>) with a date nearby"
     it "adds the date to the mix"

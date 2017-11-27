@@ -506,7 +506,7 @@ class Solig
     return element if element.attributes['xml:id'] == 'Bo2'
     return element if element.attributes['xml:id'] == 'Dellensjöarna'
     p = XPath.first(element, 'p')
-    @state = :prendash
+    @state = :initial
     @belägg = ''
     @belägg_element = nil
     @todelete = []
@@ -515,7 +515,7 @@ class Solig
       # puts "#{state}, #{child.to_s}"
       # byebug
       case @state
-      when :prendash
+      when :initial
         if child.is_opening_parenthesis?
           @preprebelägg_element = child
           @state = :prebelägg
@@ -532,7 +532,7 @@ class Solig
           @todelete << child
           @state = :interbelägg
         else
-          @state = :prendash
+          @state = :initial
         end
         # byebug
       when :interbelägg
@@ -551,7 +551,7 @@ class Solig
             @todelete << child
           end
         end
-        @state = :prendash
+        @state = :initial
       end
 
       # byebug
