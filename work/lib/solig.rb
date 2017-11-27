@@ -506,58 +506,59 @@ class Solig
     return element if element.attributes['xml:id'] == 'Bo2'
     return element if element.attributes['xml:id'] == 'Dellensjöarna'
     p = XPath.first(element, 'p')
-    state = :prendash
-    belägg = ''
-    belägg_element = nil
-    todelete = []
-    preprebelägg_element = nil
+    @state = :prendash
+    @belägg = ''
+    @belägg_element = nil
+    @todelete = []
+    @preprebelägg_element = nil
     p.each do |child|
       # puts "#{state}, #{child.to_s}"
       # byebug
-      if state == :prendash
+      case @state
+      when :prendash
         if child.is_opening_parenthesis?
-          preprebelägg_element = child
-          state = :prebelägg
+          @preprebelägg_element = child
+          @state = :prebelägg
         elsif child.is_kursiv?
-          belägg += child.text.to_s
+          @belägg += child.text.to_s
           child.attributes['type'] = 'belägg'
-          child.text = belägg
+          child.text = @belägg
         end
-      elsif state == :prebelägg
+      when :prebelägg
         if child.is_kursiv?
-          preprebelägg_element.value = preprebelägg_element.to_s.gsub /\($/, '' # TODO Något snyggare?
-          belägg = '(' + child.text
+          @preprebelägg_element.value = @preprebelägg_element.to_s.gsub /\($/, '' # TODO Något snyggare?
+          @belägg = '(' + child.text
           # byebug
-          todelete << child
-          state = :interbelägg
+          @todelete << child
+          @state = :interbelägg
         else
-          state = :prendash
+          @state = :prendash
         end
         # byebug
-      elsif state == :interbelägg
+      when :interbelägg
         # byebug
         # byebug
         if child.to_s == ')'
-          belägg += ')'
+          @belägg += ')'
         else
           raise "Unexpected data: #{child}" unless child.is_a?(Text) && child.to_s =~ /^(\s*)(…|\.\.\.|\[.*\]|\d{4})?\)\s+(.*)$/
-          belägg += $1 if $1
-          belägg += $2 if $2
-          belägg += ') '
+          @belägg += $1 if $1
+          @belägg += $2 if $2
+          @belägg += ') '
           if $3
             child.value = $3
           else
-            todelete << child
+            @todelete << child
           end
         end
-        state = :prendash
+        @state = :prendash
       end
 
       # byebug
       break if child.to_s =~ /\.\s+[-–]( |)/ # U+2013 EN DASH # TODO More specs for that
     end
 
-    todelete.each do |child|
+    @todelete.each do |child|
       p.delete child
     end
     # byebug
