@@ -518,7 +518,7 @@ class Solig
           preprebelägg_element = child
           state = :prebelägg
         elsif child.is_kursiv?
-          belägg += child.text
+          belägg += child.text.to_s
           child.attributes['type'] = 'belägg'
           child.text = belägg
         end
