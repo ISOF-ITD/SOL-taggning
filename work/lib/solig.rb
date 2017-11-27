@@ -528,6 +528,7 @@ class Solig
           @belägg += child.text.to_s
           child.attributes['type'] = 'belägg'
           child.text = @belägg
+          @belägg = ''
         end
       when :prebelägg
         if child.is_kursiv?
