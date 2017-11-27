@@ -462,10 +462,25 @@ describe Solig do
       expect(solig.instance_variable_get(:@r)).to eq ''
     end
 
-    it "resets @belägg"
-    it "resets @belägg_element"
-    it "resets @todelete"
-    it "resets @preprebelägg_element"
+    it "resets @belägg" do
+      solig.reset
+      expect(solig.instance_variable_get(:@belägg)).to eq ''
+    end
+
+    it "resets @belägg_element" do
+      solig.reset
+      expect(solig.instance_variable_get(:@belägg_element)).to eq nil
+    end
+
+    it "resets @todelete" do
+      solig.reset
+      expect(solig.instance_variable_get(:@todelete)).to eq []
+    end
+
+    it "resets @preprebelägg_element" do
+      solig.reset
+      expect(solig.instance_variable_get(:@preprebelägg_element)).to be_nil
+    end
   end
 
   describe '#unword' do
@@ -1046,7 +1061,6 @@ describe Solig do
     it "calls reset" do
       akalla = loaddiv '22-akalla'
       expect(solig).to receive(:reset)
-      pending
       solig.analyse_kursiv(akalla)
     end
 
@@ -1165,7 +1179,15 @@ describe Solig do
       expect { solig.analyse_kursiv(dellensjöarna) }.not_to raise_exception
     end
 
-    it "doesn’t screw up on Alvastra"
+    it "doesn’t screw up on Alvastra" do
+      alvastra = loaddiv '86-alvastra'
+      output = solig.analyse_kursiv(alvastra)
+      belägg = []
+      output.each_element('p/span[@type="belägg"]') do |bel|
+        belägg << bel.text
+      end
+      expect(belägg).to eq ['(in) Alvastro', 'Alvastrum']
+    end
 
     it "sees other occurrences of belägg after the dash, such as (<kurs>bel.</kurs>) with a date nearby"
     it "adds the date to the mix"

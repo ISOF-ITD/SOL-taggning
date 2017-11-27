@@ -216,6 +216,10 @@ class Solig
     @carryover = ''
     @rs = []
     @r = ''
+    @belägg = ''
+    @belägg_element = nil
+    @todelete = []
+    @preprebelägg_element = nil
   end
 
   def unword(element, reformat_head = true)
@@ -501,6 +505,7 @@ class Solig
   end
 
   def analyse_kursiv(element)
+    reset
     return element if element.attributes['type'] == 'namnelement'
     return element unless element.attributes['xml:id']
     return element if element.attributes['xml:id'] == 'Bo2'
