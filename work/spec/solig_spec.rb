@@ -1138,6 +1138,11 @@ describe Solig do
       expect { solig.analyse_kursiv(bo2) }.not_to raise_exception
     end
 
+    it "doesn’t crash on Bromma2" do
+      bromma2 = loaddiv '572-bromma2'
+      expect { solig.analyse_kursiv(bromma2) }.not_to raise_exception
+    end
+
     it "sees other occurrences of belägg after the dash, such as (<kurs>bel.</kurs>) with a date nearby"
     it "adds the date to the mix"
     it "extracts the language name"
