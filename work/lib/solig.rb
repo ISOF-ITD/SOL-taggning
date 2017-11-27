@@ -509,12 +509,13 @@ class Solig
     belägg = ''
     belägg_element = nil
     todelete = []
+    preprebelägg_element = nil
     p.each do |child|
       # puts "#{state}, #{child.to_s}"
       # byebug
       if state == :prendash
         if child.is_opening_parenthesis?
-          child.value = child.to_s.gsub /\($/, '' # TODO Något snyggare?
+          preprebelägg_element = child
           state = :prebelägg
         elsif child.is_kursiv?
           belägg += child.text
@@ -522,10 +523,15 @@ class Solig
           child.text = belägg
         end
       elsif state == :prebelägg
-        belägg = '(' + child.text
-        # byebug
-        todelete << child
-        state = :interbelägg
+        if child.is_kursiv?
+          preprebelägg_element.value = child.to_s.gsub /\($/, '' # TODO Något snyggare?
+          belägg = '(' + child.text
+          # byebug
+          todelete << child
+          state = :interbelägg
+        else
+          state = :prendash
+        end
         # byebug
       elsif state == :interbelägg
         # byebug
