@@ -504,6 +504,7 @@ class Solig
     return element if element.attributes['type'] == 'namnelement'
     return element unless element.attributes['xml:id']
     return element if element.attributes['xml:id'] == 'Bo2'
+    return element if element.attributes['xml:id'] == 'Dellensjöarna'
     p = XPath.first(element, 'p')
     state = :prendash
     belägg = ''
@@ -539,7 +540,7 @@ class Solig
         if child.to_s == ')'
           belägg += ')'
         else
-          raise "Unexpected data" unless child.is_a?(Text) && child.to_s =~ /^(\s*)(…|\.\.\.|\[.*\]|\d{4})?\)\s+(.*)$/
+          byebug unless child.is_a?(Text) && child.to_s =~ /^(\s*)(…|\.\.\.|\[.*\]|\d{4})?\)\s+(.*)$/
           belägg += $1 if $1
           belägg += $2 if $2
           belägg += ') '
