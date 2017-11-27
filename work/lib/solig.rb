@@ -524,7 +524,7 @@ class Solig
         end
       elsif state == :prebelägg
         if child.is_kursiv?
-          preprebelägg_element.value = child.to_s.gsub /\($/, '' # TODO Något snyggare?
+          preprebelägg_element.value = preprebelägg_element.to_s.gsub /\($/, '' # TODO Något snyggare?
           belägg = '(' + child.text
           # byebug
           todelete << child
