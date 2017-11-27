@@ -1159,9 +1159,9 @@ describe Solig do
       expect { solig.analyse_kursiv(bjärnum) }.not_to raise_exception
     end
 
-    it "doesn’t crash on Bo2" do
+    it "raises an exception on Bo2" do
       bo2 = loaddiv '427-bo'
-      expect { solig.analyse_kursiv(bo2) }.not_to raise_exception
+      expect { solig.analyse_kursiv(bo2) }.to raise_exception UnexpectedData
     end
 
     it "doesn’t crash on Bromma2" do
@@ -1174,9 +1174,9 @@ describe Solig do
       expect { solig.analyse_kursiv(dals_rostock) }.not_to raise_exception
     end
 
-    it "doesn’t crash on Dellensjöarna" do
+    it "raises an exception on Dellensjöarna" do
       dellensjöarna = loaddiv '783-dellensjöarna'
-      expect { solig.analyse_kursiv(dellensjöarna) }.not_to raise_exception
+      expect { solig.analyse_kursiv(dellensjöarna) }.to raise_exception UnexpectedData
     end
 
     it "doesn’t screw up on Alvastra" do

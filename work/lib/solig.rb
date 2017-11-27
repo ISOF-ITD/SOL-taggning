@@ -5,6 +5,7 @@ include REXML
 
 class UnexpectedElement < StandardError; end
 class UnexpectedLocation < StandardError; end
+class UnexpectedData < StandardError; end
 
 class NilClass
   def uspace
@@ -505,11 +506,9 @@ class Solig
   end
 
   def analyse_kursiv(element)
-    reset
     return element if element.attributes['type'] == 'namnelement'
     return element unless element.attributes['xml:id']
-    return element if element.attributes['xml:id'] == 'Bo2'
-    return element if element.attributes['xml:id'] == 'Dellensjöarna'
+    reset
     p = XPath.first(element, 'p')
     @state = :initial
     @belägg = ''
@@ -547,7 +546,7 @@ class Solig
         if child.to_s == ')'
           @belägg += ')'
         else
-          raise "Unexpected data: #{child}" unless child.is_a?(Text) && child.to_s =~ /^(\s*)(…|\.\.\.|\[.*\]|\d{4})?\)\s+(.*)$/
+          raise UnexpectedData.new(child.to_s) unless child.is_a?(Text) && child.to_s =~ /^(\s*)(…|\.\.\.|\[.*\]|\d{4})?\)\s+(.*)$/
           @belägg += $1 if $1
           @belägg += $2 if $2
           @belägg += ') '
