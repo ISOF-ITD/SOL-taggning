@@ -540,7 +540,7 @@ class Solig
         if child.to_s == ')'
           belägg += ')'
         else
-          byebug unless child.is_a?(Text) && child.to_s =~ /^(\s*)(…|\.\.\.|\[.*\]|\d{4})?\)\s+(.*)$/
+          raise "Unexpected data: #{child}" unless child.is_a?(Text) && child.to_s =~ /^(\s*)(…|\.\.\.|\[.*\]|\d{4})?\)\s+(.*)$/
           belägg += $1 if $1
           belägg += $2 if $2
           belägg += ') '
