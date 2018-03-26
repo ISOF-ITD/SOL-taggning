@@ -28,7 +28,14 @@
   </xsl:template>
 
   <xsl:template match="head">
-    <strong><xsl:value-of select="placeName" /></strong>
+    <xsl:choose>
+      <xsl:when test="placeName">
+        <strong><xsl:value-of select="placeName" /></strong>
+      </xsl:when>
+      <xsl:otherwise>
+        <strong><xsl:apply-templates /></strong>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="p">
