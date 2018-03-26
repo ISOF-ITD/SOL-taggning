@@ -11,6 +11,7 @@ Semantik
 – Taggar vi bara de nationella minoriteternas språk, inte norska, forndanska, gotiska, lågtyska osv.?
 – Enskilda problem: är -sjö:ar naturnamn eller bebyggelsenamn?
 – Taggar vi alla ortnamn in artikeltexten eller bara de som är i kursiv stil?
+— Namnelementen har inget <placeName>
 
 Vidare
 – Den nuvarande filen är ingen giltig TEI-fil.
