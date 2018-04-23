@@ -6,6 +6,7 @@
   <xsl:template match="/TEI/teiHeader" />
 
   <xsl:template match="/TEI/text/body">
+    <!DOCTYPE html>
     <html>
       <head>
         <meta encoding="UTF-8" />
