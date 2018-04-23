@@ -13,7 +13,7 @@
       </head>
 
       <body>
-        <h2>First test</h2>
+        <h2>Svenskt ortnamnslexikon</h2>
         <xsl:apply-templates select="div" />
         <xsl:apply-templates select="span" />
       </body>
